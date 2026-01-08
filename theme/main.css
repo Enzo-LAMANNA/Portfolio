@@ -1,0 +1,715 @@
+/* Import de la police Roboto depuis Google Fonts */
+/* Choix de police entre : 300 light, 400 regular et 700 bold */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+/* Import de la librairie Font Awesome pour les icônes */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
+:root { /* cible l'élément <html> */
+    --color-primary: #007bff; /* Bleu vif (utilisé pour les accents, liens, boutons) */
+    --color-secondary: #6c757d; /* Gris foncé (pour les détails secondaires) */
+    --color-background-dark: #212529; /* Noir/Gris très foncé (fond du footer/nav) */
+    --color-background-light: #f8f9fa; /* Gris très clair (fond des sections) */
+    --color-text-light: #ffffff; /* Blanc sur fonds sombres */
+    --color-text-dark: #343a40; /* Texte principal */
+    --color-card-background: #ffffff; /* Fond des cartes/articles */
+    --font-family-base: 'Roboto', sans-serif; /* Police de secours sans-serif */
+}
+
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 16px;
+    font-family: var(--font-family-base);
+    color: var(--color-text-dark);
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Nouvelle image de fond (texture légère ou dégradé) */
+    background: var(--color-background-light);
+    background-image: url(/theme/picture/toile.jpg); 
+    background-attachment: fixed;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* --- Navigation (Nav Bar) --- */
+nav {
+    position: fixed; /* Fixé en haut de l'écran */
+    top: 0;
+    left: 0; 
+    width: 100%; /* Prend toute la largeur */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px; /* Ajusté pour laisser plus de place aux liens */
+    background-color: var(--color-background-dark);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+nav p {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 8px 10px; /* Ajusté pour économiser de l'espace */
+    margin-left: 5px; /* Ajusté pour économiser de l'espace */
+    font-size: 0.95rem; /* Ajusté pour tenir sur une ligne */
+    font-weight: 400;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    color: var(--color-background-dark);
+    background-color: var(--color-primary);
+}
+
+/* Bouton de menu (visible uniquement sur mobile) */
+#menu-toggle {
+    display: none; /* Cache le bouton par défaut sur desktop */
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* --- Header / Accueil --- */
+header {
+    min-height: 100vh;
+    color: var(--color-text-light);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 90px;
+    padding-top: 80px; /* Compense la hauteur de la nav bar fixe */
+    background-color: rgba(0, 0, 0, 0.6); 
+    position: relative;
+    text-align: justify;
+}
+
+header > hgroup {
+    /* Suppression du width: 70% pour éviter le rétrécissement sur les grands écrans */
+    margin-top: 6vh;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 4.5rem; 
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+header h1 em {
+    font-weight: 300;
+    font-style: normal;
+    display: block;
+    font-size: 0.5em; 
+    color: rgba(255, 255, 255, 0.8);
+}
+
+header h1 u {
+    text-decoration-color: var(--color-primary);
+    text-decoration-thickness: 5px;
+    text-underline-offset: 5px;
+}
+
+#maPresentation {
+    width: 100%; 
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--color-primary); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+    max-width: 85%;
+}
+
+#socialnetworks a {
+    color: var(--color-text-light);
+    font-size: 1.5rem; 
+    text-decoration: none;
+    margin-right: 15px;
+    background-color: var(--color-primary); 
+    padding: 10px 15px;
+    border-radius: 50%; 
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#socialnetworks a:hover {
+    background-color: #0056b3; 
+    transform: translateY(-3px); 
+}
+
+#maPhotoProfil {
+    width: 250px; 
+    height: 350px; 
+    border-radius: 10%; 
+    object-fit: cover;
+    object-position: center top; 
+    border: 5px solid var(--color-text-light); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    
+    position: absolute;
+    top: 50%;
+    right: 10%; 
+    transform: translateY(-50%);
+    z-index: 50;
+}
+
+/* --- Contenu Principal (Main) & Sections --- */
+main {
+    padding: 0 90px;
+    margin-top: 0; /* Correction du chevauchement */
+    position: relative;
+    z-index: 2;
+    text-align: justify;
+}
+
+section {
+    padding: 60px 0;
+    margin-bottom: 30px;
+    background-color: var(--color-card-background); 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+    border-top: 5px solid var(--color-primary); 
+}
+
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-background-light);
+    text-align: center;
+}
+
+/* --- Cartes Générales (Utilisé dans toutes les sections) --- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 30px;
+    padding: 0 30px; 
+}
+
+.cards article {
+    background-color: var(--color-card-background);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dee2e6;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cards article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Section À propos de moi --- */
+#moi article {
+    grid-column: 1 / -1; 
+    line-height: 1.7;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+#moi article p strong {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* --- Section Formations/Expériences (Mise en page 1 colonne) --- */
+
+#formation .cards,
+#experience-cards { /* IMPORTANT : Applique la mise en page 1 colonne aux Expériences et Projets (car vous utilisez experience-cards) */
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+}
+
+#formation h4,
+#experience h4 { /* Aligne le h4 descriptif au-dessus des cartes */
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+}
+
+.formation-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--color-card-background);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.formation-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px;
+    cursor: pointer;
+    background-color: #e9ecef; 
+    border-left: 5px solid var(--color-primary);
+    position: relative;
+    font-weight: 700;
+}
+
+.formation-item summary h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--color-text-dark);
+    flex-grow: 1; 
+}
+
+.formation-item summary h4 {
+    margin: 0 0 0 20px;
+    font-size: 1rem;
+    color: var(--color-secondary);
+    font-weight: 400;
+    flex-shrink: 0; 
+    white-space: nowrap; 
+}
+
+/* Gère la flèche d'ouverture/fermeture et remplace le texte "Détails" */
+.formation-item summary::after {
+    content: none; 
+}
+
+.formation-item summary::before {
+    content: "▶️"; 
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-left: 10px; 
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    font-weight: 900; 
+    padding-left: 10px; 
+}
+
+.formation-item[open] summary::before {
+    content: "🔽"; 
+}
+
+/* Logos (taille et centrage) */
+.formation-logo-uca,
+.formation-logo-hack,
+.formation-logo-cisco,
+.formation-logo-psc1,
+.formation-logo-licence,
+.formation-logo-lycee,
+.formation-logo-leclerc { 
+    width: 450px; 
+    height: 150px; 
+    margin: 15px auto; /* Centrage horizontal */
+    display: block; /* Nécessaire pour le centrage horizontal */
+    object-fit: contain;
+    flex-shrink: 0; 
+}
+
+.sujet-python{
+    width: 600px;
+    margin: 15px auto;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+    border: 1px solid #000000; 
+}
+
+.descriptif_kingdomino{
+    margin: 2em;
+}
+
+.part_guidee_kingdomino{
+    width: 35%;
+    margin: 15px auto;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.part_guidee_kingdomino_1{
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.conteneur-dessins {
+    display: flex; /* Active l'alignement horizontal */
+    justify-content: center; /* Centre les images sur la ligne (optionnel) */
+    gap: 20px; /* Ajoute un espacement entre les images (optionnel) */
+    width: 100%; /* S'assurer qu'il prend toute la largeur */
+    margin: 15px auto; /* Pour centrer le conteneur lui-même */
+}
+
+.dessin{
+    width: 30%;
+    height: auto;
+    margin: 0;
+}
+
+/* Style de l'image de CV (classe .photo-cv) */
+.photo-cv {
+    width: 100%;
+    height: auto;
+    display: block; 
+    max-width: 300px; /* Ajusté pour une taille de CV plus large */
+    margin: 20px auto; /* Centrage */
+}
+
+.download-button-container {
+    text-align: center; 
+    margin: 30px 0;
+}
+
+.btn-download {
+    display: inline-block; 
+    padding: 10px 25px; 
+    background-color: #007bff; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    transition: background-color 0.3s; 
+    border: 1px solid #007bff;
+}
+
+.btn-download:hover { 
+    background-color: #0056b3; 
+}
+
+.formation-details {
+    padding: 20px;
+    border-bottom: 1px solid #dee2e6;
+    /* RÈGLES CLÉS POUR LE CENTRAGE DU CONTENU DÉTAILLÉ : */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* Centre les blocs (detail-row) */
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    /* RÈGLES CLÉS POUR LA MISE EN PAGE DU TEXTE : */
+    width: 100%; 
+    max-width: 500px; /* Limite la largeur pour le centrage visuel */
+    justify-content: flex-start; 
+}
+
+.detail-row strong {
+    min-width: 150px;
+    color: var(--color-text-dark);
+    font-weight: 700;
+}
+
+.detail-row span {
+    font-weight: 400;
+    color: var(--color-secondary);
+}
+
+/* CORRECTION : Style des titres de détails (Contexte, Objectif, etc.) */
+/* Utilise la spécificité pour assurer que ce style est appliqué partout */
+.formation-item .formation-objectif-title { 
+    font-size: 1.15rem;
+    color: var(--color-secondary); /* Gris */
+    text-align: center; /* Centré */
+    margin: 20px 0 10px 0;
+    padding-left: 0; 
+}
+
+.formation-objectif-text {
+    padding: 0 20px 20px 20px;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    font-weight: 300;
+}
+
+.formation-objectif-text ul {
+    list-style: disc;
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
+.formation-objectif-text strong {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+.formation-objectif-text li {
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+
+/* --- Section Compétences --- */
+
+.skill-group {
+    margin-bottom: 40px;
+    padding: 0 30px;
+}
+
+.skill-group h3 {
+    text-align: left;
+    color: var(--color-text-dark);
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.competence-cards {
+    gap: 20px;
+}
+
+.competence-item {
+    padding: 20px;
+    border-left: 3px solid var(--color-primary);
+}
+
+.competence-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.competence-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+/* AJOUT POUR ALIGNER LES IMAGES DANS LE DESSIN/COLLAGE */
+.excollage-gallery {
+    display: flex; /* Active Flexbox */
+    flex-wrap: wrap; /* Permet aux images de passer à la ligne sur mobile */
+    gap: 15px; /* Ajoute un espace entre chaque image */
+    margin-top: 15px; /* Espace au-dessus de la galerie */
+    justify-content: flex-start; /* S'assure que les images sont alignées à gauche */
+}
+
+.exemple-dessin {
+    width: 220px;
+    height: 220px;
+    margin: 0;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.competence-item h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    border: none;
+    padding: 0;
+    color: var(--color-primary);
+}
+
+.competence-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-secondary);
+}
+
+
+/* --- Section Contact --- */
+#contact article h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 30px 90px;
+    background-color: var(--color-background-dark);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer h3 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* --- Bouton Remonter en Haut --- */
+#RevenirenHautContainer {
+    text-align: center;
+    padding: 30px 0;
+}
+
+#RevenirenHautButton {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#RevenirenHautButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* --- Responsive (pour les petits écrans) --- */
+@media (max-width: 1200px) {
+    header {
+        padding: 50px;
+        padding-top: 80px; 
+    }
+    nav {
+        padding: 15px 30px; 
+    }
+    main {
+        padding: 0 30px;
+    }
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Affichage du bouton de menu */
+    #menu-toggle {
+        display: block; 
+    }
+    
+    /* Navigation responsive (Menu Burger) */
+    nav {
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+    }
+
+    nav ul {
+        display: none; 
+        flex-direction: column;
+        width: 100%; 
+        background-color: var(--color-background-dark);
+        position: absolute;
+        top: 50px; 
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    nav ul.open {
+        display: flex; 
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        display: block; 
+        padding: 12px 20px;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    /* Header / Accueil */
+    header > hgroup {
+        width: 100%;
+        text-align: center;
+    }
+    #maPhotoProfil {
+        width: 200px; 
+        height: 300px;
+        position: static;
+        margin: 30px auto 0 auto;
+        transform: none;
+        display: block;
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: auto;
+        padding-bottom: 50px;
+    }
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr; 
+    }
+    section {
+        padding: 30px;
+    }
+    #formation .cards {
+        padding: 0;
+    }
+    
+    .formation-logo-uca,
+    .formation-logo-hack,
+    .formation-logo-cisco,
+    .formation-logo-psc1,
+    .formation-logo-licence,
+    .formation-logo-lycee,
+    .formation-logo-leclerc { 
+        width: 100%; 
+        max-width: 300px; 
+        height: auto;
+    }
+
+    .formation-item summary {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .formation-item summary h4 {
+        margin: 5px 0 0 0; 
+        padding-left: 5px; 
+        width: 100%; 
+    }
+    .formation-item summary::before {
+        order: 1; 
+    }
+    .formation-item summary h3 {
+        order: 2;
+    }
+    .formation-item summary h4 {
+        order: 3;
+    }
+}
