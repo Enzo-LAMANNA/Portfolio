@@ -32,7 +32,7 @@ html {
 body {
     /* Nouvelle image de fond (texture légère ou dégradé) */
     background: var(--color-background-light);
-    background-image: url(/theme/picture/toile.jpg); 
+    background-image: url(theme/picture/toile.jpg); 
     background-attachment: fixed;
     background-size: cover; 
     background-repeat: no-repeat;
@@ -712,4 +712,5 @@ footer p {
     .formation-item summary h4 {
         order: 3;
     }
+
 }
