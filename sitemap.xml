@@ -1,9 +1,11 @@
+<!-- "guide touristique" pour robots google : indique les pages du site importantes et quand elles sont modifiées -->
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> <!-- indique au navigateur que c'est un XML -->
    <url>
-      <loc>https://enzo-lamanna.github.io/Portfolio/</loc>
-      <lastmod>2026-01-08</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>1.0</priority>
+      <loc>https://enzo-lamanna.github.io/Portfolio/</loc> <!-- location : url du site -->
+      <lastmod>2026-01-08</lastmod> <!-- last modif -->
+      <changefreq>monthly</changefreq> <!-- change frequency -->
+      <priority>1.0</priority> <!-- priorité de la page -->
    </url>
+
 </urlset>
