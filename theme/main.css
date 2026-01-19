@@ -190,7 +190,7 @@ header h1 u {
     z-index: 50;
 }
 
-/* --- Contenu Principal (Main) & Sections --- */
+/* Contenu Principal (Main) & Sections */
 main {
     padding: 0 90px;
     margin-top: 0; /* Correction du chevauchement */
@@ -218,7 +218,7 @@ section h2 {
     text-align: center;
 }
 
-/* --- Cartes Générales (Utilisé dans toutes les sections) --- */
+/* Cartes Générales (Utilisé dans toutes les sections) */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
@@ -240,7 +240,7 @@ section h2 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* --- Section À propos de moi --- */
+/* Section : À propos de moi */
 #moi article {
     grid-column: 1 / -1; 
     line-height: 1.7;
@@ -253,7 +253,7 @@ section h2 {
     color: var(--color-primary);
 }
 
-/* --- Section Formations/Expériences (Mise en page 1 colonne) --- */
+/* Section : Formations/Expériences (Mise en page 1 colonne) */
 
 #formation .cards,
 #experience-cards { /* IMPORTANT : Applique la mise en page 1 colonne aux Expériences et Projets (car vous utilisez experience-cards) */
@@ -306,7 +306,7 @@ section h2 {
 
 /* Gère la flèche d'ouverture/fermeture et remplace le texte "Détails" */
 .formation-item summary::after {
-    content: none; 
+    content: none; /* Supprime flêche par défaut */
 }
 
 .formation-item summary::before {
@@ -314,7 +314,7 @@ section h2 {
     font-size: 0.9rem;
     color: var(--color-primary);
     margin-left: 10px; 
-    flex-shrink: 0;
+    flex-shrink: 0; /* Ne pas rétrécir même si un manque de place */
     transition: transform 0.2s;
     font-weight: 900; 
     padding-left: 10px; 
@@ -410,7 +410,6 @@ section h2 {
 .formation-details {
     padding: 20px;
     border-bottom: 1px solid #dee2e6;
-    /* RÈGLES CLÉS POUR LE CENTRAGE DU CONTENU DÉTAILLÉ : */
     display: flex; 
     flex-direction: column; 
     align-items: center; /* Centre les blocs (detail-row) */
@@ -437,7 +436,6 @@ section h2 {
     color: var(--color-secondary);
 }
 
-/* CORRECTION : Style des titres de détails (Contexte, Objectif, etc.) */
 /* Utilise la spécificité pour assurer que ce style est appliqué partout */
 .formation-item .formation-objectif-title { 
     font-size: 1.15rem;
@@ -470,7 +468,7 @@ section h2 {
 }
 
 
-/* --- Section Compétences --- */
+/* Section : Compétences */
 
 .skill-group {
     margin-bottom: 40px;
@@ -510,7 +508,7 @@ section h2 {
     object-fit: contain;
 }
 
-/* AJOUT POUR ALIGNER LES IMAGES DANS LE DESSIN/COLLAGE */
+/* Ajout pour aligner les images dans DESSIN */
 .excollage-gallery {
     display: flex; /* Active Flexbox */
     flex-wrap: wrap; /* Permet aux images de passer à la ligne sur mobile */
@@ -542,14 +540,14 @@ section h2 {
 }
 
 
-/* --- Section Contact --- */
+/* Section : Contact */
 #contact article h3 {
     color: var(--color-primary);
     font-size: 1.5rem;
     text-align: center;
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
     padding: 30px 90px;
     background-color: var(--color-background-dark);
@@ -590,7 +588,7 @@ footer p {
     transform: scale(1.05);
 }
 
-/* --- Responsive (pour les petits écrans) --- */
+/* Responsive (pour les petits écrans) */
 @media (max-width: 1200px) {
     header {
         padding: 50px;
@@ -689,3 +687,4 @@ footer p {
         flex-wrap: wrap;
     }
 }
+
