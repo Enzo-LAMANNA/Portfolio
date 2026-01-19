@@ -15,7 +15,7 @@
     --font-family-base: 'Roboto', sans-serif; /* Police de secours sans-serif */
 }
 
-/* Global Reset and Base Styles */
+/* Remise à 0, Reset */
 * {
     margin: 0;
     padding: 0;
@@ -28,9 +28,9 @@ html {
     color: var(--color-text-dark);
     scroll-behavior: smooth;
 }
-
+/* Style du corps body */
 body {
-    /* Nouvelle image de fond (texture légère ou dégradé) */
+    /* Nouvelle image de fond */
     background: var(--color-background-light);
     background-image: url(picture/toile.jpg); 
     background-attachment: fixed;
@@ -39,14 +39,14 @@ body {
     background-position: center center;
 }
 
-/* --- Navigation (Nav Bar) --- */
+/* Bar de navigation */
 nav {
     position: fixed; /* Fixé en haut de l'écran */
     top: 0;
     left: 0; 
     width: 100%; /* Prend toute la largeur */
     z-index: 1000;
-    display: flex;
+    display: flex; /* Aligne le nom à gauche et les liens à droites */
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px; /* Ajusté pour laisser plus de place aux liens */
@@ -65,7 +65,8 @@ nav ul {
     display: flex;
 }
 
-nav ul li a {
+nav ul li a { /* Cible tous les liens (a) situés dans une puce (li) d'une liste (ul) 
+à l'intérieur de la barre de navigation (nav). */
     color: var(--color-text-light);
     text-decoration: none;
     padding: 8px 10px; /* Ajusté pour économiser de l'espace */
@@ -92,9 +93,9 @@ nav ul li a:hover {
     padding: 5px 10px;
 }
 
-/* --- Header / Accueil --- */
+/* Header / Accueil */
 header {
-    min-height: 100vh;
+    min-height: 100vh; /* Définit une hauteur minimale de 100% de la fenêtre visible */
     color: var(--color-text-light);
     display: flex;
     justify-content: flex-start;
@@ -324,13 +325,7 @@ section h2 {
 }
 
 /* Logos (taille et centrage) */
-.formation-logo-uca,
-.formation-logo-hack,
-.formation-logo-cisco,
-.formation-logo-psc1,
-.formation-logo-licence,
-.formation-logo-lycee,
-.formation-logo-leclerc { 
+.formation-logo { 
     width: 450px; 
     height: 150px; 
     margin: 15px auto; /* Centrage horizontal */
@@ -612,94 +607,79 @@ footer p {
     }
 }
 
+#menu-checkbox {
+    display: none;
+}
+
 @media (max-width: 992px) {
-    /* Affichage du bouton de menu */
-    #menu-toggle {
-        display: block; 
-    }
-    
-    /* Navigation responsive (Menu Burger) */
-    nav {
-        flex-direction: row; 
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-    }
-
-    nav ul {
-        display: none; 
+    /* Header / Accueil - Correction chevauchemement */
+    header {
         flex-direction: column;
-        width: 100%; 
-        background-color: var(--color-background-dark);
-        position: absolute;
-        top: 50px; 
-        left: 0;
-        padding: 10px 0;
-        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
-    }
-    
-    nav ul.open {
-        display: flex; 
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    nav ul li:last-child {
-        border-bottom: none;
-    }
-
-    nav ul li a {
-        display: block; 
-        padding: 12px 20px;
-        margin: 0;
-        border-radius: 0;
-    }
-    
-    /* Header / Accueil */
-    header > hgroup {
-        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 20px 50px 20px;
         text-align: center;
     }
+
     #maPhotoProfil {
-        width: 200px; 
-        height: 300px;
         position: static;
         margin: 30px auto 0 auto;
         transform: none;
         display: block;
+        width: 200px; 
+        height: 300px;
     }
-    header {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: auto;
-        padding-bottom: 50px;
-    }
+
     header h1 {
         font-size: 3rem;
     }
-    
-    .cards {
-        grid-template-columns: 1fr; 
+
+    /* Navigation - Menu Burger */
+    #menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: var(--color-primary);
+        font-size: 1.5rem;
     }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-background-dark);
+        padding: 10px 0;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #menu-checkbox:checked ~ #nav-links {
+        display: flex;
+    }
+
+    #nav-links li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    #nav-links li a {
+        display: block;
+        padding: 12px 20px;
+    }
+
+    /* Autres ajustements mobiles */
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
     section {
         padding: 30px;
     }
-    #formation .cards {
-        padding: 0;
-    }
-    
-    .formation-logo-uca,
-    .formation-logo-hack,
-    .formation-logo-cisco,
-    .formation-logo-psc1,
-    .formation-logo-licence,
-    .formation-logo-lycee,
-    .formation-logo-leclerc { 
+
+    .logo { 
         width: 100%; 
         max-width: 300px; 
         height: auto;
@@ -707,25 +687,5 @@ footer p {
 
     .formation-item summary {
         flex-wrap: wrap;
-        justify-content: flex-start;
     }
-    
-    .formation-item summary h4 {
-        margin: 5px 0 0 0; 
-        padding-left: 5px; 
-        width: 100%; 
-    }
-    .formation-item summary::before {
-        order: 1; 
-    }
-    .formation-item summary h3 {
-        order: 2;
-    }
-    .formation-item summary h4 {
-        order: 3;
-    }
-
 }
-
-
-
