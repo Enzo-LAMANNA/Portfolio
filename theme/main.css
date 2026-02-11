@@ -343,6 +343,33 @@ section h2 {
     border: 1px solid #000000; 
 }
 
+.fonction-SAE15{
+    width: 800px;
+    margin: 15px auto;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+    border: 1px solid #000000; 
+}
+
+.fonction-SAE15bis{
+    width: 600px;
+    margin: 15px auto;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+    border: 1px solid #000000; 
+}
+
+.fonction-SAE15rls{
+    width: 250px;
+    margin: 15px auto;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+    border: 1px solid #000000; 
+}
+
 .descriptif_kingdomino{
     margin: 2em;
 }
@@ -687,4 +714,3 @@ footer p {
         flex-wrap: wrap;
     }
 }
-
