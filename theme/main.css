@@ -421,17 +421,17 @@ section h2 {
 .btn-download {
     display: inline-block; 
     padding: 10px 25px; 
-    background-color: #007bff; 
+    background-color: #9c5550; 
     color: white; 
     text-decoration: none; 
     border-radius: 5px; 
     font-weight: bold; 
     transition: background-color 0.3s; 
-    border: 1px solid #007bff;
+    border: 1px solid #9c5550;
 }
 
 .btn-download:hover { 
-    background-color: #0056b3; 
+    background-color: #dc9792; 
 }
 
 .formation-details {
@@ -611,7 +611,7 @@ footer p {
 }
 
 #RevenirenHautButton:hover {
-    background-color: #0056b3;
+    background-color: #dc9792;
     transform: scale(1.05);
 }
 
@@ -714,6 +714,7 @@ footer p {
         flex-wrap: wrap;
     }
 }
+
 
 
 
