@@ -5,7 +5,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
 
 :root { /* cible l'élément <html> */
-    --color-primary: #007bff; /* Bleu vif (utilisé pour les accents, liens, boutons) */
+    --color-primary: #9c5550; /* Rouge Marron (utilisé pour les accents, liens, boutons) */
     --color-secondary: #6c757d; /* Gris foncé (pour les détails secondaires) */
     --color-background-dark: #212529; /* Noir/Gris très foncé (fond du footer/nav) */
     --color-background-light: #f8f9fa; /* Gris très clair (fond des sections) */
@@ -32,7 +32,7 @@ html {
 body {
     /* Nouvelle image de fond */
     background: var(--color-background-light);
-    background-image: url(picture/toile.jpg); 
+    background-image: url(picture/background_picture.jpg); 
     background-attachment: fixed;
     background-size: cover; 
     background-repeat: no-repeat;
@@ -714,4 +714,5 @@ footer p {
         flex-wrap: wrap;
     }
 }
+
 
