@@ -170,7 +170,7 @@ header h1 u {
 }
 
 #socialnetworks a:hover {
-    background-color: #0056b3; 
+    background-color: #dc9792; 
     transform: translateY(-3px);
 }
 
@@ -714,5 +714,6 @@ footer p {
         flex-wrap: wrap;
     }
 }
+
 
 
