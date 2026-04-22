@@ -310,7 +310,7 @@ section h2 {
 }
 
 .formation-item summary::before {
-    content: "➕"; 
+    content: ">"; 
     font-size: 0.9rem;
     color: var(--color-primary);
     margin-left: 10px; 
@@ -321,7 +321,7 @@ section h2 {
 }
 
 .formation-item[open] summary::before {
-    content: "➖"; 
+    content: "▼"; 
 }
 
 /* Logos (taille et centrage) */
