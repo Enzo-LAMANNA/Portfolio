@@ -1,803 +1,1394 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description" content="Étudiant en BUT Réseaux et Télécommunications (R&T), découvrez mon parcours, mes compétences techniques et mes projets réalisés en informatique.">
-        <meta name="google-site-verification" content="hhmEK7a6lEiQuDkZrGl1DYu4i8HDK13spU3fvCJBNSk" />
-        <link rel="stylesheet" type="text/css" href="theme/main.css">
-        <link rel="icon" type="image/png" href="theme/picture/logo_portfolio.png">
-        <title> Enzo LAMANNA - Portfolio </title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErrWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body>
+    <meta name="description"
+        content="Étudiant en BUT Réseaux et Télécommunications (R&T), découvrez mon parcours, mes compétences techniques et mes projets réalisés en informatique.">
+    <meta name="google-site-verification" content="hhmEK7a6lEiQuDkZrGl1DYu4i8HDK13spU3fvCJBNSk" />
+    <link rel="stylesheet" type="text/css" href="theme/main.css">
+    <link rel="icon" type="image/png" href="theme/picture/logo_portfolio.png">
+    <title>Enzo LAMANNA - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 
-        <header id="accueil">
-            <hgroup>
-                <h1> <em> Bonjour, je suis </em> <br> <u>Enzo LAMANNA</u> </h1>
-                <br> <br>
-                <p id="maPresentation"> Étudiant en première année de BUT Réseaux & Télécommunications à l'IUT d'Aubière (63). <br>
-                Je suis actuellement en recherche active d'une alternance d'une durée de deux ans à compter de septembre 2026.</p>
-                <br> <br>
+<body>
+
+    <nav id="navbar">
+        <p class="nav-logo">Enzo LAMANNA</p>
+        <button id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul id="nav-links">
+            <li><a href="#accueil" title="Revenir à la page d'accueil">Accueil</a></li>
+            <li><a href="#moi" title="Présentation de Enzo LAMANNA">À propos</a></li>
+            <li><a href="#formation" title="Formation de Enzo LAMANNA">Formations</a></li>
+            <li><a href="#competence" title="Compétences de Enzo LAMANNA">Compétences</a></li>
+            <li><a href="#experience" title="Expériences de Enzo LAMANNA">Expériences</a></li>
+            <li><a href="#projet" title="Projets de Enzo LAMANNA">Projets</a></li>
+            <li><a href="#divers" title="Divers">Divers</a></li>
+            <li><a href="#cv" title="Télécharger le C.V.">C.V.</a></li>
+            <li><a href="#contact" title="Coordonnées de Enzo LAMANNA">Contact ✉︎</a></li>
+        </ul>
+    </nav>
+
+    <header id="accueil">
+        <div class="header-container">
+            <div class="header-text">
+                <hgroup>
+                    <p class="pre-title">Bonjour, je suis</p>
+                    <h1><span class="highlight">Enzo LAMANNA</span></h1>
+                    <p id="maPresentation">Étudiant en première année de BUT Réseaux & Télécommunications à l'IUT
+                        d'Aubière (63).<br>
+                        Je suis actuellement en recherche active d'un stage d'une durée de 10 semaine à compter de
+                        avril 2027.</p>
+                </hgroup>
                 <div id="socialnetworks">
-                    <a href="https://www.linkedin.com/in/enzo-lamanna-b57026356/" target="_blank">
+                    <a href="https://www.linkedin.com/in/enzo-lamanna-b57026356/" target="_blank" aria-label="LinkedIn">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/Enzo-LAMANNA" target="_blank">
+                    <a href="https://github.com/Enzo-LAMANNA" target="_blank" aria-label="GitHub">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
-            </hgroup>
-            <img src="theme/picture/photo_profil.jpeg" alt="Photo de Enzo LAMANNA" id="maPhotoProfil">
-        </header>
-        <nav>
-            <p> Enzo LAMANNA </p>
-            <button id="menu-toggle" aria-expanded="false" aria-controls="nav-links">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul id="nav-links">
-                <li> <a href="#accueil" title="Revenir à la page d'accueil"> Accueil </a> </li>
-                <li> <a href="#moi" title="Présentation de Enzo LAMANNA"> À propos </a> </li>
-                <li> <a href="#formation" title="Formation de Enzo LAMANNA"> Formations </a> </li>
-                <li> <a href="#competence" title="Compètences de Enzo LAMANNA"> Compétences </a> </li>
-                <li> <a href="#experience" title="Expériences de Enzo LAMANNA"> Expériences </a> </li>
-                <li> <a href="#projet" title="Projets de Enzo LAMANNA"> Projets </a> </li> 
-                <li> <a href="#divers" title="Divers"> Divers </a> </li>
-                <li> <a href="#cv" title="Divers"> C.V. </a> </li>
-                <li> <a href="#contact" title="Coordonnées de Enzo LAMANNA"> Contact </a> </li>
-            </ul>
-        </nav>
-        <main>
-            <br> <br> <br>
-
-            <section id="moi"> <h2> À propos </h2> 
-            <div class="cards">
-                <article>
-                    <p> Je me présente, je suis Enzo LAMANNA, étudiant en première année de BUT
-                        Réseaux & Télécommunications à l'IUT d'Aubière (63). <br> <br>
-                        Initialement attiré par la programmation pure et son aspect logique, mon manque de clarté professionnelle m'a finalement mené vers une réorientation dans le domaine des réseaux.
-                        C'est pourquoi j'ai choisi de poursuivre mes études en BUT Réseaux et Télécommunications (R&T), non seulement pour me spécialiser en réseaux, mais aussi pour la polyvalence des compétences offertes par cette formation.
-                        <br> <br>
-                        Afin d'apprendre dans un cadre concret et d'acquérir une expérience professionnelle solide, je suis actuellement à la recherche d'une alternance à compter de septembre 2026, pour une durée de deux ans avec un rythme d'un mois en entreprise pour un mois en formation.
-                        <br> <br>
-                        Sociable, curieux et rigoureux sont les trois adjectifs qui définissent parfaitement mon attitude dans un contexte professionnel.
-                        <br> <br>
-
-                    </p>
-                </article>
             </div>
-            </section>
-            <section id="formation"> <h2> Formations </h2>
-            <div class="cards">
-                <details class="formation-item">
-                    <img src="theme/picture/logo_uca.png" alt="Logo IUT R&T" class="formation-logo"> 
-
-                    <summary>
-                        <h3>BUT - Réseaux & Télécommunications</h3>
-                        <h4> Formation en cours : 2025 - Présent </h4>
-                    </summary>
-                    <div class="formation-details">
-                        <div class="detail-row">
-                            <strong>Établissement :</strong> <span>IUT Clermont Auvergne</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Position :</strong> <span>Aubière (63) - Campus des Cézeaux</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Année :</strong> <span>2025 - Présent</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Obtention :</strong> <span>En cours</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Formation :</strong> <span>BUT Réseaux & Télécommunications</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Statut :</strong> <span>Étudiant - BUT1</span>
-                        </div>
-                    </div>
-                    
-                    <h4 class="formation-objectif-title">Objectif de la Formation</h4>
-                    <p class="formation-objectif-text">
-                        Le <strong>BUT Réseaux & Télécommunications (R&T) </strong> est un diplôme de niveau Bac+3 (Licence professionnelle), accessible après le Baccalauréat. Cette formation en trois ans vise à former des techniciens supérieurs spécialisés en réseaux informatiques, télécommunications et cybersécurité (à partir de la deuxième année BUT2).
-                    </p>
-
-                    <h4 class="formation-objectif-title">Pourquoi l'IUT d'Aubière ? </h4>
-                    <p class="formation-objectif-text">
-                        Mon choix pour cette formation à été guidé par la <strong> Journée Portes Ouvertes de l'IUT </strong>
-                        en Février 2023, durant laquelle j'ai eu la chance d'échanger avec les enseignants et étudiants afin de clarifier mes doutes.
-                        Ce qui m'a convaincu est l'<strong>approche polyvalente des cours</strong>, tous orientés Réseaux.
-                        En plus de couvrir en profondeur les aspects techniques liés aux Réseaux, la formation propose des modules essentiels tels que la <strong> Communication </strong> et la <strong> Gestion de Projet</strong>, préparant ainsi l'étudiant à toutes les exigences du métier de technicien réseaux.
-                        <br> Enfin, le BUT R&T offre également la possibilité de réaliser des <strong> stages </strong> ou de l'<strong>alternance </strong> (sur un rythme 1/1mois), ce qui est particulièrement bénéfique pour acquérir une expérience professionnelle concrète et essentielle avant de s'insérer sur le marché du travail.
-                    </p>
-
-                    <h4 class="formation-objectif-title">Et maintenant ?</h4>
-                    <p class="formation-objectif-text">
-                        Ayant pour objectif la validation de ma première année de BUT R&T en fin d'année universitaire 2026, <strong>je souhaite poursuivre ma formation en alternance </strong>au sein d'une entreprise pour <strong> mettre en pratique </strong> mes acquis et <strong> apprendre </strong> dans un environnement professionnel concret.
-                    </p>
-                </details>
-                
-                <details class="formation-item">
-                    <img src="theme/picture/logo_licence.png" alt="Logo UCA" class="formation-logo"> 
-                    <summary>
-                        <h3> Licence - Mathématiques et Informatique </h3>
-                        <h4> Année de réorientation : 2024 - 2025 </h4>
-                    </summary>
-                    <div class="formation-details">
-                        <div class="detail-row">
-                            <strong>Établissement :</strong> <span>UCA - Université Clermont Auvergne</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Position :</strong> <span>Aubière (63) - Campus des Cézeaux</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Année :</strong> <span>2024 - 2025</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Obtention :</strong> <span>Non validé</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Formation :</strong> <span>Double Licence Mathématiques et Informatique</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Statut :</strong> <span>Étudiant - L1</span>
-                        </div>
-                    </div>
-
-                    <h4 class="formation-objectif-title">Objectif de la Formation</h4>
-                    <p class="formation-objectif-text">
-                        La Licence Mathématiques-Informatique offre, en trois ans, une double expertise. 
-                        Elle développe la rigueur analytique grâce aux mathématiques et les fondations de l'algorithmique avec l'informatique, formant des profils aptes à modéliser et résoudre des problèmes complexes.
-                        Ce socle théorique est idéal pour la poursuite d'études en Master ou en École d'Ingénieurs, avec des orientations possibles en Recherche ou en Application.
-                    </p>
-                    
-                    <h4 class="formation-objectif-title">Pourquoi la Licence ?</h4>
-                    <p class="formation-objectif-text">
-                        Suite au refus de mon dossier pour le BUT R&T via Parcoursup en 2023, j'ai opté pour la Licence Mathématiques et Informatique. 
-                        Ce choix m'a permis de rester aligné avec mon projet d'acquérir des compétences fondamentales en logique et en informatique.
-                    </p>
-
-                    <h4 class="formation-objectif-title">Et maintenant ?</h4>
-                    <p class="formation-objectif-text">
-                      Bien que ma première année en Licence ne fût pas mon orientation de départ, cette expérience m'a permis de m'adapter aux exigences de la <strong>vie étudiante</strong> et de gagner en <strong>autonomie</strong>. J'ai également profité de cette période pour approfondir mes compétences techniques, notamment en découvrant l'environnement <strong>Linux</strong> et le langage <strong>Bash</strong>. Fort de ces acquis, j'ai renouvelé ma candidature pour le BUT R&T, un cursus en parfaite adéquation avec mon projet professionnel, et j'ai le plaisir d'y être admis pour la rentrée de septembre 2025.
-                    </p>
-                </details>
-                
-                <details class="formation-item">
-                    <img src="theme/picture/logo_lycee.jpg" alt="Logo Lycée" class="formation-logo"> 
-                    <summary>
-                        <h3> Baccalauréat - Série Général </h3>
-                        <h4> Préparation du BAC : 2021 - 2024</h4>
-                    </summary>
-                    <div class="formation-details">
-                        <div class="detail-row">
-                            <strong>Établissement :</strong> <span>Lycée Polyvalent Jérémie de la Rue</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Position :</strong> <span>Charlieu (42)</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Année :</strong> <span>2021 - 2024</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Obtention :</strong> <span>OUI</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Formation :</strong> <span>Baccalauréat Série Général - Spécialités Mathématiques et NSI</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Statut :</strong> <span>Étudiant - Lycéen</span>
-                        </div>
-                    </div>
-                    <h4 class="formation-objectif-title">Objectif de la Formation</h4>
-                    <p class="formation-objectif-text">
-                        Le Baccalauréat général a pour objectif principal de se <strong>préparer aux études supérieurs</strong> en offrant
-                        une culture général approfondie. De plus, les spécialités <strong> Mathématiques </strong> et <strong> NSI </strong> permettent d'acquérir les fondations nécessaires
-                        pour s'orienter vers des filières scientifiques et technologiques.
-                    </p>
-                    
-                    <h4 class="formation-objectif-title">Pourquoi le Lycée Jérémie de la Rue ?</h4>
-                    <p class="formation-objectif-text">
-                        J'ai choisi ce lycée car, en tant qu'établissement de mon secteur, il me permettait d'atteindre mon objectif de poursuite d'études supérieures tout en offrant les spécialités qui 
-                        correspondaient parfaitement à mon projet : Mathématiques, NSI et Physique-Chimie en première, puis Mathématiques et NSI en terminale.
-                    </p>
-
-                    <h4 class="formation-objectif-title">Et maintenant ?</h4>
-                    <p class="formation-objectif-text">
-                       L'obtention de mon baccalauréat m'a permis d'<strong>acquérir les bases solides </strong>nécessaires en Mathématiques et en Informatique pour m'engager dans mes études supérieures.
-                    </p>
-                </details>
-
-                <h2> Certifications </h2>
-                <details class="formation-item">
-                    <img src="theme/picture/logo_cisco.png" alt="Logo Cisco" class="formation-logo"> 
-                    <summary>
-                        <h3> Cisco CCNA : Introduction aux Réseaux </h3>
-                        <h4> Sept. 2025 - Présent </h4>
-                    </summary>
-                    <div class="formation-details">
-                        <div class="detail-row">
-                            <strong>Plateforme :</strong> <span>Cisco Netacad</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Intitulé :</strong> <span>CCNA : Introduction aux Réseaux</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Obtention :</strong> <span>En cours</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Année :</strong> <span>2025 - Présent</span>
-                        </div>
-                    </div>
-                    <h4 class="formation-objectif-title">Objectif de la Certification</h4>
-                    <p class="formation-objectif-text">
-                        Cisco CCNA est une certification qui permet d'acquérir les compétences 
-                        fondamentales pour l'<strong>installation</strong>, la <strong>configuration</strong>, l'<strong>exploitation</strong> et le <strong>dépannage</strong> des réseaux d'entreprise.
-                    </p>
-                    
-                    <h4 class="formation-objectif-title">Pourquoi CCNA ?</h4>
-                    <p class="formation-objectif-text">
-                        Dans cette certification, j'apprends à maîtriser les fondements des réseaux en m'appuyant sur les modèles <strong>OSI</strong> et <strong>TCP/IP</strong>. L'objectif est de savoir configurer les paramètres de base des routeurs et commutateurs via <strong>Cisco IOS</strong>, tout en manipulant les systèmes de numération binaire et hexadécimal pour l'adressage.
-
-                        La formation permet de gérer les supports physiques, la commutation <strong>Ethernet</strong>, ainsi que la conception de plans d'adressage complexes par la segmentation de réseaux <strong>IPv4</strong> et <strong>IPv6</strong>. La différenciation des protocoles <strong>TCP</strong> et <strong>UDP</strong>, la configuration de services comme le <strong>DNS</strong> ou le <strong>DHCP</strong>, et l'application des bases de la <strong>sécurité réseau</strong> font également partie des compétences acquises. Enfin, l'utilisation d'outils de diagnostic devient naturelle pour tester et dépanner la connectivité d'un réseau opérationnel.
-                    </p>
-
-                    <h4 class="formation-objectif-title">Et maintenant ?</h4>
-                    <p class="formation-objectif-text">
-                        Une fois cette certification acquise, j'aurai appris les méthodes permettant de <strong>concevoir</strong> et d'<strong>implémenter une topologie réseau</strong>, en utilisant l'outil de simulation <strong>Cisco Packet Tracer</strong>, et serai capable de paramétrer la majorité des <strong>équipements Cisco</strong>.
-                    </p>
-                </details>
-                <details class="formation-item">
-                    <img src="theme/picture/logo_psc1.png" alt="Logo PSC1" class="formation-logo"> 
-                    <summary>
-                        <h3> PSC1 - Formation premiers secours citoyen </h3>
-                        <h4> Obtenu : 2024 </h4>
-                    </summary>
-                    <div class="formation-details">
-                        <div class="detail-row">
-                            <strong>Intitulé :</strong> <span>PSC1 - Formation premiers secours citoyen</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Obtention :</strong> <span>OUI</span>
-                        </div>
-                        <div class="detail-row">
-                            <strong>Année :</strong> <span>2024</span>
-                        </div>
-                    </div>
-                    <h4 class="formation-objectif-title">Objectif de la Certification</h4>
-                    <p class="formation-objectif-text">
-                       La certification PSC1 permet de <strong>préparer au mieux l'arrivée des secours</strong> en effectuant les premiers gestes de secourisme et les soins vitaux immédiats, optimisant ainsi les chances de survie de la victime.
-                       La validation de cette certification s'effectue au moyen d'<strong>exercices pratiques et de mises en situation simulant des urgences réelles</strong> comme les cas d'étouffement, de brûlures ou de perte de conscience.
-                    </p>
-                    
-                    <h4 class="formation-objectif-title">Pourquoi la PSC1 ?</h4>
-                    <p class="formation-objectif-text">
-                       J'ai entrepris la démarche de faire cette certification afin de savoir <strong>secourir et protéger une personne en danger</strong> en appliquant les bons gestes.
-                       Cela m'assure de répondre avec <strong>calme</strong> et <strong>discernement</strong> aux situations de stress, sans paniquer dans un cadre personnel ou professionnel.
-                    </p>
-
-                    <h4 class="formation-objectif-title">Et maintenant ?</h4>
-                    <p class="formation-objectif-text">
-                        Grâce à cette certification, je suis apte à intervenir et à mettre en œuvre les gestes nécessaires pour <strong>secourir et protéger</strong> une personne en situation de danger dans ma vie quotidienne.
-                    </p>
-                </details>
+            <div class="header-image">
+                <img src="theme/picture/photo_profil.jpeg" alt="Photo de Enzo LAMANNA" id="maPhotoProfil">
             </div>
-            </section>
-            
-            <section id="competence"> 
-                <h2> Compétences </h2>
-                
-                <div class="skill-group">
-                    <h3> Hard Skills </h3>
-                    <br> <h4> Mes compétences techniques continuent d'évoluer et de s'enrichir grâce à ma formation actuelle. </h4> <br>
-                    <div class="cards competence-cards"> 
-                        
-                        <article class="competence-item">
-                            <div class="competence-header">
-                                <img src="theme/picture/code.jpg" alt="Logo de la Hard Skill Programmation" class="competence-logo">
-                                <h3>Programation</h3>
+        </div>
+    </header>
+
+    <main>
+        <section id="moi">
+            <div class="section-container">
+                <h2>À propos</h2>
+                <div class="cards">
+                    <article>
+                        <p>Je me présente, je suis Enzo LAMANNA, étudiant en première année de BUT Réseaux &
+                            Télécommunications à l'IUT d'Aubière (63).<br><br>
+                            Initialement attiré par la programmation pure et son aspect logique, mon manque de clarté
+                            professionnelle m'a finalement mené vers une réorientation dans le domaine des réseaux.
+                            C'est why, j'ai choisi de poursuivre mes études en BUT Réseaux et Télécommunications
+                            (R&T), non seulement pour me spécialiser en réseaux, mais aussi pour la polyvalence des
+                            compétences offertes par cette formation.<br><br>
+                            Dans l'objectif de valider mon diplôme et apprendre dans un cadre concret grâce à un
+                            environnement professionel, je suis à la recherche d'un stage de 10 semaine à compter
+                            d'avril 2027 en réseau.<br><br>
+                            Sociable, curieux et rigoureux sont les trois adjectifs qui définissent parfaitement mon
+                            attitude dans un contexte professionnel.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="formation">
+            <div class="section-container">
+                <h2>Formations</h2>
+                <div class="cards">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>BUT - Réseaux & Télécommunications</h3>
+                                <span class="date-badge current">2025 - Présent</span>
                             </div>
-                            <p>
-                                Maîtrise des bases techniques et syntaxiques des langages Python, C# orienté Unity, C, Script Bash, HTML, CSS, JavaScript et PHP.
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/logo_uca.png" alt="Logo IUT R&T" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Établissement :</strong> <span>IUT Clermont
+                                        Auvergne</span></div>
+                                <div class="detail-row"><strong>Position :</strong> <span>Aubière (63) - Campus des
+                                        Cézeaux</span></div>
+                                <div class="detail-row"><strong>Année :</strong> <span>2025 - Présent</span></div>
+                                <div class="detail-row"><strong>Obtention :</strong> <span>En cours</span></div>
+                                <div class="detail-row"><strong>Formation :</strong> <span>BUT Réseaux &
+                                        Télécommunications</span></div>
+                                <div class="detail-row"><strong>Statut :</strong> <span>Étudiant - BUT1</span></div>
+                            </div>
+                            <h4 class="formation-objectif-title">Objectif de la Formation</h4>
+                            <p class="formation-objectif-text">Le <strong>BUT Réseaux & Télécommunications
+                                    (R&T)</strong> est un diplôme de niveau Bac+3 (Licence professionnelle), accessible
+                                après le Baccalauréat. Cette formation en trois ans vise à former des techniciens
+                                supérieurs spécialisés en réseaux informatiques, télécommunications et cybersécurité (à
+                                partir de la deuxième année BUT2).</p>
+
+                            <h4 class="formation-objectif-title">Pourquoi l'IUT d'Aubière ?</h4>
+                            <p class="formation-objectif-text">Mon choix pour cette formation a été guidé par la
+                                <strong>Journée Portes Ouvertes de l'IUT</strong> en Février 2023, durant laquelle j'ai
+                                eu la chance d'échanger avec les enseignants et étudiants afin de clarifier mes doutes.
+                                Ce qui m'a convaincu est l'<strong>approche polyvalente des cours</strong>, tous
+                                orientés Réseaux. En plus de couvrir en profondeur les aspects techniques liés aux
+                                Réseaux, la formation propose des modules essentiels tels que la
+                                <strong>Communication</strong> et la <strong>Gestion de Projet</strong>, préparant ainsi
+                                l'étudiant à toutes les exigences du métier de technicien réseaux.<br><br>Enfin, le BUT
+                                R&T offre également la possibilité de réaliser des <strong>stages</strong> ou de
+                                l'<strong>alternance</strong> (sur un rythme 1/1mois), ce qui est particulièrement
+                                bénéfique pour acquérir une expérience professionnelle concrète et essentielle avant de
+                                s'insérer sur le marché du travail.
                             </p>
-                        </article>
-                        
-                        <article class="competence-item">
-                            <div class="competence-header">
-                                <img src="theme/picture/reseaux.jpg" alt="Logo de la Hard Skill Réseaux" class="competence-logo">
+
+                            <h4 class="formation-objectif-title">Et maintenant ?</h4>
+                            <p class="formation-objectif-text">Après validation de ma première année de BUT Réseaux
+                                & Télécommunications en fin d'année universitaire 2026, je souhaite poursuivre mon
+                                cursus
+                                afin d'approfondir mes compétences
+                                et de débuter la <strong>spécialisation en
+                                    cybersécurité</strong> dès la deuxième année.</p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Licence 1 - Mathématiques et Informatique</h3>
+                                <span class="date-badge past">2024 - 2025</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/logo_licence.png" alt="Logo UCA" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Établissement :</strong> <span>UCA - Université Clermont
+                                        Auvergne</span></div>
+                                <div class="detail-row"><strong>Position :</strong> <span>Aubière (63) - Campus des
+                                        Cézeaux</span></div>
+                                <div class="detail-row"><strong>Année :</strong> <span>2024 - 2025</span></div>
+                                <div class="detail-row"><strong>Obtention :</strong> <span>Non validé</span></div>
+                                <div class="detail-row"><strong>Formation :</strong> <span>Double Licence Mathématiques
+                                        et Informatique</span></div>
+                                <div class="detail-row"><strong>Statut :</strong> <span>Étudiant - L1</span></div>
+                            </div>
+                            <h4 class="formation-objectif-title">Objectif de la Formation</h4>
+                            <p class="formation-objectif-text">La Licence Mathématiques-Informatique offre, en trois
+                                ans, une double expertise. Elle développe la rigueur analytique grâce aux mathématiques
+                                et les fondations de l'algorithmique avec l'informatique, formant des profils aptes à
+                                modéliser et résoudre des problèmes complexes.</p>
+
+                            <h4 class="formation-objectif-title">Pourquoi la Licence ?</h4>
+                            <p class="formation-objectif-text">Suite au refus de mon dossier pour le BUT R&T via
+                                Parcoursup en 2023, j'ai opté pour la Licence Mathématiques et Informatique. Ce choix
+                                m'a permis de rester aligné avec mon projet d'acquérir des compétences fondamentales en
+                                logique et en informatique.</p>
+
+                            <h4 class="formation-objectif-title">Et maintenant ?</h4>
+                            <p class="formation-objectif-text">Bien que ma première année en Licence ne fût pas mon
+                                orientation de départ et qu'elle ne soit pas validé, cette expérience m'a permis de
+                                m'adapté aux exigences de la
+                                <strong>vie étudiante</strong> et de gagner en <strong>autonomie</strong>. J'ai
+                                également profité de cette période pour approfondir mes compétences techniques,
+                                notamment en découvrant l'environnement <strong>Linux</strong> et le langage
+                                <strong>Bash</strong>. Fort de ces acquis, j'ai renouvelé ma candidature pour le BUT
+                                R&T, un cursus en parfaite adéquation avec mon projet professionnel, et j'ai le plaisir
+                                d'y être admis pour la rentrée de septembre 2025.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Baccalauréat - Série Générale</h3>
+                                <span class="date-badge past">2021 - 2024</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/logo_lycee.jpg" alt="Logo Lycée" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Établissement :</strong> <span>Lycée Polyvalent Jérémie
+                                        de la Rue</span></div>
+                                <div class="detail-row"><strong>Position :</strong> <span>Charlieu (42)</span></div>
+                                <div class="detail-row"><strong>Année :</strong> <span>2021 - 2024</span></div>
+                                <div class="detail-row"><strong>Obtention :</strong> <span>OUI</span></div>
+                                <div class="detail-row"><strong>Formation :</strong> <span>Baccalauréat Série Générale -
+                                        Spécialités Mathématiques et NSI</span></div>
+                                <div class="detail-row"><strong>Statut :</strong> <span>Lycéen</span></div>
+                            </div>
+                            <h4 class="formation-objectif-title">Objectif de la Formation</h4>
+                            <p class="formation-objectif-text">Le Baccalauréat général a pour objectif principal de se
+                                <strong>préparer aux études supérieures</strong> en offrant une culture générale
+                                approfondie. De plus, les spécialités <strong>Mathématiques</strong> et
+                                <strong>NSI</strong> permettent d'acquérir les fondations nécessaires pour s'orienter
+                                vers des filières scientifiques et technologiques.
+                            </p>
+
+                            <h4 class="formation-objectif-title">Pourquoi le Lycée Jérémie de la Rue ?</h4>
+                            <p class="formation-objectif-text">J'ai choisi ce lycée car, en tant qu'établissement de mon
+                                secteur, il me permettait d'atteindre mon objectif de poursuite d'études supérieures
+                                tout en offrant les spécialités qui correspondaient parfaitement à mon projet :
+                                Mathématiques, NSI et Physique-Chimie en première, puis Mathématiques et NSI en
+                                terminale.</p>
+
+                            <h4 class="formation-objectif-title">Et maintenant ?</h4>
+                            <p class="formation-objectif-text">L'obtention de mon baccalauréat m'a permis
+                                d'<strong>acquérir les bases solides</strong> nécessaires en Mathématiques et en
+                                Informatique pour m'engager dans mes études supérieures, notamment pour le BUT RT.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <h2 class="sub-section-title">Certifications</h2>
+                <div class="cards">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Cisco CCNA</h3>
+                                <span class="date-badge current">Obtention : En cours</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/logo_cisco.png" alt="Logo Cisco" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Intitulé :</strong> <span>Cisco CCNA</span></div>
+                                <div class="detail-row"><strong>Obtention :</strong> <span>En cours</span></div>
+                                <div class="detail-row"><strong>Année :</strong> <span>2025 - Présent</span></div>
+                            </div>
+                            <h4 class="formation-objectif-title">Objectif de la Certification</h4>
+                            <p class="formation-objectif-text">Cisco CCNA is une certification qui permet d'acquérir les
+                                compétences fondamentales pour l'<strong>installation</strong>, la
+                                <strong>configuration</strong>, l'<strong>exploitation</strong> et le
+                                <strong>dépannage</strong> des réseaux d'entreprise.
+                            </p>
+
+                            <h4 class="formation-objectif-title">Pourquoi CCNA ?</h4>
+                            <p class="formation-objectif-text">Dans cette certification, j'apprends à maîtriser les
+                                fondements des réseaux en m'appuyant sur les modèles <strong>OSI</strong> et
+                                <strong>TCP/IP</strong>. L'objectif is de savoir configurer les paramètres de base des
+                                routeurs et commutateurs via <strong>Cisco IOS</strong>, tout en manipulant les systèmes
+                                de numération binaire et hexadécimal pour l'adressage. La formation permet de gérer les
+                                supports physiques, la commutation <strong>Ethernet</strong>, ainsi que la conception de
+                                plans d'adressage complexes par la segmentation de réseaux <strong>IPv4</strong> et
+                                <strong>IPv6</strong>. La différenciation des protocoles <strong>TCP</strong> et
+                                <strong>UDP</strong>, la configuration de services comme le <strong>DNS</strong> ou le
+                                <strong>DHCP</strong>, et l'application des bases de la <strong>sécurité réseau</strong>
+                                font également partie des compétences acquises. Enfin, l'utilisation d'outils de
+                                diagnostic devient naturelle pour tester et dépanner la connectivité d'un réseau
+                                opérationnel.
+                            </p>
+
+                            <h4 class="formation-objectif-title">Et maintenant ?</h4>
+                            <p class="formation-objectif-text">Une fois cette certification acquise, j'aurai appris les
+                                méthodes permettant de <strong>concevoir</strong> et d'<strong>implémenter une topologie
+                                    réseau</strong>, en utilisant l'outil de simulation <strong>Cisco Packet
+                                    Tracer</strong>, et serai capable de paramétrer la majorité des <strong>équipements
+                                    Cisco</strong>.</p>
+                        </div>
+                    </details>
+
+                    <div class="cards">
+                        <details class="formation-item">
+                            <summary>
+                                <div class="summary-title">
+                                    <h3>SST - Sauveuteur Secouriste du Travail</h3>
+                                    <span class="date-badge past">Obtention : 2026</span>
+                                </div>
+                            </summary>
+                            <div class="details-content">
+                                <img src="theme/picture/logo_sst.png" alt="Logo SST" class="formation-logo">
+                                <div class="formation-details">
+                                    <div class="detail-row"><strong>Intitulé :</strong> <span>SST</span></div>
+                                    <div class="detail-row"><strong>Obtention :</strong> <span>OUI</span></div>
+                                    <div class="detail-row"><strong>Année :</strong> <span>2026</span></div>
+                                </div>
+                                <h4 class="formation-objectif-title">Objectif de la Certification</h4>
+                                <p class="formation-objectif-text">La certification SST (Sauveteur Secouriste du
+                                    Travail) est une formation qui permet d'acquérir les compétences fondamentales pour
+                                    <strong>intervenir efficacement face à une situation d'accident</strong> du travail
+                                    et participer
+                                    activement à la <strong>prévention des risques professionnels</strong> au sein de
+                                    l'entreprise.
+                                </p>
+
+                                <h4 class="formation-objectif-title">Pourquoi SST ?</h4>
+                                <p class="formation-objectif-text">Souhaitant apporter une réelle valeur ajoutée en
+                                    entreprise, j'ai choisi de passer le SST pour <strong>compléter ma formation
+                                        PSC1</strong> et
+                                    l'adapter au contexte professionnel. Je <strong>maîtrise</strong> désormais les
+                                    gestes de secours
+                                    indispensables pour protéger une personne en danger tout en développant discernement
+                                    nécessaires pour gérer une situation critique.
+                                    De plus, cela m'a permis d'<strong>assimiler le cadre juridique</strong> et mes
+                                    <strong>responsabilités</strong>
+                                    concernant l'exécution de ces gestes de premiers secours.
+                                </p>
+
+                                <h4 class="formation-objectif-title">Et maintenant ?</h4>
+                                <p class="formation-objectif-text">Désormais certifié, je suis pleinement <strong>apte à
+                                        intervenir</strong> avec méthode pour <strong>protéger</strong> toute personne
+                                    en danger. Même face à des
+                                    situations complexes ou difficiles, je m'engage à <strong>faire tout mon possible
+                                        pour
+                                        porter secours</strong> et appliquer les gestes nécessaires. Que ce soit dans ma
+                                    vie
+                                    quotidienne ou au sein de mon futur environnement professionnel, je dispose des
+                                    outils techniques et réglementaires indispensables pour assurer la sécurité de mon
+                                    entourage et agir en tant que <strong>membre actif de la prévention</strong>.
+                                </p>
+                            </div>
+                        </details>
+
+
+
+                        <details class="formation-item">
+                            <summary>
+                                <div class="summary-title">
+                                    <h3>PSC1 - Formation premiers secours citoyen</h3>
+                                    <span class="date-badge past">Obtention : 2024</span>
+                                </div>
+                            </summary>
+                            <div class="details-content">
+                                <img src="theme/picture/logo_psc1.png" alt="Logo PSC1" class="formation-logo">
+                                <div class="formation-details">
+                                    <div class="detail-row"><strong>Intitulé :</strong> <span>PSC1</span></div>
+                                    <div class="detail-row"><strong>Obtention :</strong> <span>OUI</span></div>
+                                    <div class="detail-row"><strong>Année :</strong> <span>2024</span></div>
+                                </div>
+                                <h4 class="formation-objectif-title">Objectif de la Certification</h4>
+                                <p class="formation-objectif-text">La certification PSC1 permet de <strong>préparer au
+                                        mieux
+                                        l'arrivée des secours</strong> en effectuant les premiers gestes de secourisme
+                                    et
+                                    les soins vitaux immédiats, optimisant ainsi les chances de survie de la victime. La
+                                    validation de cette certification s'effectue au moyen d'<strong>exercices pratiques
+                                        et
+                                        de mises en situation simulant des urgences réelles</strong> comme les cas
+                                    d'étouffement, de brûlures ou de perte de conscience.</p>
+
+                                <h4 class="formation-objectif-title">Pourquoi la PSC1 ?</h4>
+                                <p class="formation-objectif-text">J'ai entrepris la démarche de faire cette
+                                    certification
+                                    afin de savoir <strong>secourir et protéger une personne en danger</strong> en
+                                    appliquant les bons gestes. Cela m'assure de répondre avec <strong>calme</strong> et
+                                    <strong>discernement</strong> aux situations de stress, sans paniquer dans un cadre
+                                    personnel ou professionnel.
+                                </p>
+
+                                <h4 class="formation-objectif-title">Et maintenant ?</h4>
+                                <p class="formation-objectif-text">Grâce à cette certification, je suis apte à
+                                    intervenir et
+                                    à mettre en œuvre les gestes nécessaires pour <strong>secourir et protéger</strong>
+                                    une
+                                    personne en situation de danger dans ma vie quotidienne.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+        </section>
+
+        <section id="competence">
+            <div class="section-container">
+                <h2>Compétences</h2>
+
+                <h3>Compétences Techniques</h3>
+                <br>
+
+                <div class="cards">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Programmation</h3>
+                                <span class="date-badge">Technique</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <h4 class="formation-objectif-title">Enjeux techniques</h4>
+                            <p class="formation-objective-text">
+                                Au quotidien, la programmation et le développement web me permettent de
+                                <strong>concevoir</strong>, de
+                                <strong>déployer</strong> et de <strong>concrétiser</strong> mes différents projets. De
+                                plus, dans le domaine de la
+                                cybersécurité, la maîtrise du code est une <strong>compétence cruciale</strong> pour
+                                automatiser les
+                                défenses, <strong>analyser les vulnérabilités</strong> et répondre efficacement aux
+                                besoins des
+                                infrastructures.
+                            </p>
+
+                            <div class="sub-skills-grid">
+                                <div class="sub-skill-card">
+                                    <h4>Python</h4>
+                                    <p class="formation-objective-text">
+                                        Essentiel pour l'<strong>automatisation</strong>, <strong>Python</strong> est un
+                                        langage dont je maîtrise aussi bien les bases — comme la manipulation des
+                                        variables, des boucles et des fonctions — que des concepts plus avancés. Je sais
+                                        notamment implémenter la <strong>récursion</strong> et appliquer les principes
+                                        de la <strong>Programmation Orientée Objet (POO)</strong> à travers
+                                        l'utilisation de méthodes dédiées.
+                                    </p>
+                                </div>
+
+                                <div class="sub-skill-card">
+                                    <h4>C</h4>
+                                    <p class="formation-objective-text">
+                                        Je maîtrise les bases et la structure du langage C, ce qui m'a permis de mieux
+                                        <strong>assimiler la gestion de la mémoire</strong> et l'organisation des
+                                        espaces de données,
+                                        notamment à travers la manipulation des pointeurs et de l'allocation dynamique.
+                                    </p>
+                                </div>
+
+                                <div class="sub-skill-card">
+                                    <h4>Web</h4>
+                                    <p class="formation-objective-text">
+                                        En <strong>développement web</strong>, je maîtrise les technologies
+                                        fondamentales : <strong>HTML</strong> pour la structure, <strong>CSS</strong>
+                                        pour le design, et <strong>JavaScript</strong> pour le dynamisme. Ces
+                                        compétences m'ont non seulement permis de <strong>concevoir et réaliser</strong>
+                                        l'intégralité de ce portfolio, mais elles m'aident aussi à <strong>analyser
+                                            l'architecture d'une application</strong> pour mieux en comprendre les
+                                        <strong>vulnérabilités</strong>, qu'elles se situent côté
+                                        <strong>front-end</strong> ou <strong>back-end</strong>.
+                                    </p>
+                                </div>
+
+                                <div class="sub-skill-card">
+                                    <h4>Base de donnée</h4>
+                                    <p class="formation-objective-text">
+                                        Je maîtrise le couple <strong>PHP / SQL</strong> pour le <strong>développement
+                                            côté serveur</strong>. PHP me permet de gérer la <strong>logique interne de
+                                            l'application</strong> (le traitement des requêtes utilisateurs), tandis que
+                                        SQL assure l'<strong>interaction avec les bases de données</strong>. Cette
+                                        compétence <strong>back-end</strong> est essentielle pour comprendre comment
+                                        transitent les données et comment <strong>sécuriser un site</strong> contre des
+                                        failles critiques comme les <strong>injections SQL</strong>.
+                                    </p>
+                                </div>
+
+                                <div class="sub-skill-card">
+                                    <h4>Bash</h4>
+                                    <p class="formation-objective-text">
+                                        Maîtrise de l'environnement <strong>Linux</strong> et de son
+                                        <strong>terminal</strong> pour naviguer avec aisance au sein des arborescences
+                                        de fichiers. Capacité à concevoir des <strong>scripts Bash</strong> simples afin
+                                        d'<strong>automatiser des tâches</strong> répétitives et optimiser la gestion du
+                                        système.
+                                    </p>
+                                </div>
+
+                                <div class="sub-skill-card">
+                                    <h4>PowerShell</h4>
+                                    <p class="formation-objective-text">
+                                        Utilisation de <strong>PowerShell</strong> sous Windows pour l'administration
+                                        système, notamment la <strong>gestion des utilisateurs</strong>,
+                                        l'administration des droits et la manipulation avancée du <strong>système de
+                                            fichiers</strong> (fichiers et dossiers).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
                                 <h3>Réseaux</h3>
+                                <span class="date-badge">Technique</span>
                             </div>
-                            <p>
-                                Configuration et déploiement d'équipements Cisco : Routeurs, Switches, Bornes Wi-Fi (AP) et solutions de Téléphonie sur IP (ToIP).
-                            </p>
-                        </article>
-
-                        <article class="competence-item">
-                            <div class="competence-header">
-                                <img src="theme/picture/antenne.jpg" alt="Logo de la Hard Skill Télécommunications" class="competence-logo">
-                                <h3>Télécommunications</h3>
-                            </div>
-                            <p>
-                                Maîtrise du diagnostic technique : analyse de signaux à l'oscilloscope, mesures optiques (photomètre, vérification de fibre) et étude de câblage coaxial.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-                
-                <div class="skill-group">
-                    <h3> Soft Skills </h3>
-                    <div class="cards competence-cards"> 
-
-                        <article class="competence-item">
-                            <div class="competence-header">
-                                <img src="theme/picture/equipe.jpg" alt="Logo de la Soft Skill Collaboration" class="competence-logo">
-                                <h3>Travail d'équipe</h3>
-                            </div>
-                            <p>
-                              Je fais preuve d'une forte aptitude à la collaboration et suis capable de mener à bien des travaux d'équipe en assurant une répartition stratégique et efficace des charges pour l'atteinte des objectifs.
-                            </p>
-                        </article>
-
-                        <article class="competence-item">
-                            <div class="competence-header">
-                                <img src="theme/picture/ponctuel.jpg" alt="Logo de la Soft Skill Curieux" class="competence-logo">
-                                <h3>Curieux</h3>
-                            </div>
-                            <p>
-                                Ma curiosité naturelle me pousse à explorer divers sujets et à m'investir pleinement dans l'approfondissement de mes connaissances.
-                            </p>
-                        </article>
-
-                        <article class="competence-item">
-                            <div class="competence-header">
-                                <img src="theme/picture/precis.jpg" alt="Logo de la Soft Skill Rigueur" class="competence-logo">
-                                <h3>Méthodique</h3>
-                            </div>
-                            <p>
-                                J'adopte une approche méthodique et approfondie dans mon travail, mais aussi dans mes activités personnelles. Mon sens du détail me permettent de garantir une exécution complète et rigoureuse des tâches.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="experience"> <h2> Expériences </h2>
-                <div class="cards" id="experience-cards"> 
-                    <details class="formation-item experience-item">
-                        <img src="theme/picture/logo_leclerc.png" alt="Logo de E.Leclerc" class="formation-logo">
-                        
-                        <summary>
-                            <h3>Saisonnier E.Leclerc - Mise en Rayon</h3>
-                            <h4>Août 2024 et Août 2025</h4>
                         </summary>
-                        
-                        <div class="formation-details experience-details">
-                            <div class="detail-row">
-                                <strong>Entreprise :</strong> <span>E.Leclerc PARAY LE MONIAL</span>
+                        <div class="details-content">
+                            <h4 class="formation-objectif-title">Enjeux techniques</h4>
+                            <p class="formation-objectif-text">
+                                Se spécialiser dans les réseaux exige une compréhension globale de systèmes en évolution
+                                constante. Au-delà du simple routage des données, il s'agit de maîtriser
+                                l'<strong>architecture</strong> et la <strong>gestion des infrastructures</strong> pour
+                                garantir leur <strong>bon fonctionnement</strong>.
+                            </p>
+
+                            <div class="sub-skills-grid">
+                                <div class="sub-skill-card">
+                                    <h4>Configuration</h4>
+                                    <p class="formation-objective-text">
+                                        Je maîtrise la <strong>configuration en ligne de commande (CLI)</strong> des
+                                        équipements <strong>Cisco</strong>, notamment les <strong>routeurs</strong>,
+                                        <strong>commutateurs</strong> et serveurs. Cela me permet de <strong>déployer et
+                                            de paramétrer</strong> des <strong>infrastructures réseaux</strong>
+                                        entièrement opérationnelles.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="detail-row">
-                                <strong>Lieu :</strong> <span>Paray-le-Monial (71)</span>
+
+                            <div class="sub-skills-grid">
+                                <div class="sub-skill-card">
+                                    <h4>Test de connectivité</h4>
+                                    <p class="formation-objective-text">
+                                        Je sais valider le bon fonctionnement d'un réseau en effectuant des
+                                        <strong>tests de connectivité (Ping)</strong>. J'utilise également le logiciel
+                                        <strong>Wireshark</strong> pour effectuer de l'<strong>analyse de
+                                            trames</strong>, ce qui me permet de vérifier la conformité des échanges et
+                                        de diagnostiquer d'éventuelles anomalies.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="detail-row">
-                                <strong>Durée :</strong> <span>1 mois</span>
+
+                            <div class="sub-skills-grid">
+                                <div class="sub-skill-card">
+                                    <h4>Téléphonie d'entreprise</h4>
+                                    <p class="formation-objective-text">
+                                        Je sais déployer et configurer un <strong>serveur IPBX</strong> pour mettre en
+                                        place une solution de <strong>Téléphonie sur IP (ToIP)</strong> en entreprise.
+                                        Je maîtrise l'intégration de différents terminaux, tels que les téléphones
+                                        <strong>DECT</strong> ou les <strong>boîtiers ATA</strong>, ainsi que le
+                                        paramétrage des fonctionnalités professionnelles comme les <strong>messageries
+                                            vocales</strong> et les <strong>groupes d'appel</strong>.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="detail-row">
-                                <strong>Rôle :</strong> <span>Saisonnier - Mise en rayon</span>
+
+                            <div class="sub-skills-grid">
+                                <div class="sub-skill-card">
+                                    <h4>Service</h4>
+                                    <p class="formation-objective-text">
+                                        Capable de répondre aux besoins d'une infrastructure, j'assure la mise en place
+                                        et le paramétrage de nombreux services clés : le <strong>DHCP</strong>
+                                        (<em>Dynamic Host Configuration Protocol</em>) pour l'adressage dynamique, le
+                                        <strong>DNS</strong> (<em>Domain Name System</em>) pour la résolution de noms,
+                                        le <strong>FTP</strong> (<em>File Transfer Protocol</em>) pour le transfert de
+                                        fichiers, ainsi que le déploiement de <strong>serveurs Web</strong>. De plus, je
+                                        sais gérer un domaine via <strong>Active Directory (AD)</strong> sous
+                                        <strong>Windows Server</strong>, notamment en configurant des stratégies de
+                                        groupe (<strong>GPO</strong>).
+                                    </p>
+                                </div>
                             </div>
+
+                            <div class="sub-skills-grid">
+                                <div class="sub-skill-card">
+                                    <h4>Logiciel de simulation</h4>
+                                    <p class="formation-objective-text">
+                                        Utilisation du logiciel de simulation <strong>Cisco Packet Tracer</strong> pour
+                                        maquetter virtuellement des infrastructures réseaux physiques. Cet outil me
+                                        permet de concevoir des architectures complexes et d'effectuer des tests
+                                        rigoureux en <strong>mode temps réel</strong> ou en <strong>mode
+                                            simulation</strong> afin de valider leur bon fonctionnement avant tout
+                                        déploiement réel.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="sub-skills-grid">
+                                <div class="sub-skill-card">
+                                    <h4>Plan d'adressage</h4>
+                                    <p class="formation-objective-text">
+                                        Capacité à structurer un <strong>plan d'adressage</strong> logique et évolutif
+                                        en fonction du cahier des charges, assurant la <strong>bonne
+                                            connectivité</strong> de l'ensemble des équipements et facilitant la
+                                        <strong>gestion du réseau</strong>.
+                                    </p>
+                                </div>
+                            </div>
+
+
                         </div>
-                        
-                        <h4 class="formation-objectif-title">Contexte</h4>
-                        <p class="formation-objectif-text">
-                            <center>Volonté de mettre un pied dans le monde professionnel pour acquérir de l'expérience et de faire des économies pour mes études.</center>
-                        </p>
-
-                        <h4 class="formation-objectif-title">Objectif</h4>
-                        <p class="formation-objectif-text">
-                            Assurer le remplacement d'un salarié du rayon des liquides afin de garantir la continuité du service et la disponibilité des produits durant la forte affluence estivale.
-                        </p>
-
-                        <h4 class="formation-objectif-title">Missions</h4>
-                        <p class="formation-objectif-text">
-                            Durant cette expérience, j'ai eu plusieurs responsabilités. Tout d'abord, j'étais chargé de la mise en rayon en utilisant un transpalette électrique pour remplir les étagères et offrir un maximum de choix aux clients.
-                            Ensuite, avant l'ouverture du magasin, je faisais le facing (avancer les produits) pour que le rayon paraisse toujours plein et agréable aux yeux des clients.
-                            De plus, mon travail comprenait aussi l'organisation et le nettoyage de la réserve pour préparer l'arrivée des livraisons. Enfin, quand j'avais de l'avance, j'aidais à la mise en place dans d'autres parties du rayon des liquides.
-                        </p>
-
-                        <h4 class="formation-objectif-title">Bilan</h4>
-                        <p class="formation-objectif-text">
-                            Cette expérience m'a offert un premier aperçu concret du monde professionnel, me permettant de développer mes compétences en <strong>organisation</strong>, de <strong>savoir identifier le bon moment pour solliciter de l'aide</strong>, de <strong>renforcer mon esprit d'équipe</strong> et d'<strong>améliorer mon relationnel avec les clients</strong>.
-                        </p>
-
-                    </details>
                 </div>
-                <br>
-                <div class="cards" id="experience-cards"> 
-                    <details class="formation-item experience-item">
-                        <img src="theme/picture/logo_lubi.jpg" alt="Logo de E.Leclerc" class="formation-logo">
-                        
-                        <summary>
-                            <h3>Stage d'observation Lubi'Carrelage - Architecture Intérieur et Vente</h3>
-                            <h4>2021</h4>
-                        </summary>
-                        
-                        <div class="formation-details experience-details">
-                            <div class="detail-row">
-                                <strong>Entreprise :</strong> <span>Lubi'Carrelage</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Lieu :</strong> <span>Pouilly-s/s-Charlieu (42)</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Durée :</strong> <span>1 semaine</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Rôle :</strong> <span>Stagiaire</span>
-                            </div>
-                        </div>
-                        
-                        <h4 class="formation-objectif-title">Contexte</h4>
-                        <p class="formation-objectif-text">
-                            <center>Volonté de trouver un stage afin de réaliser la séquence d'observation requise pour l'année de Troisième.</center>
-                        </p>
-
-                        <h4 class="formation-objectif-title">Objectif</h4>
-                        <p class="formation-objectif-text">
-                           Acquérir une première immersion professionnelle pour m'aider à déterminer mon orientation future, découvrir les mécanismes de la relation clientèle et explorer le domaine de l'architecture intérieure.
-                        </p>
-
-                        <h4 class="formation-objectif-title">Missions</h4>
-                        <p class="formation-objectif-text">
-                            Au cours de cette expérience, j'ai eu pour mission principale l'observation active du métier, ce qui impliquait de poser des questions pour bien comprendre le domaine et vérifier si ce secteur m'attirait. De plus, j'ai eu l'occasion d'assister à des réunions permettant d'organiser les jours suivants et de faire un récapitulatif des semaines passées. Enfin, j'ai également pris des notes détaillées sur les techniques de communication et de relation client, et j'ai contribué concrètement en aidant au rangement et à l'organisation des carrelages.
-                        </p>
-
-                        <h4 class="formation-objectif-title">Bilan</h4>
-                        <p class="formation-objectif-text">
-                            Finalement, bien que l'expérience m'ait permis de découvrir concrètement l'environnement de travail, j'ai réalisé que le métier d'architecte d'intérieur n'était pas la voie que je souhaitais suivre.
-                        </p>
-                    </details>
-                </div>
-            </section>
-            
-            <section id="projet"> <h2> Projets </h2>
-            <div class="cards" id="experience-cards"> 
-                    <details class="formation-item experience-item">
-                        <img src="theme/picture/logo_html_css.png" alt="Logo HTML/CSS" class="formation-logo">
-
-                        <summary>
-                            <h3>Projet Portfolio (HTML & CSS) : Se présenter sur Internet</h3>
-                            <h4>2025 - Semestre 1 BUT R&T</h4>
-                        </summary>
-                        
-                        <h4 class="formation-objectif-title">Contexte</h4>
-                        <p class="formation-objectif-text">
-                            <center>Se présenter sur Internet avec un portfolio à développer en HTML et CSS. </center>
-                        </p>
-                        <div class="formation-details experience-details">
-                            <div class="detail-row">
-                                <strong>Type :</strong> <span>Individuel</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Durée :</strong> <span>1 Semestre</span>
-                            </div>
-                        </div>
-                        <br>
-                        <h4 class="formation-objectif-title">Objectif</h4>
-                        <p class="formation-objectif-text">
-                            Ce portfolio a pour vocation d'<strong>appuyer notre insertion professionnelle en fournissant un document détaillé de notre parcours</strong>, tout en constituant une mise en application concreétale des notions HTML et CSS acquises lors de notre première année de BUT en développement Web.
-                            <br> <br>
-                        </p>
-
-                        <h4 class="formation-objectif-title">Missions</h4>
-                        <p class="formation-objectif-text">
-                            Le projet a démarré par des séances de TD fournissant une structure de base uniforme pour l'ensemble du groupe. Par la suite, le développement s'est fait en autonomie totale. La principale difficulté résidait dans cette indépendance, bien que les enseignants aient pu être consultés pour des conseils. J'ai principalement mobilisé des ressources externes (W3Schools, MDN Web Docs, Instagram et YouTube) pour surmonter les défis et résoudre les problématiques de codage rencontrées.
-                            <br> <br>
-                        </p>
-
-                        <h4 class="formation-objectif-title">Bilan</h4>
-                        <p class="formation-objectif-text">
-                            Ce projet de portfolio m'a permis de mettre en pratique le HTML et le CSS de manière concrète. Si le rendu visuel est satisfaisant, je prévois d'affiner la partie technique au fur et à mesure de l'évolution du site et de l'ajout de nouveaux contenus, afin d'optimiser progressivement la qualité de mon code.
-                            <br> <br>
-                            <div class="formation-details experience-details">
-                            <div class="detail-row">
-                                <strong>Évaluation Visuel :</strong> <span>17.0/20</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Moyenne de classe :</strong> <span>13.21/20</span>
-                            </div>
-                            <br> <br>
-                            <div class="detail-row">
-                                <strong>Évaluation Technique :</strong> <span>11.50/20</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Moyenne de classe :</strong> <span>14.76/20</span>
-                            </div>
-                            </div>
-                        </p>
-                    </details>
-                </div>
-                <br>
-                <div class="cards" id="experience-cards"> 
-                    <details class="formation-item experience-item">
-                        <img src="theme/picture/python.jpg" alt="Logo HTML/CSS" class="formation-logo">
-
-                        <summary>
-                            <h3>Projet Python : Traitement de données </h3>
-                            <h4>2025 - Semestre 1 BUT R&T</h4>
-                        </summary>
-                        
-                        <h4 class="formation-objectif-title">Contexte</h4>
-                        <p class="formation-objectif-text">
-                            <center>Savoir traiter des données à l'aide du langage Python.</center>
-                        </p>
-                        <div class="formation-details experience-details">
-                            <div class="detail-row">
-                                <strong>Type :</strong> <span>Individuel</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Durée :</strong> <span>1 Semestre</span>
-                            </div>
-                        </div>
-                        <br>
-                        <h4 class="formation-objectif-title">Objectif</h4>
-                        <p class="formation-objectif-text">
-                            En tant que futur professionnel R&T, je serai régulièrement amené à traiter des données provenant du système d’information de mon entreprise (extraction d'informations liées à l’infrastructure du réseau ou d'informations des utilisateurs). L'objectif est donc de maîtriser le traitement de ces données, notamment à l'aide d'outils comme le langage Python, afin de faciliter les tâches de gestion, ce qui permettra de faire de l'analyse prédictive, d'améliorer le réseau et de gérer les incidents.
-                            <br> <br>
-                            <center> Sujet du Projet </center>
-                            <img src="theme/picture/sujet_projet_python.png" alt="Python" class="sujet-python">
-                            <br>
-                        </p>
-
-                        <h4 class="formation-objectif-title">Missions</h4>
-                        <p class="formation-objectif-text">
-                            J'ai d'abord suivi un semestre de cours de programmation Python, comprenant des TD et TP axés sur divers exercices.
-                            Pour mener à bien ce projet, la mission est de mettre en œuvre les notions vues en cours tout en découvrant la librairie Numpy et Pandas. Ce travail doit être réalisé en autonomie complète, en s'appuyant sur la documentation fournie ou toute autre aide externe trouvée sur Internet.
-                            <br>
-                            Pour organiser le projet, j'ai segmenté le code en quatre étapes clés : l'extraction des données, la création du planning personnalisé par groupe, son affichage et le lancement global de l'application.
-                            (Pour plus de faciliter par rapport à l'appel récurrent des bibliothèques, j'ai crée un alias pour Pandas -> pd et NumPy -> np).
-                            <br> <br> <br>
-                            <strong>Extraction des données</strong> -> Dans un premier temps, j'extrais les données de l'emploi du temps au format CSV de manière non organisé. L'enjeu majeur consiste à traiter la structure des colonnes et à gérer les point-virgules faisant office de délimiteurs entre les données.
-                            <br>
-                            <img src="theme/picture/def_charger_filtrer_SAE15.jpeg" alt="Fonction 1" class="fonction-SAE15">
-                            <br> <br>
-                            <strong>Création du planning</strong> -> Une fois les données extraites, je procède à un filtrage selon le groupe sélectionné par l'utilisateur. Par exemple, si le groupe "TP3" est choisi, le programme isole uniquement les séances de cours correspondantes et écarte les données non pertinentes.
-                            <br>
-                            <img src="theme/picture/def_planning_gr_SAE15.jpeg" alt="Fonction 2" class="fonction-SAE15">
-                            <br> <br>
-                            <strong>Affichage du planning</strong> -> Enfin, j'ai implémenté une fonction d'affichage qui itère sur les données sélectionnées pour restituer le planning final pas à pas.
-                            <br>
-                            <img src="theme/picture/def_afficher_SAE15.png" alt="Fonction 3" class="fonction-SAE15bis">
-                            <br> <br>
-                            <strong>Lancement du programme</strong> -> Pour finir, j'ai créé une fonction main() permettant de faire appel au différentes fonctions pour réaliser le projet.
-                            <br>
-                            <img src="theme/picture/def_main_SAE15.png" alt="Fonction 4" class="fonction-SAE15">
-                            <br> <br>
-                        </p>
-
-                        <h4 class="formation-objectif-title">Bilan</h4>
-                        <p class="formation-objectif-text">
-                            La difficulté rencontré dans ce projet à été de trouver comment améliorer mon code en le réduisant, supprimant et compactant des instructions.
-                            Ce dernier a été réalisé en suivant strictement le cahier des charges et le calendrier impartis. J'en ai retiré trois acquis majeurs : la <strong>capacité à prendre en main </strong>une bibliothèque Python de manière autonome, l'<strong>optimisation</strong> de code pour plus d'efficacité, ainsi qu'une meilleure méthodologie d'<strong>organisation</strong>.
-                            <br>
-                            <center> Aperçu du résultat avec le groupe TP3 par exemple </center>
-                            <img src="theme/picture/resultat_SAE15.png" alt="Résultat" class="fonction-SAE15rls">
-                            <br>
-                            <div class="formation-details experience-details">
-                            <div class="detail-row">
-                                <strong>Note obtenue :</strong> <span>15.68/20</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Moyenne classe :</strong> <span>14.18/20</span>
-                            </div>
-                            </div>
-                            <br> <br>
-                        </p>
-                    </details>
-                </div>
-                <br>
-                <div class="cards" id="experience-cards"> 
-                    <details class="formation-item experience-item">
-                        <img src="theme/picture/kingdomino.png" alt="Kingdomino" class="formation-logo">
-
-                        <summary>
-                            <h3>Projet Python/Github : Jeu de société Kingdomino</h3>
-                            <h4>2025 - Semestre 2 Licence</h4>
-                        </summary>
-                        
-                        <h4 class="formation-objectif-title">Contexte</h4>
-                        <p class="formation-objectif-text">
-                            <center>Développer le jeu de société Kingdomino en Python pour le rendre jouable sur ordinateur et le gérer avec Github, en binôme.</center>
-                        </p>
-                        <br>
-                        <p class="descriptif_kingdomino">
-                            Le but du jeu Kingdomino est de constituer le Royaume le plus lucratif en connectant des tuiles (dominos) représentant différents paysages. Chaque joueur tente de former un carré de 5 cases par 5 autour de son château de départ. Pour placer un domino, l'une de ses cases doit obligatoirement toucher une case déjà présente dans le Royaume qui est soit de la même couleur (le même type de paysage), soit le château. À la fin de la partie, on compte les points en multipliant la taille de chaque zone de paysage identique (appelée domaine) par le nombre de couronnes qui s'y trouvent. Le joueur qui obtient le score le plus élevé l'emporte.
-                        </p>
-                        <div class="formation-details experience-details">
-                            <div class="detail-row">
-                                <strong>Type :</strong> <span>Binôme</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Nom du binôme :</strong> <span>Lilian MOURLON</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Durée :</strong> <span>1 Semestre</span>
-                            </div>
-                        </div>
-                        <br>
-                        <h4 class="formation-objectif-title">Objectif</h4>
-                        <p class="formation-objectif-text">
-                            L'objectif principal de ce projet est d'appliquer concrètement les notions abordées lors du cours de programmation Python et de gestion avec Github du premier semestre de Licence.
-                            <br> <br>
-                            L'évaluation se divise en deux parties :
-                            <br> <br>
-                            • 60% de la note : Réalisation d'une version du jeu jouable intégralement sur la console Python. <br>
-                            • 40% de la note : Développement d'une extension libre visant à améliorer le jeu initial.
-                        </p>
-
-                        <h4 class="formation-objectif-title">Missions</h4>
-                        <p class="formation-objectif-text">
-                            Avec mon binôme, nous avons commencé par répartir les tâches du projet. Le travail s'est fait à partir du squelette Python mis à notre disposition.
-                            De plus, il nous a fallu créer un espace projet sur GitHub et le paramétrer pour que mon binôme, le responsable du module et moi-même ayons un accès au code.
-                            <br> <br>
-                            <center> La répartition s'est faite de la manière suivante :</center>
-                            <br> <br>
-                            <img src="theme/picture/hierarchie_partie_guidee_king.png" alt="Hiérarchie du projet" class="part_guidee_kingdomino">
-                        </p>
-                        <br>
-                        <p class="formation-objectif-text">
-                            Lilian était chargé de la gestion du royaume, ce qui impliquait l'initialisation correcte du royaume selon des règles précises. Il a ensuite dû s'occuper de la pile des dominos, c'est-à-dire de la gestion des mélanges des dominos pour assurer l'aléatoire du jeu. Enfin, il a développé la partie tour de jeu en gérant la logique pour déterminer l'ordre de passage des joueurs.
-                            <br> <br>
-                            Ma contribution au projet a englobé la gestion des dominos, impliquant l'extraction des données à partir d'un fichier CSV en utilisant Python. J'ai ensuite géré la partie des joueurs, assurant la création des joueurs et l'implémentation du choix entre le mode manuel ou le mode automatique (contre un "robot"). Enfin, je me suis occupé de la phase jeu complet, où j'ai développé les fonctions finales nécessaires pour appeler et coordonner les différents fichiers pour la conclusion de la partie.
-                            <br> <br>
-                            <center> Je vous présente ici une fonction du bloc B_gestions_dominos afin de vous donner un aperçu concret. </center>
-                            <br> <br>
-                            <img src="theme/picture/random_domino.png" alt="Hiérarchie du projet" class="part_guidee_kingdomino_1">
-                        </p>
-                        <br>
-                        <p class="formation-objectif-text">
-                            <center> Explication de la fonction </center>
-                        </p>
-                        <br>
-                        <p class="formation-objectif-text">
-                            La fonction extraire_dominos est conçue pour lire et traiter les données de dominos contenues dans un fichier externe spécifié (nom_fichier). Elle initialise une liste nommée liste_dominos destinée à stocker tous les dominos du jeu, chacun étant représenté par un tuple de trois éléments. L'exécution parcourt chaque ligne du fichier; si la première colonne d'une ligne est suffisamment longue (if len(domino[0]) > 2:), elle est interprétée comme un intervalle de dominos similaires à générer (cette logique est assurée par la boucle while). Si ce n'est pas le cas, un seul domino est ajouté. Enfin, avant d'être retournée, la liste complète des dominos est mélangée aléatoirement grâce à la fonction random.shuffle du module random, garantissant le caractère aléatoire du jeu.
-                        </p>
-                        <br>
-                        <p class="formation-objectif-text">
-                            Une fois la partie guidée du projet achevée, mon binôme et moi avons abordé la phase d'extension. Nous avons pris la décision d'améliorer le jeu en y intégrant une fenêtre graphique, le jeu initial étant exclusivement basé sur la console. Par ailleurs, nous avons ajouté la possibilité de choisir parmi deux musiques d'arrière-plan pour enrichir l'ambiance de la partie.
-                        </p>
-                        <br>
-                        <center> Voici la nouvelle arborescence du projet avec extension : </center>
-                        <br> <br>
-                        <img src="theme/picture/hierarchie_extension_projet.png" alt="Hiérarchie du projet" class="part_guidee_kingdomino">
-                        <br>
-                        <p class="formation-objectif-text">
-                            Mon binôme et moi avons conservé la responsabilité de nos blocs de code respectifs élaborés durant la phase guidée. Nous les avons ensuite améliorés en ajoutant des fonctionnalités essentielles, notamment la création et la navigation dans le menu du jeu et la gestion du son en fonction des différentes étapes et ambiances de la partie.
-                        </p>
-                        <h4 class="formation-objectif-title">Bilan</h4>
-                        <p class="formation-objectif-text">
-                            En conclusion, ce projet a été rendu dans les délais. De plus, il m'a été bénéfique pour apprendre à <strong>gérer un projet de groupe</strong> en organisant la répartition des rôles. J'ai également eu l'opportunité d'<strong>utiliser concrètement le langage Python</strong> dans un projet à la fois amusant et enrichissant à coder. Enfin, la phase d'extension nous a permis de choisir librement des ajouts, ce qui a été l'occasion de <strong>découvrir de nouveaux modules Python</strong>.
-                            <br> <br>
-                         <div class="formation-details experience-details">
-                            <div class="detail-row">
-                                <strong>Note obtenue :</strong> <span>15.5/20</span>
-                            </div>
-                            <div class="detail-row">
-                                <strong>Moyenne classe :</strong> <span>  --/20</span>
-                            </div>
-                        </div>
-                        <br>
-                    </details>
-                </div>
-            </section>
-            
-            <section id="divers"> <h2> Divers </h2>
-            <div class="cards">
-                <details class="formation-item"> 
-                <img src="theme/picture/logo_piano.jpg" alt="Logo d'un piano" class="formation-logo"> 
-                <summary>
-                    <h3> Musique </h3>
-                    <h4> Régulièrement </h4>
-                </summary>                   
-                <p class="formation-objectif-text">
-                    Ma passion première est le piano, que je pratique depuis l'âge de mes 8 ans. J'ai commencé par des cours particuliers, puis, quand j'étais enfant, j'ai participé à un concours de piano à Paris où j'ai fini troisième. En grandissant, j'ai continué ma progression en autodidacte. Cette pratique avait ralenti avec le début de mes études universitaires, mais je m'y suis remis activement depuis quelques mois. Je joue principalement des musiques que j'entends et qui m'inspirent dans un film, une série ou un jeu vidéo, mais mon morceau favori reste La Valse d'Amélie.
-                    <br> <br>
-                </p>
-                <h4 class="formation-objectif-title"> Impact sur mon quotidien </h4>
-                    <p class="formation-objectif-text">
-                        La pratique du piano m'a appris la <strong>persévérance</strong> et l'importance de <strong>recommencer jusqu'à atteindre la réussite</strong>.
-                    </p>
                 </details>
-            </div>
-            <br>
-            <div class="cards">
+
                 <details class="formation-item">
-                    <img src="theme/picture/logo_sport.jpg" alt="Logo de sport" class="formation-logo"> 
-
                     <summary>
-                        <h3> Sport </h3>
-                        <h4> Régulièrement </h4>
-                    </summary>                   
-                    <p class="formation-objectif-text">
-                        Après avoir expérimenté plusieurs disciplines sportives (telles que le tennis, le judo et la boxe thaïlandaise), la musculation et la course à pied se sont imposées comme des pratiques durables. Aujourd'hui, cela se concrétise par la musculation, que je pratique seul ou avec mes amis 5 fois par semaine, et la course à pied, 1 à 2 fois par semaine. Ces activités ont été adoptées dans le but de renforcer la confiance en soi, de favoriser le bien-être et d’adopter une hygiène de vie saine et équilibrée. Elles ont également contribué au développement de bonnes habitudes alimentaires, essentielles pour le maintien d’une bonne santé.
-                        <br> <br>
-                    </p>
-                    <h4 class="formation-objectif-title"> Impact sur mon quotidien </h4>
-                    <p class="formation-objectif-text">
-                        Avec ces sports, il a été possible d’acquérir des qualités telles que la <strong>rigueur</strong>, c’est-à-dire la capacité à maintenir l’effort même lorsque le confort semble plus tentant, ainsi que la <strong>patience</strong>, essentielle pour obtenir des résultats sur le long terme.
-                    </p>
-                </details>
-            </div>
-            <br>
-            <div class="cards">
-                <details class="formation-item">
-                    <img src="theme/picture/logo_crayon.jpg" alt="Logo de sport" class="formation-logo"> 
+                        <div class="summary-title">
+                            <h3>Télécommunications</h3>
+                            <span class="date-badge">Technique</span>
+                        </div>
+                    </summary>
+                    <div class="details-content">
+                        <h4 class="formation-objectif-title">Enjeux techniques</h4>
+                        <p class="formation-objective-text">
+                            Étudier les télécommunications, c'est s'intéresser à la <strong>couche physique</strong> des
+                            réseaux. Il ne s'agit pas seulement d'aiguiller les paquets de données, mais de comprendre
+                            comment ils sont convertis et transmis dans les câbles. Cela demande d'appréhender des
+                            concepts fondamentaux d'<strong>électricité</strong>, de <strong>gestion de la
+                                puissance</strong> et de <strong>traitement du signal</strong> pour assurer une
+                            <strong>transmission fiable et sans pertes</strong>.
+                        </p>
 
-                    <summary>
-                        <h3> Art Plastique </h3>
-                        <h4> Régulièrement </h4>
-                    </summary>                   
-                    <p class="formation-objectif-text">
-                        De nature créative, je dessine depuis mon plus jeune âge une variété de créations inspirées par mon imagination. 
-                        Il me suffit d'une feuille blanche et d'un stylo pour faire émerger de nouvelles idées et donner forme à des concepts originaux.
-                        C'est pour cela que j'explore une multitude de types de création : dessin, peinture, collage, etc. 
-                    </p>
-
-                        <br> <br> <br>
-                    <h4 class="formation-objectif-title"> Voici un aperçu </h4>
-                        <p class="formation-objectif-text">
-                            <div class="conteneur-dessins">
-                                <img src="theme/picture/prairie.jpeg" alt="Dessin 4" class="dessin">
-                                <img src="theme/picture/city.jpeg" et Oli.png" alt="Dessin 5" class="dessin">
-                                <img src="theme/picture/fleurs.jpeg" alt="Dessin 6" class="dessin">
+                        <div class="sub-skills-grid">
+                            <div class="sub-skill-card">
+                                <h4>Oscilloscope</h4>
+                                <p class="formation-objective-text">
+                                    L'oscilloscope me permet d'analyser et de réaliser des mesures précises sur les
+                                    signaux. C'est un outil primordial qui me permet de visualiser concrètement leur
+                                    comportement et leur évolution temporelle.
+                                </p>
                             </div>
-                        </p>
-                        <br>
-                        <h4 class="formation-objectif-title"> Impact sur mon quotidien </h4>
-                        <p class="formation-objectif-text">
-                            Dans mon quotidien, la pratique artistique m'apporte une source constante de nouveaux sujets de création. Elle entretient ma <strong>soif d'apprendre</strong>, de <strong>me perfectionner</strong> et de recommencer, tout en développant un sens aigu de la <strong>précision</strong>.
-                        </p>
-                </details>
-            </div>
-            </section>
-            
-            <section id="cv"> <h2> C.V. </h2>
-            <p class="download-button-container">
-                <a href="theme/picture/CV - Enzo LAMANNA - Alternance - BUT RT.pdf" download class="btn-download">Télécharger (.pdf)</a>
-            </p>
-            </section>
 
-            <section id="contact"> <h2>Me contacter</h2>
-            <div class="cards">
-                <article>
-                    <h3> Mon profil vous intéresse et vous souhaitez me contacter ? </h3>
-                    <br> <br>
-                    <h3> <u>Mail Étudiant</u> : Enzo.LAMANNA@etu.uca.fr</h3>
+                            <div class="sub-skill-card">
+                                <h4>GBF</h4>
+                                <p class="formation-objective-text">
+                                    Le <strong>GBF (Générateur de Basses Fréquences)</strong> me permet de générer tout
+                                    type de signaux (<strong>sinusoïdaux, carrés, triangulaires</strong>). Cela me
+                                    permet d'<strong>injecter des signaux tests</strong> pour mener à bien mes
+                                    différentes expérimentations.
+                                </p>
+                            </div>
+
+                            <div class="sub-skill-card">
+                                <h4>Analyseur de spectre</h4>
+                                <p class="formation-objective-text">
+                                    L'<strong>analyseur de spectre</strong> me permet d'étudier les signaux dans le
+                                    <strong>domaine fréquentiel</strong>. Il me permet notamment d'analyser la
+                                    <strong>bande passante</strong>, de mesurer la <strong>puissance des
+                                        fréquences</strong> et de repérer d'éventuelles <strong>interférences</strong>.
+                                </p>
+                            </div>
+
+                            <div class="sub-skill-card">
+                                <h4>Fibre Optique</h4>
+                                <p class="formation-objective-text">
+                                    L'étude de la <strong>fibre optique</strong> me permet de comprendre comment les
+                                    données du réseau transitent à travers la <strong>lumière</strong>. Elle me permet
+                                    également de maîtriser les <strong>outils de test</strong> pour vérifier qu'il n'y a
+                                    pas de <strong>coupure ou d'atténuation</strong> dans le câble en verre.
+                                </p>
+                            </div>
+
+                            <div class="sub-skill-card">
+                                <h4>Schématisation et Analyse de Problèmes</h4>
+                                <p class="formation-objective-text">
+                                    Capacité à retranscrire un besoin technique sous forme de <strong>schéma
+                                        fonctionnel</strong> afin de structurer la réflexion en amont. Cette étape
+                                    essentielle de pré-production sert de support d'analyse pour <strong>anticiper les
+                                        contraintes</strong>, identifier les anomalies potentielles et sécuriser le
+                                    <strong>déploiement réel</strong> de la solution.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="formation-item">
+                    <summary>
+                        <div class="summary-title">
+                            <h3>Communication</h3>
+                            <span class="date-badge">Technique</span>
+                        </div>
+                    </summary>
+                    <div class="details-content">
+                        <h4 class="formation-objectif-title">Enjeux techniques</h4>
+                        <p class="formation-objectif-text">
+                            En informatique, la <strong>communication</strong> est une compétence technique à part
+                            entière. Un projet ne se développe jamais seul : il exige un <strong>travail
+                                d'équipe</strong> fluide et, fréquemment, une <strong>relation directe avec les
+                                clients</strong> pour comprendre et cibler leurs besoins.
+                        </p>
+                    </div>
+
+                    <div class="sub-skill-card">
+                        <h4>Vulgarisation</h4>
+                        <p class="formation-objective-text">
+                            Grâce à des cours de communication, j'ai appris à <strong>vulgariser des concepts
+                                techniques</strong> complexes pour des personnes qui ne s'y connaissent pas en
+                            informatique. En m'appuyant sur des <strong>visuels, des schémas ou des métaphores</strong>
+                            concrètes, je m'assure qu'ils comprennent parfaitement les enjeux et les solutions
+                            apportées.
+                        </p>
+                    </div>
                     <br>
-                </article>
-            </div>
-            </section>
-            
-            <p id="RevenirenHautContainer"> <a href="#accueil" id="RevenirenHautButton"> Revenir à l'Accueil  </a> </p> 
-            
-        </main>
 
-        <footer>
-            <h3> <center> En vous remerciant d'avoir pris le temps de lire mon Portfolio ! </center> </h3>
+                    <div class="sub-skill-card">
+                        <h4>Expression orale</h4>
+                        <p class="formation-objective-text">
+                            Grâce à un travail de <strong>préparation rigoureux</strong>, j'aborde les
+                            <strong>présentations orales</strong> avec assurance. Je veille à employer les termes
+                            appropriés pour <strong>structurer mon propos</strong> et rendre mon discours accessible à
+                            mon auditoire.
+                        </p>
+                    </div>
+                </details>
+            </div>
+
             <br>
-            <p> <center> &copy; 2026 - LAMANNA Enzo </center> </p>
+            <h3>Compétences Humaines</h3>
             <br>
-        </footer>
-    </body>
+
+            <div class="cards competence-cards">
+                <details class="formation-item">
+                    <summary>
+                        <div class="summary-title">
+                            <h3>Relationnel</h3>
+                            <span class="date-badge">Humaine</span>
+                        </div>
+                    </summary>
+                    <div class="details-content">
+                        <p class="formation-objective-text">
+                            Grâce à mon <strong>bon relationnel</strong>, je m'intègre facilement dans un groupe tout en
+                            sachant travailler de manière <strong>autonome</strong>. Cela me permet de mener à bien nos
+                            <strong>projets collectifs</strong> en communiquant clairement et en coordonnant la
+                            <strong>répartition des tâches</strong> de manière intelligente.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="formation-item">
+                    <summary>
+                        <div class="summary-title">
+                            <h3>Curiosité</h3>
+                            <span class="date-badge">Humaine</span>
+                        </div>
+                    </summary>
+                    <div class="details-content">
+                        <p class="formation-objective-text">
+                            Naturellement <strong>curieux</strong>, je cherche toujours à <strong>approfondir mes
+                                connaissances</strong>, ce qui me permet de progresser et d'<strong>évoluer en
+                                permanence</strong> dans mon domaine. Loin d'être un signe de lassitude, cette démarche
+                            traduit ma volonté constante de <strong>me perfectionner</strong>.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="formation-item">
+                    <summary>
+                        <div class="summary-title">
+                            <h3>Rigueur</h3>
+                            <span class="date-badge">Humaine</span>
+                        </div>
+                    </summary>
+                    <div class="details-content">
+                        <p class="formation-objective-text">
+                            Soucieux de la <strong>qualité de mon travail</strong>, je m'attache à livrer des
+                            <strong>résultats soignés</strong>. J'applique cette même <strong>rigueur</strong> lors des
+                            phases de mise en place, en <strong>sécurisant chaque procédure</strong> pour écarter tout
+                            risque de dysfonctionnement.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            </div>
+
+            <br>
+            <h3>Langue</h3>
+            <br>
+
+            <details class="formation-item">
+                <summary>
+                    <div class="summary-title">
+                        <h3>Anglais</h3>
+                        <span class="date-badge">Niveau B1</span>
+                    </div>
+                </summary>
+                <div class="details-content">
+                    <p class="formation-objective-text">
+                        Mon niveau d'anglais me permet de <strong>comprendre</strong> et de tenir une
+                        <strong>conversation simple</strong>. Par ailleurs, mes compétences techniques me permettent de
+                        <strong>comprendre les erreurs</strong> affichées dans un <strong>terminal</strong>.
+                    </p>
+                </div>
+            </details>
+        </section>
+
+        <section id="experience">
+            <div class="section-container">
+                <h2>Expériences</h2>
+
+                <div class="cards layout-one-col">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Saisonnier Netto - Hôte de caisse et mise en rayon</h3>
+                                <span class="date-badge current">Août 2026</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/logo_netto.png" alt="Logo de Netto" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Entreprise :</strong> <span>Netto
+                                        Saint-Nizier-sous-Charlieu</span></div>
+                                <div class="detail-row"><strong>Lieu :</strong> <span>Saint-Nizier-sous-Charlieu
+                                        (42)</span></div>
+                                <div class="detail-row"><strong>Durée :</strong> <span>1 mois</span></div>
+                                <div class="detail-row"><strong>Rôle :</strong> <span>Saisonnier - Hôte de caisse et
+                                        mise en rayon</span>
+                                </div>
+                            </div>
+                            <h4 class="formation-objectif-title">Contexte</h4>
+                            <p class="formation-objectif-text font-center">Poursuivre ma montée en compétences au sein
+                                du monde professionnel tout en finançant ma
+                                vie étudiante.
+                            </p>
+
+                            <h4 class="formation-objectif-title">Objectif</h4>
+                            <p class="formation-objectif-text">
+                                Assurer le remplacement d'un salarié durant la période estivale, en intervenant à la
+                                fois sur la mise en rayon et la caisse, afin de garantir la disponibilité des stocks dès
+                                l'ouverture et une prise en charge fluide des clients.
+                            </p>
+
+                            <h4 class="formation-objectif-title">Missions</h4>
+                            <p class="formation-objectif-text">Cette mission s'articule autour de deux axes principaux :
+                                d'une part, la <strong>mise en rayon</strong>, qui consiste à réaliser l'implantation et
+                                le réassort des produits avant l'ouverture du magasin dans le strict respect des
+                                processus de l'enseigne ; d'autre part, la fonction d'<strong>hôte de caisse</strong>,
+                                dédiée à l'accueil des clients et à la fiabilité des <strong>opérations
+                                    d'encaissement</strong> de leurs achats.</p>
+
+                            <h4 class="formation-objectif-title">Bilan</h4>
+                            <p class="formation-objectif-text">
+                                Bilan à venir — Expérience non encore réalisée (planifiée pour août 2026).
+                            </p>
+                        </div>
+                    </details>
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Saisonnier E.Leclerc - Mise en Rayon</h3>
+                                <span class="date-badge past">Août 2024 et Août 2025</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/logo_leclerc.png" alt="Logo de E.Leclerc" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Entreprise :</strong> <span>E.Leclerc PARAY LE
+                                        MONIAL</span></div>
+                                <div class="detail-row"><strong>Lieu :</strong> <span>Paray-le-Monial (71)</span></div>
+                                <div class="detail-row"><strong>Durée :</strong> <span>2 mois</span></div>
+                                <div class="detail-row"><strong>Rôle :</strong> <span>Saisonnier - Mise en rayon</span>
+                                </div>
+                            </div>
+                            <h4 class="formation-objectif-title">Contexte</h4>
+                            <p class="formation-objectif-text font-center">Volonté de mettre un pied dans le monde
+                                professionnel pour acquérir de l'expérience et de faire des économies pour mes études.
+                            </p>
+
+                            <h4 class="formation-objectif-title">Objectif</h4>
+                            <p class="formation-objectif-text">Assurer le remplacement d'un salarié du rayon des
+                                liquides afin de garantir la continuité du service et la disponibilité des produits
+                                durant la forte affluence estivale.</p>
+
+                            <h4 class="formation-objectif-title">Missions</h4>
+                            <p class="formation-objectif-text">Durant cette expérience, j'ai eu plusieurs
+                                responsabilités. Tout d'abord, j'étais chargé de la mise en rayon en utilisant un
+                                transpalette électrique pour remplir les étagères et offrir un maximum de choix aux
+                                clients. Ensuite, avant l'ouverture du magasin, je faisais le facing (avancer les
+                                produits) pour que le rayon paraisse toujours plein et agréable aux yeux des clients. De
+                                plus, mon travail comprenait aussi l'organisation et le nettoyage de la réserve pour
+                                préparer l'arrivée des livraisons. Enfin, quand j'avais de l'avance, j'aidais à la mise
+                                en place dans d'autres parties du rayon des liquides.</p>
+
+                            <h4 class="formation-objectif-title">Bilan</h4>
+                            <p class="formation-objectif-text">Cette expérience m'a offert un premier aperçu concret du
+                                monde professionnel, me permettant de développer mes compétences en
+                                <strong>organisation</strong>, de <strong>savoir identifier le bon moment pour
+                                    solliciter de l'aide</strong>, de <strong>renforcer mon esprit d'équipe</strong> et
+                                d'<strong>améliorer mon relationnel avec les clients</strong>.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Stage d'observation Lubi'Carrelage - Architecture Intérieur et Vente</h3>
+                                <span class="date-badge past">2021</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/logo_lubi.jpg" alt="Logo de Lubi Carrelage" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Entreprise :</strong> <span>Lubi'Carrelage</span></div>
+                                <div class="detail-row"><strong>Lieu :</strong> <span>Pouilly-s/s-Charlieu (42)</span>
+                                </div>
+                                <div class="detail-row"><strong>Durée :</strong> <span>1 semaine</span></div>
+                                <div class="detail-row"><strong>Rôle :</strong> <span>Stagiaire</span></div>
+                            </div>
+                            <h4 class="formation-objectif-title">Contexte</h4>
+                            <p class="formation-objectif-text font-center">Volonté de trouver un stage afin de réaliser
+                                la séquence d'observation requise pour l'année de Troisième.</p>
+
+                            <h4 class="formation-objectif-title">Objectif</h4>
+                            <p class="formation-objectif-text">Acquérir une première immersion professionnelle pour
+                                m'aider à déterminer mon orientation future, découvrir les mécanismes de la relation
+                                clientèle et explorer le domaine de l'architecture intérieure.</p>
+
+                            <h4 class="formation-objectif-title">Missions</h4>
+                            <p class="formation-objectif-text">Au cours de cette expérience, j'ai eu pour mission
+                                principale l'observation active du métier, ce qui impliquait de poser des questions pour
+                                bien comprendre le domaine et vérifier si ce secteur m'attirait. De plus, j'ai eu
+                                l'occasion d'assister à des réunions permettant d'organiser les jours suivants et de
+                                faire un récapitulatif des semaines passées. Enfin, j'ai également pris des notes
+                                détaillées sur les techniques de communication et de relation client, et j'ai contribué
+                                concrètement en aidant au rangement et à l'organisation des carrelages.</p>
+
+                            <h4 class="formation-objectif-title">Bilan</h4>
+                            <p class="formation-objectif-text">Finalement, bien que l'expérience m'ait permis de
+                                découvrir concrètement l'environnement de travail, j'ai réalisé que le métier
+                                d'architecte d'intérieur n'était pas la voie que je souhaitais suivre.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="projet">
+            <div class="section-container">
+                <h2>Projets</h2>
+
+                <div class="cards layout-one-col">
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Projet Intégratif : Mise en place d'un réseau d'entreprise</h3>
+                                <span class="date-badge current">2026 - Semestre 2 BUT R&T</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/logo_pharma.png" alt="Logo HTML/CSS" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Type :</strong> <span>Groupe</span></div>
+                                <div class="detail-row"><strong>Membres :</strong> <span>Ivanna KNYSH, Semih AVCI et
+                                        moi-même</span></div>
+                                <div class="detail-row"><strong>Durée :</strong> <span>3 Semaines</span></div>
+                            </div>
+                            <h4 class="formation-objectif-title">Contexte</h4>
+                            <p class="formation-objectif-text">Synthèse de cette première année de BUT
+                                Réseaux et Télécommunications, ce projet de fin d'études vise à mobiliser l'ensemble des
+                                compétences acquises. Il s'articule autour d'une approche transversale combinant les
+                                <strong>réseaux</strong>, la <strong>programmation</strong>, la
+                                <strong>téléphonie</strong>, la <strong>gestion de projet</strong> et la
+                                <strong>communication</strong>.
+                            </p>
+
+                            <h4 class="formation-objectif-title">Objectif</h4>
+                            <p class="formation-objectif-text">L'objectif est de déployer une infrastructure réseau
+                                performante pour l'entreprise <strong>PharmaSanté</strong>, tout en prenant des
+                                <strong>initiatives d'optimisation</strong> lors de sa conception. Il s'agit également
+                                de mettre en œuvre des <strong>services réseau spécifiques</strong> et adaptés aux
+                                besoins des pharmaciens ainsi qu'à ceux des clients.
+
+                            <h4 class="formation-objectif-title">Missions</h4>
+                            <p class="formation-objectif-text">Pour mener à bien ce projet en cette fin de semestre, la
+                                première étape a nécessité une organisation rigoureuse afin de définir la
+                                <strong>topologie</strong>, l'<strong>architecture réseau</strong> et les équipements
+                                requis, dans le strict respect du cahier des charges. L'objectif central est de
+                                concevoir et déployer une infrastructure complète pour l'entreprise
+                                <strong>PharmaSanté</strong>, choisie en équipe, en interconnectant des services
+                                essentiels tels que l'administration sous <strong>Windows Server</strong> et
+                                <strong>Linux</strong>, le <strong>DHCP</strong>, le transfert de fichiers
+                                (<strong>FTP</strong>) et la téléphonie sur IP (<strong>IPBX</strong>). Enfin, ce projet
+                                se clôture par une <strong>soutenance orale</strong> simulant une présentation
+                                professionnelle directement face au client.
+                            </p>
+
+                            <h4 class="formation-objectif-title">Bilan</h4>
+                            <p class="formation-objectif-text">
+                                Bilan à venir — Projet en cours de déploiement.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Mini Projet - Cracker de fichier .pdf</h3>
+                                <span class="date-badge past">2026 - Projet Perso</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/logo_fichierpdf.jpg" alt="Logo HTML/CSS" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Type :</strong> <span>Individuel</span></div>
+                                <div class="detail-row"><strong>Durée :</strong> <span>1 Semaine</span></div>
+                            </div>
+                            <h4 class="formation-objectif-title">Contexte</h4>
+                            <p class="formation-objectif-text">Développer un script Python de force brute sur un fichier
+                                PDF afin de mesurer et analyser son temps d'exécution.</p>
+
+                            <h4 class="formation-objectif-title">Objectif</h4>
+                            <p class="formation-objectif-text">
+                                L'objectif est de découvrir de nouvelles bibliothèques Python en autonomie afin de
+                                concevoir un outil de récupération de mot de passe pour fichier PDF, permettant ainsi de
+                                m'initier au <strong>hacking éthique</strong> et à l'analyse de la <strong>robustesse
+                                    des mots de passe</strong>.</p>
+
+                            <h4 class="formation-objectif-title">Missions</h4>
+                            <p class="formation-objectif-text">
+                                Le développement de ce script a nécessité la prise en main de quatre bibliothèques
+                                Python spécifiques, adaptées à la logique de mon algorithme.
+                                <br><br>
+                                La bibliothèque <strong>pikepdf</strong> est le cœur du programme pour la sécurité des
+                                documents. Dans mon code, elle est exploitée dans le bloc <code>try/except</code> avec
+                                la fonction <code>pikepdf.open()</code>. Elle me permet de tester chaque mot de passe
+                                généré et de gérer l'exception <code>pikepdf.PasswordError</code> tant que la clé est
+                                incorrecte.
+                                <br><br>
+                                Pour la logique de force brute, la bibliothèque <strong>itertools</strong> optimise la
+                                génération des combinaisons. Je l'utilise via
+                                <code>itertools.product(alphabet, repeat=lenght)</code> afin de créer de manière fluide
+                                toutes les variantes de lettres possibles, en augmentant la taille du mot de passe grâce
+                                à la boucle <code>range()</code>.
+                                <br><br>
+                                La bibliothèque <strong>time</strong> est essentielle pour évaluer les performances de
+                                l'attaque. J'utilise <code>time.time()</code> pour marquer le début
+                                (<code>start_time</code>) et la fin de la recherche (<code>end_time</code>), ce qui me
+                                permet de calculer et d'afficher le temps d'exécution précis nécessaire pour découvrir
+                                le mot de passe.
+                                <br><br>
+                                Enfin, la bibliothèque <strong>termcolor</strong> améliore l'interface en ligne de
+                                commande. Grâce à la fonction <code>colored</code>, je peux structurer visuellement les
+                                informations du terminal, notamment pour afficher la bannière ASCII en jaune, le fichier
+                                cible en magenta, le défilement des tentatives en rouge et le résultat final en vert.
+                            </p>
+
+                            <div style="display: block; text-align: center; margin: 20px auto; max-width: 90%;">
+                                <img src="theme/picture/image_pdf_1.png" alt="Capture d'écran du code Python"
+                                    style="width: 100%; max-width: 650px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #ddd;">
+                                <img src="theme/picture/image_pdf_2.png" alt="Capture d'écran du code Python"
+                                    style="width: 100%; max-width: 650px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #ddd;">
+                            </div>
+
+                            <h4 class="formation-objectif-title">Bilan</h4>
+                            <p class="formation-objectif-text">
+                                Ce projet m'a permis de monter en compétence sur la manipulation de bibliothèques Python
+                                spécialisées. Au-delà de l'aspect technique, cette expérience a mis en lumière les
+                                limites majeures de l'attaque par <strong>force brute</strong>. J'ai pu observer
+                                concrètement son inefficacité : l'exécution très chronophage et la forte sollicitation
+                                des ressources système, se traduisant par une saturation de la mémoire vive (RAM) et une
+                                montée en charge significative de la ventilation de mon PC. Cette immersion pratique m'a
+                                toutefois offert une première approche réaliste et formatrice du <strong>hacking
+                                    éthique</strong>.
+                            </p>
+
+                            <div style="display: block; text-align: center; margin: 20px auto; max-width: 90%;">
+                                <img src="theme/picture/image_term_pdf.jpeg" alt="Capture d'écran du code Python"
+                                    style="width: 100%; max-width: 650px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #ddd;">
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Projet Portfolio (HTML & CSS) : Se présenter sur Internet</h3>
+                                <span class="date-badge past">2025 - Semestre 1 BUT R&T</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/logo_html_css.png" alt="Logo HTML/CSS" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Type :</strong> <span>Individuel</span></div>
+                                <div class="detail-row"><strong>Durée :</strong> <span>1 Semestre</span></div>
+                            </div>
+                            <h4 class="formation-objectif-title">Contexte</h4>
+                            <p class="formation-objectif-text">Se présenter sur Internet avec un portfolio à
+                                développer en HTML et CSS.</p>
+
+                            <h4 class="formation-objectif-title">Objectif</h4>
+                            <p class="formation-objectif-text">Ce portfolio a pour vocation d'<strong>appuyer notre
+                                    insertion professionnelle en fournissant un document détaillé de notre
+                                    parcours</strong>, tout en constituant une mise en application concrète des notions
+                                HTML et CSS acquises lors de notre première année de BUT en développement Web.</p>
+
+                            <h4 class="formation-objectif-title">Missions</h4>
+                            <p class="formation-objectif-text">Le projet a démarré par des séances de TD fournissant une
+                                structure de base uniforme pour l'ensemble du groupe. Par la suite, le développement
+                                s'est fait en <strong>autonomie totale</strong>. La principale difficulté résidait dans
+                                cette <strong>indépendance</strong>, bien que les enseignants aient pu être consultés
+                                pour des conseils. J'ai principalement mobilisé des <strong>ressources externes</strong>
+                                (<strong>W3Schools</strong>, <strong>MDN Web Docs</strong>, Instagram et YouTube) pour
+                                surmonter les défis et résoudre les <strong>problématiques de codage</strong>
+                                rencontrées.
+                            </p>
+
+                            <h4 class="formation-objectif-title">Bilan</h4>
+                            <p class="formation-objectif-text">Ce projet de portfolio m'a permis de mettre en pratique
+                                le <strong>HTML</strong> et le <strong>CSS</strong> de manière concrète. Si le rendu
+                                visuel est satisfaisant, je prévois d'<strong>affiner la partie technique</strong> au
+                                fur et à mesure de l'évolution du site et de l'ajout de nouveaux contenus, afin
+                                d'<strong>optimiser progressivement la qualité de mon code</strong>.</p>
+
+                            <div class="formation-details spacing-top">
+                                <div class="detail-row"><strong>Note Visuelle :</strong> <span>17.0/20</span>
+                                </div>
+                                <div class="detail-row"><strong>Moyenne Visuelle Classe :</strong> <span>13.21/20</span>
+                                </div>
+                                <div class="detail-row"><strong>Note Technique :</strong> <span>11.50/20</span>
+                                </div>
+                                <div class="detail-row"><strong>Moyenne Technique Classe :</strong>
+                                    <span>14.76/20</span>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Projet Python : Traiter des données complexes</h3>
+                                <span class="date-badge past">2025 - Semestre 1 BUT R&T</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <img src="theme/picture/python.jpg" alt="Logo SAÉ 1.05" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Type :</strong> <span>Individuel</span></div>
+                                <div class="detail-row"><strong>Durée :</strong> <span>1 Semestre</span></div>
+                            </div>
+
+                            <h4 class="formation-objectif-title">Contexte</h4>
+                            <p class="formation-objectif-text">Conception et développement d'un outil Python destiné à
+                                optimiser l'organisation des étudiants. Le programme permet de récupérer et d'afficher
+                                un emploi du temps personnalisé en injectant les données spécifiques à chaque groupe de
+                                classe.</p>
+
+                            <h4 class="formation-objectif-title">Objectif</h4>
+                            <p class="formation-objectif-text">Cette SAÉ consiste à appréhender et exploiter les
+                                bibliothèques <strong>NumPy</strong> et <strong>Pandas</strong> en
+                                <strong>Python</strong> pour le traitement de données de grande envergure. L'objectif
+                                est d'analyser un fichier CSV volumineux en réalisant des opérations de
+                                <strong>tri</strong>, de <strong>filtrage</strong> et de <strong>manipulation de
+                                    données</strong> structurées.
+                            </p>
+
+                            <h4 class="formation-objectif-title">Missions</h4>
+                            <p><strong>Extraction des données</strong> : Dans un premier temps, j'extrais les données de
+                                l'emploi du temps au format CSV de manière non organisée. L'enjeu majeur consiste à
+                                traiter la structure des colonnes et à gérer les point-virgules faisant office de
+                                délimiteurs entre les données.</p>
+                            <!-- Bloc Image 1 -->
+                            <div class="image-projet-container">
+                                <img src="theme/picture/def_charger_filtrer_SAE15.jpeg" alt="Extraction des données"
+                                    class="image-projet">
+                            </div>
+
+                            <p><strong>Création du planning</strong> : Une fois les données extraites, je procède à un
+                                filtrage selon le groupe sélectionné par l'utilisateur. Par exemple, si le groupe
+                                "<strong>TP3</strong>" est choisi, le programme isole uniquement les séances de cours
+                                correspondantes et écarte les données non pertinentes.</p>
+                            <!-- Bloc Image 2 -->
+                            <div class="image-projet-container">
+                                <img src="theme/picture/def_planning_gr_SAE15.jpeg" alt="Création du planning"
+                                    class="image-projet">
+                            </div>
+
+                            <p><strong>Affichage du planning</strong> : Enfin, j'ai implémenté une fonction d'affichage
+                                qui itère sur les données sélectionnées pour restituer le planning final pas à pas.</p>
+                            <!-- Bloc Image 3 -->
+                            <div class="image-projet-container">
+                                <img src="theme/picture/def_afficher_SAE15.png" alt="Affichage du planning"
+                                    class="image-projet">
+                            </div>
+
+                            <p><strong>Lancement du programme</strong> : Pour finir, j'ai créé une fonction
+                                <strong>main()</strong> permettant de faire appel aux différentes fonctions pour
+                                réaliser le projet.
+                            </p>
+                            <!-- Bloc Image 4 -->
+                            <div class="image-projet-container">
+                                <img src="theme/picture/def_main_SAE15.png" alt="Lancement du programme"
+                                    class="image-projet">
+                            </div>
+
+                            <h4 class="formation-objectif-title">Bilan</h4>
+                            <p>La <strong>difficulté majeure</strong> rencontrée lors de ce projet a été d'apprendre à
+                                <strong>optimiser mon code</strong>, notamment en réduisant, supprimant et compactant
+                                certaines instructions. Ce travail a été réalisé en suivant strictement le
+                                <strong>cahier des charges</strong> et le <strong>calendrier</strong> impartis.
+                            </p>
+
+                            <p>J'en ai retiré <strong>trois acquis majeurs</strong> : la capacité à prendre en main une
+                                <strong>bibliothèque Python</strong> en autonomie, l'<strong>optimisation de
+                                    code</strong> pour plus d'efficacité, ainsi qu'une meilleure <strong>méthodologie
+                                    d'organisation</strong>.
+                            </p>
+
+                            <div class="image-projet-container">
+                                <img src="theme/picture/resultat_SAE15.png" alt="Résultat du planning TP3"
+                                    class="image-projet">
+                                <p class="video-title"><strong>Aperçu du résultat avec le groupe TP3</strong></p>
+                            </div>
+
+                            <div class="formation-details spacing-top">
+                                <div class="detail-row"><strong>Note Finale :</strong> <span>15.68/20</span></div>
+                                <div class="detail-row"><strong>Moyenne de classe :</strong> <span>14.18/20</span></div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="divers">
+            <div class="section-container">
+                <h2>Divers</h2>
+
+                <!-- Toutes les cartes sont maintenant regroupées ici pour un meilleur alignement CSS -->
+                <div class="cards">
+
+                    <!-- 1ER ONGLET : DESSIN -->
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Dessin - Ma passion créative</h3>
+                                <span class="date-badge">Art</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objectif-text spacing-top">
+                                Le dessin est bien plus qu'un simple passe-temps pour moi : c'est un espace de liberté
+                                et de création. Il entretient ma <strong>soif d'apprendre</strong>, de <strong>me
+                                    perfectionner</strong> et de recommencer, tout en développant un sens aigu de la
+                                <strong>précision</strong>.
+                            </p>
+                            <div class="conteneur-dessins">
+                                <img src="theme/picture/prairie.jpeg" alt="Dessin personnel 1" class="dessin">
+                                <img src="theme/picture/city.jpeg" alt="Dessin personnel 2" class="dessin">
+                                <img src="theme/picture/fleurs.jpeg" alt="Dessin personnel 3" class="dessin">
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- 2ÈME ONGLET : PIANO -->
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Piano - Ma passion musicale</h3>
+                                <span class="date-badge">Musique</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objectif-text spacing-top">
+                                Pratiquant le piano par <strong>passion</strong> depuis l'âge de 6 ans, cet instrument
+                                est devenu mon échappatoire pour <strong>décompresser</strong> et m'exprimer
+                                artistiquement. Cette pratique m'a inculqué une grande <strong>rigueur</strong>,
+                                nécessaire pour mémoriser les morceaux, ainsi qu'une capacité
+                                d'<strong>adaptation</strong> essentielle pour interpréter des partitions aux rythmes et
+                                intensités variés.
+                                <br><br>
+                                De par ma grande curiosité, je joue tout ce qui me plaît, qu'il s'agisse de musiques de
+                                <strong>jeux vidéo</strong>, de <strong>films</strong> ou de <strong>séries</strong>.
+                                Mon morceau de prédilection demeure <em>La Valse d'Amélie</em>, issue de la bande
+                                originale du film <em>Le Fabuleux Destin d'Amélie Poulain</em>.
+                            </p>
+                            <div class="conteneur-videos">
+                                <div class="video-item">
+                                    <video controls class="passion-video">
+                                        <source src="theme/picture/valse_amelie.mp4" type="video/mp4">
+                                        Votre navigateur ne supporte pas la lecture de vidéos.
+                                    </video>
+                                    <p class="video-title"><strong>La Valse d'Amélie</strong> - Arrangement</p>
+                                </div>
+                                <div class="video-item">
+                                    <video controls class="passion-video">
+                                        <source src="theme/picture/solas.mp4" type="video/mp4">
+                                        Votre navigateur ne supporte pas la lecture de vidéos.
+                                    </video>
+                                    <p class="video-title"><strong>Solas</strong> - Arrangement</p>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- 3ÈME ONGLET : MUSCULATION (NOUVEAU) -->
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Musculation - Mon dépassement personnel</h3>
+                                <span class="date-badge">Sport</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objectif-text spacing-top">
+                                La musculation est bien plus qu'un sport : c'est un moteur de <strong>bien-être
+                                    quotidien</strong>. Elle améliore ma forme physique et renforce durablement ma
+                                <strong>confiance en moi</strong>.
+                                <br><br>
+                                Cette pratique m'apprend l'<strong>organisation</strong>, que je m'entraîne seul ou à
+                                plusieurs. Partager ces séances avec des amis est une vraie source de motivation. Nous
+                                nous poussons mutuellement vers le haut dans une ambiance conviviale.
+                            </p>
+
+                            <!-- Espace pour intégrer une ou plusieurs photos de sport / entraînements -->
+                            <div class="conteneur-sport">
+                                <img src="theme/picture/logo_sport.jpg" alt="Suivi des entraînements ou photo"
+                                    class="sport-img"
+                                    style="width: 100%; max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                            </div>
+                        </div>
+                    </details>
+
+                </div> <!-- Fin de la div .cards -->
+            </div>
+        </section>
+
+        <section id="cv">
+            <div class="section-container">
+                <h2>Mon C.V.</h2>
+                <div class="cv-content-block">
+                    <div class="download-button-container">
+                        <a href="theme/CV-Enzo-LAMANNA-BUT-RT.pdf" download class="btn-download">
+                            <i class="fa-solid fa-download"></i> Télécharger au format PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-container">
+                <h2>Me contacter</h2>
+                <div class="cards contact-grid">
+                    <article class="contact-card">
+                        <h3>Mon profil vous intéresse et vous souhaitez me contacter ?</h3>
+                        <p class="contact-action-text">Vous pouvez me joindre via :</p>
+
+                        <!-- Conteneur pour aligner et uniformiser la taille des deux éléments -->
+                        <div
+                            style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 20px;">
+
+                            <!-- Téléphone (Non cliquable, taille identique) -->
+                            <div class="contact-link"
+                                style="cursor: default; width: 280px; box-sizing: border-box; text-align: center; display: flex; justify-content: center; gap: 10px;">
+                                <i class="fa-solid fa-phone"></i> Sur demande
+                            </div>
+
+                            <!-- Mail (Cliquable, taille identique) -->
+                            <a href="mailto:Enzo.LAMANNA@etu.uca.fr" class="contact-link"
+                                style="width: 280px; box-sizing: border-box; text-align: center; display: flex; justify-content: center; gap: 10px;">
+                                <i class="fa-solid fa-envelope"></i> Enzo.LAMANNA@etu.uca.fr
+                            </a>
+
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div id="RevenirenHautContainer">
+            <a href="#accueil" id="RevenirenHautButton" aria-label="Revenir en haut">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-thanks">En vous remerciant d'avoir pris le temps de lire mon Portfolio !</p>
+        <p class="footer-copy">&copy; 2026 - Enzo LAMANNA. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
