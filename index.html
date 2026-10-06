@@ -16,6 +16,9 @@
 
 <body>
 
+    <!-- ============================================================================
+         BARRE DE NAVIGATION
+    ============================================================================= -->
     <nav id="navbar">
         <p class="nav-logo">Enzo LAMANNA</p>
         <button id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
@@ -34,9 +37,20 @@
         </ul>
     </nav>
 
+    <!-- ============================================================================
+         SECTION ACCUEIL / HEADER
+    ============================================================================= -->
     <header id="accueil">
+        <!-- Canvas pour l'animation de fond (réseau de points) -->
+        <canvas id="network-canvas"></canvas>
+
         <div class="header-container">
             <div class="header-text">
+                <!-- Bulle de notification du dernier projet -->
+                <a href="#projet" class="latest-project-notif">
+                    <span class="pulse"></span> Dernier projet : Développer des applications - Java <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
                 <hgroup>
                     <p class="pre-title">Bonjour, je suis</p>
                     <h1><span class="highlight">Enzo LAMANNA</span></h1>
@@ -44,6 +58,11 @@
                         d'Aubière (63).<br>
                         Je suis actuellement en recherche active d'une alternance de 2 ans en réseaux sur un rythme de
                         1/1mois à compter de septembre 2026.</p>
+                    
+                    <!-- Ajout de l'objectif Pentester -->
+                    <p id="monObjectif">
+                        <strong>Objectif :</strong> Acquérir une première expérience concrète en systèmes et réseaux grâce à l'alternance, afin de développer les bases solides indispensables pour évoluer à terme vers le métier de <strong>pentester</strong>.
+                    </p>
                 </hgroup>
                 <div id="socialnetworks">
                     <a href="https://www.linkedin.com/in/enzo-lamanna-b57026356/" target="_blank" aria-label="LinkedIn">
@@ -61,29 +80,30 @@
     </header>
 
     <main>
+        <!-- ============================================================================
+             SECTION A PROPOS
+        ============================================================================= -->
         <section id="moi">
             <div class="section-container">
                 <h2>À propos</h2>
                 <div class="cards">
                     <article>
-                        <p>Je me présente, je suis Enzo LAMANNA, étudiant en deuxième année de BUT Réseaux &
-                            Télécommunications à l'IUT d'Aubière (63).<br><br>
-                            Initialement attiré par la programmation pure et son aspect logique, mon manque de clarté
-                            professionnelle m'a finalement mené vers une réorientation dans le domaine des réseaux.
-                            C'est pourquoi j'ai choisi de poursuivre mes études en BUT Réseaux et Télécommunications
-                            (R&T), non seulement pour me spécialiser en réseaux, mais aussi pour la polyvalence des
-                            compétences offertes par cette formation.<br><br>
-                            Dans l'objectif de valider mon diplôme et d'apprendre dans un cadre concret grâce à un
-                            environnement professionnel, je suis à la recherche d'une alternance en réseaux pour mes
-                            deux prochaines années d'études, à compter de septembre 2026.<br><br>
-                            Rythme : 1 mois en entreprise pour 1 mois à l'IUT <br> <br>
-                            Sociable, curieux, rigoureux et discret sont les adjectifs qui définissent parfaitement mon
-                            profil dans un contexte professionnel.</p>
+                        <p>Je m'appelle Enzo LAMANNA, étudiant en deuxième année de <strong>BUT - Réseaux & Télécommunications à l'IUT d'Aubière</strong>.<br> <br>
+
+Attiré au départ par la logique de la programmation, je me suis orienté vers le BUT R&T pour bénéficier d'une formation polyvalente et concrète. Dans le cadre de mon diplôme, <strong>je recherche une alternance de deux ans en systèmes et réseaux</strong> à compter de septembre 2026, selon un rythme d'un mois en entreprise et un mois à l'IUT. <br> <br>
+
+Mon objectif pour cette alternance est de découvrir la réalité du terrain : appréhender le paramétrage des équipements réseau et maîtriser l'administration système, notamment la gestion des comptes avec Active Directory. Une fois ces compétences fondamentales acquises, j'ambitionne d'évoluer vers le métier de pentester. <strong>Je suis en effet convaincu qu'une connaissance approfondie de l'architecture des réseaux et des systèmes est indispensable pour savoir en identifier les failles</strong>. <br> <br>
+
+Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon envie d'apprendre au service de votre équipe.
+</p>
                     </article>
                 </div>
             </div>
         </section>
 
+        <!-- ============================================================================
+             SECTION FORMATIONS
+        ============================================================================= -->
         <section id="formation">
             <div class="section-container">
                 <h2>Formations</h2>
@@ -91,7 +111,7 @@
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>BUT - Réseaux & Télécommunications</h3>
+                                <h3>BUT - Réseaux & Télécommunications (Option : Cyber)</h3>
                                 <span class="date-badge current">2025 - 2028</span>
                             </div>
                         </summary>
@@ -106,7 +126,7 @@
                                 <div class="detail-row"><strong>Obtention :</strong> <span>En cours</span></div>
                                 <div class="detail-row"><strong>Formation :</strong> <span>BUT Réseaux &
                                         Télécommunications</span></div>
-                                <div class="detail-row"><strong>Statut :</strong> <span>Étudiant - BUT1</span></div>
+                                <div class="detail-row"><strong>Statut :</strong> <span>Étudiant - BUT2</span></div>
                             </div>
                             <h4 class="formation-objectif-title">Objectif de la Formation</h4>
                             <p class="formation-objectif-text">Le <strong>BUT Réseaux & Télécommunications
@@ -144,7 +164,7 @@
                         <summary>
                             <div class="summary-title">
                                 <h3>Licence 1 - Mathématiques et Informatique</h3>
-                                <span class="date-badge past">2024 - 2025</span>
+                                <span class="date-badge licence">2024 - 2025</span>
                             </div>
                         </summary>
                         <div class="details-content">
@@ -189,7 +209,7 @@
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Baccalauréat - Série Générale</h3>
+                                <h3>Baccalauréat - Série Générale (Spécialités : Maths & NSI)</h3>
                                 <span class="date-badge past">2021 - 2024</span>
                             </div>
                         </summary>
@@ -233,7 +253,7 @@
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Cisco CCNA</h3>
+                                <h3>Cisco - CCNA</h3>
                                 <span class="date-badge current">Obtention : En cours</span>
                             </div>
                         </summary>
@@ -276,550 +296,529 @@
                         </div>
                     </details>
 
-                    <div class="cards">
-                        <details class="formation-item">
-                            <summary>
-                                <div class="summary-title">
-                                    <h3>SST - Sauveuteur Secouriste du Travail</h3>
-                                    <span class="date-badge past">Obtention : 2026</span>
-                                </div>
-                            </summary>
-                            <div class="details-content">
-                                <img src="theme/picture/logo_sst.png" alt="Logo SST" class="formation-logo">
-                                <div class="formation-details">
-                                    <div class="detail-row"><strong>Intitulé :</strong> <span>SST</span></div>
-                                    <div class="detail-row"><strong>Obtention :</strong> <span>OUI</span></div>
-                                    <div class="detail-row"><strong>Année :</strong> <span>2026</span></div>
-                                </div>
-                                <h4 class="formation-objectif-title">Objectif de la Certification</h4>
-                                <p class="formation-objectif-text">La certification SST (Sauveteur Secouriste du
-                                    Travail) est une formation qui permet d'acquérir les compétences fondamentales pour
-                                    <strong>intervenir efficacement face à une situation d'accident</strong> du travail
-                                    et participer
-                                    activement à la <strong>prévention des risques professionnels</strong> au sein de
-                                    l'entreprise.
-                                </p>
-
-                                <h4 class="formation-objectif-title">Pourquoi SST ?</h4>
-                                <p class="formation-objectif-text">Souhaitant apporter une réelle valeur ajoutée en
-                                    entreprise, j'ai choisi de passer le SST pour <strong>compléter ma formation
-                                        PSC1</strong> et
-                                    l'adapter au contexte professionnel. Je <strong>maîtrise</strong> désormais les
-                                    gestes de secours
-                                    indispensables pour protéger une personne en danger tout en développant discernement
-                                    nécessaires pour gérer une situation critique.
-                                    De plus, cela m'a permis d'<strong>assimiler le cadre juridique</strong> et mes
-                                    <strong>responsabilités</strong>
-                                    concernant l'exécution de ces gestes de premiers secours.
-                                </p>
-
-                                <h4 class="formation-objectif-title">Et maintenant ?</h4>
-                                <p class="formation-objectif-text">Désormais certifié, je suis pleinement <strong>apte à
-                                        intervenir</strong> avec méthode pour <strong>protéger</strong> toute personne
-                                    en danger. Même face à des
-                                    situations complexes ou difficiles, je m'engage à <strong>faire tout mon possible
-                                        pour
-                                        porter secours</strong> et appliquer les gestes nécessaires. Que ce soit dans ma
-                                    vie
-                                    quotidienne ou au sein de mon futur environnement professionnel, je dispose des
-                                    outils techniques et réglementaires indispensables pour assurer la sécurité de mon
-                                    entourage et agir en tant que <strong>membre actif de la prévention</strong>.
-                                </p>
-                            </div>
-                        </details>
-
-
-
-                        <details class="formation-item">
-                            <summary>
-                                <div class="summary-title">
-                                    <h3>PSC1 - Formation premiers secours citoyen</h3>
-                                    <span class="date-badge past">Obtention : 2024</span>
-                                </div>
-                            </summary>
-                            <div class="details-content">
-                                <img src="theme/picture/logo_psc1.png" alt="Logo PSC1" class="formation-logo">
-                                <div class="formation-details">
-                                    <div class="detail-row"><strong>Intitulé :</strong> <span>PSC1</span></div>
-                                    <div class="detail-row"><strong>Obtention :</strong> <span>OUI</span></div>
-                                    <div class="detail-row"><strong>Année :</strong> <span>2024</span></div>
-                                </div>
-                                <h4 class="formation-objectif-title">Objectif de la Certification</h4>
-                                <p class="formation-objectif-text">La certification PSC1 permet de <strong>préparer au
-                                        mieux
-                                        l'arrivée des secours</strong> en effectuant les premiers gestes de secourisme
-                                    et
-                                    les soins vitaux immédiats, optimisant ainsi les chances de survie de la victime. La
-                                    validation de cette certification s'effectue au moyen d'<strong>exercices pratiques
-                                        et
-                                        de mises en situation simulant des urgences réelles</strong> comme les cas
-                                    d'étouffement, de brûlures ou de perte de conscience.</p>
-
-                                <h4 class="formation-objectif-title">Pourquoi la PSC1 ?</h4>
-                                <p class="formation-objectif-text">J'ai entrepris la démarche de faire cette
-                                    certification
-                                    afin de savoir <strong>secourir et protéger une personne en danger</strong> en
-                                    appliquant les bons gestes. Cela m'assure de répondre avec <strong>calme</strong> et
-                                    <strong>discernement</strong> aux situations de stress, sans paniquer dans un cadre
-                                    personnel ou professionnel.
-                                </p>
-
-                                <h4 class="formation-objectif-title">Et maintenant ?</h4>
-                                <p class="formation-objectif-text">Grâce à cette certification, je suis apte à
-                                    intervenir et
-                                    à mettre en œuvre les gestes nécessaires pour <strong>secourir et protéger</strong>
-                                    une
-                                    personne en situation de danger dans ma vie quotidienne.</p>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-        </section>
-
-        <section id="competence">
-            <div class="section-container">
-                <h2>Compétences</h2>
-
-                <h3>Compétences Techniques</h3>
-                <br>
-
-                <div class="cards">
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Programmation</h3>
-                                <span class="date-badge">Technique</span>
+                                <h3>SST - Sauveuteur Secouriste du Travail</h3>
+                                <span class="date-badge past">Obtention : 2026</span>
                             </div>
                         </summary>
                         <div class="details-content">
-                            <h4 class="formation-objectif-title">Enjeux techniques</h4>
-                            <p class="formation-objective-text">
-                                Au quotidien, la programmation et le développement web me permettent de
-                                <strong>concevoir</strong>, de
-                                <strong>déployer</strong> et de <strong>concrétiser</strong> mes différents projets. De
-                                plus, dans le domaine de la
-                                cybersécurité, la maîtrise du code est une <strong>compétence cruciale</strong> pour
-                                automatiser les
-                                défenses, <strong>analyser les vulnérabilités</strong> et répondre efficacement aux
-                                besoins des
-                                infrastructures.
+                            <img src="theme/picture/logo_sst.png" alt="Logo SST" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Intitulé :</strong> <span>SST</span></div>
+                                <div class="detail-row"><strong>Obtention :</strong> <span>OUI</span></div>
+                                <div class="detail-row"><strong>Année :</strong> <span>2026</span></div>
+                            </div>
+                            <h4 class="formation-objectif-title">Objectif de la Certification</h4>
+                            <p class="formation-objectif-text">La certification SST (Sauveteur Secouriste du
+                                Travail) est une formation qui permet d'acquérir les compétences fondamentales pour
+                                <strong>intervenir efficacement face à une situation d'accident</strong> du travail
+                                et participer
+                                activement à la <strong>prévention des risques professionnels</strong> au sein de
+                                l'entreprise.
                             </p>
 
-                            <div class="sub-skills-grid">
-                                <div class="sub-skill-card">
-                                    <h4>Python</h4>
-                                    <p class="formation-objective-text">
-                                        Essentiel pour l'<strong>automatisation</strong>, <strong>Python</strong> est un
-                                        langage dont je maîtrise aussi bien les bases — comme la manipulation des
-                                        variables, des boucles et des fonctions — que des concepts plus avancés. Je sais
-                                        notamment implémenter la <strong>récursion</strong> et appliquer les principes
-                                        de la <strong>Programmation Orientée Objet (POO)</strong> à travers
-                                        l'utilisation de méthodes dédiées.
-                                    </p>
-                                </div>
+                            <h4 class="formation-objectif-title">Pourquoi SST ?</h4>
+                            <p class="formation-objectif-text">Souhaitant apporter une réelle valeur ajoutée en
+                                entreprise, j'ai choisi de passer le SST pour <strong>compléter ma formation
+                                    PSC1</strong> et
+                                l'adapter au contexte professionnel. Je <strong>maîtrise</strong> désormais les
+                                gestes de secours
+                                indispensables pour protéger une personne en danger tout en développant discernement
+                                nécessaires pour gérer une situation critique.
+                                De plus, cela m'a permis d'<strong>assimiler le cadre juridique</strong> et mes
+                                <strong>responsabilités</strong>
+                                concernant l'exécution de ces gestes de premiers secours.
+                            </p>
 
-                                <div class="sub-skill-card">
-                                    <h4>C</h4>
-                                    <p class="formation-objective-text">
-                                        Je maîtrise les bases et la structure du langage C, ce qui m'a permis de mieux
-                                        <strong>assimiler la gestion de la mémoire</strong> et l'organisation des
-                                        espaces de données,
-                                        notamment à travers la manipulation des pointeurs et de l'allocation dynamique.
-                                    </p>
-                                </div>
-
-                                <div class="sub-skill-card">
-                                    <h4>Web</h4>
-                                    <p class="formation-objective-text">
-                                        En <strong>développement web</strong>, je maîtrise les technologies
-                                        fondamentales : <strong>HTML</strong> pour la structure, <strong>CSS</strong>
-                                        pour le design, et <strong>JavaScript</strong> pour le dynamisme. Ces
-                                        compétences m'ont non seulement permis de <strong>concevoir et réaliser</strong>
-                                        l'intégralité de ce portfolio, mais elles m'aident aussi à <strong>analyser
-                                            l'architecture d'une application</strong> pour mieux en comprendre les
-                                        <strong>vulnérabilités</strong>, qu'elles se situent côté
-                                        <strong>front-end</strong> ou <strong>back-end</strong>.
-                                    </p>
-                                </div>
-
-                                <div class="sub-skill-card">
-                                    <h4>Base de donnée</h4>
-                                    <p class="formation-objective-text">
-                                        Je maîtrise le couple <strong>PHP / SQL</strong> pour le <strong>développement
-                                            côté serveur</strong>. PHP me permet de gérer la <strong>logique interne de
-                                            l'application</strong> (le traitement des requêtes utilisateurs), tandis que
-                                        SQL assure l'<strong>interaction avec les bases de données</strong>. Cette
-                                        compétence <strong>back-end</strong> est essentielle pour comprendre comment
-                                        transitent les données et comment <strong>sécuriser un site</strong> contre des
-                                        failles critiques comme les <strong>injections SQL</strong>.
-                                    </p>
-                                </div>
-
-                                <div class="sub-skill-card">
-                                    <h4>Bash</h4>
-                                    <p class="formation-objective-text">
-                                        Maîtrise de l'environnement <strong>Linux</strong> et de son
-                                        <strong>terminal</strong> pour naviguer avec aisance au sein des arborescences
-                                        de fichiers. Capacité à concevoir des <strong>scripts Bash</strong> simples afin
-                                        d'<strong>automatiser des tâches</strong> répétitives et optimiser la gestion du
-                                        système.
-                                    </p>
-                                </div>
-
-                                <div class="sub-skill-card">
-                                    <h4>PowerShell</h4>
-                                    <p class="formation-objective-text">
-                                        Utilisation de <strong>PowerShell</strong> sous Windows pour l'administration
-                                        système, notamment la <strong>gestion des utilisateurs</strong>,
-                                        l'administration des droits et la manipulation avancée du <strong>système de
-                                            fichiers</strong> (fichiers et dossiers).
-                                    </p>
-                                </div>
-                            </div>
+                            <h4 class="formation-objectif-title">Et maintenant ?</h4>
+                            <p class="formation-objectif-text">Désormais certifié, je suis pleinement <strong>apte à
+                                    intervenir</strong> avec méthode pour <strong>protéger</strong> toute personne
+                                en danger. Même face à des
+                                situations complexes ou difficiles, je m'engage à <strong>faire tout mon possible
+                                    pour
+                                    porter secours</strong> et appliquer les gestes nécessaires. Que ce soit dans ma
+                                vie
+                                quotidienne ou au sein de mon futur environnement professionnel, je dispose des
+                                outils techniques et réglementaires indispensables pour assurer la sécurité de mon
+                                entourage et agir en tant que <strong>membre actif de la prévention</strong>.
+                            </p>
                         </div>
                     </details>
 
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Réseaux</h3>
-                                <span class="date-badge">Technique</span>
+                                <h3>PSC1 - Formation premiers secours citoyen</h3>
+                                <span class="date-badge past">Obtention : 2024</span>
                             </div>
                         </summary>
                         <div class="details-content">
-                            <h4 class="formation-objectif-title">Enjeux techniques</h4>
-                            <p class="formation-objectif-text">
-                                Se spécialiser dans les réseaux exige une compréhension globale de systèmes en évolution
-                                constante. Au-delà du simple routage des données, il s'agit de maîtriser
-                                l'<strong>architecture</strong> et la <strong>gestion des infrastructures</strong> pour
-                                garantir leur <strong>bon fonctionnement</strong>.
+                            <img src="theme/picture/logo_psc1.png" alt="Logo PSC1" class="formation-logo">
+                            <div class="formation-details">
+                                <div class="detail-row"><strong>Intitulé :</strong> <span>PSC1</span></div>
+                                <div class="detail-row"><strong>Obtention :</strong> <span>OUI</span></div>
+                                <div class="detail-row"><strong>Année :</strong> <span>2024</span></div>
+                            </div>
+                            <h4 class="formation-objectif-title">Objectif de la Certification</h4>
+                            <p class="formation-objectif-text">La certification PSC1 permet de <strong>préparer au
+                                    mieux
+                                    l'arrivée des secours</strong> en effectuant les premiers gestes de secourisme
+                                et
+                                les soins vitaux immédiats, optimisant ainsi les chances de survie de la victime. La
+                                validation de cette certification s'effectue au moyen d'<strong>exercices pratiques
+                                    et
+                                    de mises en situation simulant des urgences réelles</strong> comme les cas
+                                d'étouffement, de brûlures ou de perte de conscience.</p>
+
+                            <h4 class="formation-objectif-title">Pourquoi la PSC1 ?</h4>
+                            <p class="formation-objectif-text">J'ai entrepris la démarche de faire cette
+                                certification
+                                afin de savoir <strong>secourir et protéger une personne en danger</strong> en
+                                appliquant les bons gestes. Cela m'assure de répondre avec <strong>calme</strong> et
+                                <strong>discernement</strong> aux situations de stress, sans paniquer dans un cadre
+                                personnel ou professionnel.
                             </p>
 
-                            <div class="sub-skills-grid">
-                                <div class="sub-skill-card">
-                                    <h4>Configuration</h4>
-                                    <p class="formation-objective-text">
-                                        Je maîtrise la <strong>configuration en ligne de commande (CLI)</strong> des
-                                        équipements <strong>Cisco</strong>, notamment les <strong>routeurs</strong>,
-                                        <strong>commutateurs</strong> et serveurs. Cela me permet de <strong>déployer et
-                                            de paramétrer</strong> des <strong>infrastructures réseaux</strong>
-                                        entièrement opérationnelles.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="sub-skills-grid">
-                                <div class="sub-skill-card">
-                                    <h4>Test de connectivité</h4>
-                                    <p class="formation-objective-text">
-                                        Je sais valider le bon fonctionnement d'un réseau en effectuant des
-                                        <strong>tests de connectivité (Ping)</strong>. J'utilise également le logiciel
-                                        <strong>Wireshark</strong> pour effectuer de l'<strong>analyse de
-                                            trames</strong>, ce qui me permet de vérifier la conformité des échanges et
-                                        de diagnostiquer d'éventuelles anomalies.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="sub-skills-grid">
-                                <div class="sub-skill-card">
-                                    <h4>Téléphonie d'entreprise</h4>
-                                    <p class="formation-objective-text">
-                                        Je sais déployer et configurer un <strong>serveur IPBX</strong> pour mettre en
-                                        place une solution de <strong>Téléphonie sur IP (ToIP)</strong> en entreprise.
-                                        Je maîtrise l'intégration de différents terminaux, tels que les téléphones
-                                        <strong>DECT</strong> ou les <strong>boîtiers ATA</strong>, ainsi que le
-                                        paramétrage des fonctionnalités professionnelles comme les <strong>messageries
-                                            vocales</strong> et les <strong>groupes d'appel</strong>.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="sub-skills-grid">
-                                <div class="sub-skill-card">
-                                    <h4>Service</h4>
-                                    <p class="formation-objective-text">
-                                        Capable de répondre aux besoins d'une infrastructure, j'assure la mise en place
-                                        et le paramétrage de nombreux services clés : le <strong>DHCP</strong>
-                                        (<em>Dynamic Host Configuration Protocol</em>) pour l'adressage dynamique, le
-                                        <strong>DNS</strong> (<em>Domain Name System</em>) pour la résolution de noms,
-                                        le <strong>FTP</strong> (<em>File Transfer Protocol</em>) pour le transfert de
-                                        fichiers, ainsi que le déploiement de <strong>serveurs Web</strong>. De plus, je
-                                        sais gérer un domaine via <strong>Active Directory (AD)</strong> sous
-                                        <strong>Windows Server</strong>, notamment en configurant des stratégies de
-                                        groupe (<strong>GPO</strong>).
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="sub-skills-grid">
-                                <div class="sub-skill-card">
-                                    <h4>Logiciel de simulation</h4>
-                                    <p class="formation-objective-text">
-                                        Utilisation du logiciel de simulation <strong>Cisco Packet Tracer</strong> pour
-                                        maquetter virtuellement des infrastructures réseaux physiques. Cet outil me
-                                        permet de concevoir des architectures complexes et d'effectuer des tests
-                                        rigoureux en <strong>mode temps réel</strong> ou en <strong>mode
-                                            simulation</strong> afin de valider leur bon fonctionnement avant tout
-                                        déploiement réel.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="sub-skills-grid">
-                                <div class="sub-skill-card">
-                                    <h4>Plan d'adressage</h4>
-                                    <p class="formation-objective-text">
-                                        Capacité à structurer un <strong>plan d'adressage</strong> logique et évolutif
-                                        en fonction du cahier des charges, assurant la <strong>bonne
-                                            connectivité</strong> de l'ensemble des équipements et facilitant la
-                                        <strong>gestion du réseau</strong>.
-                                    </p>
-                                </div>
-                            </div>
-
-
+                            <h4 class="formation-objectif-title">Et maintenant ?</h4>
+                            <p class="formation-objectif-text">Grâce à cette certification, je suis apte à
+                                intervenir et
+                                à mettre en œuvre les gestes nécessaires pour <strong>secourir et protéger</strong>
+                                une
+                                personne en situation de danger dans ma vie quotidienne.</p>
                         </div>
+                    </details>
                 </div>
-                </details>
-
-                <details class="formation-item">
-                    <summary>
-                        <div class="summary-title">
-                            <h3>Télécommunications</h3>
-                            <span class="date-badge">Technique</span>
-                        </div>
-                    </summary>
-                    <div class="details-content">
-                        <h4 class="formation-objectif-title">Enjeux techniques</h4>
-                        <p class="formation-objective-text">
-                            Étudier les télécommunications, c'est s'intéresser à la <strong>couche physique</strong> des
-                            réseaux. Il ne s'agit pas seulement d'aiguiller les paquets de données, mais de comprendre
-                            comment ils sont convertis et transmis dans les câbles. Cela demande d'appréhender des
-                            concepts fondamentaux d'<strong>électricité</strong>, de <strong>gestion de la
-                                puissance</strong> et de <strong>traitement du signal</strong> pour assurer une
-                            <strong>transmission fiable et sans pertes</strong>.
-                        </p>
-
-                        <div class="sub-skills-grid">
-                            <div class="sub-skill-card">
-                                <h4>Oscilloscope</h4>
-                                <p class="formation-objective-text">
-                                    L'oscilloscope me permet d'analyser et de réaliser des mesures précises sur les
-                                    signaux. C'est un outil primordial qui me permet de visualiser concrètement leur
-                                    comportement et leur évolution temporelle.
-                                </p>
-                            </div>
-
-                            <div class="sub-skill-card">
-                                <h4>GBF</h4>
-                                <p class="formation-objective-text">
-                                    Le <strong>GBF (Générateur de Basses Fréquences)</strong> me permet de générer tout
-                                    type de signaux (<strong>sinusoïdaux, carrés, triangulaires</strong>). Cela me
-                                    permet d'<strong>injecter des signaux tests</strong> pour mener à bien mes
-                                    différentes expérimentations.
-                                </p>
-                            </div>
-
-                            <div class="sub-skill-card">
-                                <h4>Analyseur de spectre</h4>
-                                <p class="formation-objective-text">
-                                    L'<strong>analyseur de spectre</strong> me permet d'étudier les signaux dans le
-                                    <strong>domaine fréquentiel</strong>. Il me permet notamment d'analyser la
-                                    <strong>bande passante</strong>, de mesurer la <strong>puissance des
-                                        fréquences</strong> et de repérer d'éventuelles <strong>interférences</strong>.
-                                </p>
-                            </div>
-
-                            <div class="sub-skill-card">
-                                <h4>Fibre Optique</h4>
-                                <p class="formation-objective-text">
-                                    L'étude de la <strong>fibre optique</strong> me permet de comprendre comment les
-                                    données du réseau transitent à travers la <strong>lumière</strong>. Elle me permet
-                                    également de maîtriser les <strong>outils de test</strong> pour vérifier qu'il n'y a
-                                    pas de <strong>coupure ou d'atténuation</strong> dans le câble en verre.
-                                </p>
-                            </div>
-
-                            <div class="sub-skill-card">
-                                <h4>Schématisation et Analyse de Problèmes</h4>
-                                <p class="formation-objective-text">
-                                    Capacité à retranscrire un besoin technique sous forme de <strong>schéma
-                                        fonctionnel</strong> afin de structurer la réflexion en amont. Cette étape
-                                    essentielle de pré-production sert de support d'analyse pour <strong>anticiper les
-                                        contraintes</strong>, identifier les anomalies potentielles et sécuriser le
-                                    <strong>déploiement réel</strong> de la solution.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="formation-item">
-                    <summary>
-                        <div class="summary-title">
-                            <h3>Communication</h3>
-                            <span class="date-badge">Technique</span>
-                        </div>
-                    </summary>
-                    <div class="details-content">
-                        <h4 class="formation-objectif-title">Enjeux techniques</h4>
-                        <p class="formation-objectif-text">
-                            En informatique, la <strong>communication</strong> est une compétence technique à part
-                            entière. Un projet ne se développe jamais seul : il exige un <strong>travail
-                                d'équipe</strong> fluide et, fréquemment, une <strong>relation directe avec les
-                                clients</strong> pour comprendre et cibler leurs besoins.
-                        </p>
-                    </div>
-
-                    <div class="sub-skill-card">
-                        <h4>Vulgarisation</h4>
-                        <p class="formation-objective-text">
-                            Grâce à des cours de communication, j'ai appris à <strong>vulgariser des concepts
-                                techniques</strong> complexes pour des personnes qui ne s'y connaissent pas en
-                            informatique. En m'appuyant sur des <strong>visuels, des schémas ou des métaphores</strong>
-                            concrètes, je m'assure qu'ils comprennent parfaitement les enjeux et les solutions
-                            apportées.
-                        </p>
-                    </div>
-                    <br>
-
-                    <div class="sub-skill-card">
-                        <h4>Expression orale</h4>
-                        <p class="formation-objective-text">
-                            Grâce à un travail de <strong>préparation rigoureux</strong>, j'aborde les
-                            <strong>présentations orales</strong> avec assurance. Je veille à employer les termes
-                            appropriés pour <strong>structurer mon propos</strong> et rendre mon discours accessible à
-                            mon auditoire.
-                        </p>
-                    </div>
-                </details>
             </div>
-
-            <br>
-            <h3>Compétences Humaines</h3>
-            <br>
-
-            <div class="cards competence-cards">
-                <details class="formation-item">
-                    <summary>
-                        <div class="summary-title">
-                            <h3>Relationnel</h3>
-                            <span class="date-badge">Humaine</span>
-                        </div>
-                    </summary>
-                    <div class="details-content">
-                        <p class="formation-objective-text">
-                            Grâce à mon <strong>bon relationnel</strong>, je m'intègre facilement dans un groupe tout en
-                            sachant travailler de manière <strong>autonome</strong>. Cela me permet de mener à bien nos
-                            <strong>projets collectifs</strong> en communiquant clairement et en coordonnant la
-                            <strong>répartition des tâches</strong> de manière intelligente.
-                        </p>
-
-                        <p>
-                            <br>
-                            <strong>Acquisition :</strong>
-                        </p>
-
-                        <p>
-                            <br>
-                            Mon <strong>sens du relationnel</strong> s'est développé à travers mes expériences
-                            professionnelles en caisse, qui m'ont confronté quotidiennement au <strong>contact
-                                client</strong>, ainsi qu'à travers les cours de <strong>communication</strong> suivis
-                            en BUT R&T. Ces enseignements m'ont appris à <strong>structurer mes idées</strong> et à les
-                            transmettre de manière claire, méthodique et <strong>adaptée à chaque
-                                interlocuteur</strong>.
-                        </p>
-                    </div>
-                </details>
-
-                <details class="formation-item">
-                    <summary>
-                        <div class="summary-title">
-                            <h3>Curiosité</h3>
-                            <span class="date-badge">Humaine</span>
-
-                        </div>
-                    </summary>
-                    <div class="details-content">
-                        <p class="formation-objective-text">
-                            Naturellement <strong>curieux</strong>, je cherche toujours à <strong>approfondir mes
-                                connaissances</strong>, ce qui me permet de progresser et d'<strong>évoluer en
-                                permanence</strong> dans mon domaine. Loin d'être un signe de lassitude, cette démarche
-                            traduit ma volonté constante de <strong>me perfectionner</strong>.
-                        </p>
-                        <br>
-                        <strong>Acquisition :</strong>
-                        </p>
-
-                        <p>
-                            <br>
-                            Ma <strong>curiosité</strong> s'exprime avant tout à travers ma pratique artistique, où
-                            j'explore en permanence de nouveaux univers sans me limiter à une seule technique passant
-                            de l'<strong>aquarelle</strong> et la peinture traditionnelle au <strong>dessin
-                                réaliste</strong> ou au <strong>pixel art</strong>, tout en restant ouvert à d'autres
-                            médiums. Cet esprit d'exploration se retrouve également dans le domaine informatique, où
-                            l'interconnexion des <strong>langages de programmation</strong> et des technologies m'incite
-                            à ne jamais me cantonner à un seul sujet et à <strong>renouveler sans cesse mes
-                                apprentissages</strong>.
-                        </p>
-                    </div>
-                </details>
-
-                <details class="formation-item">
-                    <summary>
-                        <div class="summary-title">
-                            <h3>Rigueur</h3>
-                            <span class="date-badge">Humaine</span>
-                        </div>
-                    </summary>
-                    <div class="details-content">
-                        <p class="formation-objective-text">
-                            Soucieux de la <strong>qualité de mon travail</strong>, je m'attache à livrer des
-                            <strong>résultats soignés</strong>. J'applique cette même <strong>rigueur</strong> lors des
-                            phases de mise en place, en <strong>sécurisant chaque procédure</strong> pour écarter tout
-                            risque de dysfonctionnement.
-                        </p>
-                        <br>
-                        <strong>Acquisition :</strong>
-                        </p>
-
-                        <p>
-                            <br>
-                            Ma <strong>rigueur</strong> s'est développée à travers les nombreux travaux pratiques en
-                            réseaux réalisés durant mon BUT R&T, où le <strong>paramétrage des équipements</strong>
-                            exige un contrôle minutieux : la moindre erreur de configuration peut bloquer l'ensemble
-                            d'un réseau. Cette exigence s'est également renforcée lors de mes expériences
-                            professionnelles en mise en rayon, où le <strong>respect strict des normes</strong> et le
-                            soin apporté à la disposition des produits étaient essentiels pour garantir un <strong>rayon
-                                irréprochable</strong>.
-                        </p>
-                    </div>
-                </details>
-            </div>
-            </div>
-
-            <br>
-            <h3>Langue</h3>
-            <br>
-
-            <details class="formation-item">
-                <summary>
-                    <div class="summary-title">
-                        <h3>Anglais</h3>
-                        <span class="date-badge">Niveau A2+</span>
-                    </div>
-                </summary>
-                <div class="details-content">
-                    <p class="formation-objective-text">
-                        Mon niveau d'anglais me permet de <strong>comprendre</strong> et de tenir une
-                        <strong>conversation simple</strong>. Par ailleurs, mes compétences techniques me permettent de
-                        <strong>comprendre les erreurs</strong> affichées dans un <strong>terminal</strong>.
-                    </p>
-                </div>
-            </details>
         </section>
 
+        <!-- ============================================================================
+             SECTION COMPÉTENCES TECHNIQUES ET HUMAINES
+        ============================================================================= -->
+        <section id="competence">
+            <div class="section-container">
+                <h2>Compétences</h2>
+
+                <!-- SOUS-SECTION : PROGRAMMATION -->
+                <h3 class="sub-section-title">Programmation</h3>
+                <div class="cards">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Python</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Essentiel pour l'<strong>automatisation</strong>, <strong>Python</strong> est un
+                                langage dont je maîtrise aussi bien les bases — comme la manipulation des
+                                variables, des boucles et des fonctions — que des concepts plus avancés. Je sais
+                                notamment implémenter la <strong>récursion</strong> et appliquer les principes
+                                de la <strong>Programmation Orientée Objet (POO)</strong> à travers
+                                l'utilisation de méthodes dédiées.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>C</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Je maîtrise les bases et la structure du langage C, ce qui m'a permis de mieux
+                                <strong>assimiler la gestion de la mémoire</strong> et l'organisation des
+                                espaces de données,
+                                notamment à travers la manipulation des pointeurs et de l'allocation dynamique.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Web (HTML / CSS / JS)</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                En <strong>développement web</strong>, je maîtrise les technologies
+                                fondamentales : <strong>HTML</strong> pour la structure, <strong>CSS</strong>
+                                pour le design, et <strong>JavaScript</strong> pour le dynamisme. Ces
+                                compétences m'ont non seulement permis de <strong>concevoir et réaliser</strong>
+                                l'intégralité de ce portfolio, mais elles m'aident aussi à <strong>analyser
+                                    l'architecture d'une application</strong> pour mieux en comprendre les
+                                <strong>vulnérabilités</strong>, qu'elles se situent côté
+                                <strong>front-end</strong> ou <strong>back-end</strong>.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Base de données (PHP / SQL)</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Je maîtrise le couple <strong>PHP / SQL</strong> pour le <strong>développement
+                                    côté serveur</strong>. PHP me permet de gérer la <strong>logique interne de
+                                    l'application</strong> (le traitement des requêtes utilisateurs), tandis que
+                                SQL assure l'<strong>interaction avec les bases de données</strong>. Cette
+                                compétence <strong>back-end</strong> est essentielle pour comprendre comment
+                                transitent les données et comment <strong>sécuriser un site</strong> contre des
+                                failles critiques comme les <strong>injections SQL</strong>.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Bash & Linux</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Maîtrise de l'environnement <strong>Linux</strong> et de son
+                                <strong>terminal</strong> pour naviguer avec aisance au sein des arborescences
+                                de fichiers. Capacité à concevoir des <strong>scripts Bash</strong> simples afin
+                                d'<strong>automatiser des tâches</strong> répétitives et optimiser la gestion du
+                                système.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>PowerShell</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Utilisation de <strong>PowerShell</strong> sous Windows pour l'administration
+                                système, notamment la <strong>gestion des utilisateurs</strong>,
+                                l'administration des droits et la manipulation avancée du <strong>système de
+                                    fichiers</strong> (fichiers et dossiers).
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- SOUS-SECTION : RÉSEAUX -->
+                <h3 class="sub-section-title">Réseaux</h3>
+                <div class="cards">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Configuration d'équipements</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Je maîtrise la <strong>configuration en ligne de commande (CLI)</strong> des
+                                équipements <strong>Cisco</strong>, notamment les <strong>routeurs</strong>,
+                                <strong>commutateurs</strong> et serveurs. Cela me permet de <strong>déployer et
+                                    de paramétrer</strong> des <strong>infrastructures réseaux</strong>
+                                entièrement opérationnelles.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Test de connectivité et Analyse</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Je sais valider le bon fonctionnement d'un réseau en effectuant des
+                                <strong>tests de connectivité (Ping)</strong>. J'utilise également le logiciel
+                                <strong>Wireshark</strong> pour effectuer de l'<strong>analyse de
+                                    trames</strong>, ce qui me permet de vérifier la conformité des échanges et
+                                de diagnostiquer d'éventuelles anomalies.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Téléphonie d'entreprise</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Je sais déployer et configurer un <strong>serveur IPBX</strong> pour mettre en
+                                place une solution de <strong>Téléphonie sur IP (ToIP)</strong> en entreprise.
+                                Je maîtrise l'intégration de différents terminaux, tels que les téléphones
+                                <strong>DECT</strong> ou les <strong>boîtiers ATA</strong>, ainsi que le
+                                paramétrage des fonctionnalités professionnelles comme les <strong>messageries
+                                    vocales</strong> et les <strong>groupes d'appel</strong>.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Services Réseau</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Capable de répondre aux besoins d'une infrastructure, j'assure la mise en place
+                                et le paramétrage de nombreux services clés : le <strong>DHCP</strong>
+                                (<em>Dynamic Host Configuration Protocol</em>) pour l'adressage dynamique, le
+                                <strong>DNS</strong> (<em>Domain Name System</em>) pour la résolution de noms,
+                                le <strong>FTP</strong> (<em>File Transfer Protocol</em>) pour le transfert de
+                                fichiers, ainsi que le déploiement de <strong>serveurs Web</strong>. De plus, je
+                                sais gérer un domaine via <strong>Active Directory (AD)</strong> sous
+                                <strong>Windows Server</strong>, notamment en configurant des stratégies de
+                                groupe (<strong>GPO</strong>).
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Logiciel de simulation (Cisco Packet Tracer)</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Utilisation du logiciel de simulation <strong>Cisco Packet Tracer</strong> pour
+                                maquetter virtuellement des infrastructures réseaux physiques. Cet outil me
+                                permet de concevoir des architectures complexes et d'effectuer des tests
+                                rigoureux en <strong>mode temps réel</strong> ou en <strong>mode
+                                    simulation</strong> afin de valider leur bon fonctionnement avant tout
+                                déploiement réel.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Plan d'adressage</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Capacité à structurer un <strong>plan d'adressage</strong> logique et évolutif
+                                en fonction du cahier des charges, assurant la <strong>bonne
+                                    connectivité</strong> de l'ensemble des équipements et facilitant la
+                                <strong>gestion du réseau</strong>.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- SOUS-SECTION : TÉLÉCOMMUNICATIONS -->
+                <h3 class="sub-section-title">Télécommunications</h3>
+                <div class="cards">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Oscilloscope, GBF & Analyseur de spectre</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                L'oscilloscope me permet d'analyser et de réaliser des mesures précises sur les
+                                signaux. C'est un outil primordial qui me permet de visualiser concrètement leur
+                                comportement et leur évolution temporelle.
+                                <br><br>
+                                Le <strong>GBF (Générateur de Basses Fréquences)</strong> me permet de générer tout
+                                type de signaux (<strong>sinusoïdaux, carrés, triangulaires</strong>). Cela me
+                                permet d'<strong>injecter des signaux tests</strong> pour mener à bien mes
+                                différentes expérimentations.
+                                <br><br>
+                                L'<strong>analyseur de spectre</strong> me permet d'étudier les signaux dans le
+                                <strong>domaine fréquentiel</strong>. Il me permet notamment d'analyser la
+                                <strong>bande passante</strong>, de mesurer la <strong>puissance des
+                                    fréquences</strong> et de repérer d'éventuelles <strong>interférences</strong>.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Fibre Optique</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                L'étude de la <strong>fibre optique</strong> me permet de comprendre comment les
+                                données du réseau transitent à travers la <strong>lumière</strong>. Elle me permet
+                                également de maîtriser les <strong>outils de test</strong> pour vérifier qu'il n'y a
+                                pas de <strong>coupure ou d'atténuation</strong> dans le câble en verre.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Schématisation et Analyse</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Capacité à retranscrire un besoin technique sous forme de <strong>schéma
+                                    fonctionnel</strong> afin de structurer la réflexion en amont. Cette étape
+                                essentielle de pré-production sert de support d'analyse pour <strong>anticiper les
+                                    contraintes</strong>, identifier les anomalies potentielles et sécuriser le
+                                <strong>déploiement réel</strong> de la solution.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- SOUS-SECTION : COMMUNICATION -->
+                <h3 class="sub-section-title">Communication</h3>
+                <div class="cards">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Vulgarisation & Expression orale</h3>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Grâce à des cours de communication, j'ai appris à <strong>vulgariser des concepts
+                                    techniques</strong> complexes pour des personnes qui ne s'y connaissent pas en
+                                informatique. En m'appuyant sur des <strong>visuels, des schémas ou des métaphores</strong>
+                                concrètes, je m'assure qu'ils comprennent parfaitement les enjeux et les solutions
+                                apportées.
+                                <br><br>
+                                Grâce à un travail de <strong>préparation rigoureux</strong>, j'aborde les
+                                <strong>présentations orales</strong> avec assurance. Je veille à employer les termes
+                                appropriés pour <strong>structurer mon propos</strong> et rendre mon discours accessible à
+                                mon auditoire.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- SOUS-SECTION : COMPÉTENCES HUMAINES -->
+                <h3 class="sub-section-title">Compétences Humaines</h3>
+                <div class="cards">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Relationnel</h3>
+                                <span class="date-badge humaine">Humaine</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Grâce à mon <strong>bon relationnel</strong>, je m'intègre facilement dans un groupe tout en
+                                sachant travailler de manière <strong>autonome</strong>. Cela me permet de mener à bien nos
+                                <strong>projets collectifs</strong> en communiquant clairement et en coordonnant la
+                                <strong>répartition des tâches</strong> de manière intelligente.
+                                <br><br>
+                                <strong>Acquisition :</strong>
+                                <br><br>
+                                Mon <strong>sens du relationnel</strong> s'est développé à travers mes expériences
+                                professionnelles en caisse, qui m'ont confronté quotidiennement au <strong>contact
+                                    client</strong>, ainsi qu'à travers les cours de <strong>communication</strong> suivis
+                                en BUT R&T. Ces enseignements m'ont appris à <strong>structurer mes idées</strong> et à les
+                                transmettre de manière claire, méthodique et <strong>adaptée à chaque
+                                    interlocuteur</strong>.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Curiosité</h3>
+                                <span class="date-badge humaine">Humaine</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Naturellement <strong>curieux</strong>, je cherche toujours à <strong>approfondir mes
+                                    connaissances</strong>, ce qui me permet de progresser et d'<strong>évoluer en
+                                    permanence</strong> dans mon domaine. Loin d'être un signe de lassitude, cette démarche
+                                traduit ma volonté constante de <strong>me perfectionner</strong>.
+                                <br><br>
+                                <strong>Acquisition :</strong>
+                                <br><br>
+                                Ma <strong>curiosité</strong> s'exprime avant tout à travers ma pratique artistique, où
+                                j'explore en permanence de nouveaux univers sans me limiter à une seule technique passant
+                                de l'<strong>aquarelle</strong> et la peinture traditionnelle au <strong>dessin
+                                    réaliste</strong> ou au <strong>pixel art</strong>, tout en restant ouvert à d'autres
+                                médiums. Cet esprit d'exploration se retrouve également dans le domaine informatique, où
+                                l'interconnexion des <strong>langages de programmation</strong> et des technologies m'incite
+                                à ne jamais me cantonner à un seul sujet et à <strong>renouveler sans cesse mes
+                                    apprentissages</strong>.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Rigueur</h3>
+                                <span class="date-badge humaine">Humaine</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Soucieux de la <strong>qualité de mon travail</strong>, je m'attache à livrer des
+                                <strong>résultats soignés</strong>. J'applique cette même <strong>rigueur</strong> lors des
+                                phases de mise en place, en <strong>sécurisant chaque procédure</strong> pour écarter tout
+                                risque de dysfonctionnement.
+                                <br><br>
+                                <strong>Acquisition :</strong>
+                                <br><br>
+                                Ma <strong>rigueur</strong> s'est développée à travers les nombreux travaux pratiques en
+                                réseaux réalisés durant mon BUT R&T, où le <strong>paramétrage des équipements</strong>
+                                exige un contrôle minutieux : la moindre erreur de configuration peut bloquer l'ensemble
+                                d'un réseau. Cette exigence s'est également renforcée lors de mes expériences
+                                professionnelles en mise en rayon, où le <strong>respect strict des normes</strong> et le
+                                soin apporté à la disposition des produits étaient essentiels pour garantir un <strong>rayon
+                                    irréprochable</strong>.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- SOUS-SECTION : LANGUES -->
+                <h3 class="sub-section-title">Langue</h3>
+                <div class="cards">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Anglais</h3>
+                                <span class="date-badge">Niveau A2+</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <p class="formation-objective-text">
+                                Mon niveau d'anglais me permet de <strong>comprendre</strong> et de tenir une
+                                <strong>conversation simple</strong>. Par ailleurs, mes compétences techniques me permettent de
+                                <strong>comprendre les erreurs</strong> affichées dans un <strong>terminal</strong>.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================================
+             SECTION EXPÉRIENCES
+        ============================================================================= -->
         <section id="experience">
             <div class="section-container">
                 <h2>Expériences</h2>
@@ -903,6 +902,7 @@
                             </p>
                         </div>
                     </details>
+
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
@@ -921,20 +921,17 @@
                                 </div>
                             </div>
                             <h4 class="formation-objectif-title">Contexte</h4>
-                            <p class="formation-objectif-text font-center">
                             <div>
                                 <h3>Contexte - Août 2025</h3>
-                                <p>
+                                <p class="formation-objectif-text">
                                     Assurer le remplacement d'un salarié sur l'ensemble du rayon des
                                     <strong>liquides</strong> afin de garantir la <strong>continuité du
                                         service</strong>, la gestion des stocks et la disponibilité des produits durant
                                     la forte affluence estivale.
                                 </p>
-
                                 <br>
-
                                 <h3>Contexte - Août 2024</h3>
-                                <p>
+                                <p class="formation-objectif-text">
                                     Découvrir le milieu de la grande distribution à travers une mission
                                     <strong>polyvalente</strong> en boulangerie et en rayon liquides, afin d'assurer la
                                     <strong>préparation des produits</strong> et l'approvisionnement tout en soutenant
@@ -942,23 +939,18 @@
                                 </p>
                             </div>
 
-                            </p>
-
                             <h4 class="formation-objectif-title">Objectif</h4>
-                            <p class="formation-objectif-text">
                             <div>
                                 <h3>Objectif - Août 2025</h3>
-                                <p>
+                                <p class="formation-objectif-text">
                                     Poursuivre mon expérience en grande distribution en prenant en charge l'ensemble du
                                     <strong>rayon des liquides</strong>, afin de garantir la <strong>continuité du
                                         service</strong>, la gestion complète des stocks et la disponibilité des
                                     produits face à la forte affluence estivale.
                                 </p>
-
                                 <br>
-
                                 <h3>Objectif - Août 2024</h3>
-                                <p>
+                                <p class="formation-objectif-text">
                                     Découvrir le monde professionnel et le fonctionnement d'une grande surface à travers
                                     une mission <strong>polyvalente</strong>, en participant à la production en
                                     boulangerie et à l'<strong>approvisionnement</strong> du rayon des liquides pour
@@ -966,15 +958,10 @@
                                 </p>
                             </div>
 
-
-
-                            </p>
-
                             <h4 class="formation-objectif-title">Missions</h4>
-                            <p class="formation-objectif-text">
                             <div>
                                 <h3>Août 2025 - Gestion globale du rayon des liquides (1 mois)</h3>
-                                <p>
+                                <p class="formation-objectif-text">
                                     Fort d'un premier aperçu acquis l'année précédente, cette mission s'est concentrée
                                     exclusivement sur l'ensemble du rayon des <strong>liquides</strong> (bières, sirops,
                                     gros alcools, eaux et vins). L'activité a consisté à assurer la <strong>mise en
@@ -987,11 +974,9 @@
                                     <strong>polyvalence</strong> pour intervenir sur l'intégralité des sous-secteurs du
                                     rayon.
                                 </p>
-
                                 <br>
-
                                 <h3>Août 2024 - Découverte de la grande distribution (2 semaines)</h3>
-                                <p>
+                                <p class="formation-objectif-text">
                                     Cette première période s'est divisée en deux expériences distinctes. Durant la
                                     première semaine en <strong>boulangerie</strong>, la mission principale a consisté à
                                     emballer un quota précis de produits avant l'ouverture, en faisant preuve de rigueur
@@ -1007,11 +992,9 @@
                                     sécurité.
                                 </p>
                             </div>
-                            </p>
 
                             <h4 class="formation-objectif-title">Bilan</h4>
                             <p class="formation-objectif-text">
-
                                 Cette expérience a offert une première immersion concrète dans le monde professionnel,
                                 permettant de développer des compétences clés telles que l'<strong>organisation</strong>
                                 rigoureuse, la <strong>gestion du timing</strong> pour identifier le moment opportun
@@ -1023,26 +1006,56 @@
                                 l'utilisation de <strong>transpalettes</strong> (électriques et manuels), le respect des
                                 <strong>règles de sécurité</strong>, la réalisation du <strong>facing</strong> et la
                                 <strong>gestion de la surface de vente</strong>.
-
                             </p>
                         </div>
                     </details>
-
                 </div>
             </div>
         </section>
 
+        <!-- ============================================================================
+             SECTION PROJETS
+        ============================================================================= -->
         <section id="projet">
             <div class="section-container">
                 <h2>Projets</h2>
 
+                <!-- SOUS-SECTION : PROJETS PROFESSIONNELS -->
+                <h3 class="sub-section-title">Projets Professionnels</h3>
                 <div class="cards layout-one-col">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>Java - Développer des applications communiquantes</h3>
+                                <span class="date-badge current">2026 - Semestre 1 BUT2 R&T</span>
+                            </div>
+                        </summary>
+                        <div class="details-content">
+                            <h4 class="formation-objectif-title">Contexte</h4>
+                            <p class="formation-objectif-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+
+                            <h4 class="formation-objectif-title">Objectif</h4>
+                            <p class="formation-objectif-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+
+                            <h4 class="formation-objectif-title">Missions</h4>
+                            <p class="formation-objectif-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Aenean id metus id velit ullamcorper pulvinar.</p>
+                            
+                            <h4 class="formation-objectif-title">Bilan</h4>
+                            <p class="formation-objectif-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet.</p>
+                            
+                            <div class="download-button-container spacing-top">
+                                <a href="#" class="btn-download">
+                                    <i class="fa-solid fa-file-pdf"></i> Télécharger le compte-rendu PDF
+                                </a>
+                            </div>
+                        </div>
+                    </details>
 
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Projet Intégratif : Mise en place d'un réseau d'entreprise</h3>
-                                <span class="date-badge current">2026 - Semestre 2 BUT R&T</span>
+                                <h3>Projet Intégratif - Mise en place d'un réseau d'entreprise</h3>
+                                <span class="date-badge current">2026 - Semestre 2 BUT1 R&T</span>
                             </div>
                         </summary>
                         <div class="details-content">
@@ -1087,16 +1100,20 @@
                             <p class="formation-objectif-text">
                                 Bilan à venir — Projet en cours de déploiement.
                             </p>
+                            
+                            <div class="download-button-container spacing-top">
+                                <a href="#" class="btn-download">
+                                    <i class="fa-solid fa-file-pdf"></i> Télécharger le compte-rendu PDF
+                                </a>
+                            </div>
                         </div>
                     </details>
-
-
 
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Projet Portfolio (HTML & CSS) : Se présenter sur Internet</h3>
-                                <span class="date-badge past">2025 - Semestre 1 BUT R&T</span>
+                                <h3>HTML et CSS - Portfolio</h3>
+                                <span class="date-badge past">2025 - Semestre 1 BUT1 R&T</span>
                             </div>
                         </summary>
                         <div class="details-content">
@@ -1144,14 +1161,20 @@
                                     <span>14.76/20</span>
                                 </div>
                             </div>
+                            
+                            <div class="download-button-container spacing-top">
+                                <a href="#" class="btn-download">
+                                    <i class="fa-solid fa-file-pdf"></i> Télécharger le compte-rendu PDF
+                                </a>
+                            </div>
                         </div>
                     </details>
 
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Projet Python : Traiter des données complexes</h3>
-                                <span class="date-badge past">2025 - Semestre 1 BUT R&T</span>
+                                <h3>Python : Traiter des données complexes</h3>
+                                <span class="date-badge past">2025 - Semestre 1 BUT1 R&T</span>
                             </div>
                         </summary>
                         <div class="details-content">
@@ -1177,52 +1200,52 @@
                             </p>
 
                             <h4 class="formation-objectif-title">Missions</h4>
-                            <p><strong>Extraction des données</strong> : Dans un premier temps, j'extrais les données de
+                            <p class="formation-objectif-text"><strong>Extraction des données</strong> : Dans un premier temps, j'extrais les données de
                                 l'emploi du temps au format CSV de manière non organisée. L'enjeu majeur consiste à
                                 traiter la structure des colonnes et à gérer les point-virgules faisant office de
                                 délimiteurs entre les données.</p>
-                            <!-- Bloc Image 1 -->
+                            
                             <div class="image-projet-container">
                                 <img src="theme/picture/def_charger_filtrer_SAE15.jpeg" alt="Extraction des données"
                                     class="image-projet">
                             </div>
 
-                            <p><strong>Création du planning</strong> : Une fois les données extraites, je procède à un
+                            <p class="formation-objectif-text"><strong>Création du planning</strong> : Une fois les données extraites, je procède à un
                                 filtrage selon le groupe sélectionné par l'utilisateur. Par exemple, si le groupe
                                 "<strong>TP3</strong>" est choisi, le programme isole uniquement les séances de cours
                                 correspondantes et écarte les données non pertinentes.</p>
-                            <!-- Bloc Image 2 -->
+                                
                             <div class="image-projet-container">
                                 <img src="theme/picture/def_planning_gr_SAE15.jpeg" alt="Création du planning"
                                     class="image-projet">
                             </div>
 
-                            <p><strong>Affichage du planning</strong> : Enfin, j'ai implémenté une fonction d'affichage
+                            <p class="formation-objectif-text"><strong>Affichage du planning</strong> : Enfin, j'ai implémenté une fonction d'affichage
                                 qui itère sur les données sélectionnées pour restituer le planning final pas à pas.</p>
-                            <!-- Bloc Image 3 -->
+                                
                             <div class="image-projet-container">
                                 <img src="theme/picture/def_afficher_SAE15.png" alt="Affichage du planning"
                                     class="image-projet">
                             </div>
 
-                            <p><strong>Lancement du programme</strong> : Pour finir, j'ai créé une fonction
+                            <p class="formation-objectif-text"><strong>Lancement du programme</strong> : Pour finir, j'ai créé une fonction
                                 <strong>main()</strong> permettant de faire appel aux différentes fonctions pour
                                 réaliser le projet.
                             </p>
-                            <!-- Bloc Image 4 -->
+                            
                             <div class="image-projet-container">
                                 <img src="theme/picture/def_main_SAE15.png" alt="Lancement du programme"
                                     class="image-projet">
                             </div>
 
                             <h4 class="formation-objectif-title">Bilan</h4>
-                            <p>La <strong>difficulté majeure</strong> rencontrée lors de ce projet a été d'apprendre à
+                            <p class="formation-objectif-text">La <strong>difficulté majeure</strong> rencontrée lors de ce projet a été d'apprendre à
                                 <strong>optimiser mon code</strong>, notamment en réduisant, supprimant et compactant
                                 certaines instructions. Ce travail a été réalisé en suivant strictement le
                                 <strong>cahier des charges</strong> et le <strong>calendrier</strong> impartis.
                             </p>
 
-                            <p>J'en ai retiré <strong>trois acquis majeurs</strong> : la capacité à prendre en main une
+                            <p class="formation-objectif-text">J'en ai retiré <strong>trois acquis majeurs</strong> : la capacité à prendre en main une
                                 <strong>bibliothèque Python</strong> en autonomie, l'<strong>optimisation de
                                     code</strong> pour plus d'efficacité, ainsi qu'une meilleure <strong>méthodologie
                                     d'organisation</strong>.
@@ -1238,25 +1261,65 @@
                                 <div class="detail-row"><strong>Note Finale :</strong> <span>15.68/20</span></div>
                                 <div class="detail-row"><strong>Moyenne de classe :</strong> <span>14.18/20</span></div>
                             </div>
+                            
+                            <div class="download-button-container spacing-top">
+                                <a href="#" class="btn-download">
+                                    <i class="fa-solid fa-file-pdf"></i> Télécharger le compte-rendu PDF
+                                </a>
+                            </div>
+                        </div>
+                    </details>
+                    
+                </div>
+
+                <!-- SOUS-SECTION : PROJETS PERSONNELS -->
+                <h3 class="sub-section-title">Projets Personnels</h3>
+                <div class="cards layout-one-col">
+                    <details class="formation-item">
+                        <summary>
+                            <div class="summary-title">
+                                <h3>*</h3>
+                                <span class="date-badge">Personnel</span>
+                            </div>
+                        </summary>
+                        
+                        <div class="details-content">
+                            <h4 class="formation-objectif-title">Contexte</h4>
+                            <p class="formation-objectif-text">*</p>
+
+                            <h4 class="formation-objectif-title">Objectif</h4>
+                            <p class="formation-objectif-text">*</p>
+
+                            <h4 class="formation-objectif-title">Missions</h4>
+                            <p class="formation-objectif-text">*</p>
+                            
+                            <h4 class="formation-objectif-title">Bilan</h4>
+                            <p class="formation-objectif-text">*</p>
+                            
+                            <div class="download-button-container spacing-top">
+                                <a href="#" class="btn-download">
+                                    <i class="fa-solid fa-file-pdf"></i> Télécharger la feuille de route PDF
+                                </a>
+                            </div>
                         </div>
                     </details>
                 </div>
             </div>
         </section>
 
+        <!-- ============================================================================
+             SECTION DIVERS
+        ============================================================================= -->
         <section id="divers">
             <div class="section-container">
                 <h2>Divers</h2>
-
-                <!-- Toutes les cartes sont maintenant regroupées ici pour un meilleur alignement CSS -->
                 <div class="cards">
-
                     <!-- 1ER ONGLET : DESSIN -->
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
                                 <h3>Dessin - Ma passion créative</h3>
-                                <span class="date-badge">Art</span>
+                                <span class="date-badge humaine">Art</span>
                             </div>
                         </summary>
                         <div class="details-content">
@@ -1267,7 +1330,7 @@
                                 <strong>précision</strong>.
                             </p>
 
-                            <p>
+                            <p class="formation-objectif-text">
                                 <br>
                                 Parmi toutes ces disciplines, le <strong>pixel art</strong> occupe une place
                                 privilégiée. Je partage d'ailleurs mes créations sur mon compte Instagram
@@ -1288,7 +1351,7 @@
                         <summary>
                             <div class="summary-title">
                                 <h3>Piano - Ma passion musicale</h3>
-                                <span class="date-badge">Musique</span>
+                                <span class="date-badge humaine">Musique</span>
                             </div>
                         </summary>
                         <div class="details-content">
@@ -1324,12 +1387,12 @@
                         </div>
                     </details>
 
-                    <!-- 3ÈME ONGLET : MUSCULATION (NOUVEAU) -->
+                    <!-- 3ÈME ONGLET : MUSCULATION -->
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
                                 <h3>Musculation - Mon dépassement personnel</h3>
-                                <span class="date-badge">Sport</span>
+                                <span class="date-badge humaine">Sport</span>
                             </div>
                         </summary>
                         <div class="details-content">
@@ -1343,7 +1406,6 @@
                                 nous poussons mutuellement vers le haut dans une ambiance conviviale.
                             </p>
 
-                            <!-- Espace pour intégrer une ou plusieurs photos de sport / entraînements -->
                             <div class="conteneur-sport">
                                 <img src="theme/picture/logo_sport.jpg" alt="Suivi des entraînements ou photo"
                                     class="sport-img"
@@ -1351,11 +1413,13 @@
                             </div>
                         </div>
                     </details>
-
-                </div> <!-- Fin de la div .cards -->
+                </div> 
             </div>
         </section>
 
+        <!-- ============================================================================
+             SECTION CV
+        ============================================================================= -->
         <section id="cv">
             <div class="section-container">
                 <h2>Mon C.V.</h2>
@@ -1369,31 +1433,46 @@
             </div>
         </section>
 
+        <!-- ============================================================================
+             SECTION CONTACT (FORMULAIRE AUTOMATIQUE)
+        ============================================================================= -->
         <section id="contact">
             <div class="section-container">
                 <h2>Me contacter</h2>
                 <div class="cards contact-grid">
                     <article class="contact-card">
-                        <h3>Mon profil vous intéresse et vous souhaitez me contacter ?</h3>
-                        <p class="contact-action-text">Vous pouvez me joindre via :</p>
-
-                        <!-- Conteneur pour aligner et uniformiser la taille des deux éléments -->
-                        <div
-                            style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 20px;">
-
-                            <!-- Téléphone (Non cliquable, taille identique) -->
-                            <div class="contact-link"
-                                style="cursor: default; width: 280px; box-sizing: border-box; text-align: center; display: flex; justify-content: center; gap: 10px;">
-                                <i class="fa-solid fa-phone"></i> Sur CV
+                        <p class="contact-action-text">Mon profil vous intéresse et vous voulez me contactez ? Remplissez le formulaire ci-dessous :</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="nomPrenom">Nom et Prénom :</label>
+                                <input type="text" id="nomPrenom" placeholder="Votre nom et prénom" required>
                             </div>
 
-                            <!-- Mail (Cliquable, taille identique) -->
-                            <a href="mailto:Enzo.LAMANNA@etu.uca.fr" class="contact-link"
-                                style="width: 280px; box-sizing: border-box; text-align: center; display: flex; justify-content: center; gap: 10px;">
-                                <i class="fa-solid fa-envelope"></i> Enzo.LAMANNA@etu.uca.fr
-                            </a>
+                            <div class="form-group">
+                                <label for="emailExpediteur">Votre Adresse E-mail :</label>
+                                <input type="email" id="emailExpediteur" placeholder="exemple@mail.com" required>
+                            </div>
 
-                        </div>
+                            <div class="form-group">
+                                <label for="objetDemande">Objet de la demande :</label>
+                                <select id="objetDemande" required>
+                                    <option value="Proposition d'alternance">Proposition d'alternance</option>
+                                    <option value="Proposition de stage">Proposition de stage</option>
+                                    <option value="Demande d'information">Demande d'information</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="messageContenu">Message :</label>
+                                <textarea id="messageContenu" placeholder="Écrivez votre message ici..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit">
+                                <i class="fa-solid fa-paper-plane"></i> Envoyer
+                            </button>
+                        </form>
                     </article>
                 </div>
             </div>
@@ -1411,7 +1490,11 @@
         <p class="footer-copy">&copy; 2026 - Enzo LAMANNA. Tous droits réservés.</p>
     </footer>
 
+    <!-- ============================================================================
+         SCRIPTS (Menu, Fade-in, Formulaire, Canvas Réseau)
+    ============================================================================= -->
     <script>
+        // Gestion de la Navbar
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -1421,6 +1504,7 @@
             }
         });
 
+        // Menu Mobile
         const menuToggle = document.getElementById('menu-toggle');
         const navLinks = document.getElementById('nav-links');
 
@@ -1436,6 +1520,112 @@
                 navLinks.classList.remove('active');
             });
         });
+
+        // Animation d'apparition au scroll (Fade-in)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(sec => {
+            sec.classList.add('fade-in-hidden');
+            observer.observe(sec);
+        });
+
+        // Gestion de l'envoi du formulaire via MailTo formaté
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nomPrenom = document.getElementById('nomPrenom').value.toUpperCase();
+            const email = document.getElementById('emailExpediteur').value;
+            const objet = document.getElementById('objetDemande').value;
+            const message = document.getElementById('messageContenu').value;
+            
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('fr-FR') + ' / ' + now.toLocaleTimeString('fr-FR');
+            
+            // Formatage du corps de l'email exactement comme demandé
+            const body = `Date de l'envoi / heure : ${dateStr}
+
+Vous avez reçu un message de ${nomPrenom} depuis votre portfolio - Mail : ${email}
+
+Objet : ${objet}
+
+Message : 
+${message}`;
+
+            const targetMail = "Enzo.lamanna@etu.uca.fr";
+            
+            window.location.href = `mailto:${targetMail}?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent(body)}`;
+        });
+
+        // Animation de particules (Réseau) sur le header
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        
+        canvas.width = window.innerWidth;
+        canvas.height = document.getElementById('accueil').offsetHeight;
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = document.getElementById('accueil').offsetHeight;
+        });
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 1.5;
+                this.vy = (Math.random() - 0.5) * 1.5;
+                this.radius = 2.5;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = '#823f3a'; // Couleur Bordeaux du thème
+                ctx.fill();
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                
+                if(this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if(this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+        }
+
+        for(let i = 0; i < 70; i++) {
+            particles.push(new Particle());
+        }
+
+        function animateNetwork() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for(let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                
+                for(let j = i; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if(dist < 120) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(130, 63, 58, ${1 - dist/120})`;
+                        ctx.lineWidth = 1;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateNetwork);
+        }
+        animateNetwork();
     </script>
 </body>
 
