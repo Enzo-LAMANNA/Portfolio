@@ -1026,7 +1026,7 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Java - Développer des applications communiquantes</h3>
+                                <h3>Développer des applications communiquantes — Java</h3>
                                 <span class="date-badge current">2026 - Semestre 1 BUT2 R&T</span>
                             </div>
                         </summary>
@@ -1078,7 +1078,7 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Projet Intégratif - Mise en place d'un réseau d'entreprise</h3>
+                                <h3>Mise en place d'un réseau d'entreprise — Projet Intégratif</h3>
                                 <span class="date-badge current">2026 - Semestre 2 BUT1 R&T</span>
                             </div>
                         </summary>
@@ -1136,8 +1136,8 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>HTML et CSS - Portfolio</h3>
-                                <span class="date-badge past">2025 - Semestre 1 BUT1 R&T</span>
+                                <h3>Portfolio — HTML et CSS</h3>
+                                <span class="date-badge past">2025 — Semestre 1 BUT1 R&T</span>
                             </div>
                         </summary>
                         <div class="details-content">
@@ -1197,8 +1197,8 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Python - Traiter des données complexes</h3>
-                                <span class="date-badge past">2025 - Semestre 1 BUT1 R&T</span>
+                                <h3>Traiter des données — Python</h3>
+                                <span class="date-badge past">2025 — Semestre 1 BUT1 R&T</span>
                             </div>
                         </summary>
                         <div class="details-content">
@@ -1303,7 +1303,7 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
                         <summary>
                             <div class="summary-title">
                                 <h3>Installation Dual Boot — Windows 11 / Kali Linux</h3>
-                                <span class="date-badge past">Septembre 2026</span>
+                                <span class="date-badge past">2026 - Septembre</span>
                             </div>
                         </summary>
                         
@@ -1462,45 +1462,19 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
         </section>
 
         <!-- ============================================================================
-             SECTION CONTACT (FORMULAIRE AUTOMATIQUE)
+             SECTION CONTACT (BULLE STYLE POP-UP)
         ============================================================================= -->
         <section id="contact">
             <div class="section-container">
                 <h2>Me contacter</h2>
                 <div class="cards contact-grid">
-                    <article class="contact-card">
-                        <p class="contact-action-text">Mon profil vous intéresse et vous voulez me contactez ? Remplissez le formulaire ci-dessous :</p>
+                    <article class="contact-card" style="text-align: center; padding: 60px 20px;">
+                        <p class="contact-action-text" style="margin-bottom: 25px;">Mon profil vous intéresse et vous souhaitez me contacter ?</p>
                         
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                                <label for="nomPrenom">Nom et Prénom :</label>
-                                <input type="text" id="nomPrenom" placeholder="Votre nom et prénom" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="emailExpediteur">Votre Adresse E-mail :</label>
-                                <input type="email" id="emailExpediteur" placeholder="exemple@mail.com" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="objetDemande">Objet de la demande :</label>
-                                <select id="objetDemande" required>
-                                    <option value="Proposition d'alternance">Proposition d'alternance</option>
-                                    <option value="Proposition de stage">Proposition de stage</option>
-                                    <option value="Demande d'information">Demande d'information</option>
-                                    <option value="Autre">Autre</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="messageContenu">Message :</label>
-                                <textarea id="messageContenu" placeholder="Écrivez votre message ici..." required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn-submit">
-                                <i class="fa-solid fa-paper-plane"></i> Envoyer
-                            </button>
-                        </form>
+                        <!-- Bulle / Pop-up -->
+                        <div style="display: inline-block; background-color: #ffffff; border: 2px solid var(--color-primary); color: var(--color-primary); padding: 18px 35px; border-radius: 50px; font-size: 1.15rem; font-weight: 600; box-shadow: 0 10px 30px rgba(130, 63, 58, 0.15); margin-top: 10px; transition: transform 0.3s ease;">
+                            <i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> mail : Enzo.LAMANNA@etu.uca.fr
+                        </div>
                     </article>
                 </div>
             </div>
@@ -1519,7 +1493,7 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
     </footer>
 
     <!-- ============================================================================
-         SCRIPTS (Menu, Fade-in, Formulaire, Canvas Réseau)
+         SCRIPTS (Menu, Fade-in, Canvas Réseau)
     ============================================================================= -->
     <script>
         // Gestion de la Navbar
@@ -1561,33 +1535,6 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
         document.querySelectorAll('section').forEach(sec => {
             sec.classList.add('fade-in-hidden');
             observer.observe(sec);
-        });
-
-        // Gestion de l'envoi du formulaire via MailTo formaté
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const nomPrenom = document.getElementById('nomPrenom').value.toUpperCase();
-            const email = document.getElementById('emailExpediteur').value;
-            const objet = document.getElementById('objetDemande').value;
-            const message = document.getElementById('messageContenu').value;
-            
-            const now = new Date();
-            const dateStr = now.toLocaleDateString('fr-FR') + ' / ' + now.toLocaleTimeString('fr-FR');
-            
-            // Formatage du corps de l'email exactement comme demandé
-            const body = `Date de l'envoi / heure : ${dateStr}
-
-Vous avez reçu un message de ${nomPrenom} depuis votre portfolio - Mail : ${email}
-
-Objet : ${objet}
-
-Message : 
-${message}`;
-
-            const targetMail = "Enzo.lamanna@etu.uca.fr";
-            
-            window.location.href = `mailto:${targetMail}?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent(body)}`;
         });
 
         // Animation de particules (Réseau) sur le header
