@@ -1032,16 +1032,40 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
                         </summary>
                         <div class="details-content">
                             <h4 class="formation-objectif-title">Contexte</h4>
-                            <p class="formation-objectif-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+                            <p class="formation-objectif-text"><p>Les <strong>infrastructures informatiques modernes</strong> sont constituées d'un grand nombre d'<strong>équipements interconnectés</strong> : routeurs, commutateurs, points d'accès Wi-Fi, serveurs, ordinateurs, objets connectés, imprimantes réseau, équipements industriels, etc. Dans une entreprise, ces équipements peuvent être répartis sur plusieurs bâtiments ou plusieurs sites géographiques. Leur <strong>bon fonctionnement</strong> est indispensable aux services numériques.</p>
+<br>
+<p>Lorsqu'un équipement devient indisponible, qu'un serveur manque de mémoire ou qu'un point d'accès Wi-Fi ne répond plus, il est essentiel de <strong>détecter le problème rapidement</strong>. Il n'est évidemment pas envisageable de vérifier manuellement et en permanence chaque équipement : des <strong>outils de supervision réseau</strong> sont donc utilisés.</p>
 
                             <h4 class="formation-objectif-title">Objectif</h4>
-                            <p class="formation-objectif-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+                            <p class="formation-objectif-text"><p>Dans le cadre de ce projet, <strong>je dois développer une version simplifiée</strong> d'un outil de supervision. Mon objectif n'était pas de reproduire un produit industriel existant, mais de <strong>comprendre et maîtriser les principaux mécanismes informatiques</strong> permettant de construire une application de supervision :</p>
+<br>
+<ul>
+    <li><strong>modélisation des équipements</strong> ;</li>
+    <li><strong>gestion des utilisateurs</strong> ;</li>
+    <li><strong>gestion des droits</strong> ;</li>
+    <li><strong>conservation des données</strong> ;</li>
+    <li><strong>gestion d'événements</strong> ;</li>
+    <li><strong>détection d'anomalies</strong> ;</li>
+    <li><strong>communication entre plusieurs applications</strong> ;</li>
+    <li><strong>échanges réseau</strong> ;</li>
+    <li><strong>gestion simultanée de plusieurs clients</strong> ;</li>
+    <li><strong>interface graphique</strong>.</li>
+</ul>
+<br>
+<p>L'application que doit s'appeler <strong>NetMonitor</strong>.</p></p></p>
 
                             <h4 class="formation-objectif-title">Missions</h4>
-                            <p class="formation-objectif-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Aenean id metus id velit ullamcorper pulvinar.</p>
+                            <p class="formation-objectif-text"><p>Ce projet s'effectue de manière <strong>progressive et structurée</strong>, en suivant plusieurs volets successifs :</p>
+<br>
+<ul>
+    <li>Réalisation préalable d'un <strong>cahier des charges complet</strong>.</li>
+    <li>Développement pas à pas de l'application en <strong>Java</strong>.</li>
+    <li>Implémentation première des fonctionnalités directement dans le <strong>terminal</strong>.</li>
+    <li>Évolution vers une <strong>interface graphique avec JavaFX</strong> pour améliorer l'application.</li>
+</ul></p>
                             
                             <h4 class="formation-objectif-title">Bilan</h4>
-                            <p class="formation-objectif-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet.</p>
+                            <p class="formation-objectif-text">Bilan à venir...</p>
                             
                             <div class="download-button-container spacing-top">
                                 <a href="#" class="btn-download">
@@ -1098,7 +1122,7 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
 
                             <h4 class="formation-objectif-title">Bilan</h4>
                             <p class="formation-objectif-text">
-                                Bilan à venir — Projet en cours de déploiement.
+                                Bilan à venir...
                             </p>
                             
                             <div class="download-button-container spacing-top">
@@ -1434,19 +1458,45 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
         </section>
 
         <!-- ============================================================================
-             SECTION CONTACT (BULLE STYLE POP-UP)
+             SECTION CONTACT (FORMULAIRE AUTOMATIQUE)
         ============================================================================= -->
         <section id="contact">
             <div class="section-container">
                 <h2>Me contacter</h2>
                 <div class="cards contact-grid">
-                    <article class="contact-card" style="text-align: center; padding: 60px 20px;">
-                        <p class="contact-action-text" style="margin-bottom: 25px;">Mon profil vous intéresse et vous souhaitez me contacter ?</p>
+                    <article class="contact-card">
+                        <p class="contact-action-text">Mon profil vous intéresse et vous voulez me contactez ? Remplissez le formulaire ci-dessous :</p>
                         
-                        <!-- Bulle / Pop-up -->
-                        <div style="display: inline-block; background-color: #ffffff; border: 2px solid var(--color-primary); color: var(--color-primary); padding: 18px 35px; border-radius: 50px; font-size: 1.15rem; font-weight: 600; box-shadow: 0 10px 30px rgba(130, 63, 58, 0.15); margin-top: 10px; transition: transform 0.3s ease;">
-                            <i class="fa-regular fa-envelope" style="margin-right: 8px;"></i> mail : Enzo.LAMANNA@etu.uca.fr
-                        </div>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="nomPrenom">Nom et Prénom :</label>
+                                <input type="text" id="nomPrenom" placeholder="Votre nom et prénom" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emailExpediteur">Votre Adresse E-mail :</label>
+                                <input type="email" id="emailExpediteur" placeholder="exemple@mail.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="objetDemande">Objet de la demande :</label>
+                                <select id="objetDemande" required>
+                                    <option value="Proposition d'alternance">Proposition d'alternance</option>
+                                    <option value="Proposition de stage">Proposition de stage</option>
+                                    <option value="Demande d'information">Demande d'information</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="messageContenu">Message :</label>
+                                <textarea id="messageContenu" placeholder="Écrivez votre message ici..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit">
+                                <i class="fa-solid fa-paper-plane"></i> Envoyer
+                            </button>
+                        </form>
                     </article>
                 </div>
             </div>
@@ -1465,7 +1515,7 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
     </footer>
 
     <!-- ============================================================================
-         SCRIPTS (Menu, Fade-in, Canvas Réseau)
+         SCRIPTS (Menu, Fade-in, Formulaire, Canvas Réseau)
     ============================================================================= -->
     <script>
         // Gestion de la Navbar
@@ -1507,6 +1557,33 @@ Sociable, curieux, rigoureux et discret, je souhaite mettre ma motivation et mon
         document.querySelectorAll('section').forEach(sec => {
             sec.classList.add('fade-in-hidden');
             observer.observe(sec);
+        });
+
+        // Gestion de l'envoi du formulaire via MailTo formaté
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nomPrenom = document.getElementById('nomPrenom').value.toUpperCase();
+            const email = document.getElementById('emailExpediteur').value;
+            const objet = document.getElementById('objetDemande').value;
+            const message = document.getElementById('messageContenu').value;
+            
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('fr-FR') + ' / ' + now.toLocaleTimeString('fr-FR');
+            
+            // Formatage du corps de l'email exactement comme demandé
+            const body = `Date de l'envoi / heure : ${dateStr}
+
+Vous avez reçu un message de ${nomPrenom} depuis votre portfolio - Mail : ${email}
+
+Objet : ${objet}
+
+Message : 
+${message}`;
+
+            const targetMail = "Enzo.lamanna@etu.uca.fr";
+            
+            window.location.href = `mailto:${targetMail}?subject=${encodeURIComponent(objet)}&body=${encodeURIComponent(body)}`;
         });
 
         // Animation de particules (Réseau) sur le header
