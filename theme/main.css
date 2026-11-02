@@ -213,7 +213,7 @@ header {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: #5ba4d4; /* Pulse bleu clair */
+    background-color: #5bf812; /* Pulse vert fluo */
     border-radius: 50%;
     animation: pulse-animation 2s infinite;
 }
