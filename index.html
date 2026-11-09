@@ -1353,31 +1353,35 @@ Enfin, concernant le pôle cybersécurité, ces échanges s'inscrivent parfaitem
                     <details class="formation-item">
                         <summary>
                             <div class="summary-title">
-                                <h3>Installation Dual Boot — Windows 11 / Kali Linux</h3>
-                                <span class="date-badge past">2026 - Septembre</span>
+                                <h3>LAB Virtuel VMs Debian13</h3>
+                                <span class="date-badge past">2026 - Novembre</span>
                             </div>
                         </summary>
                         
                         <div class="details-content">
                             <h4 class="formation-objectif-title">Contexte</h4>
-                            <p class="formation-objectif-text"><p>Dans le cadre de mon cours de <strong>pentest</strong>, j’utilise des <strong>VM sous Kali Linux</strong>, notamment en vue d’un futur projet de <strong>SAE</strong> dont l’objectif sera d’obtenir l’accès à une <strong>VM victime</strong> pour la pirater.</p>
-                            <br>
-<p>Suite à l’utilisation de Kali sur ces machines virtuelles et aux atouts de cette distribution orientée <strong>cybersécurité</strong> — qui intègre de nombreux outils spécialisés —, j’ai décidé d’installer un <strong>dual boot Windows 11 / Kali Linux sur mon PC perso</strong>. Cela me permet d’<strong>expérimenter depuis chez moi</strong>, de <strong>découvrir une nouvelle distribution Linux</strong> et de comprendre l’utilité des <strong>différents outils de pentester</strong>.</p></p>
+                            <p class="formation-objectif-text"><p><p>Étant étudiant en <strong>BUT Réseaux & Télécommunications</strong>, je pratique les réseaux lors des <strong>travaux pratiques</strong> mis en place dans mon établissement. Pour cela, je dispose de postes en <strong>dual boot Windows 11 / Debian</strong> pour expérimenter. De plus, ces machines disposent d’un système qui permet de <strong>réinitialiser toutes les configurations</strong> faites dessus, afin que chaque utilisateur retrouve un espace propre, comme s'il venait d'être installé. Cela permet de ne pas à avoir à réinstaller toute la configuration des OS ni avoir de conflits de paramètres entre les différents groupes de TP.<br><br>C’est donc dans ce contexte que j’ai décidé, sur mon <strong>PC personnel</strong>, d’installer <strong>deux VM Debian</strong> pour expérimenter depuis chez moi. Cela me permet de <strong>réviser mes cours</strong> en pratiquant à nouveau, mais également d’explorer de nouvelles choses.</p></p>
 
                             <h4 class="formation-objectif-title">Objectif</h4>
-                            <p class="formation-objectif-text"><p>Mon objectif est donc de maîtriser un système d'exploitation utile pour mes cours en <strong>BUT</strong>, tout en préparant mon projet de devenir <strong>pentester</strong>. 
-                                <br> <br>
-                                Cela me permet d'avoir déjà une connaissance des <strong>outils les plus utilisés</strong> et de comprendre concrètement comment <strong>pirater ou protéger</strong> une infrastructure.</p></p>
-
+                            <p class="formation-objectif-text"><p>L’objectif est le suivant : mettre en place un <strong>lab virtuel</strong> avec <strong>2 VM Debian</strong> pour expérimenter.<br><br>Concrètement, je veux que ces deux VM puissent <strong>communiquer entre elles</strong> et qu’elles puissent <strong>se réinitialiser</strong> comme à l'IUT, afin de <strong>tout remettre à zéro</strong> quand je le souhaite sans devoir réinstaller une VM complète.</p>
                             <h4 class="formation-objectif-title">Missions</h4>
-                            <p class="formation-objectif-text">Missions à venir...</p>
+                            <p class="formation-objectif-text"><ul>
+    <li><strong>Installation de l'hyperviseur VirtualBox :</strong> Téléchargement et mise en place d'Oracle VirtualBox pour accueillir et gérer les machines virtuelles.</li>
+    <li><strong>Récupération de l'ISO Debian 13 :</strong> Téléchargement de l'image réseau officielle (netinst) pour installer le système d'exploitation.</li>
+    <li><strong>Création et configuration de VM1 (Debian-Lab-1) :</strong> Allocation du matériel virtuel, installation du système en CLI et configuration de la carte réseau statique.</li>
+    <li><strong>Création et configuration de VM2 (Debian-Lab-2) :</strong> Clonage de la première machine, régénération des adresses MAC, adaptation de l'adresse IP et modification du nom d'hôte.</li>
+    <li><strong>Prise d'instantanés (Snapshots) :</strong> Sauvegarde de l'état « Clean-Base » pour réinitialiser les VMs à zéro à tout moment.</li>
+    <li><strong>Tests de connectivité :</strong> Validation de la communication entre les deux machines virtuelles à l'aide d'échanges ICMP (ping).</li>
+</ul>
+
+<p class="font-center spacing-top"><em>Veuillez vous référer au compte-rendu complet ci-dessous pour consulter le détail de l'ensemble des missions et des procédures.</em></p></p>
                             
                             <h4 class="formation-objectif-title">Bilan</h4>
-                            <p class="formation-objectif-text">Bilan à venir...</p>
+                            <p class="formation-objectif-text">Pour terminer, le projet a été réalisé à <strong>100 %</strong> par rapport à ce que je voulais mettre en place.<br><br>Mes <strong>deux VM Debian</strong> sont prêtes, bien configurées et elles communiquent parfaitement.<br><br>Grâce à mes <strong>snapshots Clean-Base</strong>, je sais que je peux tester tout ce que je veux sans avoir peur de casser le système. Ce <strong>home lab basique</strong> est désormais opérationnel et me permet de lancer mes premières <strong>simulations et mes tests de réseau</strong>.</p>
                             
                             <div class="download-button-container spacing-top">
-                                <a href="#" class="btn-download">
-                                    <i class="fa-solid fa-file-pdf"></i> Télécharger la feuille de route PDF
+                                <a href="theme/picture/LAB_Virtuel_Debian13_LAMANNA_Enzo.pdf" class="btn-download">
+                                    <i class="fa-solid fa-file-pdf"></i> Voir le projet complet
                                 </a>
                             </div>
                         </div>
