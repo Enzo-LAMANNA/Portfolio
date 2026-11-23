@@ -8,7 +8,7 @@ function ToggleIcon({ variant, isOpen }) {
       <motion.span
         className="accordion-icon"
         animate={{ rotate: isOpen ? 90 : 0 }}
-        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         aria-hidden="true"
       >
         <ChevronRight size={15} strokeWidth={2.5} />
@@ -20,7 +20,7 @@ function ToggleIcon({ variant, isOpen }) {
       <motion.span
         className="accordion-icon"
         animate={{ rotate: isOpen ? 180 : 0 }}
-        transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
         aria-hidden="true"
       >
         <ArrowDown size={15} strokeWidth={2.4} />
@@ -32,7 +32,7 @@ function ToggleIcon({ variant, isOpen }) {
       <motion.span
         className="accordion-icon"
         animate={{ rotate: isOpen ? 180 : 0 }}
-        transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
         aria-hidden="true"
       >
         <ChevronDown size={16} strokeWidth={2.4} />
@@ -43,7 +43,7 @@ function ToggleIcon({ variant, isOpen }) {
     <motion.span
       className="accordion-icon"
       animate={{ rotate: isOpen ? 135 : 0 }}
-      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
       aria-hidden="true"
     >
       <Plus size={16} strokeWidth={2.4} />
@@ -51,33 +51,12 @@ function ToggleIcon({ variant, isOpen }) {
   );
 }
 
-export default function AccordionItem({ item, variant = 'formation', index = 0 }) {
+export default function AccordionItem({ item, variant = 'formation' }) {
   const [isOpen, setIsOpen] = useState(false);
   const contentId = useId();
 
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    e.currentTarget.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-    e.currentTarget.style.setProperty('--my', `${e.clientY - rect.top}px`);
-  };
-
-  const isGridVariant = variant === 'competence';
-
   return (
-    <motion.div
-      layout={isGridVariant ? 'position' : false}
-      className={`formation-item${isOpen ? ' is-open' : ''}`}
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.08 }}
-      transition={{
-        duration: 0.55,
-        delay: Math.min(index * 0.055, 0.3),
-        ease: [0.16, 1, 0.3, 1],
-        layout: { duration: 0.42, ease: [0.16, 1, 0.3, 1] },
-      }}
-      onMouseMove={handleMouseMove}
-    >
+    <div className={`formation-item${isOpen ? ' is-open' : ''}`}>
       <button
         type="button"
         className="accordion-trigger"
@@ -104,30 +83,26 @@ export default function AccordionItem({ item, variant = 'formation', index = 0 }
               height: 'auto',
               opacity: 1,
               transition: {
-                height: { duration: 0.46, ease: [0.16, 1, 0.3, 1] },
-                opacity: { duration: 0.32, delay: 0.08 },
+                height: { duration: 0.38, ease: [0.22, 1, 0.36, 1] },
+                opacity: { duration: 0.25, delay: 0.06 },
               },
             }}
             exit={{
               height: 0,
               opacity: 0,
               transition: {
-                height: { duration: 0.34, ease: [0.4, 0, 0.2, 1] },
-                opacity: { duration: 0.2 },
+                height: { duration: 0.28, ease: [0.4, 0, 0.2, 1] },
+                opacity: { duration: 0.16 },
               },
             }}
           >
-            <motion.div
+            <div
               className="details-content"
-              initial={{ y: -10 }}
-              animate={{ y: 0 }}
-              exit={{ y: -6 }}
-              transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
               dangerouslySetInnerHTML={{ __html: item.contentHtml }}
             />
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   );
 }

@@ -53,7 +53,6 @@ html {
     font-size: 16px;
     font-family: var(--font-base);
     color: var(--color-text-dark);
-    scroll-behavior: smooth;
     scroll-padding-top: 80px;
     background-color: var(--wine-950);
     scrollbar-color: var(--wine-500) var(--wine-950);
@@ -63,14 +62,23 @@ body {
     line-height: 1.65;
     overflow-x: hidden;
     background-color: var(--wine-950);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Calque de fond fixe sur GPU (remplace background-attachment: fixed pour 0 repaint au scroll) */
+.bg-grid-layer {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    transform: translateZ(0);
+    background-color: var(--wine-950);
     background-image:
         radial-gradient(ellipse 60% 40% at 85% 10%, rgba(155, 32, 64, 0.18), transparent 70%),
         radial-gradient(ellipse 50% 40% at 0% 60%, rgba(107, 26, 46, 0.18), transparent 70%),
         linear-gradient(rgba(199, 51, 79, 0.045) 1px, transparent 1px),
         linear-gradient(90deg, rgba(199, 51, 79, 0.045) 1px, transparent 1px);
     background-size: 100% 100%, 100% 100%, 44px 44px, 44px 44px;
-    background-attachment: fixed;
-    -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
@@ -96,8 +104,9 @@ body {
     height: 2px;
     z-index: 1100;
     transform-origin: 0% 50%;
+    will-change: transform;
     background: linear-gradient(90deg, var(--wine-500), var(--wine-200), var(--copper));
-    box-shadow: 0 0 12px rgba(229, 88, 111, 0.7);
+    box-shadow: 0 0 10px rgba(229, 88, 111, 0.65);
 }
 
 strong, b {
@@ -122,17 +131,18 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background-color: rgba(11, 5, 7, 0.55);
+    background-color: rgba(11, 5, 7, 0.72);
     border-bottom: 1px solid transparent;
-    transition: padding 0.35s var(--ease), background-color 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
-    backdrop-filter: blur(14px) saturate(140%);
-    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    transform: translateZ(0);
+    transition: padding 0.3s var(--ease), background-color 0.3s var(--ease), border-color 0.3s var(--ease);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 nav.scrolled {
     padding: 11px 5%;
-    background-color: rgba(18, 8, 11, 0.88);
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+    background-color: rgba(18, 8, 11, 0.92);
+    box-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -367,13 +377,10 @@ header h1 {
 }
 
 header .highlight {
-    background: linear-gradient(100deg, #ffffff 0%, var(--wine-100) 35%, var(--wine-200) 65%, var(--copper) 100%);
-    background-size: 200% auto;
+    background: linear-gradient(100deg, #ffffff 0%, var(--wine-100) 40%, var(--wine-200) 75%, var(--copper) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: shimmer 8s linear infinite;
-    filter: drop-shadow(0 4px 24px rgba(199, 51, 79, 0.35));
 }
 
 #maPresentation {
@@ -387,14 +394,13 @@ header .highlight {
     position: relative;
     font-size: 1.02rem;
     color: var(--color-text-dark);
-    background: linear-gradient(120deg, rgba(42, 18, 27, 0.85), rgba(29, 13, 19, 0.6));
+    background: linear-gradient(120deg, rgba(42, 18, 27, 0.92), rgba(29, 13, 19, 0.86));
     padding: 18px 22px 18px 26px;
     border: 1px solid var(--color-border);
     border-radius: 12px;
     margin-bottom: 32px;
     line-height: 1.65;
     overflow: hidden;
-    backdrop-filter: blur(6px);
 }
 
 #monObjectif::before {
@@ -509,6 +515,7 @@ section {
     padding: 110px 10%;
     text-align: justify;
     counter-increment: sec;
+    contain: layout style;
 }
 
 section + section::before {
@@ -746,12 +753,11 @@ article:hover {
     display: block;
     text-align: left;
     outline: none;
-    transition: background-color 0.35s var(--ease);
+    transition: background-color 0.28s var(--ease);
 }
 
-/* Halo spotlight qui suit le curseur */
 .accordion-trigger:hover {
-    background: radial-gradient(380px circle at var(--mx) var(--my), var(--accent-soft), transparent 70%);
+    background-color: var(--accent-soft);
 }
 
 .accordion-trigger:focus-visible {
@@ -983,7 +989,7 @@ article:hover {
 #projet .accordion-trigger:hover {
     background:
         linear-gradient(90deg, var(--accent), transparent 60%) top left / 100% 2px no-repeat,
-        radial-gradient(380px circle at var(--mx) var(--my), var(--accent-soft), transparent 70%);
+        var(--accent-soft);
 }
 
 #projet .accordion-icon {
@@ -1407,7 +1413,7 @@ article:hover {
     display: flex;
     width: 46px;
     height: 46px;
-    background: rgba(29, 13, 19, 0.85);
+    background: rgba(29, 13, 19, 0.94);
     color: var(--color-text-dark);
     border: 1px solid var(--color-border-strong);
     border-radius: 12px;
@@ -1415,7 +1421,6 @@ article:hover {
     align-items: center;
     text-decoration: none;
     box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(8px);
     transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 

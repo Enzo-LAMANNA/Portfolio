@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { LayoutGroup, MotionConfig, motion } from 'framer-motion';
+import { MotionConfig, motion } from 'framer-motion';
 import { Check, Download, Mail } from 'lucide-react';
 import { portfolioData } from './data/portfolioData';
+import SmoothScroll from './components/SmoothScroll';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SectionWrapper from './components/SectionWrapper';
@@ -25,6 +26,8 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion="user">
+      <div className="bg-grid-layer" aria-hidden="true" />
+      <SmoothScroll />
       <Navbar data={nav} />
       <Hero data={hero} />
 
@@ -32,13 +35,7 @@ export default function App() {
         {/* À PROPOS */}
         <SectionWrapper id="moi" title={moi.title}>
           <div className="cards">
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-              dangerouslySetInnerHTML={{ __html: moi.contentHtml }}
-            />
+            <article dangerouslySetInnerHTML={{ __html: moi.contentHtml }} />
           </div>
         </SectionWrapper>
 
@@ -53,12 +50,11 @@ export default function App() {
                   <h3 className="sub-section-title">{group.subTitle}</h3>
                 ))}
               <div className="cards">
-                {group.items.map((item, idx) => (
+                {group.items.map((item) => (
                   <AccordionItem
                     key={item.id}
                     item={item}
                     variant="formation"
-                    index={idx}
                   />
                 ))}
               </div>
@@ -77,33 +73,31 @@ export default function App() {
           </h3>
 
           {competence.groups.map((group, gi) => (
-            <LayoutGroup key={gi} id={`comp-group-${gi}`}>
+            <div key={gi}>
               {group.subTitle && (
                 <h3 className="sub-section-title">{group.subTitle}</h3>
               )}
               <div className="cards">
-                {group.items.map((item, idx) => (
+                {group.items.map((item) => (
                   <AccordionItem
                     key={item.id}
                     item={item}
                     variant="competence"
-                    index={idx}
                   />
                 ))}
               </div>
-            </LayoutGroup>
+            </div>
           ))}
         </SectionWrapper>
 
         {/* EXPÉRIENCES */}
         <SectionWrapper id="experience" title={experience.title}>
           <div className="cards layout-one-col">
-            {experience.items.map((item, idx) => (
+            {experience.items.map((item) => (
               <AccordionItem
                 key={item.id}
                 item={item}
                 variant="experience"
-                index={idx}
               />
             ))}
           </div>
@@ -117,12 +111,11 @@ export default function App() {
                 <h3 className="sub-section-title">{group.subTitle}</h3>
               )}
               <div className="cards layout-one-col">
-                {group.items.map((item, idx) => (
+                {group.items.map((item) => (
                   <AccordionItem
                     key={item.id}
                     item={item}
                     variant="projet"
-                    index={idx}
                   />
                 ))}
               </div>
@@ -133,12 +126,11 @@ export default function App() {
         {/* DIVERS */}
         <SectionWrapper id="divers" title={divers.title}>
           <div className="cards">
-            {divers.items.map((item, idx) => (
+            {divers.items.map((item) => (
               <AccordionItem
                 key={item.id}
                 item={item}
                 variant="divers"
-                index={idx}
               />
             ))}
           </div>
@@ -146,13 +138,7 @@ export default function App() {
 
         {/* CV */}
         <SectionWrapper id="cv" title={cv.title}>
-          <motion.div
-            className="cv-content-block"
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          >
+          <div className="cv-content-block">
             <div className="download-button-container">
               <motion.a
                 href={cv.href}
@@ -165,26 +151,20 @@ export default function App() {
                 <span>{cv.label}</span>
               </motion.a>
             </div>
-          </motion.div>
+          </div>
         </SectionWrapper>
 
         {/* CONTACT */}
         <SectionWrapper id="contact" title={contact.title}>
           <div className="cards contact-grid">
-            <motion.article
-              className="contact-card"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-            >
+            <article className="contact-card">
               <p className="contact-action-text">{contact.text}</p>
               <motion.button
                 type="button"
                 className={`contact-email-pill${copied ? ' is-copied' : ''}`}
                 onClick={handleCopyEmail}
                 title="Cliquer pour copier l'adresse e-mail"
-                whileHover={{ y: -4, scale: 1.02 }}
+                whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 {copied ? (
@@ -194,7 +174,7 @@ export default function App() {
                 )}
                 <span>{contact.email}</span>
               </motion.button>
-            </motion.article>
+            </article>
           </div>
         </SectionWrapper>
 

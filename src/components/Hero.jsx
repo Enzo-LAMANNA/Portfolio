@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import NetworkCanvas from './NetworkCanvas';
 
@@ -23,32 +23,23 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.12 },
+    transition: { staggerChildren: 0.08, delayChildren: 0.08 },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 26 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
 export default function Hero({ data }) {
   const headerRef = useRef(null);
 
-  // Parallaxe subtile au scroll
-  const { scrollYProgress } = useScroll({
-    target: headerRef,
-    offset: ['start start', 'end start'],
-  });
-  const textY = useTransform(scrollYProgress, [0, 1], [0, 55]);
-  const photoY = useTransform(scrollYProgress, [0, 1], [0, 90]);
-  const headerOpacity = useTransform(scrollYProgress, [0, 0.9], [1, 0.25]);
-
-  // Effet 3D tilt sur la photo
+  // Effet 3D tilt sur la photo (actif uniquement au survol de la photo, 0 coût au scroll)
   const rawX = useMotionValue(0);
   const rawY = useMotionValue(0);
   const rotateX = useSpring(rawY, { stiffness: 180, damping: 20 });
@@ -58,8 +49,8 @@ export default function Hero({ data }) {
     const rect = e.currentTarget.getBoundingClientRect();
     const px = (e.clientX - rect.left) / rect.width - 0.5;
     const py = (e.clientY - rect.top) / rect.height - 0.5;
-    rawX.set(px * 12);
-    rawY.set(-py * 12);
+    rawX.set(px * 10);
+    rawY.set(-py * 10);
   };
 
   const handlePhotoLeave = () => {
@@ -71,10 +62,9 @@ export default function Hero({ data }) {
     <header id="accueil" ref={headerRef}>
       <NetworkCanvas containerRef={headerRef} />
 
-      <motion.div className="header-container" style={{ opacity: headerOpacity }}>
+      <div className="header-container">
         <motion.div
           className="header-text"
-          style={{ y: textY }}
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -83,7 +73,7 @@ export default function Hero({ data }) {
             href={data.latestProject.href}
             className="latest-project-notif"
             variants={itemVariants}
-            whileHover={{ y: -3, scale: 1.015 }}
+            whileHover={{ y: -3 }}
             whileTap={{ scale: 0.98 }}
           >
             <span className="pulse" />
@@ -118,9 +108,9 @@ export default function Hero({ data }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={soc.ariaLabel}
-                whileHover={{ y: -4, rotate: -4, scale: 1.06 }}
+                whileHover={{ y: -4, rotate: -4, scale: 1.05 }}
                 whileTap={{ scale: 0.94 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 22 }}
               >
                 {soc.ariaLabel.toLowerCase().includes('linkedin') ? (
                   <LinkedInIcon />
@@ -134,10 +124,10 @@ export default function Hero({ data }) {
 
         <motion.div
           className="header-image"
-          style={{ y: photoY, perspective: 900 }}
-          initial={{ opacity: 0, scale: 0.92, y: 30 }}
+          style={{ perspective: 900 }}
+          initial={{ opacity: 0, scale: 0.94, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.75, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
           onMouseMove={handlePhotoMove}
           onMouseLeave={handlePhotoLeave}
         >
@@ -156,7 +146,7 @@ export default function Hero({ data }) {
             />
           </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </header>
   );
 }

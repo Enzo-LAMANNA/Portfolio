@@ -8,31 +8,35 @@ export default function NetworkCanvas({ containerRef }) {
     const container = containerRef?.current;
     if (!canvas || !container) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) return;
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const LINK_DIST = 145;
+    const LINK_DIST = 140;
+    const LINK_DIST_SQ = LINK_DIST * LINK_DIST;
+    const MOUSE_DIST = 175;
+    const MOUSE_DIST_SQ = MOUSE_DIST * MOUSE_DIST;
+
     let width = 0;
     let height = 0;
-    let dpr = Math.min(window.devicePixelRatio || 1, 2);
     let nodes = [];
     let packets = [];
     let rafId = null;
     let isVisible = true;
+    let isTabVisible = !document.hidden;
     const mouse = { x: -9999, y: -9999 };
 
     function initNodes() {
-      const count = Math.min(85, Math.max(30, Math.floor(width / 18)));
+      const count = Math.min(55, Math.max(24, Math.floor(width / 26)));
       nodes = Array.from({ length: count }, () => {
-        const router = Math.random() < 0.14;
+        const router = Math.random() < 0.16;
         return {
           x: Math.random() * width,
           y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.55,
-          vy: (Math.random() - 0.5) * 0.55,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
           router,
-          size: router ? 4.2 : 2,
+          size: router ? 3.8 : 1.9,
           phase: Math.random() * Math.PI * 2,
         };
       });
@@ -42,7 +46,7 @@ export default function NetworkCanvas({ containerRef }) {
     function resize() {
       width = container.offsetWidth;
       height = container.offsetHeight;
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       canvas.width = Math.floor(width * dpr);
       canvas.height = Math.floor(height * dpr);
       canvas.style.width = `${width}px`;
@@ -65,30 +69,33 @@ export default function NetworkCanvas({ containerRef }) {
 
     container.addEventListener('mousemove', onMouseMove, { passive: true });
     container.addEventListener('mouseleave', onMouseLeave);
-    window.addEventListener('resize', resize);
+    window.addEventListener('resize', resize, { passive: true });
 
     function spawnPacket() {
       if (nodes.length < 2) return;
       const a = nodes[Math.floor(Math.random() * nodes.length)];
       let best = null;
-      let bestD = Infinity;
+      let bestDSq = LINK_DIST_SQ;
       for (let i = 0; i < nodes.length; i++) {
         const b = nodes[i];
         if (b === a) continue;
-        const d = Math.hypot(a.x - b.x, a.y - b.y);
-        if (d < LINK_DIST && d < bestD) {
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        const dSq = dx * dx + dy * dy;
+        if (dSq < bestDSq) {
           best = b;
-          bestD = d;
+          bestDSq = dSq;
         }
       }
       if (best) {
-        packets.push({ from: a, to: best, t: 0, speed: 0.012 + Math.random() * 0.014 });
+        packets.push({ from: a, to: best, t: 0, speed: 0.013 + Math.random() * 0.012 });
       }
     }
 
     function drawFrame(now) {
       ctx.clearRect(0, 0, width, height);
 
+      // 1. Liens entre nœuds (sans shadowBlur et sans Math.sqrt inutile)
       for (let i = 0; i < nodes.length; i++) {
         const a = nodes[i];
         if (!reduceMotion) {
@@ -102,95 +109,124 @@ export default function NetworkCanvas({ containerRef }) {
           const b = nodes[j];
           const dx = a.x - b.x;
           const dy = a.y - b.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < LINK_DIST) {
-            const alpha = (1 - dist / LINK_DIST) * 0.55;
+          const dSq = dx * dx + dy * dy;
+          if (dSq < LINK_DIST_SQ) {
+            const alpha = (1 - Math.sqrt(dSq) / LINK_DIST) * 0.52;
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(155, 32, 64, ${alpha})`;
-            ctx.lineWidth = a.router || b.router ? 1.2 : 0.8;
+            ctx.strokeStyle = `rgba(155, 32, 64, ${alpha.toFixed(2)})`;
+            ctx.lineWidth = a.router || b.router ? 1.15 : 0.75;
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
             ctx.stroke();
           }
         }
 
-        const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
-        if (md < 185) {
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(227, 167, 125, ${(1 - md / 185) * 0.65})`;
-          ctx.lineWidth = 1;
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(mouse.x, mouse.y);
-          ctx.stroke();
+        if (mouse.x > -999) {
+          const mdx = a.x - mouse.x;
+          const mdy = a.y - mouse.y;
+          const mdSq = mdx * mdx + mdy * mdy;
+          if (mdSq < MOUSE_DIST_SQ) {
+            const alpha = (1 - Math.sqrt(mdSq) / MOUSE_DIST) * 0.6;
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(227, 167, 125, ${alpha.toFixed(2)})`;
+            ctx.lineWidth = 1;
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.stroke();
+          }
         }
       }
 
+      // 2. Nœuds & routeurs (halo léger sans shadowBlur pour rester à 60-120 FPS)
       for (let i = 0; i < nodes.length; i++) {
         const n = nodes[i];
-        ctx.beginPath();
         if (n.router) {
-          const pulse = 0.85 + Math.sin(now * 0.003 + n.phase) * 0.15;
-          ctx.fillStyle = `rgba(229, 88, 111, ${pulse})`;
-          ctx.shadowColor = '#e5586f';
-          ctx.shadowBlur = 12;
-          ctx.rect(n.x - n.size, n.y - n.size, n.size * 2, n.size * 2);
+          const pulse = 0.8 + Math.sin(now * 0.003 + n.phase) * 0.2;
+          const halo = n.size * 2.2;
+          ctx.fillStyle = `rgba(229, 88, 111, ${(0.18 * pulse).toFixed(2)})`;
+          ctx.fillRect(n.x - halo, n.y - halo, halo * 2, halo * 2);
+          ctx.fillStyle = `rgba(229, 88, 111, ${pulse.toFixed(2)})`;
+          ctx.fillRect(n.x - n.size, n.y - n.size, n.size * 2, n.size * 2);
         } else {
+          ctx.beginPath();
           ctx.fillStyle = 'rgba(199, 51, 79, 0.85)';
-          ctx.shadowBlur = 0;
           ctx.arc(n.x, n.y, n.size, 0, Math.PI * 2);
+          ctx.fill();
         }
-        ctx.fill();
-        ctx.shadowBlur = 0;
       }
 
+      // 3. Paquets de données
       if (!reduceMotion) {
-        if (packets.length < 16 && Math.random() < 0.14) spawnPacket();
-        packets = packets.filter((p) => {
+        if (packets.length < 12 && Math.random() < 0.12) spawnPacket();
+        for (let i = packets.length - 1; i >= 0; i--) {
+          const p = packets[i];
           p.t += p.speed;
-          if (p.t >= 1 || Math.hypot(p.from.x - p.to.x, p.from.y - p.to.y) > LINK_DIST) {
-            return false;
+          const dx = p.from.x - p.to.x;
+          const dy = p.from.y - p.to.y;
+          if (p.t >= 1 || dx * dx + dy * dy > LINK_DIST_SQ) {
+            packets.splice(i, 1);
+            continue;
           }
           const x = p.from.x + (p.to.x - p.from.x) * p.t;
           const y = p.from.y + (p.to.y - p.from.y) * p.t;
           ctx.beginPath();
-          ctx.fillStyle = '#f4c3a0';
-          ctx.shadowColor = '#e3a77d';
-          ctx.shadowBlur = 10;
-          ctx.arc(x, y, 1.9, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(227, 167, 125, 0.28)';
+          ctx.arc(x, y, 4.5, 0, Math.PI * 2);
           ctx.fill();
-          ctx.shadowBlur = 0;
-          return true;
-        });
+          ctx.beginPath();
+          ctx.fillStyle = '#f4c3a0';
+          ctx.arc(x, y, 1.8, 0, Math.PI * 2);
+          ctx.fill();
+        }
       }
 
-      if (isVisible && !reduceMotion) {
+      if (isVisible && isTabVisible && !reduceMotion) {
         rafId = requestAnimationFrame(drawFrame);
+      } else {
+        rafId = null;
       }
     }
+
+    const startIfNeeded = () => {
+      if (isVisible && isTabVisible && !reduceMotion && rafId === null) {
+        rafId = requestAnimationFrame(drawFrame);
+      }
+    };
+
+    const stopIfRunning = () => {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    };
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         isVisible = entry.isIntersecting;
-        if (isVisible && !reduceMotion && rafId === null) {
-          rafId = requestAnimationFrame(drawFrame);
-        } else if (!isVisible && rafId !== null) {
-          cancelAnimationFrame(rafId);
-          rafId = null;
-        }
+        if (isVisible) startIfNeeded();
+        else stopIfRunning();
       },
       { threshold: 0.01 }
     );
     observer.observe(container);
 
+    const onVisibility = () => {
+      isTabVisible = !document.hidden;
+      if (isTabVisible) startIfNeeded();
+      else stopIfRunning();
+    };
+    document.addEventListener('visibilitychange', onVisibility);
+
     if (reduceMotion) {
       drawFrame(0);
     } else {
-      rafId = requestAnimationFrame(drawFrame);
+      startIfNeeded();
     }
 
     return () => {
       observer.disconnect();
-      if (rafId !== null) cancelAnimationFrame(rafId);
+      document.removeEventListener('visibilitychange', onVisibility);
+      stopIfRunning();
       container.removeEventListener('mousemove', onMouseMove);
       container.removeEventListener('mouseleave', onMouseLeave);
       window.removeEventListener('resize', resize);
