@@ -505,7 +505,7 @@ export const portfolioData = {
       }
     ],
     "noticeTitleHtml": "<strong>À savoir !</strong>",
-    "noticeText": "Les projets de BUT R&T sont réalisés dans le cadre de cette formation afin de valider mes notes, mais également dans le but d'améliorer mes compétences ou d'en créer de nouvelles. Les projets personnels sont là pour réviser, m'entraîner ou bien simplement par curiosité."
+    "noticeText": "Les projets de BUT R&T sont réalisés dans le cadre de cette formation afin de valider mes modules pour l'obtention du BUT, mais également de concrétiser la théorie à travers des projets pratiques et concrets. Les projets personnels sont là pour réviser, m'entraîner ou bien simplement par curiosité."
   },
   "divers": {
     "title": "Divers",
