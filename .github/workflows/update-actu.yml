@@ -1,0 +1,91 @@
+name: Mise à jour automatique des actualités (ActuZip)
+
+on:
+  schedule:
+    # =========================================================================
+    # FRÉQUENCE DE MISE À JOUR (syntaxe cron UTC) :
+    #   '0 */6 * * *'   -> Toutes les 6 heures (par défaut)
+    #   '0 */3 * * *'   -> Toutes les 3 heures
+    #   '0 */12 * * *'  -> Toutes les 12 heures (2 fois par jour)
+    #   '0 7 * * *'     -> Tous les jours à 7h00 UTC (8h/9h heure française)
+    # =========================================================================
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Permet aussi de lancer la mise à jour manuellement depuis l'onglet Actions
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "actuzip-update"
+  cancel-in-progress: false
+
+jobs:
+  update-and-build:
+    runs-on: ubuntu-latest
+    outputs:
+      should_deploy: ${{ steps.commit_actu.outputs.changed == 'true' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - name: Checkout du dépôt
+        uses: actions/checkout@v4
+
+      - name: Configuration de Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Installation des dépendances Python (google-genai)
+        run: pip install -r requirements.txt
+
+      - name: Récupération et analyse unique des nouvelles actualités
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python fetch_actu.py
+
+      - name: Commit et push si ActuZip.json a changé
+        id: commit_actu
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ActuZip.json public/ActuZip.json
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Aucune nouvelle actualité détectée."
+          else
+            git commit -m "chore(actu): mise a jour automatique de ActuZip.json"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Configuration de Node.js (si mise à jour)
+        if: steps.commit_actu.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - name: Installation et build Vite
+        if: steps.commit_actu.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          npm ci
+          npm run build
+
+      - name: Upload de l'artefact GitHub Pages
+        if: steps.commit_actu.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: update-and-build
+    if: needs.update-and-build.outputs.should_deploy == 'true'
+    steps:
+      - name: Déploiement sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

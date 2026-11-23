@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, Radio, X } from 'lucide-react';
 
-export default function Navbar({ data }) {
+export default function Navbar({ data, isActuPage = false }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeId, setActiveId] = useState('accueil');
+  const [activeId, setActiveId] = useState(isActuPage ? 'actu' : 'accueil');
   const progressRef = useRef(null);
 
   useEffect(() => {
@@ -35,6 +35,10 @@ export default function Navbar({ data }) {
     window.addEventListener('scroll', onScroll, { passive: true });
     updateOnScroll();
 
+    if (isActuPage) {
+      return () => window.removeEventListener('scroll', onScroll);
+    }
+
     const ids = data.links.map((l) => l.href.replace('#', ''));
     const elements = ids.map((id) => document.getElementById(id)).filter(Boolean);
 
@@ -55,13 +59,17 @@ export default function Navbar({ data }) {
       window.removeEventListener('scroll', onScroll);
       observer.disconnect();
     };
-  }, [data.links]);
+  }, [data.links, isActuPage]);
+
+  const resolveHref = (href) => (isActuPage ? `./index.html${href}` : href);
 
   return (
     <>
       <div id="scroll-progress" ref={progressRef} aria-hidden="true" />
       <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
-        <p className="nav-logo">{data.logo}</p>
+        <a href={isActuPage ? './index.html' : '#accueil'} className="nav-logo nav-logo-link">
+          {data.logo}
+        </a>
 
         <button
           id="menu-toggle"
@@ -77,11 +85,11 @@ export default function Navbar({ data }) {
         <ul id="nav-links" className="nav-desktop">
           {data.links.map((link) => {
             const id = link.href.replace('#', '');
-            const isActive = activeId === id;
+            const isActive = !isActuPage && activeId === id;
             return (
               <li key={link.href}>
                 <a
-                  href={link.href}
+                  href={resolveHref(link.href)}
                   title={link.title}
                   className={isActive ? 'active' : ''}
                 >
@@ -97,6 +105,19 @@ export default function Navbar({ data }) {
               </li>
             );
           })}
+
+          {/* Nouvel onglet Actu — espace à part avec style distinct */}
+          <li className="nav-actu-item">
+            <a
+              href="./ActuZip.html"
+              title="Veille technologique & actualités IT"
+              className={`nav-actu-link${isActuPage ? ' is-current' : ''}`}
+            >
+              <Radio size={14} className="nav-actu-icon" aria-hidden="true" />
+              <span>Actu</span>
+              <span className="nav-actu-dot" aria-hidden="true" />
+            </a>
+          </li>
         </ul>
 
         <AnimatePresence>
@@ -110,11 +131,11 @@ export default function Navbar({ data }) {
             >
               {data.links.map((link) => {
                 const id = link.href.replace('#', '');
-                const isActive = activeId === id;
+                const isActive = !isActuPage && activeId === id;
                 return (
                   <li key={link.href}>
                     <a
-                      href={link.href}
+                      href={resolveHref(link.href)}
                       title={link.title}
                       className={isActive ? 'active' : ''}
                       onClick={() => setMenuOpen(false)}
@@ -124,6 +145,18 @@ export default function Navbar({ data }) {
                   </li>
                 );
               })}
+              <li className="nav-mobile-actu">
+                <a
+                  href="./ActuZip.html"
+                  title="Veille technologique & actualités IT"
+                  className={`nav-actu-link${isActuPage ? ' is-current' : ''}`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <Radio size={15} className="nav-actu-icon" aria-hidden="true" />
+                  <span>Actu — Veille Tech</span>
+                  <span className="nav-actu-dot" aria-hidden="true" />
+                </a>
+              </li>
             </motion.ul>
           )}
         </AnimatePresence>

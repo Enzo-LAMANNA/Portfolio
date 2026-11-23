@@ -1,0 +1,1853 @@
+{
+  "updated_at": "2026-11-23T23:04:16.128154+00:00",
+  "total": 120,
+  "sources": [
+    "IT-Connect",
+    "ZDNet France"
+  ],
+  "categories": [
+    "Cybersécurité",
+    "Informatique",
+    "Logiciel & OS",
+    "Matériel",
+    "Web"
+  ],
+  "articles": [
+    {
+      "id": "art-6529053",
+      "title": "Kudu, FluentCleaner, BleachBit, etc… Lequel choisir pour remplacer CCleaner ?",
+      "description": "Par quoi remplacer CCleaner ? Kudu, FluentCleaner, BleachBit, PrivaZer, Glary Utilities et PC Manager comparés, avec la vidéo de démonstration.",
+      "link": "https://www.it-connect.fr/alternative-ccleaner-logiciels-nettoyage/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Astuces & logiciels",
+        "Logiciel",
+        "Open Source",
+        "Windows"
+      ],
+      "published_at": "2026-11-23T17:00:00+00:00",
+      "published_ts": 1795453200,
+      "ai_summary": {
+        "badge": "Actu / Tendance",
+        "contexte": "Cet article s'intéresse aux logiciels de nettoyage système sous Windows, c'est-à-dire des utilitaires qui suppriment les fichiers temporaires, les caches de navigateurs et les résidus d'anciennes installations pour libérer de l'espace disque. CCleaner a longtemps été la référence historique, mais d'autres outils — notamment des projets « open source » (dont le code source est public et vérifiable par tous) comme BleachBit ou Kudu, ainsi que Microsoft PC Manager — gagnent du terrain.",
+        "quoi": "IT-Connect publie un comparatif détaillé accompagné d'une démonstration vidéo de six alternatives concrètes à CCleaner : Kudu, FluentCleaner, BleachBit, PrivaZer, Glary Utilities et PC Manager. L'article passe en revue leurs interfaces, leur efficacité de nettoyage, leur niveau de respect de la vie privée et leurs limites afin d'aider à identifier le meilleur outil selon chaque usage.",
+        "pourquoi": "Au fil des années, CCleaner (édité par Piriform / Gen Digital) a suscité de nombreuses critiques chez les utilisateurs et techniciens IT en raison de la télémétrie, des notifications commerciales et de fonctionnalités jugées intrusives. Face à cette perte de confiance, la communauté open source et Microsoft lui-même (avec PC Manager) cherchent à proposer des alternatives plus sobres, transparentes et maîtrisées.",
+        "consequence": "Pour les particuliers, ce comparatif permet d'entretenir son PC sans installer d'utilitaires publicitaires ni risquer de casser Windows avec des nettoyeurs de registre trop agressifs. Pour les techniciens support et administrateurs de parc, s'orienter vers un outil open source (comme BleachBit) ou natif Microsoft facilite la standardisation des procédures de maintenance tout en limitant les risques de sécurité et de conformité en entreprise.",
+        "generated_by": "preview"
+      }
+    },
+    {
+      "id": "art-5436353",
+      "title": "Windows Admin Center vMode : la migration de VMware ESXi vers Hyper-V arrive en préversion privée",
+      "description": "Microsoft intègre VM Conversion à Windows Admin Center vMode pour migrer des VM VMware ESXi vers Hyper-V. Une préversion privée qui change l'architecture.",
+      "link": "https://www.it-connect.fr/windows-admin-center-vmode-vm-conversion-vmware-hyper-v/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Hyper-V",
+        "Microsoft",
+        "Virtualisation"
+      ],
+      "published_at": "2026-11-23T16:30:00+00:00",
+      "published_ts": 1795451400,
+      "ai_summary": {
+        "badge": "Mise à jour",
+        "contexte": "En informatique d'entreprise, la virtualisation permet de faire tourner plusieurs serveurs virtuels (appelés VM, pour « Virtual Machines ») sur une même machine physique grâce à un hyperviseur. VMware ESXi et Microsoft Hyper-V sont les deux grands hyperviseurs du marché, tandis que Windows Admin Center (WAC) est la console web de Microsoft servant à administrer à distance des serveurs Windows — sa déclinaison « vMode » étant dédiée à la gestion des environnements virtualisés.",
+        "quoi": "Microsoft intègre directement le module « VM Conversion » dans Windows Admin Center vMode, actuellement accessible en préversion privée. Cette évolution architecturale permet de convertir et de migrer des machines virtuelles hébergées sous VMware ESXi vers Microsoft Hyper-V depuis une interface centralisée, en simplifiant les étapes techniques de transition.",
+        "pourquoi": "Depuis le rachat de VMware par Broadcom et la refonte tarifaire des licences VMware, de nombreuses entreprises cherchent à réduire leur dépendance envers ESXi et à migrer vers d'autres hyperviseurs. Microsoft saisit cet enjeu stratégique majeur pour attirer ces infrastructures vers son écosystème Hyper-V en levant l'un des principaux freins : la complexité et le risque d'interruption lors de la migration des VM existantes.",
+        "consequence": "Pour les administrateurs systèmes et réseaux, disposer d'un outil officiel intégré à Windows Admin Center réduit le bricolage par scripts tiers et accélère les tests de migration en laboratoire ou en production. Pour les entreprises et DSI, cela ouvre une piste plus crédible et moins coûteuse pour sortir de VMware, tout en incitant les équipes IT à monter en compétence sur l'administration Hyper-V et WAC.",
+        "generated_by": "preview"
+      }
+    },
+    {
+      "id": "art-6250618",
+      "title": "Les faux téléchargements de GTA 6 pour PC inondent le Web, comment éviter de se faire arnaquer",
+      "description": "Les escrocs et les pirates ont inondé Internet de faux liens de téléchargement de GTA VI pour PC. Voici comment vous protéger.",
+      "link": "https://www.zdnet.fr/actualites/les-faux-telechargements-de-gta-6-pour-pc-inondent-le-web-comment-eviter-de-se-faire-arnaquer-508418.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T12:11:54+00:00",
+      "published_ts": 1795435914,
+      "ai_summary": {
+        "badge": "Alerte / Faille",
+        "contexte": "À l'approche de sorties de jeux vidéo très attendus comme GTA VI (Grand Theft Auto VI), les cybercriminels utilisent l'ingénierie sociale — une technique qui consiste à manipuler la curiosité ou l'impatience des internautes — pour diffuser des malwares (logiciels malveillants comme des voleurs de mots de passe ou des rançongiciels). Ces pièges se propagent via de faux sites web bien référencés, des vidéos sur les réseaux sociaux ou de faux installeurs « gratuits ».",
+        "quoi": "ZDNet France alerte sur une vague massive de faux liens de téléchargement promettant une version PC de GTA 6. L'article détaille les méthodes employées par les escrocs pour piéger les joueurs et présente les bons réflexes à adopter pour repérer ces arnaques et protéger son ordinateur.",
+        "pourquoi": "Les groupes cybercriminels exploitent l'écart entre la forte attente du grand public et la disponibilité réelle du jeu sur PC, sachant que de nombreux internautes recherchent des accès anticipés ou des versions piratées. Pour les attaquants, c'est un moyen très rentable de compromettre un grand volume de postes personnels afin de dérober des identifiants, des cookies de session ou des données bancaires.",
+        "consequence": "Pour les utilisateurs finaux, cliquer sur ces faux téléchargements expose directement le PC à une infection (vol de comptes Steam, messageries, accès bancaires ou prise de contrôle à distance). Pour les entreprises — notamment avec le télétravail ou l'usage mixte d'équipements — un poste compromis à domicile peut devenir un point d'entrée sur le réseau professionnel, ce qui rappelle l'importance de la sensibilisation et du filtrage web/antivirus.",
+        "generated_by": "preview"
+      }
+    },
+    {
+      "id": "art-8741134",
+      "title": "Signal bloque les captures d'écran pour cacher vos messages aux IA",
+      "description": "L'année dernière, cette application de messagerie avait également restreint la prise de captures d'écran en raison de la fonctionnalité « Microsoft Recall ».",
+      "link": "https://www.zdnet.fr/actualites/signal-bloque-les-captures-decran-pour-cacher-vos-messages-aux-ia-508415.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T12:11:35+00:00",
+      "published_ts": 1795435895,
+      "ai_summary": {
+        "badge": "Mise à jour",
+        "contexte": "Signal est une application de messagerie chiffrée de bout en bout (seuls l'expéditeur et le destinataire peuvent lire les messages). À l'inverse, certains assistants d'intelligence artificielle intégrés aux systèmes d'exploitation — comme « Microsoft Recall » sur Windows — fonctionnent en prenant régulièrement des captures d'écran afin d'indexer et de retrouver tout ce que fait l'utilisateur sur son PC.",
+        "quoi": "Signal déploie un mécanisme de blocage des captures d'écran afin d'empêcher les outils d'IA et les fonctions de capture système d'enregistrer le contenu des conversations affichées à l'écran. Cette mesure prolonge les restrictions déjà introduites par la messagerie l'an dernier face à l'arrivée de Microsoft Recall.",
+        "pourquoi": "Même le chiffrement réseau le plus robuste devient inutile si un outil tiers lit le message directement une fois déchiffré à l'écran. La fondation Signal, qui place la vie privée au cœur de son modèle, réagit face à l'intégration croissante d'agents IA capables d'observer l'interface système chez les grands éditeurs d'OS comme Microsoft.",
+        "consequence": "Pour les utilisateurs soucieux de confidentialité (journalistes, particuliers, équipes sensibles), les échanges Signal restent mieux isolés des journaux et captures automatiques d'IA locales. En contrepartie, certaines fonctions légitimes comme la capture d'écran manuelle ou l'accessibilité système peuvent être restreintes, illustrant la tension croissante entre confidentialité applicative et fonctions d'IA intégrées aux OS.",
+        "generated_by": "preview"
+      }
+    },
+    {
+      "id": "art-6154103",
+      "title": "Microsoft Edge : avec le Lockdown Mode, Microsoft veut bloquer les attaques",
+      "description": "Microsoft teste dans Edge Canary un Lockdown Mode qui bloque WebGL et WebGPU pour contrer les attaques ciblées. Voici ce qu'il faut savoir sur ce mode.",
+      "link": "https://www.it-connect.fr/edge-lockdown-mode-webgl-webgpu/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "Microsoft",
+        "Microsoft Edge"
+      ],
+      "published_at": "2026-11-23T10:30:00+00:00",
+      "published_ts": 1795429800,
+      "ai_summary": {
+        "badge": "Alerte / Faille",
+        "contexte": "Les navigateurs modernes comme Microsoft Edge exécutent des technologies avancées directement depuis les sites web, notamment WebGL et WebGPU — deux interfaces (API) qui permettent à une page web d'utiliser la carte graphique du PC pour afficher de la 3D ou accélérer des calculs. Edge Canary est la version de test quotidienne dans laquelle Microsoft expérimente ses futures fonctionnalités avant un déploiement global.",
+        "quoi": "Microsoft teste actuellement dans Edge Canary un mode de verrouillage renforcé baptisé « Lockdown Mode » qui désactive volontairement des fonctionnalités complexes comme WebGL et WebGPU. L'objectif est de bloquer les attaques ciblées qui s'appuient sur des failles dans le traitement graphique du navigateur.",
+        "pourquoi": "Les pilotes graphiques et moteurs de rendu web (WebGL/WebGPU) représentent un code très complexe, historiquement propice aux failles critiques (exécution de code à distance ou évasion du bac à sable du navigateur). Face à des attaquants sophistiqués (logiciels espions, attaques zero-day), Microsoft suit une approche de « réduction de la surface d'attaque » déjà observée chez d'autres éditeurs.",
+        "consequence": "Pour les utilisateurs à haut risque et les administrateurs sécurité, activer ce mode apporte une couche de défense supplémentaire contre des exploits web avancés, au prix d'une compatibilité réduite sur certains sites 3D ou jeux navigateur. Pour les entreprises, cela laisse présager de futures stratégies de groupe (GPO/Intune) permettant d'imposer ce durcissement sur les postes sensibles.",
+        "generated_by": "preview"
+      }
+    },
+    {
+      "id": "art-2241247",
+      "title": "Black Friday GEEKOM : notre sélection d’offres sur les mini-PC, jusqu’à 30 % de réduction",
+      "description": "GEEKOM profite du Black Friday 2026 pour proposer des offres sur sa gamme de mini PC, des modèles du quotidien jusqu'aux machines les plus performantes.",
+      "link": "https://www.it-connect.fr/black-friday-geekom-notre-selection-doffres-sur-les-mini-pc-jusqua-30-de-reduction/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Bons Plans",
+        "Black Friday",
+        "Bon plan",
+        "GEEKOM"
+      ],
+      "published_at": "2026-11-23T10:20:00+00:00",
+      "published_ts": 1795429200,
+      "ai_summary": {
+        "badge": "Actu / Tendance",
+        "contexte": "Les mini-PC sont des ordinateurs de bureau ultra-compacts consommant beaucoup moins d'électricité qu'une tour classique, tout en embarquant des processeurs récents capables de faire tourner de la bureautique lourde ou de la virtualisation légère. GEEKOM est l'un des fabricants spécialisés sur ce segment en forte croissance.",
+        "quoi": "À l'occasion du Black Friday 2026, IT-Connect recense une sélection de promotions chez GEEKOM pouvant atteindre 30 % de réduction sur plusieurs gammes de mini-PC, des modèles d'entrée de gamme aux configurations haute performance.",
+        "pourquoi": "Le Black Friday est un temps fort commercial où les constructeurs de matériel cherchent à élargir leur part de marché face à la demande grandissante pour des postes compacts, silencieux et économes en énergie — tant pour le télétravail que pour les petits serveurs domestiques (home labs).",
+        "consequence": "Pour les particuliers et étudiants en réseaux/systèmes, ces réductions rendent plus accessible l'achat d'une machine dédiée à un home lab (Proxmox, VM Debian, conteneurs Docker) à faible coût électrique. Pour les petites entreprises, les mini-PC constituent une alternative économique et peu encombrante aux stations classiques pour équiper des postes bureautiques.",
+        "generated_by": "preview"
+      }
+    },
+    {
+      "id": "art-3029743",
+      "title": "ZDNET Morning 23/11/2026 : 200 millions d'euros alloués face aux offensives IA, TikTok renforce sa politique de transparence, Contrôle fiscal et Data,...",
+      "description": "Le ZDNET Morning le brief de l'actu tech pour les pros tous les matins à 9h00. Transformation numérique, IA, matériel, logiciels,... ne passez pas à côté de ce qui fait la Une du secteur.",
+      "link": "https://www.zdnet.fr/actualites/zdnet-morning-23-11-2026-xxxxxxxxxxxxxxxxxxxx-508411.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T10:11:34+00:00",
+      "published_ts": 1795428694,
+      "ai_summary": {
+        "badge": "Actu / Tendance",
+        "contexte": "Le ZDNET Morning est un condensé quotidien des actualités majeures touchant la transformation numérique, la gouvernance de la donnée (Data), l'intelligence artificielle et la cybersécurité en France et en Europe.",
+        "quoi": "L'édition du 23 novembre 2026 met en lumière plusieurs dossiers clés : une enveloppe de 200 millions d'euros mobilisée pour faire face aux offensives liées à l'IA, le renforcement des politiques de transparence chez TikTok, ainsi que l'usage de la data dans le contrôle fiscal.",
+        "pourquoi": "Les pouvoirs publics, les régulateurs et les grandes plateformes numériques font face à l'accélération des cyberattaques assistées par IA et à une pression réglementaire accrue sur la transparence algorithmique et l'exploitation des données.",
+        "consequence": "Pour les DSI et responsables sécurité, les investissements publics et la montée en puissance de l'IA offensive confirment la nécessité de budgéter le renforcement de la cyberdéfense. Pour les entreprises et citoyens, l'automatisation croissante du contrôle de la donnée et la régulation des plateformes imposent une vigilance renforcée sur la conformité et la qualité des données.",
+        "generated_by": "preview"
+      }
+    },
+    {
+      "id": "art-1566948",
+      "title": "IA : pourquoi les méthodes historiques d'Apple l'empêchent de rattraper son retard",
+      "description": "Alors que les géants de la tech accélèrent dans les agents IA, Apple reste prisonnier de ses cycles de développement traditionnels. Une organisation qui pourrait ralentir la transformation de Siri en véritable assistant intelligent, au moment où la concurrence prend de l'avance.",
+      "link": "https://www.zdnet.fr/actualites/ia-pourquoi-les-methodes-historiques-dapple-lempechent-de-rattraper-son-retard-508401.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T10:11:32+00:00",
+      "published_ts": 1795428692,
+      "ai_summary": {
+        "badge": "Actu / Tendance",
+        "contexte": "Les « agents IA » sont des programmes capables non seulement de répondre à des questions, mais aussi d'enchaîner des actions autonomes dans des applications. Dans cette course, Apple doit faire évoluer son assistant vocal historique Siri face à des concurrents (OpenAI, Google, Anthropic) qui déploient des mises à jour continues.",
+        "quoi": "ZDNet analyse pourquoi les méthodes d'organisation internes d'Apple et ses cycles de sortie annuels rigides ralentissent la transformation de Siri en véritable assistant intelligent de nouvelle génération.",
+        "pourquoi": "Contrairement aux acteurs du cloud et de l'IA qui livrent des modèles itératifs presque chaque semaine, Apple fonctionne historiquement sur de grands lancements synchronisés avec ses matériels et ses systèmes d'exploitation annuels, avec une forte culture du secret et du contrôle intégré.",
+        "consequence": "Pour les utilisateurs d'iPhone et de Mac, l'arrivée des fonctions d'assistant IA avancées pourrait prendre plus de retard que chez la concurrence. Pour Apple et les développeurs de son écosystème, cet écart crée une pression stratégique forte pour assouplir les méthodes d'ingénierie logicielle sans sacrifier la stabilité ni la confidentialité.",
+        "generated_by": "preview"
+      }
+    },
+    {
+      "id": "art-7641228",
+      "title": "GTA 6 sur PC : le projet Leonida tente de recompiler la version Xbox qui a fuité",
+      "description": "Le projet open source Leonida veut faire tourner sous Windows la version Xbox de GTA 6 diffusée par Cyberleek. Mais le jeu ne démarre pas encore.",
+      "link": "https://www.it-connect.fr/gta-6-pc-leonida-fuite-xbox-cyberleek/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Matériel",
+        "Cybersécurité",
+        "Gaming",
+        "Open Source"
+      ],
+      "published_at": "2026-11-23T09:23:56+00:00",
+      "published_ts": 1795425836,
+      "ai_summary": {
+        "badge": "Actu / Tendance",
+        "contexte": "La recompilation statique est une technique de rétro-ingénierie consistant à traduire le code machine d'un programme conçu pour une console (ici la Xbox) vers un programme natif capable de tourner sur un autre système (ici Windows sur PC), sans passer par un émulateur classique.",
+        "quoi": "Des développeurs ont lancé un projet open source baptisé « Leonida » visant à recompiler sous Windows une version Xbox de GTA 6 issue d'une fuite diffusée par Cyberleek. À ce stade, le projet est encore expérimental et le jeu ne démarre pas encore.",
+        "pourquoi": "Au-delà de l'attrait médiatique de GTA 6, ce type d'initiative est motivé par le défi technique de la rétro-ingénierie et par l'essor récent d'outils open source de recompilation de binaires consoles dans la communauté des développeurs bas niveau.",
+        "consequence": "Sur le plan technique, cela montre les progrès rapides des outils d'analyse et de traduction de code binaire, un domaine très proche de la recherche en sécurité et de l'analyse de malwares. Sur le plan juridique et sécurité, les éditeurs de jeux (Rockstar / Take-Two) risquent d'engager rapidement des demandes de retrait (DMCA), et les utilisateurs qui chercheraient des copies compilées sur Internet s'exposent à des fichiers piégés.",
+        "generated_by": "preview"
+      }
+    },
+    {
+      "id": "art-8169913",
+      "title": "Black Friday Week : Mac mini M6, AirPods Pro 3, Alienware 15… le top des offres sur Amazon",
+      "description": "Black Friday Week sur Amazon : Mac mini M6 à 889 €, Alienware 15 à 969 €, AirPods Pro 3 à 188 €... Voici les bons plans du lundi 23 novembre 2026.",
+      "link": "https://www.it-connect.fr/bon-plan-black-friday-week-amazon-2026/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Bons Plans",
+        "Black Friday",
+        "Bon plan",
+        "Hardware"
+      ],
+      "published_at": "2026-11-23T09:17:30+00:00",
+      "published_ts": 1795425450
+    },
+    {
+      "id": "art-6808333",
+      "title": "TikTok renforce la protection des adolescents et la transparence sur les contenus IA",
+      "description": "TikTok a repensé le tableau de bord Family Pairing et introduit un détecteur de contenus créés avec son IA.",
+      "link": "https://www.zdnet.fr/actualites/tiktok-renforce-la-protection-des-adolescents-et-la-transparence-sur-les-contenus-ia-508399.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T09:11:56+00:00",
+      "published_ts": 1795425116
+    },
+    {
+      "id": "art-6131802",
+      "title": "J’ai testé ARTEX, ce framework offensif IA redouté par le FBI",
+      "description": "ARTEX, framework de pentest autonome dopé à l'IA, fait l'objet d'une alerte du FBI. Fonctionnement, chronologie, test en lab et mesures de protection.",
+      "link": "https://www.it-connect.fr/artex-framework-offensif-ia-cest-quoi/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Red Team",
+        "Cybersécurité",
+        "IA"
+      ],
+      "published_at": "2026-11-23T08:24:44+00:00",
+      "published_ts": 1795422284
+    },
+    {
+      "id": "art-1914413",
+      "title": "ZD Tech : L'IA du fisc scrute vos comptes Vinted et LinkedIn",
+      "description": "L'administration fiscale croise désormais vos données avec celles des banques et des plateformes comme LinkedIn. Si l'intelligence artificielle cible 60% des contrôles, les inspecteurs humains restent indispensables pour débusquer la grande fraude.",
+      "link": "https://www.zdnet.fr/actualites/zd-tech-lia-du-fisc-scrute-vos-comptes-vinted-et-linkedin-507405.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T08:11:23+00:00",
+      "published_ts": 1795421483
+    },
+    {
+      "id": "art-9871039",
+      "title": "Amazon négocierait l’acquisition de Decart, spécialiste de l’efficacité des modèles d’IA",
+      "description": "Amazon est en négociations avancées pour racheter cette start-up d’IA fondée en 2023, sur la base d’environ 7,5 milliards de dollars. Ses logiciels aident les modèles à mieux exploiter les puces, ce qui servirait AWS face à Nvidia.",
+      "link": "https://www.zdnet.fr/actualites/amazon-negocierait-lacquisition-de-decart-specialiste-de-lefficacite-des-modeles-dia-508396.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T08:11:12+00:00",
+      "published_ts": 1795421472
+    },
+    {
+      "id": "art-2702594",
+      "title": "Specops lance une API pour vérifier l’identité des utilisateurs dans vos outils : chatbots IA, ITSM, etc.",
+      "description": "Specops lance l'API Specops Authentication : vérifiez l'identité d'un utilisateur depuis un chatbot IA ou ServiceNow avant toute action sensible.",
+      "link": "https://www.it-connect.fr/api-specops-authentication/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "IA"
+      ],
+      "published_at": "2026-11-23T08:00:00+00:00",
+      "published_ts": 1795420800
+    },
+    {
+      "id": "art-3687777",
+      "title": "GL.iNet : des pirates ont exploité le cloud GoodCloud pour infecter des routeurs et des KVM",
+      "description": "GL.iNet confirme qu'une faille de son cloud GoodCloud a servi à installer un malware sur des routeurs et des KVM. Voici ce qu'il faut savoir.",
+      "link": "https://www.it-connect.fr/gl-inet-goodcloud-routeurs-kvm-malware/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cloud",
+        "Cybersécurité",
+        "Malware"
+      ],
+      "published_at": "2026-11-23T07:49:13+00:00",
+      "published_ts": 1795420153
+    },
+    {
+      "id": "art-8050159",
+      "title": "Le CHU de la Guadeloupe visé par une attaque par rançongiciel",
+      "description": "L’établissement de santé a activé son « Plan blanc » pour faire face à ce piratage informatique.",
+      "link": "https://www.zdnet.fr/actualites/le-chu-de-la-guadeloupe-vise-par-une-attaque-par-rancongiciel-508447.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-23T07:11:26+00:00",
+      "published_ts": 1795417886
+    },
+    {
+      "id": "art-8916765",
+      "title": "L'IA peut-elle aider à planifier des attentats terroristes ? Les États-Unis ont testé ChatGPT, Claude, Gemini et Grok pour le savoir",
+      "description": "Les chercheurs ont tenté de contourner les mécanismes de protection de l'IA pour générer des plans d'attaque terroriste. Les résultats mettent en évidence des failles de sécurité préoccupantes et soulèvent des questions quant à la prévention des utilisations abusives.",
+      "link": "https://www.zdnet.fr/actualites/lia-peut-elle-aider-a-planifier-des-attentats-terroristes-les-etats-unis-ont-teste-chatgpt-claude-gemini-et-grok-pour-le-savoir-508439.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T07:11:13+00:00",
+      "published_ts": 1795417873
+    },
+    {
+      "id": "art-8835667",
+      "title": "4 Etats rejoignent le centre français pour l’IA de défense",
+      "description": "Allemagne, Italie, Pologne et Suède s’alignent sur la France et son projet de création d’un centre international pour l’IA de défense, l’ICAID. Installé à Rennes. Le centre doit en principe entrer en service à l’été 2027.",
+      "link": "https://www.zdnet.fr/actualites/4-etats-rejoignent-le-centre-francais-pour-lia-de-defense-508427.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T04:11:55+00:00",
+      "published_ts": 1795407115
+    },
+    {
+      "id": "art-2830504",
+      "title": "Nvidia réintègre Jensen Huang, l'action bondit de plus de 30 %",
+      "description": "Le conseil d'administration de Nvidia a voté à l'unanimité le retour de Jensen Huang au poste de CEO. Ce retour aux manettes est validé par les autorités américaines, propulse le titre en bourse.",
+      "link": "https://www.zdnet.fr/actualites/nvidia-reintegre-jensen-huang-laction-bondit-de-27-508435.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T04:11:29+00:00",
+      "published_ts": 1795407089
+    },
+    {
+      "id": "art-1272765",
+      "title": "Cybersécurité et IA : après sa traversée du désert, la nouvelle vie de Mark Karpelès",
+      "description": "Autrefois à la tête de Mt.Gox, le célèbre geek français qui vit au Japon a refait récemment parler de lui en disséquant des implants suspects dans des matériels Ledger.",
+      "link": "https://www.zdnet.fr/actualites/cybersecurite-et-ia-apres-sa-traversee-du-desert-la-nouvelle-vie-de-mark-karpeles-507622.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-23T04:11:22+00:00",
+      "published_ts": 1795407082
+    },
+    {
+      "id": "art-6711672",
+      "title": "Votre PC est-il capable de faire tourner GTA VI ? Voici la configuration minimale requise en termes de mémoire vive, de carte graphique et de processeur",
+      "description": "La date de sortie de GTA VI sur PC n'a pas encore été confirmée, mais selon certaines informations, elle serait prévue pour début 2027. Voici la configuration minimale estimée pour vous aider à vous préparer",
+      "link": "https://www.zdnet.fr/actualites/votre-pc-est-il-capable-de-faire-tourner-gta-vi-voici-la-configuration-minimale-requise-en-termes-de-memoire-vive-de-carte-graphique-et-de-processeur-508426.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-23T03:11:14+00:00",
+      "published_ts": 1795403474
+    },
+    {
+      "id": "art-6714171",
+      "title": "Sysinternals : Autoruns arrive sur Linux et Process Explorer sur macOS",
+      "description": "Vous utilisez Autoruns sous Windows ? L'outil Sysinternals a désormais une version Linux, et Process Explorer débarque sur macOS. Voici ce qu'il faut retenir.",
+      "link": "https://www.it-connect.fr/sysinternals-autoruns-linux-process-explorer-macos/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Linux",
+        "macOS",
+        "Microsoft"
+      ],
+      "published_at": "2026-11-21T12:00:00+00:00",
+      "published_ts": 1795262400
+    },
+    {
+      "id": "art-2225015",
+      "title": "Windows 11 KB5132057 : la nouvelle fonction de recherche exécute des actions !",
+      "description": "KB5132057 : nouvelle recherche Windows 11, boîte Exécuter modernisée et connexion web sur les postes hybrides. Voici l'essentiel à savoir sur cette mise à jour.",
+      "link": "https://www.it-connect.fr/windows-11-kb5132057-nouvelle-recherche-connexion-web/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Microsoft",
+        "Mise à jour",
+        "Windows 11"
+      ],
+      "published_at": "2026-11-20T15:34:06+00:00",
+      "published_ts": 1795188846
+    },
+    {
+      "id": "art-6066178",
+      "title": "Intune : les fenêtres de maintenance pour Windows Update arrivent enfin !",
+      "description": "Intune prend enfin en charge les fenêtres de maintenance pour Windows Update, un an après leur annonce à Ignite 2025. Voici ce qu'il faut savoir.",
+      "link": "https://www.it-connect.fr/intune-fenetres-de-maintenance-windows-update/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Entreprise",
+        "intune",
+        "Microsoft",
+        "Mise à jour"
+      ],
+      "published_at": "2026-11-20T15:30:00+00:00",
+      "published_ts": 1795188600
+    },
+    {
+      "id": "art-798572",
+      "title": "Mon top 5 des commandes Nmap que vous devez connaître",
+      "description": "Découverte d’hôtes, détection de versions, audit SMB et HTTP, scan complet : 5 commandes Nmap pour cartographier et auditer un réseau comme un pentester.",
+      "link": "https://www.it-connect.fr/mon-top-5-des-commandes-nmap-que-vous-devez-connaitre/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Blue Team",
+        "Commandes et Système",
+        "Cybersécurité",
+        "Red Team"
+      ],
+      "published_at": "2026-11-20T14:00:00+00:00",
+      "published_ts": 1795183200
+    },
+    {
+      "id": "art-5895692",
+      "title": "FastUnlock : une faille zero-day Windows 11 contourne l’écran de verrouillage et menace BitLocker",
+      "description": "FastUnlock, nouvelle zero-day publiée par Nightmare Eclipse, contourne l'écran de verrouillage de Windows 11 via le Narrateur et menace BitLocker.",
+      "link": "https://www.it-connect.fr/fastunlock-zero-day-windows-11-bitlocker-narrateur/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "BitLocker",
+        "Cybersécurité",
+        "Vulnérabilité"
+      ],
+      "published_at": "2026-11-20T11:06:58+00:00",
+      "published_ts": 1795172818
+    },
+    {
+      "id": "art-785322",
+      "title": "STMicroelectronics : un composant 60 % plus petit pour des appareils électroniques plus compacts et mieux protégés",
+      "description": "STMicroelectronics présente un dispositif miniature destiné à protéger les circuits électroniques contre les surtensions et les décharges électrostatiques. Une solution qui cible notamment les équipements industriels, les objets connectés et les appareils électroniques où chaque millimètre compte.",
+      "link": "https://www.zdnet.fr/actualites/stmicroelectronics-un-composant-60-plus-petit-pour-des-appareils-electroniques-plus-compacts-et-mieux-proteges-508267.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T10:11:55+00:00",
+      "published_ts": 1795169515
+    },
+    {
+      "id": "art-1910467",
+      "title": "L'IA au secours d'elfes, de nains et d'hobbits à l'assaut des failles dans le code",
+      "description": "Face à des vulnérabilités enfouies depuis des décennies que l'intelligence artificielle sait désormais exploiter en quelques secondes, la traque aux failles change d'échelle. Entre fuzzing, exécution symbolique, vérification formelle et LLM, plongée au cœur de la nouvelle bataille des tests logiciels automatisés.",
+      "link": "https://www.zdnet.fr/actualites/lia-au-secours-delfes-de-nains-et-dhobbits-a-lassaut-des-failles-dans-le-code-508243.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T10:11:50+00:00",
+      "published_ts": 1795169510
+    },
+    {
+      "id": "art-3138950",
+      "title": "ZDNET Morning 20/11/2026 : Retex panne Outlook, IA et tests logiciels, STMicroelectronics miniaturise la protection des circuits pour l'IoT,...",
+      "description": "Le ZDNET Morning le brief de l'actu tech pour les pros tous les matins à 9h00. Transformation numérique, IA, matériel, logiciels,... ne passez pas à côté de ce qui fait la Une du secteur.",
+      "link": "https://www.zdnet.fr/actualites/zdnet-morning-20-11-2026-retex-panne-outlook-ia-et-tests-logiciels-stmicroelectronics-miniaturise-la-protection-des-circuits-pour-liot-508282.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T10:11:43+00:00",
+      "published_ts": 1795169503
+    },
+    {
+      "id": "art-1626612",
+      "title": "Copilot Workspaces et autres nouveautés pour l'IA au travail, le point sur les annonces de Microsoft Ignite 2026",
+      "description": "L'entreprise a également lancé de nouveaux outils de suivi du retour sur investissement destinés aux entreprises qui surveillent leurs dépenses en matière d'IA.",
+      "link": "https://www.zdnet.fr/actualites/copilot-workspaces-et-autres-nouveautes-pour-lia-au-travail-le-point-sur-les-annonces-de-microsoft-ignite-2026-508149.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T10:11:25+00:00",
+      "published_ts": 1795169485
+    },
+    {
+      "id": "art-3869983",
+      "title": "ZD Tech : Renault bascule dans l'économie de guerre avec ses drones",
+      "description": "Le constructeur automobile s'associe au belge John Cockerill pour créer le Forefront Concept. Ce robot terrestre réutilise des composants civils pour diviser les coûts de production par dix.",
+      "link": "https://www.zdnet.fr/actualites/zd-tech-renault-bascule-dans-leconomie-de-guerre-avec-ses-drones-507404.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T08:11:04+00:00",
+      "published_ts": 1795162264
+    },
+    {
+      "id": "art-9684013",
+      "title": "NAS Synology : une mise à jour DSM corrige deux failles critiques, dont NGINX2Root",
+      "description": "Synology a publié deux bulletins critiques pour DSM : la faille NGINX2Root et une faille notée 9,8 sur 10 dans OAuth Service. Voici comment protéger votre NAS.",
+      "link": "https://www.it-connect.fr/nginx2root-synology-dsm-faille-oauth-cve-2026-120382/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "NAS",
+        "Synology"
+      ],
+      "published_at": "2026-11-20T06:04:17+00:00",
+      "published_ts": 1795154657
+    },
+    {
+      "id": "art-3253737",
+      "title": "Le directeur national de la cybersécurité des Etats-Unis viré suite à une cascade de pannes numériques",
+      "description": "La Maison-Blanche démet Sean Cairncross de ses fonctions de directeur national de la cybersécurité. Kirsten Davies, DSI du département de la Défense, assure l'intérim alors que les États-Unis subissent une série de pannes informatiques paralysant le transport aérien, le secteur bancaire et la NSA.",
+      "link": "https://www.zdnet.fr/actualites/le-directeur-national-de-la-cybersecurite-des-etats-unis-vire-suite-a-une-cascade-de-pannes-numeriques-508330.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-20T04:11:34+00:00",
+      "published_ts": 1795147894
+    },
+    {
+      "id": "art-5531071",
+      "title": "Face aux cyberattaques, Sébastien Lecornu réoriente 200 millions",
+      "description": "Face à une vague de sabotages informatiques propulsée par l'IA, la France muscle sa défense. Le Premier ministre Sébastien Lecornu annonce 200 millions d'euros pour contrer ces menaces inédites, tandis que la directive NIS2 doit sécuriser 20 000 organisations.",
+      "link": "https://www.zdnet.fr/actualites/face-aux-cyberattaques-sebastien-lecornu-reoriente-200-millions-508317.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-20T03:11:34+00:00",
+      "published_ts": 1795144294
+    },
+    {
+      "id": "art-7901840",
+      "title": "Artex frappe l'UE : l'exploitation d'une IA autonome paralyse le SIRH de la Commission européenne",
+      "description": "La Commission européenne confirme une cyberattaque pilotée par une intelligence artificielle. Détectée le 22 octobre 2026, l'offensive a neutralisé plusieurs systèmes d'information des ressources humaines de l'institution.",
+      "link": "https://www.zdnet.fr/actualites/artex-frappe-lue-lexploitation-dune-ia-autonome-paralyse-le-sirh-de-la-commission-europeenne-508320.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T03:11:15+00:00",
+      "published_ts": 1795144275
+    },
+    {
+      "id": "art-7530230",
+      "title": "Comment jouer à GTA VI sur votre PC du boulot dès aujourd'hui, grâce à une application gratuite",
+      "description": "La version PC officielle de GTA VI devrait sortir en 2027, mais vous n'avez pas besoin d'attendre jusque-là pour y jouer sur votre ordinateur portable ou votre PC. Voici comment faire.",
+      "link": "https://www.zdnet.fr/actualites/comment-jouer-a-gta-vi-sur-votre-pc-du-boulot-des-aujourdhui-grace-a-une-application-gratuite-508311.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T02:11:58+00:00",
+      "published_ts": 1795140718
+    },
+    {
+      "id": "art-4853881",
+      "title": "Le port USB-C de votre casque dispose de 4 fonctionnalités cachées, mais il vous faut le bon câble",
+      "description": "Le port USB-C d'un casque comporte plusieurs couches. Les avez-vous déjà essayées ?",
+      "link": "https://www.zdnet.fr/actualites/le-port-usb-c-de-votre-casque-dispose-de-4-fonctionnalites-cachees-mais-il-vous-faut-le-bon-cable-508314.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T02:11:38+00:00",
+      "published_ts": 1795140698
+    },
+    {
+      "id": "art-9222080",
+      "title": "Le Flipper One est bien plus qu'un simple Flipper Zero 2.0 : c'est un ordinateur sous Linux à 399 $ qui a levé 13 millions de dollars sur Kickstarter",
+      "description": "Les contributeurs se ruent sur le « Ultimate Bundle » à 759 dollars, mais Flipper prévient que la hausse des prix de la mémoire vive pourrait affecter la production.",
+      "link": "https://www.zdnet.fr/actualites/le-flipper-one-est-bien-plus-quun-simple-flipper-zero-2-0-cest-un-ordinateur-sous-linux-a-399-qui-a-leve-13-millions-de-dollars-sur-kickstarter-508295.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T01:11:46+00:00",
+      "published_ts": 1795137106
+    },
+    {
+      "id": "art-1291530",
+      "title": "Vos recherches Google en mode IA peuvent désormais rester privées grâce aux « fils de discussion temporaires » — voici comment faire",
+      "description": "Avec les fils de discussion temporaires, les recherches que vous effectuez en mode IA de Google ne seront pas associées à votre compte ni enregistrées dans l'historique de vos conversations.",
+      "link": "https://www.zdnet.fr/actualites/vos-recherches-google-en-mode-ia-peuvent-desormais-rester-privees-grace-aux-fils-de-discussion-temporaires-voici-comment-faire-508299.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T01:11:43+00:00",
+      "published_ts": 1795137103
+    },
+    {
+      "id": "art-2598959",
+      "title": "Vous en avez assez de l'IA dans Canva ? Vous pouvez la désactiver dès maintenant",
+      "description": "À l'instar d'autres plateformes, Canva offre désormais à ses utilisateurs la possibilité de désactiver les outils et contenus basés sur l'IA.",
+      "link": "https://www.zdnet.fr/pratique/vous-en-avez-assez-de-lia-dans-canva-vous-pouvez-la-desactiver-des-maintenant-508302.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Informatique",
+        "Pratique"
+      ],
+      "published_at": "2026-11-20T01:11:36+00:00",
+      "published_ts": 1795137096
+    },
+    {
+      "id": "art-4126684",
+      "title": "Meta Muse a réservé un logement sur Airbnb sans autorisation, et ce n'est pas le pire",
+      "description": "Des employés de Meta ont signalé des atteintes alarmantes à la vie privée impliquant leur IA maison Muse, notamment des actions non autorisées. Une enquête a également révélé que cet agent IA avait accédé à des messages privés.",
+      "link": "https://www.zdnet.fr/actualites/meta-muse-a-reserve-un-logement-sur-airbnb-sans-autorisation-et-ce-nest-pas-le-pire-508306.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-20T01:11:11+00:00",
+      "published_ts": 1795137071
+    },
+    {
+      "id": "art-8203815",
+      "title": "VMware vCenter : une faille critique exploitée comme zero-day depuis septembre 2026",
+      "description": "Broadcom a corrigé la CVE-2026-123890, une faille critique dans VMware vCenter exploitée comme zero-day dès septembre 2026 d'après Mandiant.",
+      "link": "https://www.it-connect.fr/vmware-vcenter-cve-2026-123890-zero-day/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "VMware",
+        "Vulnérabilités"
+      ],
+      "published_at": "2026-11-19T19:00:00+00:00",
+      "published_ts": 1795114800
+    },
+    {
+      "id": "art-5459038",
+      "title": "Cyberattaque contre la Commission européenne : les pirates auraient utilisé l’outil ARTEX",
+      "description": "La Commission européenne confirme une cyberattaque qui a perturbé ses applications internes. Selon POLITICO, les pirates auraient utilisé ARTEX.",
+      "link": "https://www.it-connect.fr/commission-europeenne-cyberattaque-artex/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cyberattaque",
+        "Cybersécurité",
+        "IA"
+      ],
+      "published_at": "2026-11-19T16:40:11+00:00",
+      "published_ts": 1795106411
+    },
+    {
+      "id": "art-5351124",
+      "title": "phpAfterShell : PHP corrige sept failles critiques, dont deux variantes de PHP2Shell",
+      "description": "phpAfterShell (CVE-2026-126714) et six autres failles critiques sont corrigées dans PHP 8.5.13, 8.4.28, 8.3.37 et 8.2.36. Voici l'essentiel à savoir.",
+      "link": "https://www.it-connect.fr/phpaftershell-cve-2026-126714-php-failles-critiques/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "PHP",
+        "Vulnérabilité"
+      ],
+      "published_at": "2026-11-19T16:05:31+00:00",
+      "published_ts": 1795104331
+    },
+    {
+      "id": "art-1110927",
+      "title": "ZDNET Morning 19/11/2026 : IPO record pour Anthropic, Explosion nucléaire en orbite basse, Microsoft défie Anthropic sur le code,...",
+      "description": "Le ZDNET Morning le brief de l'actu tech pour les pros tous les matins à 9h00. Transformation numérique, IA, matériel, logiciels,... ne passez pas à côté de ce qui fait la Une du secteur.",
+      "link": "https://www.zdnet.fr/actualites/zdnet-morning-19-11-2026-ipo-record-pour-anthropic-explosion-nucleaire-en-orbite-basse-microsoft-defie-anthropic-sur-le-code-508175.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-19T10:11:26+00:00",
+      "published_ts": 1795083086
+    },
+    {
+      "id": "art-4190908",
+      "title": "Une explosion nucléaire dans l’espace pourrait neutraliser 98 % des satellites en une semaine",
+      "description": "Une étude américaine alerte sur les conséquences d’une explosion nucléaire en orbite terrestre basse. Les radiations pourraient rendre la quasi-totalité des satellites inopérants, perturber durablement les infrastructures de communication et compromettre le déploiement de nouveaux équipements.",
+      "link": "https://www.zdnet.fr/actualites/une-explosion-nucleaire-dans-lespace-pourrait-neutraliser-98-des-satellites-en-une-semaine-508159.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-19T10:11:00+00:00",
+      "published_ts": 1795083060
+    },
+    {
+      "id": "art-8690665",
+      "title": "Garlic LLM : cette application fait tourner une IA de 9 milliards de paramètres sur une PS4",
+      "description": "Garlic LLM fait tourner l'IA Qwen3.5-9B en local sur le GPU d'une PS4 débridée, sans Internet et à plus de 30 tokens par seconde. Voici ce qu'il faut savoir.",
+      "link": "https://www.it-connect.fr/garlic-llm-ia-locale-ps4/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Matériel",
+        "Gaming",
+        "IA",
+        "Open Source"
+      ],
+      "published_at": "2026-11-19T10:00:00+00:00",
+      "published_ts": 1795082400
+    },
+    {
+      "id": "art-2949937",
+      "title": "Microsoft déclare PowerShell 5.1 obsolète et prépare son retrait de Windows",
+      "description": "Microsoft intégrera PowerShell 7 à la prochaine version de Windows. Windows PowerShell 5.1, qui ne reçoit plus de nouvelles fonctions, deviendra une fonctionnalité à la demande avant son retrait dans une version ultérieure.",
+      "link": "https://www.zdnet.fr/actualites/microsoft-declare-powershell-5-1-obsolete-et-prepare-son-retrait-de-windows-508165.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-19T09:11:36+00:00",
+      "published_ts": 1795079496
+    },
+    {
+      "id": "art-9403354",
+      "title": "1,8 million de mots de passe en clair : la CNIL inflige 5 M€ d'amende à la Macif",
+      "description": "La CNIL sanctionne la Macif pour de graves manquements au RGPD. L'assureur conservait les mots de passe de ses clients en clair et stockait des données personnelles pendant plus de dix ans. Une décision qui rappelle les exigences en matière de sécurisation des accès et de cycle de vie de la donnée.",
+      "link": "https://www.zdnet.fr/actualites/18-million-de-mots-de-passe-en-clair-la-cnil-inflige-5-me-damende-a-la-macif-508236.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-19T06:11:23+00:00",
+      "published_ts": 1795068683
+    },
+    {
+      "id": "art-9284618",
+      "title": "PHP va corriger au moins une faille critique ce jeudi : préparez-vous à mettre à jour PHP 8.2 à 8.5",
+      "description": "Ce 19 novembre 2026, au moins une faille de sécurité critique sera corrigée dans les branches 8.2 à 8.5 de PHP, et sans doute la CVE-2026-115560.",
+      "link": "https://www.it-connect.fr/mise-a-jour-php-faille-critique-19-novembre-2026/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "PHP",
+        "Vulnérabilité"
+      ],
+      "published_at": "2026-11-19T05:55:10+00:00",
+      "published_ts": 1795067710
+    },
+    {
+      "id": "art-5824538",
+      "title": "Panne mondiale Microsoft : un bug dormant de juillet à l'origine du crash",
+      "description": "L'éditeur détaille l'enchaînement de défaillances ayant paralysé ses services Cloud pendant 24 heures la semaine dernière.",
+      "link": "https://www.zdnet.fr/actualites/panne-mondiale-microsoft-un-bug-dormant-de-juillet-a-lorigine-du-crash-508233.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-19T05:11:36+00:00",
+      "published_ts": 1795065096
+    },
+    {
+      "id": "art-6689189",
+      "title": "La nouvelle fonctionnalité « Licensed Weights » de Microsoft permet aux entreprises de personnaliser leurs modèles d'IA à l'aide de leurs propres données",
+      "description": "Microsoft comble le fossé entre l'IA propriétaire et l'IA open-source, tout en ciblant les entreprises soucieuses de la gestion de leurs données.",
+      "link": "https://www.zdnet.fr/actualites/la-nouvelle-fonctionnalite-licensed-weights-de-microsoft-permet-aux-entreprises-de-personnaliser-leurs-modeles-dia-a-laide-de-leurs-propres-donnees-508209.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-19T04:11:37+00:00",
+      "published_ts": 1795061497
+    },
+    {
+      "id": "art-5198975",
+      "title": "Faille Java4Shell : exécution de code à distance sur les infrastructures OpenJDK",
+      "description": "Une faille critique baptisée Java4Shell (CVE-2026-114938) expose les systèmes d'information à des attaques par exécution de code à distance. Cette vulnérabilité impose le déploiement des correctifs logiciels sur les serveurs concernés.",
+      "link": "https://www.zdnet.fr/actualites/faille-java4shell-execution-de-code-a-distance-sur-les-infrastructures-openjdk-508232.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-19T04:11:18+00:00",
+      "published_ts": 1795061478
+    },
+    {
+      "id": "art-4911945",
+      "title": "Nouvelle vulnérabilité RCE sur PHP : les correctifs de sécurité attendus sur toutes les versions ce jour",
+      "description": "L'équipe de sécurité PHP déploie ce jeudi 19 novembre des correctifs pour l'ensemble des versions maintenues. Cette intervention traite une faille d'exécution de code à distance (RCE), accentuant la pression sur des directions informatiques encore aux prises avec les récentes attaques PHP2Shell.",
+      "link": "https://www.zdnet.fr/actualites/nouvelle-vulnerabilite-rce-sur-php-les-correctifs-de-securite-attendus-sur-toutes-les-versions-ce-jour-508230.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-19T04:11:16+00:00",
+      "published_ts": 1795061476
+    },
+    {
+      "id": "art-3538564",
+      "title": "Valorisé 3,5 milliards de dollars, Genesis AI déploie son robot industriel Eno",
+      "description": "La pépite franco-américaine annonce une série A de 500 millions de dollars. Cette opération propulse sa valorisation, et doit lui permettre d'accélérer la production d'Eno, un robot généraliste autonome, cible les lignes de production logistiques et manufacturières d'ici 2027.",
+      "link": "https://www.zdnet.fr/actualites/valorise-35-milliards-de-dollars-genesis-ai-deploie-son-robot-industriel-eno-508220.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-19T03:11:43+00:00",
+      "published_ts": 1795057903
+    },
+    {
+      "id": "art-3014743",
+      "title": "Microsoft souhaite attribuer une valeur monétaire au travail de l'IA, mais peut-on se fier à ses calculs ?",
+      "description": "Avec Agent 365 Business Analytics, Microsoft pourrait redéfinir les dépenses des entreprises, mais il existe une différence fondamentale entre la valeur estimée et les économies réalisées.",
+      "link": "https://www.zdnet.fr/actualites/microsoft-souhaite-attribuer-une-valeur-monetaire-au-travail-de-lia-mais-peut-on-se-fier-a-ses-calculs-508146.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-19T02:11:26+00:00",
+      "published_ts": 1795054286
+    },
+    {
+      "id": "art-7137088",
+      "title": "J'ai testé Ubuntu 27.04 avant sa sortie prévue en avril, et cette version va vous épater",
+      "description": "J'utilise Ubuntu 27.04 depuis quelque temps, et le gain de vitesse est perceptible. Voici les autres nouveautés à venir.",
+      "link": "https://www.zdnet.fr/actualites/jai-teste-ubuntu-27-04-avant-sa-sortie-prevue-en-avril-et-cette-version-va-vous-epater-508213.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-19T01:11:36+00:00",
+      "published_ts": 1795050696
+    },
+    {
+      "id": "art-8718578",
+      "title": "NGINX2Root : deux failles critiques permettent de prendre le contrôle d’un serveur NGINX",
+      "description": "Failles NGINX : CVE-2026-123007 et CVE-2026-123633 permettent d'exécuter du code à distance via HTTP/2. Voici les versions à installer et comment vous protéger.",
+      "link": "https://www.it-connect.fr/nginx2root-failles-cve-2026-123007-rce/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "Nginx",
+        "Vulnérabilité"
+      ],
+      "published_at": "2026-11-18T19:59:23+00:00",
+      "published_ts": 1795031963
+    },
+    {
+      "id": "art-6577503",
+      "title": "Windows Server 2028 : Microsoft durcit Server Core par défaut, pour plus de sécurité",
+      "description": "Avec Windows Server 2028, Server Core est durci dès l'installation (SMB, TLS, WinRM, RDP, etc.). Ce qui change et comment le gérer, voici ce qu'il faut savoir.",
+      "link": "https://www.it-connect.fr/windows-server-2028-server-core-durci-par-defaut/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Cybersécurité",
+        "Microsoft",
+        "Windows Server"
+      ],
+      "published_at": "2026-11-18T15:59:12+00:00",
+      "published_ts": 1795017552
+    },
+    {
+      "id": "art-1941721",
+      "title": "FBI : avec ARTEX, certaines intrusions atteignent un accès privilégié en moins de trois heures",
+      "description": "Le FBI alerte sur ARTEX, un framework de pentest piloté par l'IA détourné par des pirates. Certaines intrusions atteignent un accès admin en moins de 3 heures.",
+      "link": "https://www.it-connect.fr/fbi-artex-framework-ia-cyberattaques/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "IA"
+      ],
+      "published_at": "2026-11-18T15:45:00+00:00",
+      "published_ts": 1795016700
+    },
+    {
+      "id": "art-6631873",
+      "title": "Modèles d’IA : « grosso modo, nous avons accès à tout » (Vincent Strubel)",
+      "description": "A l’occasion de l’European cyber week, le directeur général de l’Anssi a fait le point dans son discours et auprès de ZDnet.fr sur la question cruciale de l’IA.",
+      "link": "https://www.zdnet.fr/actualites/modeles-dia-grosso-modo-nous-avons-acces-a-tout-vincent-strubel-508062.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-18T11:11:58+00:00",
+      "published_ts": 1795000318
+    },
+    {
+      "id": "art-3280645",
+      "title": "PowerShell 7 va débarquer dans Windows : les jours de Windows PowerShell 5.1 sont comptés",
+      "description": "PowerShell 7 sera intégré à la prochaine version de Windows et Windows PowerShell 5.1 est déprécié. Calendrier et limites du MSIX : voici ce qu'il faut savoir.",
+      "link": "https://www.it-connect.fr/powershell-7-integre-windows-powershell-5-1-deprecie/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Microsoft",
+        "Powershell",
+        "Windows"
+      ],
+      "published_at": "2026-11-18T10:31:17+00:00",
+      "published_ts": 1794997877
+    },
+    {
+      "id": "art-5458048",
+      "title": "La faille Java4Shell (CVE-2026-114938) menace Keycloak, Jira, Jenkins, etc.",
+      "description": "La faille Java4Shell (CVE-2026-114938) menace Java 17 à 27 sur certains CPU, et elle permet une exécution de code à distance sans authentification.",
+      "link": "https://www.it-connect.fr/java4shell-faille-critique-java-openjdk/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "Vulnérabilité"
+      ],
+      "published_at": "2026-11-18T08:44:52+00:00",
+      "published_ts": 1794991492
+    },
+    {
+      "id": "art-5085931",
+      "title": "Microsoft Perception : les agents IA spécialisés dans la cybersécurité sont disponibles !",
+      "description": "Project Perception devient Microsoft Perception et passe en disponibilité générale : triage des alertes, pentest web, Intune, MCP. Voici l'essentiel à retenir.",
+      "link": "https://www.it-connect.fr/microsoft-perception-disponibilite-generale-ignite/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "IA",
+        "Microsoft"
+      ],
+      "published_at": "2026-11-18T07:53:56+00:00",
+      "published_ts": 1794988436
+    },
+    {
+      "id": "art-685209",
+      "title": "Windows Server 2028 arrive en préversion : quelles sont les nouveautés ?",
+      "description": "Windows Server 2028 est en préversion publique : Server Core durci, NVMe natif par défaut, Intune pour les serveurs et IA locale. Voici ce qu'il faut retenir.",
+      "link": "https://www.it-connect.fr/windows-server-2028-preversion-publique-nouveautes/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Microsoft",
+        "Windows Server",
+        "Windows Server 2028"
+      ],
+      "published_at": "2026-11-18T06:12:31+00:00",
+      "published_ts": 1794982351
+    },
+    {
+      "id": "art-3369696",
+      "title": "Le Flipper One est en précommande à 399 dollars sur Kickstarter",
+      "description": "Le Flipper One, ordinateur Linux de poche de Flipper Devices, est sur Kickstarter à 399 dollars jusqu'au 17 décembre. Livraison prévue en juillet 2027.",
+      "link": "https://www.it-connect.fr/flipper-one-kickstarter-399-dollars/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Matériel",
+        "Cybersécurité",
+        "Hardware",
+        "Linux"
+      ],
+      "published_at": "2026-11-17T21:00:45+00:00",
+      "published_ts": 1794949245
+    },
+    {
+      "id": "art-2827347",
+      "title": "Cyberattaque : Air France, IKEA, HSBC, Zoom… De nombreux sites ont servi du code malveillant à leurs visiteurs",
+      "description": "Un pirate a détourné les scripts Optimizely de 178 organisations, dont Ikea, Transavia, CNN, la BBC et Zoom, pour voler des cartes bancaires et des cryptos.",
+      "link": "https://www.it-connect.fr/optimizely-pirate-scripts-malveillants-cnn-bbc-zoom/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-17T19:23:39+00:00",
+      "published_ts": 1794943419
+    },
+    {
+      "id": "art-5358412",
+      "title": "IA sur Windows 11 : Microsoft sait si vous codez avec Claude, Codex ou Cursor",
+      "description": "Un composant de Windows 11 repère les agents IA de codage (Claude, Codex, Cursor...) et peut le signaler à Microsoft via les données de diagnostic facultatives.",
+      "link": "https://www.it-connect.fr/windows-11-telemetrie-agents-ia-codage/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "IA",
+        "Microsoft",
+        "Privacy"
+      ],
+      "published_at": "2026-11-17T15:48:40+00:00",
+      "published_ts": 1794930520
+    },
+    {
+      "id": "art-4988719",
+      "title": "« Je suis cook, venez à mon procès » : quatre ans de prison avec sursis pour « egorgeur2pedo »",
+      "description": "Le tribunal judiciaire de Paris vient de condamner un jeune homme qui avait accumulé plusieurs défigurations de sites et des fuites de données.",
+      "link": "https://www.zdnet.fr/actualites/je-suis-cook-venez-a-mon-proces-quatre-ans-de-prison-avec-sursis-pour-egorgeur2pedo-507969.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-17T10:11:13+00:00",
+      "published_ts": 1794910273
+    },
+    {
+      "id": "art-3723650",
+      "title": "NoisyTCP : cette faille du noyau Linux vieille de 11 ans permet de faire planter un serveur à distance",
+      "description": "Des paquets TCP bien synchronisés, et tout le serveur tombe. NoisyTCP (CVE-2026-99288), une faille Linux vieille de 11 ans menace les serveurs Linux.",
+      "link": "https://www.it-connect.fr/noisytcp-cve-2026-99288-faille-noyau-linux-tcp/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cybersécurité",
+        "Linux",
+        "Vulnérabilité"
+      ],
+      "published_at": "2026-11-17T07:58:23+00:00",
+      "published_ts": 1794902303
+    },
+    {
+      "id": "art-2979725",
+      "title": "5 façons dont l'IA va transformer la manière dont vous protégez votre entreprise en 2027",
+      "description": "Des responsables de sécurité informatique dévoilent les conséquences futures d'une IA qui devancerait les défenseurs humains.",
+      "link": "https://www.zdnet.fr/actualites/5-facons-dont-lia-va-transformer-la-maniere-dont-vous-protegez-votre-entreprise-en-2027-508043.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-17T04:11:33+00:00",
+      "published_ts": 1794888693
+    },
+    {
+      "id": "art-8967519",
+      "title": "Menace russe, l'armée française accélère sa préparation cyber pour 2030",
+      "description": "Face au développement de l'intelligence artificielle, les militaires raccourcissent leurs cycles pour anticiper un affrontement de haute intensité.",
+      "link": "https://www.zdnet.fr/actualites/menace-russe-larmee-francaise-accelere-sa-preparation-cyber-pour-2030-508022.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-17T02:11:13+00:00",
+      "published_ts": 1794881473
+    },
+    {
+      "id": "art-3919460",
+      "title": "L'accès à l'IA de votre entreprise peut être vendu pour quelques centimes, méfiez-vous des « LLM Mixers »",
+      "description": "Selon Google, des revendeurs clandestins vendent l'accès à des comptes d'IA d'entreprise piratés, dont les frais d'utilisation sont pris en charge par les victimes.",
+      "link": "https://www.zdnet.fr/actualites/lacces-a-lia-de-votre-entreprise-peut-etre-vendu-pour-quelques-centimes-mefiez-vous-des-llm-mixers-508025.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-17T02:11:10+00:00",
+      "published_ts": 1794881470
+    },
+    {
+      "id": "art-817904",
+      "title": "Cyberattaque des frigos : « Quand on a des trous de ce niveau, c'est du pénal » tempête le Vice-amiral Arnaud Coustillière",
+      "description": "Le commandement de la cyberdéfense pointe l'irresponsabilité du secteur privé après le sabotage de centaines d'équipements frigorifiques. Les autorités militaires dénoncent une absence d'hygiène informatique élémentaire, allant jusqu'à évoquer la responsabilité pénale des chefs d'entreprise.",
+      "link": "https://www.zdnet.fr/actualites/cyberattaque-des-frigos-quand-on-a-des-trous-de-ce-niveau-cest-du-penal-tempete-le-vice-amiral-arnaud-coustilliere-508017.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-17T01:11:32+00:00",
+      "published_ts": 1794877892
+    },
+    {
+      "id": "art-7726948",
+      "title": "Erreur 0x80041008 : Microsoft corrige l’activation de Windows avec des mises à jour hors bande",
+      "description": "Microsoft a publié des mises à jour hors bande pour corriger l'erreur 0x80041008 qui bloque l'activation de Windows via slmgr.vbs. Voici les KB à installer.",
+      "link": "https://www.it-connect.fr/windows-mise-a-jour-hors-bande-activation-slmgr-080041008/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Microsoft",
+        "Mise à jour",
+        "Windows 10"
+      ],
+      "published_at": "2026-11-16T13:56:55+00:00",
+      "published_ts": 1794837415
+    },
+    {
+      "id": "art-8490615",
+      "title": "22 millions de personnes concernées, une nouvelle fuite de données XXL en France",
+      "description": "Le groupe « La Poste » vient de confirmer le piratage d’une de ses filiales à mi-septembre, un incident qui se solde par une fuite de données relative à 22 millions de personnes.",
+      "link": "https://www.zdnet.fr/actualites/22-millions-de-personnes-concernees-une-nouvelle-fuite-de-donnees-xxl-en-france-507901.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-16T12:11:28+00:00",
+      "published_ts": 1794831088
+    },
+    {
+      "id": "art-8464511",
+      "title": "GTA 6 : comment 212 Go arrivent sur des millions de consoles sans saturer Internet ?",
+      "description": "GTA 6 pèse jusqu'à 212 Go et sort le 19 novembre. Préchargement, CDN, clé livrée au lancement : voici comment le réseau absorbe des millions de téléchargements.",
+      "link": "https://www.it-connect.fr/gta-6-prechargement-cdn-chiffrement/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "Gaming",
+        "Réseau"
+      ],
+      "published_at": "2026-11-16T09:55:46+00:00",
+      "published_ts": 1794822946
+    },
+    {
+      "id": "art-8575888",
+      "title": "Nextcloud Office Desktop : l’application de bureau basée sur Euro-Office est disponible",
+      "description": "Nextcloud Office Desktop, l'application de bureau gratuite basée sur Euro-Office, est disponible pour Windows, Linux et macOS. Voici ce qu'il faut retenir.",
+      "link": "https://www.it-connect.fr/nextcloud-office-desktop-euro-office-disponible/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Nextcloud",
+        "ONLYOFFICE",
+        "Open Source"
+      ],
+      "published_at": "2026-11-16T06:25:59+00:00",
+      "published_ts": 1794810359
+    },
+    {
+      "id": "art-9136007",
+      "title": "Linux 7.4 : pour Linus Torvalds, les correctifs assistés par l’IA sont devenus la norme",
+      "description": "Dans l'annonce de Linux 7.4-rc2, Linus Torvalds tient les correctifs issus de l'IA pour acquis. Sur BPF, ils arriveraient plus vite que les rapports de bugs.",
+      "link": "https://www.it-connect.fr/linux-7-4-correctifs-ia-norme-torvalds/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "IA",
+        "Linux"
+      ],
+      "published_at": "2026-11-16T05:58:44+00:00",
+      "published_ts": 1794808724
+    },
+    {
+      "id": "art-7494305",
+      "title": "L'IA détecte désormais des failles « zero-day » pour seulement 4 $, et même les hackers les moins doués peuvent en tirer profit",
+      "description": "Les progrès rapides des modèles d'IA permettent de détecter plus facilement et à moindre coût les failles critiques, mais c'est une arme à double tranchant — et un véritable cadeau pour les pirates informatiques.",
+      "link": "https://www.zdnet.fr/actualites/lia-detecte-desormais-des-failles-zero-day-pour-seulement-4-et-meme-les-hackers-les-moins-doues-peuvent-en-tirer-profit-507946.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-16T04:11:12+00:00",
+      "published_ts": 1794802272
+    },
+    {
+      "id": "art-8072134",
+      "title": "Comment les failles de sécurité liées à l'IA mettent en danger votre chaîne d'approvisionnement, et ce que vous pouvez faire",
+      "description": "Une nouvelle étude dresse un tableau sans concession de la chaîne d'approvisionnement de l'IA et des risques qu'elle fait peser sur les entreprises.",
+      "link": "https://www.zdnet.fr/actualites/comment-les-failles-de-securite-liees-a-lia-mettent-en-danger-votre-chaine-dapprovisionnement-et-ce-que-vous-pouvez-faire-507940.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-16T01:11:42+00:00",
+      "published_ts": 1794791502
+    },
+    {
+      "id": "art-3649972",
+      "title": "Rennes accueillera le Centre international pour l’IA de défense (ICAID)",
+      "description": "Le ministère des Armées a officialisé la création à Rennes de l'International Center for AI in Defense (ICAID) pour accélérer l'adoption de l'IA et renforcer l'interopérabilité des forces membres de l’OTAN. Ouverture prévue à l’été 2027.",
+      "link": "https://www.zdnet.fr/actualites/rennes-accueillera-le-centre-international-pour-lia-de-defense-icaid-507916.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-16T01:11:32+00:00",
+      "published_ts": 1794791492
+    },
+    {
+      "id": "art-8891533",
+      "title": "Le nouvel outil d'IA de Google vient de prouver que le chiffrement de Signal fonctionne vraiment, voici comment",
+      "description": "Dans le but de sécuriser d'autres systèmes essentiels, Google DeepMind prévoit de mettre son code AlphaProof en open source.",
+      "link": "https://www.zdnet.fr/actualites/le-nouvel-outil-dia-de-google-vient-de-prouver-que-le-chiffrement-de-signal-fonctionne-vraiment-voici-comment-507930.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-16T01:11:09+00:00",
+      "published_ts": 1794791469
+    },
+    {
+      "id": "art-4644659",
+      "title": "Windows : les mises à jour de novembre 2026 provoquent des échecs d’activation, Microsoft confirme",
+      "description": "Les mises à jour Windows de novembre 2026 font échouer l'activation via slmgr avec l'erreur 0x80041008. Microsoft confirme le bug et prépare un correctif.",
+      "link": "https://www.it-connect.fr/windows-activation-slmgr-erreur-080041008/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Microsoft",
+        "Mise à jour",
+        "Windows 10"
+      ],
+      "published_at": "2026-11-13T12:41:58+00:00",
+      "published_ts": 1794573718
+    },
+    {
+      "id": "art-4709351",
+      "title": "Votre SQL Server est lent ? Les mises à jour Windows récentes sont peut-être en cause",
+      "description": "Depuis les mises à jour Windows d'octobre 2026, les serveurs liés SQL Server peuvent laisser des connexions ouvertes. Microsoft a confirmé et prépare un patch.",
+      "link": "https://www.it-connect.fr/sql-server-serveurs-lies-connexions-ouvertes-mises-a-jour-windows/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Microsoft",
+        "Mise à jour",
+        "SQL Server"
+      ],
+      "published_at": "2026-11-12T16:25:06+00:00",
+      "published_ts": 1794500706
+    },
+    {
+      "id": "art-2527478",
+      "title": "Windows 11 : la mise à jour KB5132061 refuse de s’installer sur certains PC, Microsoft promet un correctif",
+      "description": "L'installation de la KB5132061 échoue sur certains PC Windows 11 ayant reçu la préversion d'octobre. Microsoft promet une réparation automatique sous 48h.",
+      "link": "https://www.it-connect.fr/windows-11-kb5132061-echec-installation-0800f0989/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Microsoft",
+        "Mise à jour",
+        "Windows 11"
+      ],
+      "published_at": "2026-11-12T16:10:10+00:00",
+      "published_ts": 1794499810
+    },
+    {
+      "id": "art-1906640",
+      "title": "Comment l’Assemblée nationale a repris à sa sauce NIS 2",
+      "description": "Les députés viennent de boucler l’examen en séance publique de ce projet de loi très attendu dans la cybersécurité.",
+      "link": "https://www.zdnet.fr/actualites/comment-lassemblee-nationale-a-repris-a-sa-sauce-nis-2-507741.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-12T05:11:41+00:00",
+      "published_ts": 1794460301
+    },
+    {
+      "id": "art-9145831",
+      "title": "Firefox 160 : Mini Window, vitesse de lecture en Picture-in-Picture et reconnaissance vocale locale",
+      "description": "Un onglet qui reste au premier plan pendant que vous travaillez ailleurs : c'est Mini Window, la nouveauté phare de Firefox 160. Voici ce qui change.",
+      "link": "https://www.it-connect.fr/firefox-160-mini-window-nouveautes/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Firefox"
+      ],
+      "published_at": "2026-11-11T08:45:00+00:00",
+      "published_ts": 1794386700
+    },
+    {
+      "id": "art-3922063",
+      "title": "Windows 11 KB5132061 : voici l’essentiel à savoir sur la mise à jour de novembre 2026",
+      "description": "KB5132061 : menu contextuel personnalisable, signature NTLM par défaut, audio USB corrigé. Voici le récapitulatif de la mise à jour Windows 11 de novembre 2026.",
+      "link": "https://www.it-connect.fr/windows-11-kb5132061-kb5131087-nouveautes-correctifs/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Microsoft",
+        "Mise à jour",
+        "Windows 11"
+      ],
+      "published_at": "2026-11-11T07:15:41+00:00",
+      "published_ts": 1794381341
+    },
+    {
+      "id": "art-8557861",
+      "title": "Claude Fable 5.2 a codé un système d’exploitation en 8 jours avec plus de 1 000 sous-agents",
+      "description": "Anthropic a dévoilé Claude Fable 5.2 (et Mythos 5.2), et à cette occasion, l'IA a créée un système d'exploitation en huit jours avec plus de 1 000 sous-agents.",
+      "link": "https://www.it-connect.fr/claude-fable-5-2-systeme-exploitation-1000-sous-agents/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "IA"
+      ],
+      "published_at": "2026-11-10T20:18:00+00:00",
+      "published_ts": 1794341880
+    },
+    {
+      "id": "art-3886679",
+      "title": "Après plusieurs reports, le projet de loi « Résilience » enfin examiné en séance publique par les députés",
+      "description": "L’examen de ce texte qui transpose trois directives européennes, dont NIS2, était attendu depuis environ un an et demi.",
+      "link": "https://www.zdnet.fr/actualites/apres-plusieurs-reports-le-projet-de-loi-resilience-enfin-examine-en-seance-publique-par-les-deputes-507551.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-09T11:11:56+00:00",
+      "published_ts": 1794222716
+    },
+    {
+      "id": "art-4223489",
+      "title": "Piratage des frigos : la France vise l'Iran et Shahid Kaveh",
+      "description": "Le parquet de Paris et le C4 attribuent officiellement la cyberattaque des frigos de supermarchés au groupe iranien Shahid Kaveh. Ces hackers, liés aux Gardiens de la révolution, auraient même provoqué plusieurs incendies lors de ce sabotage.",
+      "link": "https://www.zdnet.fr/actualites/piratage-des-frigos-la-france-vise-liran-et-shahid-kaveh-507602.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-09T07:11:52+00:00",
+      "published_ts": 1794208312
+    },
+    {
+      "id": "art-6038307",
+      "title": "Alpine Linux et OpenSSH corrigent une faille d'une gravité sans précédent",
+      "description": "Cette faille de sécurité dangereuse sous Linux doit être corrigée dès que possible.",
+      "link": "https://www.zdnet.fr/actualites/alpine-linux-et-openssh-corrigent-une-faille-dune-gravite-sans-precedent-507570.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-09T01:11:15+00:00",
+      "published_ts": 1794186675
+    },
+    {
+      "id": "art-9095641",
+      "title": "Alpine Linux a réinstallé son serveur GitLab après avoir frôlé la catastrophe, ce que vous devriez vérifier au plus vite",
+      "description": "Un pirate a failli exploiter une faille présentant un niveau de gravité maximal. Voici ce qu'il faut savoir.",
+      "link": "https://www.zdnet.fr/actualites/alpine-linux-a-reinstalle-son-serveur-gitlab-apres-avoir-frole-la-catastrophe-ce-que-vous-devriez-verifier-au-plus-vite-507442.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-06T11:11:09+00:00",
+      "published_ts": 1793963469
+    },
+    {
+      "id": "art-9629560",
+      "title": "OpenAI lance GPT-6 Cyber, une IA qui traque les failles avant les attaquants",
+      "description": "GPT-6 Cyber est un modèle qui repère des failles logicielles, vérifie qu’elles sont exploitables et propose des correctifs. Réservé à certains clients du programme Daybreak Red, il a trouvé 81 failles inédites dans Firefox.",
+      "link": "https://www.zdnet.fr/actualites/openai-lance-gpt-6-cyber-une-ia-qui-traque-les-failles-avant-les-attaquants-507422.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-06T08:11:35+00:00",
+      "published_ts": 1793952695
+    },
+    {
+      "id": "art-5795623",
+      "title": "Affaire Holograph : 3 condamnations et près de 2 millions d’euros à rembourser",
+      "description": "Le tribunal judiciaire vient de rendre sa décision dans ce dossier XXL de détournement crypto.",
+      "link": "https://www.zdnet.fr/actualites/affaire-holograph-3-condamnations-et-pres-de-2-millions-deuros-a-rembourser-507486.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-06T05:11:24+00:00",
+      "published_ts": 1793941884
+    },
+    {
+      "id": "art-9488404",
+      "title": "ZD Tech : Steam paralysé par les clones IA, Valve impose un test manuel",
+      "description": "Boostés par ChatGPT, les clones générés par intelligence artificielle inondent les boutiques d'Apple et de Valve. Résultat : une modération saturée, des sorties retardées de plusieurs semaines, et des plateformes forcées de contre-attaquer pour bloquer les robots.",
+      "link": "https://www.zdnet.fr/actualites/zd-tech-steam-paralyse-par-les-clones-ia-valve-impose-un-test-manuel-507395.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-06T02:11:08+00:00",
+      "published_ts": 1793931068
+    },
+    {
+      "id": "art-3353092",
+      "title": "Cyberattaque Crédit Mutuel Arkéa : 100 millions d'euros exfiltrés vers la sphère crypto",
+      "description": "Le groupe bancaire annonce la maîtrise d'une attaque informatique ayant forcé la suspension temporaire de ses transactions. Si les avoirs des clients sont préservés, l'ampleur de la fraude interroge l'efficacité des systèmes de détection de l'établissement.",
+      "link": "https://www.zdnet.fr/actualites/cyberattaque-credit-mutuel-arkea-100-millions-deuros-exfiltres-vers-la-sphere-crypto-507348.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-05T11:11:03+00:00",
+      "published_ts": 1793877063
+    },
+    {
+      "id": "art-3644456",
+      "title": "ZD Tech : Piratage Auto Planning, 18 millions de dossiers clients vendus sur le dark web",
+      "description": "Les plateformes Auto Planning et Auto Contrôle Paris ont subi une cyberattaque. Près de 18 millions de dossiers, incluant des plaques d'immatriculation et des RIB, sont en vente, exposant les automobilistes au risque de phishing.",
+      "link": "https://www.zdnet.fr/actualites/zd-tech-piratage-auto-planning-18-millions-de-dossiers-clients-vendus-sur-le-dark-web-507299.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-05T08:11:06+00:00",
+      "published_ts": 1793866266
+    },
+    {
+      "id": "art-340278",
+      "title": "Pas d’IA, pas de recherche Google : c’est ce que veut imposer Google aux écoles",
+      "description": "Gemini et Google Search seront désactivés par défaut sur les comptes élèves. Une école qui refuse l'IA de Google perdra aussi l'accès au moteur de recherche.",
+      "link": "https://www.it-connect.fr/google-ecoles-ia-gemini-recherche-desactivee/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "Google",
+        "IA"
+      ],
+      "published_at": "2026-11-04T09:32:03+00:00",
+      "published_ts": 1793784723
+    },
+    {
+      "id": "art-9061043",
+      "title": "Comment la vigilance d'un technicien a sauvé les frigos de l'EFS",
+      "description": "L’Établissement Français du Sang explique que ses réfrigérateurs utilisés pour stocker les poches de sang ont été visés par une cyberattaque. Mais les systèmes d'alarme ont permis aux équipes de déjouer la tentative.",
+      "link": "https://www.zdnet.fr/actualites/comment-la-vigilance-dun-technicien-a-sauve-les-frigos-de-lefs-507303.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actualités",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-04T07:11:08+00:00",
+      "published_ts": 1793776268
+    },
+    {
+      "id": "art-8441792",
+      "title": "Netflix, jeux vidéo, cloud : la taxe au gigaoctet votée par 11 députés fait débat",
+      "description": "Votée à une voix près, la taxe de 0,055 € par Go est vivement critiquée et elle a fait réagir VideoLAN, Free et OVHcloud. Qu'en est-il réellement ?",
+      "link": "https://www.it-connect.fr/taxe-gigaoctet-producteurs-donnees-numeriques/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "Internet"
+      ],
+      "published_at": "2026-11-02T06:10:26+00:00",
+      "published_ts": 1793599826
+    },
+    {
+      "id": "art-3918363",
+      "title": "Reddit va réserver ses contenus aux utilisateurs connectés pour freiner le scraping (et l’IA)",
+      "description": "Reddit va progressivement réserver ses contenus aux utilisateurs connectés, avec des tests hors des États-Unis. Scraping, publicité : voici ce que l'on sait.",
+      "link": "https://www.it-connect.fr/reddit-connexion-obligatoire-scraping/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "Internet"
+      ],
+      "published_at": "2026-11-02T05:49:21+00:00",
+      "published_ts": 1793598561
+    },
+    {
+      "id": "art-9815306",
+      "title": "Discord : les messages des serveurs publics vont apparaître dans les moteurs de recherche",
+      "description": "Dès la mi-décembre 2026, Discord publiera sur le Web, notamment sur Google, des messages de ses serveurs publics. En France, l'option est désactivée par défaut.",
+      "link": "https://www.it-connect.fr/discord-messages-serveurs-publics-moteurs-recherche/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "Discord"
+      ],
+      "published_at": "2026-10-28T16:40:54+00:00",
+      "published_ts": 1793205654
+    },
+    {
+      "id": "art-6490749",
+      "title": "Google : vos e-mails Gmail et vos photos peuvent désormais influencer les publicités, à une condition",
+      "description": "Google a modifié sa politique de confidentialité : si vous connectez Gmail ou Google Photos à la recherche, ces données peuvent influencer vos publicités.",
+      "link": "https://www.it-connect.fr/google-gmail-photos-publicites-personnalisees-politique-confidentialite/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "Google",
+        "Privacy"
+      ],
+      "published_at": "2026-10-27T06:40:22+00:00",
+      "published_ts": 1793083222
+    },
+    {
+      "id": "art-3780239",
+      "title": "Quad9 quitte la France : le DNS 9.9.9.9 sera coupé le 24 novembre 2026",
+      "description": "Vous utilisez le DNS 9.9.9.9 ? Le 24 novembre 2026, Quad9 cessera de servir la France plutôt que d'appliquer un blocage judiciaire. Voici ce que l'on sait.",
+      "link": "https://www.it-connect.fr/quad9-quitte-la-france-blocage-dns/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "DNS"
+      ],
+      "published_at": "2026-10-26T07:35:50+00:00",
+      "published_ts": 1793000150
+    },
+    {
+      "id": "art-4284",
+      "title": "SynthID Detector : Google ouvre à tous son outil pour repérer les contenus générés par IA",
+      "description": "Google ouvre SynthID Detector à tous : l'outil vérifie si une image, une vidéo ou un audio vient de l'IA de Google, OpenAI, NVIDIA ou Kakao. Pas des autres.",
+      "link": "https://www.it-connect.fr/google-synthid-detector-grand-public/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "Google",
+        "IA"
+      ],
+      "published_at": "2026-10-07T16:13:51+00:00",
+      "published_ts": 1791389631
+    },
+    {
+      "id": "art-2015092",
+      "title": "DNSSEC : la clé principale du DNS change le 11 octobre, qui doit vérifier son résolveur ?",
+      "description": "Le 11 octobre 2026, la clé KSK-2024 signera la zone racine du DNS. Les résolveurs où la validation DNSSEC est activée sont concernés : voici comment vérifier.",
+      "link": "https://www.it-connect.fr/dnssec-roulement-ksk-racine-dns-verifier-resolveur/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "Cybersécurité",
+        "DNS"
+      ],
+      "published_at": "2026-10-07T15:29:41+00:00",
+      "published_ts": 1791386981
+    },
+    {
+      "id": "art-1785659",
+      "title": "MalExt : une liste open source avec près de 7 000 extensions Chrome malveillantes",
+      "description": "MalExt Sentry recense près de 7 000 extensions Chrome et Edge malveillantes ou retirées des stores, avec des outils pour vérifier vos propres navigateurs.",
+      "link": "https://www.it-connect.fr/malext-sentry-base-extensions-chrome-edge-malveillantes/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "Chrome",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-10-06T13:11:38+00:00",
+      "published_ts": 1791292298
+    },
+    {
+      "id": "art-6206730",
+      "title": "OpenAI va ajouter un filigrane invisible aux textes de ChatGPT et Codex dans l’UE",
+      "description": "AI Act oblige, OpenAI va glisser un filigrane invisible dans les textes de ChatGPT et Codex en Europe. Une méthode qui a ses limites, selon OpenAI.",
+      "link": "https://www.it-connect.fr/openai-filigrane-invisible-textes-chatgpt-codex-ue/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "IA",
+        "OpenAI"
+      ],
+      "published_at": "2026-10-06T05:15:53+00:00",
+      "published_ts": 1791263753
+    },
+    {
+      "id": "art-6375550",
+      "title": "Avec les mods, Claude Code devient personnalisable : interface, commandes, etc.",
+      "description": "Anthropic lance les mods dans Claude Code : des plugins qui modifient l'interface et le comportement de l'outil, et qui tournent avec vos droits, sans sandbox.",
+      "link": "https://www.it-connect.fr/claude-code-mods-plugins/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "Claude",
+        "IA"
+      ],
+      "published_at": "2026-10-05T16:56:39+00:00",
+      "published_ts": 1791219399
+    },
+    {
+      "id": "art-7225178",
+      "title": "OpenAI lance dots, l’agent IA qui travaille même quand vous dormez",
+      "description": "OpenAI lance dots, des agents IA toujours actifs dotés de leur propre ordinateur dans le cloud. Disponibilité, garde-fous, Agent 365 : voici l'essentiel.",
+      "link": "https://www.it-connect.fr/openai-dots-agents-ia-toujours-actifs/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "IA",
+        "OpenAI"
+      ],
+      "published_at": "2026-09-30T15:24:46+00:00",
+      "published_ts": 1790781886
+    },
+    {
+      "id": "art-4374450",
+      "title": "Claude Code : Anthropic offre jusqu’à 250 dollars de crédit, mais seulement pour les sessions cloud",
+      "description": "Abonné à Claude Pro ou Max ? Anthropic vous offre jusqu'à 250 dollars de crédit pour tester les sessions cloud de Claude Code. Voici comment en profiter.",
+      "link": "https://www.it-connect.fr/claude-code-sessions-cloud-credit-offert/",
+      "source": "IT-Connect",
+      "category": "Web",
+      "tags": [
+        "Web",
+        "IA"
+      ],
+      "published_at": "2026-09-29T12:06:13+00:00",
+      "published_ts": 1790683573
+    },
+    {
+      "id": "art-2485704",
+      "title": "Synology : APM 2.0 s’ouvre à de nouvelles plateformes dont Proxmox et Nutanix",
+      "description": "Synology dévoile ActiveProtect Manager 2.0 : sauvegarde d'Amazon EC2, Azure VM, Proxmox VE, Nutanix AHV et Google Workspace, et restauration cloud à cloud.",
+      "link": "https://www.it-connect.fr/synology-activeprotect-manager-2-0-multicloud-proxmox-nutanix/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Matériel",
+        "Proxmox",
+        "Synology"
+      ],
+      "published_at": "2026-09-04T13:22:38+00:00",
+      "published_ts": 1788528158
+    },
+    {
+      "id": "art-9786039",
+      "title": "UGREEN HomeAgent : quand le NAS devient un hub avec de l’IA locale pour la domotique",
+      "description": "UGREEN a dévoilé HomeAgent à l'IFA 2026 : trois hubs d'IA locale sous UGOS Pro, dont un modèle NVIDIA Jetson Thor, pour la domotique. Précommandes ouvertes.",
+      "link": "https://www.it-connect.fr/ugreen-homeagent-hub-ia-locale-domotique/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Matériel",
+        "IA",
+        "Smart Home",
+        "Ugreen"
+      ],
+      "published_at": "2026-09-04T12:21:46+00:00",
+      "published_ts": 1788524506
+    },
+    {
+      "id": "art-3416426",
+      "title": "Le Thunderbolt arrive sur les Mac sous Linux, mais pas pour tous les modèles",
+      "description": "Une série de 19 patchs apporte l'USB4 et le Thunderbolt aux Mac M1, M2 et M3 sous Linux. Mais les écrans externes et les boîtiers PCIe devront encore patienter.",
+      "link": "https://www.it-connect.fr/linux-mac-usb4-thunderbolt-puces-apple-m1-m2-m3/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Matériel",
+        "Apple",
+        "Linux"
+      ],
+      "published_at": "2026-09-01T10:11:17+00:00",
+      "published_ts": 1788257477
+    },
+    {
+      "id": "art-7201936",
+      "title": "Synology dévoile la gamme neo+ : quatre NAS moins chers, mais sans mémoire ECC",
+      "description": "Synology dévoile les DS1825neo+, DS1525neo+, DS925neo+ et DS725neo+ : même plateforme que les DS Plus, mais 4 Go de DDR4 non-ECC. Disponibilité en octobre.",
+      "link": "https://www.it-connect.fr/synology-diskstation-neo-plus-nas-memoire-non-ecc/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Matériel",
+        "Hardware",
+        "NAS",
+        "Synology"
+      ],
+      "published_at": "2026-08-17T12:28:38+00:00",
+      "published_ts": 1786969718
+    },
+    {
+      "id": "art-3455923",
+      "title": "ConfigoMatic : le configurateur de PC sur mesure 100% compatible",
+      "description": "Découvrez le ConfigoMatic, le configurateur PC de TopAchat pour concevoir un PC gamer sur mesure 100% compatible, à monter soi-même ou pas : à vous de choisir.",
+      "link": "https://www.it-connect.fr/configomatic-configurateur-pc-sur-mesure/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Matériel",
+        "Gaming",
+        "Hardware"
+      ],
+      "published_at": "2026-07-25T11:00:00+00:00",
+      "published_ts": 1784977200
+    },
+    {
+      "id": "art-3422731",
+      "title": "Monter son PC soi-même, bonne ou mauvaise idée ?",
+      "description": "Gamer et budget: faut-il assembler soi-même ou opter pour un PC prêt-à-lancer? Analyse des coûts, concessions et fiabilité.",
+      "link": "https://www.it-connect.fr/monter-son-pc-soi-meme-bonne-ou-mauvaise-idee/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Matériel"
+      ],
+      "published_at": "2026-07-13T22:30:00+00:00",
+      "published_ts": 1783981800
+    }
+  ]
+}

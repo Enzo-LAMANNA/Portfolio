@@ -152,6 +152,7 @@ nav .nav-logo {
     font-size: clamp(1rem, 1.3vw, 1.14rem);
     letter-spacing: -0.3px;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 nav .nav-logo::before {
@@ -205,6 +206,59 @@ nav ul li a.active {
 
 nav ul.nav-desktop li a:not(.active):hover {
     background-color: rgba(223, 75, 106, 0.14);
+}
+
+/* Style distinct de l'onglet "Actu" dans la barre de navigation */
+nav ul.nav-desktop li.nav-actu-item {
+    margin-left: 8px;
+}
+
+nav ul li a.nav-actu-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1.5px solid rgba(240, 188, 147, 0.55);
+    background: linear-gradient(135deg, rgba(184, 51, 87, 0.28), rgba(240, 188, 147, 0.14));
+    color: #fff;
+    font-weight: 600;
+    transition: transform 0.22s var(--ease-out), border-color 0.22s, background 0.22s, box-shadow 0.22s;
+}
+
+nav ul li a.nav-actu-link:hover,
+nav ul li a.nav-actu-link.is-current {
+    border-color: var(--copper);
+    background: linear-gradient(135deg, var(--wine-400), var(--wine-500));
+    box-shadow: 0 0 0 3px rgba(240, 188, 147, 0.18), 0 8px 22px -8px rgba(223, 75, 106, 0.6);
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+.nav-actu-icon {
+    color: var(--copper);
+    flex-shrink: 0;
+}
+
+.nav-actu-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--led-green);
+    box-shadow: 0 0 8px var(--led-green);
+    flex-shrink: 0;
+}
+
+.nav-mobile-actu {
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--color-border);
+}
+
+nav ul.nav-mobile li.nav-mobile-actu a.nav-actu-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .nav-mobile { display: none; }
@@ -2395,10 +2449,746 @@ article:hover { border-color: var(--color-border-strong); }
     box-shadow: var(--glow);
 }
 
+/* Mention discrète de transparence (page ActuZip) */
+.footer-disclaimer {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 28px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(139, 72, 101, 0.35);
+    text-align: center;
+}
+
+.footer-disclaimer p {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: rgba(227, 211, 218, 0.72);
+    text-align: center;
+}
+
 @keyframes pulse-animation {
     0%   { box-shadow: 0 0 0 0 rgba(78, 234, 155, 0.65); }
     70%  { box-shadow: 0 0 0 9px rgba(78, 234, 155, 0); }
     100% { box-shadow: 0 0 0 0 rgba(78, 234, 155, 0); }
+}
+
+/* ==========================================================================
+   PAGE ACTU / VEILLE TECH (ActuZip.html) — TABLEAU DE BORD
+   ========================================================================== */
+header.actu-hero {
+    min-height: auto;
+    padding: 120px clamp(16px, 5vw, 64px) 58px;
+}
+
+header.actu-hero::after {
+    background: linear-gradient(transparent, #271520);
+}
+
+.actu-hero-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.actu-hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.actu-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    background: rgba(67, 37, 53, 0.85);
+    border: 1px solid var(--color-border-strong);
+    color: var(--color-text-dark);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.actu-back-link:hover {
+    background: var(--wine-400);
+    border-color: var(--wine-100);
+    transform: translateX(-3px);
+}
+
+.actu-live-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(78, 234, 155, 0.12);
+    border: 1px solid rgba(78, 234, 155, 0.38);
+    color: #96f3c4;
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.actu-title {
+    font-size: clamp(2rem, 4.2vw, 3.1rem) !important;
+    margin-bottom: 14px !important;
+}
+
+.actu-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    max-width: 780px;
+    margin-bottom: 28px;
+    text-align: left;
+}
+
+.actu-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.actu-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    background: rgba(45, 24, 35, 0.84);
+    border: 1px solid var(--color-border-strong);
+}
+
+.actu-stat-card svg {
+    color: var(--copper);
+    flex-shrink: 0;
+}
+
+.actu-stat-card strong {
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.actu-stat-card span {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 0.84rem;
+    margin-top: 2px;
+}
+
+.actu-section {
+    padding: clamp(54px, 6vw, 80px) clamp(16px, 5vw, 64px);
+}
+
+.actu-featured-section {
+    background-color: #271520;
+}
+
+.actu-feed-section {
+    background-color: #20121b;
+}
+
+.actu-section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.actu-section-head h2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.actu-head-icon {
+    display: inline-block;
+    vertical-align: -4px;
+    margin-right: 10px;
+    color: var(--copper);
+}
+
+.actu-section-head h2 {
+    display: block;
+}
+
+.actu-section-note {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--copper);
+}
+
+/* ==========================================================================
+   LES 3 ACTUS DU MOMENT — GRANDES CARTES DÉTAILLÉES AVEC ANALYSE 4 POINTS
+   ========================================================================== */
+.actu-spotlight-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+article.actu-spotlight-card {
+    padding: clamp(22px, 3vw, 32px);
+    border-radius: 16px;
+    border: 1.5px solid var(--color-border-strong);
+    border-left: 4px solid var(--copper);
+    background: linear-gradient(150deg, #4b273a 0%, #341c29 65%, #2b1621 100%);
+    box-shadow: 0 18px 42px -18px rgba(0, 0, 0, 0.7);
+}
+
+article.actu-spotlight-card.is-lead {
+    border-left-color: var(--wine-200);
+    border-color: rgba(244, 124, 147, 0.55);
+    box-shadow: 0 20px 48px -18px rgba(223, 75, 106, 0.42);
+}
+
+.actu-spotlight-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(139, 72, 101, 0.45);
+}
+
+.actu-rank-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 9px;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.actu-spotlight-body {
+    display: grid;
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.52fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.actu-spotlight-left {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.actu-spotlight-title {
+    font-size: clamp(1.16rem, 2vw, 1.38rem);
+    font-weight: 700;
+    line-height: 1.34;
+    text-align: left;
+}
+
+.actu-spotlight-title a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.actu-spotlight-title a:hover {
+    color: var(--copper);
+}
+
+.actu-spotlight-desc {
+    font-size: 0.94rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.actu-source-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--wine-400), var(--wine-500));
+    border: 1px solid var(--wine-200);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 600;
+    transition: transform 0.2s var(--ease-out), box-shadow 0.2s;
+}
+
+.actu-source-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow);
+}
+
+/* Badges de type IA : Rouge (Alerte/Faille), Orange/Bleu (Mise à jour), Vert (Actu/Tendance) */
+.actu-type-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 11px;
+    border-radius: 999px;
+    font-size: 0.77rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.actu-type-badge.type-alert {
+    background: rgba(239, 68, 68, 0.22);
+    border: 1px solid rgba(248, 113, 113, 0.65);
+    color: #fecaca;
+}
+
+.actu-type-badge.type-update {
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(251, 146, 60, 0.6);
+    color: #fed7aa;
+}
+
+.actu-type-badge.type-trend {
+    background: rgba(52, 211, 153, 0.16);
+    border: 1px solid rgba(110, 231, 183, 0.48);
+    color: #a7f3d0;
+}
+
+/* Grille 4 points : Contexte / Quoi / Pourquoi / Conséquence */
+.actu-analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.actu-analysis-grid.is-compact {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 12px;
+}
+
+.actu-analysis-item {
+    padding: 15px 17px;
+    border-radius: 10px;
+    background: rgba(27, 14, 21, 0.66);
+    border: 1px solid rgba(139, 72, 101, 0.45);
+    text-align: left;
+}
+
+.actu-analysis-label {
+    display: inline-block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    color: var(--copper);
+    margin-bottom: 7px;
+}
+
+.actu-analysis-item p {
+    font-size: 0.89rem;
+    color: var(--color-text-dark);
+    line-height: 1.66;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Cartes compactes de l'historique + accordéon Voir l'analyse */
+.actu-card-desc-short {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: initial;
+}
+
+.actu-history-accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.actu-analysis-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border-strong);
+    background: rgba(31, 16, 24, 0.72);
+    color: var(--wine-100);
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.actu-analysis-toggle:hover,
+.actu-history-card.is-expanded .actu-analysis-toggle {
+    background: rgba(184, 51, 87, 0.28);
+    border-color: var(--wine-200);
+    color: #fff;
+}
+
+.actu-toggle-chevron {
+    transition: transform 0.25s var(--ease-out);
+    flex-shrink: 0;
+}
+
+.actu-toggle-chevron.is-rotated {
+    transform: rotate(180deg);
+}
+
+.actu-analysis-collapse {
+    overflow: hidden;
+}
+
+/* Cartes Actualités (désactive le bandeau 3-points des articles génériques) */
+article.actu-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px 24px;
+    background: linear-gradient(155deg, var(--wine-700) 0%, var(--wine-800) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    box-shadow: 0 12px 30px -16px rgba(0, 0, 0, 0.62);
+    transition: transform 0.24s var(--ease-out), border-color 0.24s, box-shadow 0.24s;
+}
+
+article.actu-card::before {
+    display: none;
+}
+
+article.actu-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--wine-200);
+    box-shadow: var(--glow);
+}
+
+article.actu-featured-card {
+    border-top: 3px solid var(--copper);
+    background: linear-gradient(155deg, #4b273a 0%, #361e2b 100%);
+}
+
+article.actu-featured-card.is-lead {
+    border-top-color: var(--wine-200);
+    box-shadow: 0 14px 36px -14px rgba(223, 75, 106, 0.38);
+}
+
+.actu-card-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.actu-source-badge,
+.actu-cat-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.actu-source-badge.src-itc {
+    background: rgba(223, 75, 106, 0.2);
+    border: 1px solid rgba(244, 124, 147, 0.45);
+    color: #ffd1da;
+}
+
+.actu-source-badge.src-zdnet {
+    background: rgba(240, 188, 147, 0.18);
+    border: 1px solid rgba(240, 188, 147, 0.45);
+    color: #ffe2c8;
+}
+
+.actu-cat-badge.cat-cyber {
+    background: rgba(167, 114, 245, 0.18);
+    border: 1px solid rgba(196, 152, 255, 0.45);
+    color: #e2c9ff;
+}
+
+.actu-cat-badge.cat-os {
+    background: rgba(78, 234, 155, 0.14);
+    border: 1px solid rgba(78, 234, 155, 0.38);
+    color: #9cf5c7;
+}
+
+.actu-cat-badge.cat-hw {
+    background: rgba(255, 203, 122, 0.15);
+    border: 1px solid rgba(255, 203, 122, 0.4);
+    color: #ffd99c;
+}
+
+.actu-cat-badge.cat-web,
+.actu-cat-badge.cat-info {
+    background: rgba(151, 207, 251, 0.15);
+    border: 1px solid rgba(151, 207, 251, 0.4);
+    color: #b7e0ff;
+}
+
+.actu-card-title {
+    font-size: 1.06rem;
+    font-weight: 700;
+    line-height: 1.38;
+    text-align: left;
+}
+
+article.actu-featured-card .actu-card-title {
+    font-size: 1.14rem;
+}
+
+.actu-card-title a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.actu-card-title a:hover {
+    color: var(--copper);
+}
+
+.actu-card-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    text-align: justify;
+    hyphens: auto;
+    flex: 1;
+}
+
+.actu-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 12px;
+    margin-top: auto;
+    border-top: 1px solid rgba(139, 72, 101, 0.45);
+    font-size: 0.82rem;
+}
+
+.actu-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-text-muted);
+}
+
+.actu-read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--copper);
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.actu-read-link:hover {
+    color: #fff;
+    transform: translateX(2px);
+}
+
+/* Barre de filtres du tableau de bord */
+.actu-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 24px;
+    margin-bottom: 28px;
+    border-radius: 14px;
+    background: rgba(54, 30, 43, 0.78);
+    border: 1px solid var(--color-border-strong);
+}
+
+.actu-toolbar-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.actu-filter-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.actu-filter-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--copper);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.actu-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.actu-pill {
+    padding: 7px 13px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border-strong);
+    background: rgba(31, 16, 24, 0.7);
+    color: var(--color-text-muted);
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.actu-pill:hover {
+    border-color: var(--wine-200);
+    color: #fff;
+}
+
+.actu-pill.is-active {
+    background: linear-gradient(135deg, var(--wine-400), var(--wine-500));
+    border-color: var(--wine-100);
+    color: #fff;
+    font-weight: 600;
+}
+
+.actu-sort-btn,
+.actu-reset-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border-strong);
+    background: rgba(31, 16, 24, 0.8);
+    color: var(--color-text-dark);
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.actu-sort-btn:hover,
+.actu-reset-btn:hover {
+    background: var(--wine-600);
+    border-color: var(--copper);
+}
+
+.actu-toolbar-search {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.actu-search-wrap {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(25, 13, 19, 0.85);
+    border: 1px solid var(--color-border-strong);
+    color: var(--color-text-muted);
+}
+
+.actu-search-wrap:focus-within {
+    border-color: var(--wine-200);
+}
+
+.actu-search-wrap input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font: inherit;
+    font-size: 0.92rem;
+    outline: none;
+}
+
+.actu-search-wrap input::placeholder {
+    color: rgba(227, 211, 218, 0.6);
+}
+
+.actu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.actu-load-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 34px;
+}
+
+.actu-load-more .btn-download {
+    cursor: pointer;
+}
+
+.actu-state-box {
+    padding: 32px 24px;
+    border-radius: 14px;
+    background: rgba(54, 30, 43, 0.72);
+    border: 1px dashed var(--color-border-strong);
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+.actu-state-box.is-error {
+    border-color: var(--wine-200);
+    color: #ffd1da;
+}
+
+@media (max-width: 1100px) {
+    .actu-spotlight-body {
+        grid-template-columns: 1fr;
+    }
+    .actu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .actu-stats-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .actu-analysis-grid {
+        grid-template-columns: 1fr;
+    }
+    .actu-grid {
+        grid-template-columns: 1fr;
+    }
+    .actu-toolbar {
+        padding: 16px;
+    }
 }
 
 /* ==========================================================================
