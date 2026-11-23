@@ -56,7 +56,7 @@ export default function AccordionItem({ item, variant = 'formation' }) {
   const contentId = useId();
 
   return (
-    <div className={`formation-item${isOpen ? ' is-open' : ''}`}>
+    <div className={`formation-item${isOpen ? ' is-open' : ''}${item.featured ? ' is-featured' : ''}`}>
       <button
         type="button"
         className="accordion-trigger"

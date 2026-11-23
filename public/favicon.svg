@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#24101a"/>
+      <stop offset="100%" stop-color="#4b1a2f"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f47c93"/>
+      <stop offset="100%" stop-color="#f0bc93"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)" stroke="#df4b6a" stroke-width="2.5"/>
+  <!-- 3 liens réseau reliant les 3 points autour du centre -->
+  <line x1="32" y1="10" x2="12" y2="50" stroke="url(#line)" stroke-width="2.2" stroke-opacity="0.7"/>
+  <line x1="32" y1="10" x2="52" y2="50" stroke="url(#line)" stroke-width="2.2" stroke-opacity="0.7"/>
+  <line x1="12" y1="50" x2="52" y2="50" stroke="url(#line)" stroke-width="2.2" stroke-opacity="0.7"/>
+  <!-- 3 nœuds / points du réseau -->
+  <circle cx="32" cy="10" r="4.2" fill="#f0bc93"/>
+  <circle cx="12" cy="50" r="4.2" fill="#f47c93"/>
+  <circle cx="52" cy="50" r="4.2" fill="#f47c93"/>
+  <!-- Disque central sombre pour détacher la lettre E -->
+  <circle cx="32" cy="34" r="14" fill="#231019" stroke="#df4b6a" stroke-width="1.6"/>
+  <!-- Lettre E au centre -->
+  <text x="32" y="42" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="23" fill="#ffffff">E</text>
+</svg>

@@ -4,6 +4,7 @@ import { Check, Mail } from 'lucide-react';
 import { portfolioData } from './data/portfolioData';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import GuideSection from './components/GuideSection';
 import SectionWrapper from './components/SectionWrapper';
 import AccordionItem from './components/AccordionItem';
 import CompetenceGrid from './components/CompetenceGrid';
@@ -49,6 +50,9 @@ export default function App() {
       <Hero data={hero} onEmailClick={handleHeroEmailClick} />
 
       <main>
+        {/* GUIDE DE BIENVENUE (sans onglet dans la navbar) */}
+        <GuideSection />
+
         {/* À PROPOS */}
         <SectionWrapper id="moi" title={moi.title}>
           <div className="cards">
@@ -66,15 +70,33 @@ export default function App() {
                 ) : (
                   <h3 className="sub-section-title">{group.subTitle}</h3>
                 ))}
-              <div className="cards">
-                {group.items.map((item) => (
-                  <AccordionItem
-                    key={item.id}
-                    item={item}
-                    variant="formation"
-                  />
-                ))}
-              </div>
+
+              {group.subGroups ? (
+                group.subGroups.map((sg, sgi) => (
+                  <div key={sgi} className="cert-subgroup">
+                    <h4 className="cert-sub-title">{sg.label}</h4>
+                    <div className="cards">
+                      {sg.items.map((item) => (
+                        <AccordionItem
+                          key={item.id}
+                          item={item}
+                          variant="formation"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="cards">
+                  {group.items.map((item) => (
+                    <AccordionItem
+                      key={item.id}
+                      item={item}
+                      variant="formation"
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </SectionWrapper>
@@ -91,13 +113,24 @@ export default function App() {
           <CompetenceGrid groups={competence.groups} />
         </SectionWrapper>
 
-        {/* EXPÉRIENCES — Panneau latéral interactif (Master-Detail) */}
+        {/* EXPÉRIENCES — Panneau latéral interactif regroupé par sous-catégories */}
         <SectionWrapper id="experience" title={experience.title}>
-          <ExperienceShowcase items={experience.items} />
+          <ExperienceShowcase items={experience.items} groups={experience.groups} />
         </SectionWrapper>
 
-        {/* PROJETS — Cartes dossiers techniques + Modale détaillée */}
+        {/* PROJETS — Encart À savoir + Cartes dossiers techniques + Modale détaillée */}
         <SectionWrapper id="projet" title={projet.title}>
+          {projet.noticeTitleHtml && (
+            <>
+              <h3
+                className="sub-section-title competence-notice-title"
+                dangerouslySetInnerHTML={{ __html: projet.noticeTitleHtml }}
+              />
+              <h3 className="sub-section-title competence-notice-text">
+                {projet.noticeText}
+              </h3>
+            </>
+          )}
           <ProjectShowcase groups={projet.groups} />
         </SectionWrapper>
 
@@ -106,7 +139,7 @@ export default function App() {
           <DiversTabs items={divers.items} />
         </SectionWrapper>
 
-        {/* CV — Aperçu PDF interactif + téléchargement */}
+        {/* CV — 2 colonnes : Aperçu + bouton à gauche, encart texte à droite */}
         <SectionWrapper id="cv" title={cv.title}>
           <CvSection data={cv} />
         </SectionWrapper>
@@ -139,7 +172,12 @@ export default function App() {
         <BackToTop />
       </main>
 
-      <Footer data={footer} socials={hero.socials} />
+      <Footer
+        data={footer}
+        socials={hero.socials}
+        onEmailClick={handleHeroEmailClick}
+        instagramUrl="https://www.instagram.com/intakk_iii/"
+      />
     </MotionConfig>
   );
 }

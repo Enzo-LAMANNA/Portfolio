@@ -3,11 +3,23 @@ import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowUpRight, X } from 'lucide-react';
 
+function decodeEntities(str) {
+  return str
+    .replace(/&amp;/g, '&')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;|&rsquo;/g, "'");
+}
+
 function getSnippet(html) {
-  const plain = html
-    .replace(/<div class="formation-details[\s\S]*?<\/div>\s*<\/div>/gi, ' ')
-    .replace(/<h4[^>]*>[\s\S]*?<\/h4>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
+  const plain = decodeEntities(
+    html
+      .replace(/<div class="formation-details[\s\S]*?<\/div>\s*<\/div>/gi, ' ')
+      .replace(/<h4[^>]*>[\s\S]*?<\/h4>/gi, ' ')
+      .replace(/<[^>]+>/g, ' ')
+  )
     .replace(/\s+/g, ' ')
     .trim();
   return plain.length > 165 ? plain.slice(0, 162).trim() + '…' : plain;

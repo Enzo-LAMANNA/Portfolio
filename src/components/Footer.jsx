@@ -1,17 +1,37 @@
 import { useRef } from 'react';
+import { ArrowUp } from 'lucide-react';
 import NetworkCanvas from './NetworkCanvas';
 import SocialLinks from './SocialLinks';
 
-export default function Footer({ data, socials }) {
+export default function Footer({ data, socials, onEmailClick, instagramUrl }) {
   const footerRef = useRef(null);
 
   return (
     <footer className="site-footer" ref={footerRef}>
       <NetworkCanvas containerRef={footerRef} />
       <div className="footer-inner">
-        <p className="footer-thanks">{data.thanks}</p>
-        <SocialLinks socials={socials} className="footer-socials" />
-        <p className="footer-copy">{data.copy}</p>
+        <div className="footer-left">
+          <SocialLinks
+            socials={socials}
+            className="footer-socials"
+            onEmailClick={onEmailClick}
+            instagramUrl={instagramUrl}
+            compact
+          />
+        </div>
+
+        <div className="footer-center">
+          <p className="footer-thanks">{data.thanks}</p>
+          <span className="footer-divider" aria-hidden="true" />
+          <p className="footer-copy">{data.copy}</p>
+        </div>
+
+        <div className="footer-right">
+          <a href="#accueil" className="footer-back-top">
+            <ArrowUp size={16} aria-hidden="true" />
+            <span>Revenir au début</span>
+          </a>
+        </div>
       </div>
     </footer>
   );
