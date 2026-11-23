@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Mail } from 'lucide-react';
 
 function LinkedInIcon() {
   return (
@@ -16,7 +17,7 @@ function GitHubIcon() {
   );
 }
 
-export default function SocialLinks({ socials, id, className = 'social-links' }) {
+export default function SocialLinks({ socials, id, className = 'social-links', onEmailClick }) {
   return (
     <div id={id} className={className}>
       {socials.map((soc) => (
@@ -37,6 +38,18 @@ export default function SocialLinks({ socials, id, className = 'social-links' })
           )}
         </motion.a>
       ))}
+      {onEmailClick && (
+        <motion.a
+          href="#contact"
+          aria-label="Me contacter par e-mail"
+          onClick={onEmailClick}
+          whileHover={{ y: -4, scale: 1.06 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 22 }}
+        >
+          <Mail size={24} aria-hidden="true" />
+        </motion.a>
+      )}
     </div>
   );
 }

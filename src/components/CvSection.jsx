@@ -4,6 +4,10 @@ import { Download } from 'lucide-react';
 export default function CvSection({ data }) {
   return (
     <div className="cv-content-block">
+      <p className="cv-intro-text">
+        Retrouvez mon CV ci-dessous : survolez l&apos;aperçu ou cliquez sur le bouton pour le télécharger au format PDF.
+      </p>
+
       <a
         href={data.href}
         download

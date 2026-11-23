@@ -21,7 +21,7 @@ const itemVariants = {
   },
 };
 
-export default function Hero({ data }) {
+export default function Hero({ data, onEmailClick }) {
   const headerRef = useRef(null);
 
   const rawX = useMotionValue(0);
@@ -85,7 +85,11 @@ export default function Hero({ data }) {
           </motion.hgroup>
 
           <motion.div variants={itemVariants}>
-            <SocialLinks socials={data.socials} id="socialnetworks" />
+            <SocialLinks
+              socials={data.socials}
+              id="socialnetworks"
+              onEmailClick={onEmailClick}
+            />
           </motion.div>
         </motion.div>
 

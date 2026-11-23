@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { MotionConfig, motion } from 'framer-motion';
 import { Check, Mail } from 'lucide-react';
 import { portfolioData } from './data/portfolioData';
@@ -18,6 +18,18 @@ export default function App() {
   const { nav, hero, moi, formation, competence, experience, projet, divers, cv, contact, footer } =
     portfolioData;
   const [copied, setCopied] = useState(false);
+  const [blinkKey, setBlinkKey] = useState(0);
+  const [isBlinking, setIsBlinking] = useState(false);
+  const blinkTimerRef = useRef(null);
+
+  const handleHeroEmailClick = () => {
+    if (blinkTimerRef.current) clearTimeout(blinkTimerRef.current);
+    setIsBlinking(true);
+    setBlinkKey((k) => k + 1);
+    blinkTimerRef.current = setTimeout(() => {
+      setIsBlinking(false);
+    }, 3600);
+  };
 
   const handleCopyEmail = () => {
     if (navigator.clipboard) {
@@ -34,7 +46,7 @@ export default function App() {
   return (
     <MotionConfig reducedMotion="user">
       <Navbar data={nav} />
-      <Hero data={hero} />
+      <Hero data={hero} onEmailClick={handleHeroEmailClick} />
 
       <main>
         {/* À PROPOS */}
@@ -105,8 +117,9 @@ export default function App() {
             <article className="contact-card">
               <p className="contact-action-text">{contact.text}</p>
               <motion.button
+                key={blinkKey}
                 type="button"
-                className={`contact-email-pill${copied ? ' is-copied' : ''}`}
+                className={`contact-email-pill${copied ? ' is-copied' : ''}${isBlinking ? ' is-blinking' : ''}`}
                 onClick={handleCopyEmail}
                 title="Cliquer pour copier l'adresse e-mail"
                 whileHover={{ y: -3, scale: 1.02 }}

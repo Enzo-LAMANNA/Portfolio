@@ -50,7 +50,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 17px;
     font-family: var(--font-base);
     color: var(--color-text-dark);
     scroll-behavior: smooth;
@@ -1489,13 +1489,21 @@ article:hover { border-color: var(--color-border-strong); }
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 26px;
     padding: 40px 28px;
     border: 1px dashed var(--color-border-strong);
     border-radius: var(--radius);
     background:
         radial-gradient(ellipse at center, rgba(184, 51, 87, 0.2), transparent 72%),
         rgba(54, 30, 43, 0.62);
+}
+
+.cv-intro-text {
+    color: var(--color-text-muted);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 640px;
 }
 
 .cv-preview-card {
@@ -1661,6 +1669,24 @@ article:hover { border-color: var(--color-border-strong); }
 .contact-email-pill.is-copied { border-color: var(--led-green); }
 .contact-email-pill.is-copied svg { color: var(--led-green); }
 
+.contact-email-pill.is-blinking {
+    animation: email-blink 0.65s ease-in-out 5;
+}
+
+@keyframes email-blink {
+    0%, 100% {
+        border-color: var(--wine-200);
+        box-shadow: 0 14px 34px -12px rgba(223, 75, 106, 0.45);
+        transform: scale(1);
+    }
+    50% {
+        border-color: #ffffff;
+        background: linear-gradient(135deg, var(--wine-300), var(--wine-400));
+        box-shadow: 0 0 0 8px rgba(244, 124, 147, 0.35), 0 0 38px rgba(244, 124, 147, 0.9);
+        transform: scale(1.05);
+    }
+}
+
 /* ==========================================================================
    RETOUR EN HAUT & PIED DE PAGE (DESIGN ACCUEIL + CONSTELLATION)
    ========================================================================== */
@@ -1748,7 +1774,7 @@ article:hover { border-color: var(--color-border-strong); }
     nav ul.nav-desktop li a { padding: 8px 9px; font-size: 0.86rem; }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
     #menu-toggle { display: grid; }
     nav ul.nav-desktop { display: none; }
 
