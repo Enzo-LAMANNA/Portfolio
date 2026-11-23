@@ -39,7 +39,11 @@ USER_AGENT = (
 TIMEOUT = 15
 MAX_ARTICLES = 120
 ALLOWED_BADGES = ("Alerte / Faille", "Mise à jour", "Actu / Tendance")
-GEMINI_MODELS = ("gemini-2.5-flash", "gemini-2.0-flash")
+DEFAULT_GEMINI_MODELS = (
+    "gemini-3.8-flash",
+    "gemini-flash-latest",
+    "gemini-2.5-flash",
+)
 
 # Flux RSS fiables (sources + rubriques associées)
 FEEDS: list[dict[str, Any]] = [
@@ -353,7 +357,29 @@ def extract_article_excerpt(url: str, fallback_desc: str) -> str:
     return "\n".join(parts)[:2400]
 
 
-def summarize_with_gemini(client: Any, article: dict[str, Any]) -> dict[str, str] | None:
+def resolve_gemini_models(client: Any) -> list[str]:
+    """Construit la liste des modèles Flash disponibles (avec découverte auto en secours)."""
+    models: list[str] = list(DEFAULT_GEMINI_MODELS)
+    try:
+        discovered: list[str] = []
+        for m in client.models.list():
+            name = (getattr(m, "name", "") or "").replace("models/", "")
+            methods = getattr(m, "supported_actions", None) or getattr(m, "supported_generation_methods", None) or []
+            if "flash" in name.lower() and "image" not in name.lower() and "audio" not in name.lower() and "tts" not in name.lower():
+                if not methods or any("generateContent" in str(act) for act in methods):
+                    discovered.append(name)
+        # Trie pour essayer les versions Flash les plus récentes en premier
+        discovered.sort(reverse=True)
+        for name in discovered:
+            if name not in models:
+                models.append(name)
+    except Exception:
+        pass
+    print(f"[IA] Modèles candidats : {models[:5]}")
+    return models
+
+
+def summarize_with_gemini(client: Any, article: dict[str, Any], models: list[str]) -> dict[str, str] | None:
     """Appelle Google Gemini Flash une seule fois pour produire une analyse pédagogique détaillée en JSON."""
     from google.genai import types
 
@@ -390,7 +416,7 @@ def summarize_with_gemini(client: Any, article: dict[str, Any]) -> dict[str, str
     )
 
     last_err: Exception | None = None
-    for model_name in GEMINI_MODELS:
+    for model_name in models:
         try:
             response = client.models.generate_content(
                 model=model_name,
@@ -487,13 +513,14 @@ def main() -> int:
         print("[ERREUR] Bibliothèque 'google-genai' manquante. Installez-la avec : pip install google-genai", file=sys.stderr)
         return 1
 
+    models = resolve_gemini_models(client)
     analyzed_count = 0
     batch = to_analyze[: args.max_ai]
     for idx, key in enumerate(batch, start=1):
         art = merged[key]
         print(f"[IA {idx}/{len(batch)}] Analyse de : {art['title'][:75]}…")
         try:
-            summary = summarize_with_gemini(client, art)
+            summary = summarize_with_gemini(client, art, models)
         except RuntimeError as quota_err:
             print(f"[STOP] Limite de quota API atteinte ({quota_err}). Les analyses déjà faites sont sauvegardées.", file=sys.stderr)
             break
