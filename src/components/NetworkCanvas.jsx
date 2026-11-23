@@ -11,10 +11,9 @@ export default function NetworkCanvas({ containerRef }) {
     const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) return;
 
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const LINK_DIST = 140;
+    const LINK_DIST = 165;
     const LINK_DIST_SQ = LINK_DIST * LINK_DIST;
-    const MOUSE_DIST = 175;
+    const MOUSE_DIST = 190;
     const MOUSE_DIST_SQ = MOUSE_DIST * MOUSE_DIST;
 
     let width = 0;
@@ -27,32 +26,46 @@ export default function NetworkCanvas({ containerRef }) {
     const mouse = { x: -9999, y: -9999 };
 
     function initNodes() {
-      const count = Math.min(55, Math.max(24, Math.floor(width / 26)));
+      const area = width * height;
+      const count = Math.min(72, Math.max(28, Math.floor(area / 16000)));
       nodes = Array.from({ length: count }, () => {
-        const router = Math.random() < 0.16;
+        const star = Math.random() < 0.2;
+        const speed = star ? 0.45 : 0.72;
+        const angle = Math.random() * Math.PI * 2;
         return {
           x: Math.random() * width,
           y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          router,
-          size: router ? 3.8 : 1.9,
+          vx: Math.cos(angle) * (0.28 + Math.random() * speed),
+          vy: Math.sin(angle) * (0.28 + Math.random() * speed),
+          star,
+          size: star ? 3.2 : 1.7 + Math.random() * 1.1,
           phase: Math.random() * Math.PI * 2,
+          twinkleSpeed: 0.002 + Math.random() * 0.0025,
         };
       });
       packets = [];
     }
 
     function resize() {
-      width = container.offsetWidth;
-      height = container.offsetHeight;
+      const nextW = container.offsetWidth;
+      const nextH = container.offsetHeight;
+      if (nextW === 0 || nextH === 0) return;
+      width = nextW;
+      height = nextH;
       const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       canvas.width = Math.floor(width * dpr);
       canvas.height = Math.floor(height * dpr);
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      if (nodes.length === 0) initNodes();
+      if (nodes.length === 0) {
+        initNodes();
+      } else {
+        for (let i = 0; i < nodes.length; i++) {
+          if (nodes[i].x > width) nodes[i].x = Math.random() * width;
+          if (nodes[i].y > height) nodes[i].y = Math.random() * height;
+        }
+      }
     }
 
     resize();
@@ -88,22 +101,24 @@ export default function NetworkCanvas({ containerRef }) {
         }
       }
       if (best) {
-        packets.push({ from: a, to: best, t: 0, speed: 0.013 + Math.random() * 0.012 });
+        packets.push({ from: a, to: best, t: 0, speed: 0.012 + Math.random() * 0.014 });
       }
     }
 
     function drawFrame(now) {
       ctx.clearRect(0, 0, width, height);
 
-      // 1. Liens entre nœuds (sans shadowBlur et sans Math.sqrt inutile)
+      // 1. Déplacement continu + fils de constellation
       for (let i = 0; i < nodes.length; i++) {
         const a = nodes[i];
-        if (!reduceMotion) {
-          a.x += a.vx;
-          a.y += a.vy;
-          if (a.x < 0 || a.x > width) a.vx *= -1;
-          if (a.y < 0 || a.y > height) a.vy *= -1;
-        }
+        a.x += a.vx;
+        a.y += a.vy;
+
+        // Rebond doux sur les bords
+        if (a.x < 0) { a.x = 0; a.vx *= -1; }
+        else if (a.x > width) { a.x = width; a.vx *= -1; }
+        if (a.y < 0) { a.y = 0; a.vy *= -1; }
+        else if (a.y > height) { a.y = height; a.vy *= -1; }
 
         for (let j = i + 1; j < nodes.length; j++) {
           const b = nodes[j];
@@ -111,25 +126,30 @@ export default function NetworkCanvas({ containerRef }) {
           const dy = a.y - b.y;
           const dSq = dx * dx + dy * dy;
           if (dSq < LINK_DIST_SQ) {
-            const alpha = (1 - Math.sqrt(dSq) / LINK_DIST) * 0.52;
+            const ratio = 1 - Math.sqrt(dSq) / LINK_DIST;
+            const alpha = ratio * 0.58;
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(155, 32, 64, ${alpha.toFixed(2)})`;
-            ctx.lineWidth = a.router || b.router ? 1.15 : 0.75;
+            ctx.strokeStyle =
+              a.star || b.star
+                ? `rgba(242, 138, 158, ${alpha.toFixed(2)})`
+                : `rgba(218, 92, 118, ${(alpha * 0.85).toFixed(2)})`;
+            ctx.lineWidth = a.star || b.star ? 1.15 : 0.8;
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
             ctx.stroke();
           }
         }
 
+        // Interaction constellation vers la souris
         if (mouse.x > -999) {
           const mdx = a.x - mouse.x;
           const mdy = a.y - mouse.y;
           const mdSq = mdx * mdx + mdy * mdy;
           if (mdSq < MOUSE_DIST_SQ) {
-            const alpha = (1 - Math.sqrt(mdSq) / MOUSE_DIST) * 0.6;
+            const alpha = (1 - Math.sqrt(mdSq) / MOUSE_DIST) * 0.72;
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(227, 167, 125, ${alpha.toFixed(2)})`;
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = `rgba(242, 192, 150, ${alpha.toFixed(2)})`;
+            ctx.lineWidth = 1.1;
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(mouse.x, mouse.y);
             ctx.stroke();
@@ -137,50 +157,52 @@ export default function NetworkCanvas({ containerRef }) {
         }
       }
 
-      // 2. Nœuds & routeurs (halo léger sans shadowBlur pour rester à 60-120 FPS)
+      // 2. Étoiles / nœuds scintillants (sans shadowBlur, 100 % fluide)
       for (let i = 0; i < nodes.length; i++) {
         const n = nodes[i];
-        if (n.router) {
-          const pulse = 0.8 + Math.sin(now * 0.003 + n.phase) * 0.2;
-          const halo = n.size * 2.2;
-          ctx.fillStyle = `rgba(229, 88, 111, ${(0.18 * pulse).toFixed(2)})`;
-          ctx.fillRect(n.x - halo, n.y - halo, halo * 2, halo * 2);
-          ctx.fillStyle = `rgba(229, 88, 111, ${pulse.toFixed(2)})`;
-          ctx.fillRect(n.x - n.size, n.y - n.size, n.size * 2, n.size * 2);
+        const twinkle = 0.65 + 0.35 * Math.sin(now * n.twinkleSpeed + n.phase);
+        if (n.star) {
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(248, 176, 190, ${(0.22 * twinkle).toFixed(2)})`;
+          ctx.arc(n.x, n.y, n.size * 2.8, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(255, 228, 234, ${(0.95 * twinkle).toFixed(2)})`;
+          ctx.arc(n.x, n.y, n.size, 0, Math.PI * 2);
+          ctx.fill();
         } else {
           ctx.beginPath();
-          ctx.fillStyle = 'rgba(199, 51, 79, 0.85)';
+          ctx.fillStyle = `rgba(244, 146, 166, ${(0.88 * twinkle).toFixed(2)})`;
           ctx.arc(n.x, n.y, n.size, 0, Math.PI * 2);
           ctx.fill();
         }
       }
 
-      // 3. Paquets de données
-      if (!reduceMotion) {
-        if (packets.length < 12 && Math.random() < 0.12) spawnPacket();
-        for (let i = packets.length - 1; i >= 0; i--) {
-          const p = packets[i];
-          p.t += p.speed;
-          const dx = p.from.x - p.to.x;
-          const dy = p.from.y - p.to.y;
-          if (p.t >= 1 || dx * dx + dy * dy > LINK_DIST_SQ) {
-            packets.splice(i, 1);
-            continue;
-          }
-          const x = p.from.x + (p.to.x - p.from.x) * p.t;
-          const y = p.from.y + (p.to.y - p.from.y) * p.t;
-          ctx.beginPath();
-          ctx.fillStyle = 'rgba(227, 167, 125, 0.28)';
-          ctx.arc(x, y, 4.5, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.beginPath();
-          ctx.fillStyle = '#f4c3a0';
-          ctx.arc(x, y, 1.8, 0, Math.PI * 2);
-          ctx.fill();
+      // 3. Impulsions lumineuses glissant entre étoiles
+      if (packets.length < 14 && Math.random() < 0.15) spawnPacket();
+      for (let i = packets.length - 1; i >= 0; i--) {
+        const p = packets[i];
+        p.t += p.speed;
+        const dx = p.from.x - p.to.x;
+        const dy = p.from.y - p.to.y;
+        if (p.t >= 1 || dx * dx + dy * dy > LINK_DIST_SQ) {
+          packets.splice(i, 1);
+          continue;
         }
+        const x = p.from.x + (p.to.x - p.from.x) * p.t;
+        const y = p.from.y + (p.to.y - p.from.y) * p.t;
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(245, 198, 158, 0.34)';
+        ctx.arc(x, y, 4.8, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.fillStyle = '#ffdfc4';
+        ctx.arc(x, y, 2, 0, Math.PI * 2);
+        ctx.fill();
       }
 
-      if (isVisible && isTabVisible && !reduceMotion) {
+      if (isVisible && isTabVisible) {
         rafId = requestAnimationFrame(drawFrame);
       } else {
         rafId = null;
@@ -188,7 +210,7 @@ export default function NetworkCanvas({ containerRef }) {
     }
 
     const startIfNeeded = () => {
-      if (isVisible && isTabVisible && !reduceMotion && rafId === null) {
+      if (isVisible && isTabVisible && rafId === null) {
         rafId = requestAnimationFrame(drawFrame);
       }
     };
@@ -217,11 +239,7 @@ export default function NetworkCanvas({ containerRef }) {
     };
     document.addEventListener('visibilitychange', onVisibility);
 
-    if (reduceMotion) {
-      drawFrame(0);
-    } else {
-      startIfNeeded();
-    }
+    startIfNeeded();
 
     return () => {
       observer.disconnect();

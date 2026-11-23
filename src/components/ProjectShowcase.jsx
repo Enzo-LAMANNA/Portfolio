@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowUpRight, X } from 'lucide-react';
 
@@ -9,7 +10,7 @@ function getSnippet(html) {
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
-  return plain.length > 155 ? plain.slice(0, 152).trim() + '…' : plain;
+  return plain.length > 165 ? plain.slice(0, 162).trim() + '…' : plain;
 }
 
 export default function ProjectShowcase({ groups }) {
@@ -36,6 +37,56 @@ export default function ProjectShowcase({ groups }) {
         items: g.items.map((item) => ({ ...item, snippet: getSnippet(item.contentHtml) })),
       })),
     [groups]
+  );
+
+  const modalContent = (
+    <AnimatePresence>
+      {selected && (
+        <motion.div
+          className="proj-modal-backdrop"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          onClick={() => setSelected(null)}
+        >
+          <motion.div
+            className="proj-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label={selected.title}
+            initial={{ opacity: 0, scale: 0.96, y: 16 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.96, y: 12 }}
+            transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="proj-modal-header">
+              <div className="proj-modal-title-wrap">
+                <h3>{selected.title}</h3>
+                {selected.badge && (
+                  <span className={selected.badge.className}>
+                    {selected.badge.text}
+                  </span>
+                )}
+              </div>
+              <button
+                type="button"
+                className="proj-modal-close"
+                aria-label="Fermer la fenêtre"
+                onClick={() => setSelected(null)}
+              >
+                <X size={20} />
+              </button>
+            </div>
+            <div
+              className="details-content proj-modal-body"
+              dangerouslySetInnerHTML={{ __html: selected.contentHtml }}
+            />
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 
   return (
@@ -69,53 +120,7 @@ export default function ProjectShowcase({ groups }) {
         </div>
       ))}
 
-      <AnimatePresence>
-        {selected && (
-          <motion.div
-            className="proj-modal-backdrop"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            onClick={() => setSelected(null)}
-          >
-            <motion.div
-              className="proj-modal"
-              role="dialog"
-              aria-modal="true"
-              aria-label={selected.title}
-              initial={{ opacity: 0, scale: 0.96, y: 16 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96, y: 12 }}
-              transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="proj-modal-header">
-                <div>
-                  <h3>{selected.title}</h3>
-                  {selected.badge && (
-                    <span className={selected.badge.className}>
-                      {selected.badge.text}
-                    </span>
-                  )}
-                </div>
-                <button
-                  type="button"
-                  className="proj-modal-close"
-                  aria-label="Fermer"
-                  onClick={() => setSelected(null)}
-                >
-                  <X size={20} />
-                </button>
-              </div>
-              <div
-                className="details-content proj-modal-body"
-                dangerouslySetInnerHTML={{ __html: selected.contentHtml }}
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {typeof document !== 'undefined' && createPortal(modalContent, document.body)}
     </>
   );
 }

@@ -8,16 +8,16 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.07, delayChildren: 0.05 },
+    transition: { staggerChildren: 0.06, delayChildren: 0.04 },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0, y: 14 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
@@ -65,7 +65,7 @@ export default function Hero({ data }) {
             <ArrowRight size={15} className="notif-arrow" aria-hidden="true" />
           </motion.a>
 
-          <hgroup>
+          <motion.hgroup variants={containerVariants}>
             <motion.p className="pre-title" variants={itemVariants}>
               {data.preTitle}
             </motion.p>
@@ -82,7 +82,7 @@ export default function Hero({ data }) {
               variants={itemVariants}
               dangerouslySetInnerHTML={{ __html: data.objectifHtml }}
             />
-          </hgroup>
+          </motion.hgroup>
 
           <motion.div variants={itemVariants}>
             <SocialLinks socials={data.socials} id="socialnetworks" />
@@ -92,9 +92,9 @@ export default function Hero({ data }) {
         <motion.div
           className="header-image"
           style={{ perspective: 900 }}
-          initial={{ opacity: 0, scale: 0.94, y: 18 }}
+          initial={{ opacity: 0, scale: 0.95, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.65, delay: 0.14, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.55, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           onMouseMove={handlePhotoMove}
           onMouseLeave={handlePhotoLeave}
         >
