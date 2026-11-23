@@ -436,7 +436,29 @@ export const portfolioData = {
           "text": "Art",
           "className": "date-badge humaine"
         },
-        "contentHtml": "<p class=\"formation-objectif-text spacing-top\">\n                                Le dessin est bien plus qu'un simple passe-temps pour moi : c'est un espace de liberté\n                                et de création. Il entretient ma <strong>soif d'apprendre</strong>, de <strong>me\n                                    perfectionner</strong> et de recommencer, tout en développant un sens aigu de la\n                                <strong>précision</strong>.\n                            </p>\n\n                            <p class=\"formation-objectif-text\">\n                                <br>\n                                Parmi toutes ces disciplines, le <strong>pixel art</strong> occupe une place\n                                privilégiée. Je partage d'ailleurs mes créations sur mon compte Instagram\n                                (<strong>@intakk_iii</strong>), un espace où je représente visuellement l'ensemble des\n                                univers qui me <strong>passionnent</strong>.\n                            </p>\n\n                            <div class=\"conteneur-dessins\">\n                                <img src=\"theme/picture/prairie.webp\" alt=\"Dessin personnel 1\" class=\"dessin\" loading=\"lazy\" decoding=\"async\">\n                                <img src=\"theme/picture/city.webp\" alt=\"Dessin personnel 2\" class=\"dessin\" loading=\"lazy\" decoding=\"async\">\n                                <img src=\"theme/picture/fleurs.webp\" alt=\"Dessin personnel 3\" class=\"dessin\" loading=\"lazy\" decoding=\"async\">\n                            </div>"
+        "contentHtml": "<p class=\"formation-objectif-text spacing-top\">\n                                Le dessin est bien plus qu'un simple passe-temps pour moi : c'est un espace de liberté\n                                et de création. Il entretient ma <strong>soif d'apprendre</strong>, de <strong>me\n                                    perfectionner</strong> et de recommencer, tout en développant un sens aigu de la\n                                <strong>précision</strong>.\n                            </p>\n\n                            <p class=\"formation-objectif-text\">\n                                <br>\n                                Parmi toutes ces disciplines, le <strong>pixel art</strong> occupe une place\n                                privilégiée. Je partage d'ailleurs mes créations sur mon compte Instagram\n                                (<strong>@intakk_iii</strong>), un espace où je représente visuellement l'ensemble des\n                                univers qui me <strong>passionnent</strong>.\n                            </p>",
+        "gallery": [
+          {
+            "src": "theme/picture/dessin_un_autre_chemin.png",
+            "title": "Un autre chemin",
+            "description": "Un dinosaure veut rentrer chez lui et est obligé de passer par la forêt des lucioles pour continuer son périple."
+          },
+          {
+            "src": "theme/picture/dessin_apocalypse.png",
+            "title": "Apocalypse - Suivre le passage",
+            "description": "Un couple essaye de s'enfuir vers une zone sûre, sans savoir où le chemin les mène, pour tenter de survivre dans un monde apocalyptique."
+          },
+          {
+            "src": "theme/picture/dessin_jojo.png",
+            "title": "JoJo's bizarre adventure",
+            "description": "Reproduction en pixel art du titre de l'anime JoJo's Bizarre Adventure."
+          }
+        ],
+        "instagram": {
+          "text": "Vous souhaitez découvrir davantage de mes créations en pixel art ? Retrouvez l'ensemble de mes œuvres sur mon compte Instagram :",
+          "url": "https://www.instagram.com/intakk_iii/",
+          "label": "Voir plus sur Instagram (@intakk_iii)"
+        }
       },
       {
         "id": "div-1",
