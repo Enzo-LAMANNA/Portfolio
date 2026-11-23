@@ -127,6 +127,8 @@ export default function GuideSection() {
               </div>
             </div>
           </div>
+
+          <p className="guide-closing">Bonne visite !</p>
         </div>
       </div>
     </section>

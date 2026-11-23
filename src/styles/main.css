@@ -678,6 +678,15 @@ section {
     text-align: left;
 }
 
+.guide-closing {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 1.06rem;
+    font-weight: 600;
+    color: var(--copper);
+    letter-spacing: 0.2px;
+}
+
 section + section::before {
     content: '';
     position: absolute;
