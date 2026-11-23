@@ -233,5 +233,5 @@ export default function NetworkCanvas({ containerRef }) {
     };
   }, [containerRef]);
 
-  return <canvas id="network-canvas" ref={canvasRef} aria-hidden="true" />;
+  return <canvas className="network-canvas" ref={canvasRef} aria-hidden="true" />;
 }

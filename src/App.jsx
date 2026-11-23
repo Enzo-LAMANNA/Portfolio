@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import { MotionConfig, motion } from 'framer-motion';
-import { Check, Download, Mail } from 'lucide-react';
+import { Check, Mail } from 'lucide-react';
 import { portfolioData } from './data/portfolioData';
-import SmoothScroll from './components/SmoothScroll';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SectionWrapper from './components/SectionWrapper';
 import AccordionItem from './components/AccordionItem';
+import CompetenceGrid from './components/CompetenceGrid';
+import ExperienceShowcase from './components/ExperienceShowcase';
+import ProjectShowcase from './components/ProjectShowcase';
+import DiversTabs from './components/DiversTabs';
+import CvSection from './components/CvSection';
 import BackToTop from './components/BackToTop';
 import Footer from './components/Footer';
 
@@ -17,17 +21,18 @@ export default function App() {
 
   const handleCopyEmail = () => {
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(contact.email).then(() => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1800);
-      }).catch(() => {});
+      navigator.clipboard
+        .writeText(contact.email)
+        .then(() => {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 1800);
+        })
+        .catch(() => {});
     }
   };
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="bg-grid-layer" aria-hidden="true" />
-      <SmoothScroll />
       <Navbar data={nav} />
       <Hero data={hero} />
 
@@ -39,7 +44,7 @@ export default function App() {
           </div>
         </SectionWrapper>
 
-        {/* FORMATIONS & CERTIFICATIONS */}
+        {/* FORMATIONS & CERTIFICATIONS — Frise chronologique interactive */}
         <SectionWrapper id="formation" title={formation.title}>
           {formation.groups.map((group, gi) => (
             <div key={gi}>
@@ -62,7 +67,7 @@ export default function App() {
           ))}
         </SectionWrapper>
 
-        {/* COMPÉTENCES */}
+        {/* COMPÉTENCES — Grille de cases par 4 déjà ouvertes */}
         <SectionWrapper id="competence" title={competence.title}>
           <h3
             className="sub-section-title competence-notice-title"
@@ -71,87 +76,27 @@ export default function App() {
           <h3 className="sub-section-title competence-notice-text">
             {competence.noticeText}
           </h3>
-
-          {competence.groups.map((group, gi) => (
-            <div key={gi}>
-              {group.subTitle && (
-                <h3 className="sub-section-title">{group.subTitle}</h3>
-              )}
-              <div className="cards">
-                {group.items.map((item) => (
-                  <AccordionItem
-                    key={item.id}
-                    item={item}
-                    variant="competence"
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
+          <CompetenceGrid groups={competence.groups} />
         </SectionWrapper>
 
-        {/* EXPÉRIENCES */}
+        {/* EXPÉRIENCES — Panneau latéral interactif (Master-Detail) */}
         <SectionWrapper id="experience" title={experience.title}>
-          <div className="cards layout-one-col">
-            {experience.items.map((item) => (
-              <AccordionItem
-                key={item.id}
-                item={item}
-                variant="experience"
-              />
-            ))}
-          </div>
+          <ExperienceShowcase items={experience.items} />
         </SectionWrapper>
 
-        {/* PROJETS */}
+        {/* PROJETS — Cartes dossiers techniques + Modale détaillée */}
         <SectionWrapper id="projet" title={projet.title}>
-          {projet.groups.map((group, gi) => (
-            <div key={gi}>
-              {group.subTitle && (
-                <h3 className="sub-section-title">{group.subTitle}</h3>
-              )}
-              <div className="cards layout-one-col">
-                {group.items.map((item) => (
-                  <AccordionItem
-                    key={item.id}
-                    item={item}
-                    variant="projet"
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
+          <ProjectShowcase groups={projet.groups} />
         </SectionWrapper>
 
-        {/* DIVERS */}
+        {/* DIVERS — Onglets horizontaux avec contenu affiché */}
         <SectionWrapper id="divers" title={divers.title}>
-          <div className="cards">
-            {divers.items.map((item) => (
-              <AccordionItem
-                key={item.id}
-                item={item}
-                variant="divers"
-              />
-            ))}
-          </div>
+          <DiversTabs items={divers.items} />
         </SectionWrapper>
 
-        {/* CV */}
+        {/* CV — Aperçu PDF interactif + téléchargement */}
         <SectionWrapper id="cv" title={cv.title}>
-          <div className="cv-content-block">
-            <div className="download-button-container">
-              <motion.a
-                href={cv.href}
-                download
-                className="btn-download"
-                whileHover={{ y: -3, scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <Download size={17} aria-hidden="true" />
-                <span>{cv.label}</span>
-              </motion.a>
-            </div>
-          </div>
+          <CvSection data={cv} />
         </SectionWrapper>
 
         {/* CONTACT */}
@@ -181,7 +126,7 @@ export default function App() {
         <BackToTop />
       </main>
 
-      <Footer data={footer} />
+      <Footer data={footer} socials={hero.socials} />
     </MotionConfig>
   );
 }

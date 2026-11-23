@@ -1,29 +1,40 @@
-import { useEffect, useState } from 'react';
-import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar({ data }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState('accueil');
-
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 180,
-    damping: 30,
-    restDelta: 0.001,
-  });
+  const progressRef = useRef(null);
 
   useEffect(() => {
-    // 1. Etat scrolled sans lecture DOM (0 reflow)
-    const onScroll = () => {
-      const next = window.scrollY > 50;
-      setScrolled((prev) => (prev === next ? prev : next));
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    let ticking = false;
 
-    // 2. Section active via IntersectionObserver (0 getBoundingClientRect au scroll)
+    const updateOnScroll = () => {
+      ticking = false;
+      const y = window.scrollY;
+      setScrolled((prev) => {
+        const next = y > 50;
+        return prev === next ? prev : next;
+      });
+      if (progressRef.current) {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const ratio = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
+        progressRef.current.style.transform = `scaleX(${ratio})`;
+      }
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateOnScroll);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateOnScroll();
+
     const ids = data.links.map((l) => l.href.replace('#', ''));
     const elements = ids.map((id) => document.getElementById(id)).filter(Boolean);
 
@@ -48,14 +59,8 @@ export default function Navbar({ data }) {
 
   return (
     <>
-      <motion.div id="scroll-progress" style={{ scaleX }} aria-hidden="true" />
-      <motion.nav
-        id="navbar"
-        className={scrolled ? 'scrolled' : ''}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-      >
+      <div id="scroll-progress" ref={progressRef} aria-hidden="true" />
+      <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
         <p className="nav-logo">{data.logo}</p>
 
         <button
@@ -84,7 +89,7 @@ export default function Navbar({ data }) {
                     <motion.span
                       layoutId="nav-active-pill"
                       className="nav-active-pill"
-                      transition={{ type: 'spring', stiffness: 380, damping: 34 }}
+                      transition={{ type: 'spring', stiffness: 420, damping: 34 }}
                     />
                   )}
                   <span className="nav-link-label">{link.label}</span>
@@ -101,7 +106,7 @@ export default function Navbar({ data }) {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
               {data.links.map((link) => {
                 const id = link.href.replace('#', '');
@@ -122,7 +127,7 @@ export default function Navbar({ data }) {
             </motion.ul>
           )}
         </AnimatePresence>
-      </motion.nav>
+      </nav>
     </>
   );
 }

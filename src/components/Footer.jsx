@@ -1,16 +1,18 @@
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import NetworkCanvas from './NetworkCanvas';
+import SocialLinks from './SocialLinks';
 
-export default function Footer({ data }) {
+export default function Footer({ data, socials }) {
+  const footerRef = useRef(null);
+
   return (
-    <motion.footer
-      className="site-footer"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.7 }}
-    >
-      <p className="footer-thanks">{data.thanks}</p>
-      <p className="footer-copy">{data.copy}</p>
-    </motion.footer>
+    <footer className="site-footer" ref={footerRef}>
+      <NetworkCanvas containerRef={footerRef} />
+      <div className="footer-inner">
+        <p className="footer-thanks">{data.thanks}</p>
+        <SocialLinks socials={socials} className="footer-socials" />
+        <p className="footer-copy">{data.copy}</p>
+      </div>
+    </footer>
   );
 }
