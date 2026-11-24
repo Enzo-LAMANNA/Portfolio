@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T09:44:08.724441+00:00",
+  "updated_at": "2026-11-24T22:11:42.929816+00:00",
   "total": 120,
   "sources": [
     "IT-Connect",
@@ -13,6 +13,54 @@
     "Web"
   ],
   "articles": [
+    {
+      "id": "art-5790294",
+      "title": "ElixirOffice : une suite bureautique open source qui s’adresse aux habitués de Microsoft Office",
+      "description": "ElixirOffice, la suite libre de Gaël Duval basée sur Euro-Office, reprend le ruban, les menus et les raccourcis de Microsoft Office. Voici ce qu'il faut savoir.",
+      "link": "https://www.it-connect.fr/elixiroffice-suite-bureautique-libre-microsoft-office/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Self-Hosting & Open Source",
+        "Office",
+        "ONLYOFFICE",
+        "Open Source"
+      ],
+      "published_at": "2026-11-24T17:00:00+00:00",
+      "published_ts": 1795539600,
+      "ai_summary": {
+        "badge": "Actu / Tendance",
+        "contexte": "Le domaine des suites bureautiques open source, c'est-à-dire des logiciels libres dont le code source est accessible à tous, voit l'émergence de nouveaux acteurs pour concurrencer les géants du secteur comme Microsoft. L'article présente ElixirOffice, une nouvelle suite logicielle libre conçue pour offrir une alternative aux utilisateurs habitués aux outils traditionnels.",
+        "quoi": "Gaël Duval a lancé ElixirOffice, une suite bureautique open source basée sur Euro-Office, qui intègre le ruban, les menus et les raccourcis visuels et ergonomiques typiques de Microsoft Office. Cette conception vise à reproduire fidèlement l'environnement de travail de la suite de Microsoft pour faciliter la transition des utilisateurs.",
+        "pourquoi": "Ce projet est porté par Gaël Duval, une figure bien connue du monde de l'open source notamment pour ses initiatives autour du système d'exploitation mobile eelo (devenu /e/OS). L'objectif stratégique et économique est de proposer une alternative libre et souveraine tout en réduisant la résistance au changement des utilisateurs grâce à une interface familière.",
+        "consequence": "Pour les utilisateurs finaux et les entreprises, cette démarche offre la possibilité de migrer vers une solution libre sans avoir à réapprendre une nouvelle ergonomie, ce qui réduit les coûts de formation. Pour les administrateurs systèmes, cela représente un nouvel outil open source à intégrer et à évaluer dans les parcs informatiques en quête d'indépendance vis-à-vis des logiciels propriétaires.",
+        "generated_by": "gemini"
+      }
+    },
+    {
+      "id": "art-6393987",
+      "title": "Google Chrome : une seule faille corrigée, mais elle est critique (CVE-2026-134401)",
+      "description": "Google a publié Chrome 158.0.8127.88 pour corriger la CVE-2026-134401, une faille critique qui permettrait de sortir de la sandbox : voici ce qu'il faut savoir.",
+      "link": "https://www.it-connect.fr/cve-2026-134401-faille-critique-chrome/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Chrome",
+        "Cybersécurité",
+        "Google"
+      ],
+      "published_at": "2026-11-24T10:33:39+00:00",
+      "published_ts": 1795516419,
+      "ai_summary": {
+        "badge": "Alerte / Faille",
+        "contexte": "Le navigateur web Google Chrome utilise un mécanisme de sécurité fondamental appelé « sandbox » (ou bac à sable), conçu pour isoler les pages web du reste du système d'exploitation et empêcher un code malveillant d'accéder aux fichiers ou applications de l'ordinateur. Lorsqu'une vulnérabilité est identifiée par un identifiant standardisé comme CVE-2026-134401, cela signifie qu'un défaut de sécurité précis a été répertorié au niveau mondial pour que les professionnels de l'IT puissent le suivre et le corriger.",
+        "quoi": "Google vient d'annoncer la mise à disposition de la version 158.0.8127.88 de son navigateur Chrome. Cette publication cible un correctif unique dédié à la résolution de la vulnérabilité CVE-2026-134401. La correction apportée vise à combler une défaillance de sécurité majeure capable de compromettre le mécanisme d'isolement du logiciel.",
+        "pourquoi": "L'éditeur Google est intervenu en urgence car la vulnérabilité identifiée présente un niveau de sévérité qualifié de critique. La raison technique principale de cette action est qu'un attaquant exploitant cette faille pourrait réussir à sortir de la sandbox, ce qui lui permettrait d'exécuter des actions non autorisées au-delà des limites normalement imposées par le navigateur.",
+        "consequence": "Pour les utilisateurs finaux ainsi que les administrateurs systèmes et réseaux en entreprise, l'impact direct est la nécessité d'effectuer immédiatement la mise à jour vers Chrome 158.0.8127.88. Le maintien d'une version non corrigée expose les équipements informatiques à des risques d'attaques pouvant franchir les barrières de protection du navigateur, remettant en cause l'efficacité de la sandbox face aux menaces extérieures.",
+        "generated_by": "gemini"
+      }
+    },
     {
       "id": "art-9198283",
       "title": "ZDNET Morning 24/11/2026 : Influence politique derrière la réintégration de Jensen Huang, Rétention cognitive et usage des IA, Google Chrome : six réglages clés pour la sécurité,...",
@@ -209,7 +257,57 @@
         "Informatique"
       ],
       "published_at": "2026-11-24T07:11:54+00:00",
-      "published_ts": 1795504314
+      "published_ts": 1795504314,
+      "ai_summary": {
+        "badge": "Actu / Tendance",
+        "contexte": "Cette actualité s'inscrit dans un contexte de tensions géopolitiques et industrielles majeures autour de l'informatique de pointe et des composants électroniques. Le Sénat américain, via sa commission bancaire, intervient pour surveiller le contrôle des exportations de puces, c'est-à-dire les règles réglementaires et de sécurité nationale qui encadrent la vente et l'expédition de microprocesseurs stratégiques à l'étranger.",
+        "quoi": "Jensen Huang, le dirigeant du géant informatique Nvidia spécialisé dans les puces électroniques, est convoqué pour témoigner publiquement devant le Sénat des États-Unis le 3 décembre. Cette convocation officielle a été fixée par le sénateur Tim Scott peu de temps après le retour surprise de Jensen Huang à la tête de l'entreprise.",
+        "pourquoi": "L'initiative provient de Tim Scott, le président de la commission bancaire du Sénat américain, qui souhaite auditionner le patron de Nvidia sur la politique d'exportation des semi-conducteurs. Les raisons de cette audition font suite au retour inattendu de Jensen Huang aux commandes de la firme, nécessitant des clarifications stratégiques et légales de la part des régulateurs américains face aux enjeux industriels des puces.",
+        "consequence": "Pour le régulateur américain, cette audition permettra d'évaluer le respect des réglementations sur le commerce international des puces par Nvidia. Pour l'entreprise, ses investisseurs et les acteurs du secteur technologique, les déclarations de Jensen Huang le 3 décembre pourraient influencer les futures règles d'exportation et impacter directement la chaîne d'approvisionnement globale des composants informatiques.",
+        "generated_by": "gemini"
+      }
+    },
+    {
+      "id": "art-111679",
+      "title": "Data centers IA : pourquoi (et comment) l'industrie prépare sa grande bascule vers le 800 VDC",
+      "description": "Face à l'explosion de la densité thermique et électrique des serveurs d'intelligence artificielle, les architectures traditionnelles en courant alternatif touchent leurs limites physiques. Poussé par Nvidia, Google, Microsoft et l'écosystème OCP, le standard 800 VDC s'impose comme la clé de voûte pour alimenter les futurs supercalculateurs sans gaspiller…",
+      "link": "https://www.zdnet.fr/actualites/data-centers-ia-pourquoi-et-comment-lindustrie-prepare-sa-grande-bascule-vers-le-800-vdc-508520.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T07:11:08+00:00",
+      "published_ts": 1795504268
+    },
+    {
+      "id": "art-4660062",
+      "title": "Terres rares : la France veut des stocks stratégiques pour contrer la Chine dès 2027",
+      "description": "L'Élysée officialise la création de réserves nationales pour une vingtaine de métaux prioritaires dès 2027. Piloté par la Caisse des dépôts, ce dispositif d'achats mutualisés couple souveraineté et durcissement des règles d'attribution des subventions publiques pour les industriels de la tech, de la défense et de l'aéronautique.",
+      "link": "https://www.zdnet.fr/actualites/terres-rares-la-france-veut-des-stocks-strategiques-pour-contrer-la-chine-des-2027-508511.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T03:11:41+00:00",
+      "published_ts": 1795489901
+    },
+    {
+      "id": "art-380138",
+      "title": "J'ai joué à GTA VI en streaming sur mon PC, c'était génial, même avec un peu de lag",
+      "description": "J'ai streamé les premières heures de gameplay de GTA VI pour mes amis via Discord, et ça m'a valu d'être sacré numéro un du groupe.",
+      "link": "https://www.zdnet.fr/actualites/jai-joue-a-gta-vi-en-streaming-sur-mon-pc-cetait-genial-meme-avec-un-peu-de-lag-508504.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T03:11:19+00:00",
+      "published_ts": 1795489879
     },
     {
       "id": "art-5844384",
@@ -228,6 +326,48 @@
       "published_ts": 1795489200
     },
     {
+      "id": "art-7105403",
+      "title": "Claude peut désormais générer du code pour vous, comment essayer (si vous osez)",
+      "description": "Accepteriez-vous que quelques agents de Claude vérifient et publient votre code à votre place ?",
+      "link": "https://www.zdnet.fr/actualites/claude-peut-desormais-generer-du-code-pour-vous-comment-essayer-si-vous-osez-508495.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T02:11:46+00:00",
+      "published_ts": 1795486306
+    },
+    {
+      "id": "art-9717588",
+      "title": "Vous avez besoin d'un casque pour GTA VI ? Utilisez ceux que vous possédez déjà, en ajustant quelques paramètres",
+      "description": "Si vous n'êtes pas encore prêt à acheter un casque de jeu dédié, cette solution gratuite vous permet de profiter de GTA VI sur votre PS5 ou votre Xbox avec un son de meilleure qualité.",
+      "link": "https://www.zdnet.fr/actualites/vous-avez-besoin-dun-casque-pour-gta-vi-utilisez-ceux-que-vous-possedez-deja-en-ajustant-quelques-parametres-508498.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T02:11:30+00:00",
+      "published_ts": 1795486290
+    },
+    {
+      "id": "art-4241307",
+      "title": "Comment sauvegarder vos vidéos de l'application Google Nest avant sa fermeture en janvier",
+      "description": "Google va supprimer l'application Nest au profit de l'application Google Home. Voici comment transférer vos données.",
+      "link": "https://www.zdnet.fr/actualites/comment-sauvegarder-vos-videos-de-lapplication-google-nest-avant-sa-fermeture-en-janvier-508492.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T02:11:05+00:00",
+      "published_ts": 1795486265
+    },
+    {
       "id": "art-2402808",
       "title": "Entra Connect Health : une faille exploitée a exposé les e-mails des admins de tenants Microsoft",
       "description": "Une faille dans l'API d'Entra Connect Health a été exploitée pour lire les métadonnées de tenants, dont les e-mails des admins. Voici ce qu'il faut savoir.",
@@ -242,6 +382,20 @@
       ],
       "published_at": "2026-11-24T02:00:00+00:00",
       "published_ts": 1795485600
+    },
+    {
+      "id": "art-7880650",
+      "title": "Il faudra attendre 2028 pour voir une Galaxy Watch 10, voici pourquoi",
+      "description": "Samsung reporterait le lancement de la Galaxy Watch 10 dans le but de réduire ses coûts. Voici ce qu'il faut savoir.",
+      "link": "https://www.zdnet.fr/actualites/il-faudra-attendre-2028-pour-voir-une-galaxy-watch-10-voici-pourquoi-508489.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T01:11:19+00:00",
+      "published_ts": 1795482679
     },
     {
       "id": "art-6529053",
@@ -1872,136 +2026,6 @@
       ],
       "published_at": "2026-11-05T08:11:06+00:00",
       "published_ts": 1793866266
-    },
-    {
-      "id": "art-340278",
-      "title": "Pas d’IA, pas de recherche Google : c’est ce que veut imposer Google aux écoles",
-      "description": "Gemini et Google Search seront désactivés par défaut sur les comptes élèves. Une école qui refuse l'IA de Google perdra aussi l'accès au moteur de recherche.",
-      "link": "https://www.it-connect.fr/google-ecoles-ia-gemini-recherche-desactivee/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "Google",
-        "IA"
-      ],
-      "published_at": "2026-11-04T09:32:03+00:00",
-      "published_ts": 1793784723
-    },
-    {
-      "id": "art-9061043",
-      "title": "Comment la vigilance d'un technicien a sauvé les frigos de l'EFS",
-      "description": "L’Établissement Français du Sang explique que ses réfrigérateurs utilisés pour stocker les poches de sang ont été visés par une cyberattaque. Mais les systèmes d'alarme ont permis aux équipes de déjouer la tentative.",
-      "link": "https://www.zdnet.fr/actualites/comment-la-vigilance-dun-technicien-a-sauve-les-frigos-de-lefs-507303.htm#xtor=RSS-1",
-      "source": "ZDNet France",
-      "category": "Cybersécurité",
-      "tags": [
-        "Actualités",
-        "Cybersécurité"
-      ],
-      "published_at": "2026-11-04T07:11:08+00:00",
-      "published_ts": 1793776268
-    },
-    {
-      "id": "art-8441792",
-      "title": "Netflix, jeux vidéo, cloud : la taxe au gigaoctet votée par 11 députés fait débat",
-      "description": "Votée à une voix près, la taxe de 0,055 € par Go est vivement critiquée et elle a fait réagir VideoLAN, Free et OVHcloud. Qu'en est-il réellement ?",
-      "link": "https://www.it-connect.fr/taxe-gigaoctet-producteurs-donnees-numeriques/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "Internet"
-      ],
-      "published_at": "2026-11-02T06:10:26+00:00",
-      "published_ts": 1793599826
-    },
-    {
-      "id": "art-3918363",
-      "title": "Reddit va réserver ses contenus aux utilisateurs connectés pour freiner le scraping (et l’IA)",
-      "description": "Reddit va progressivement réserver ses contenus aux utilisateurs connectés, avec des tests hors des États-Unis. Scraping, publicité : voici ce que l'on sait.",
-      "link": "https://www.it-connect.fr/reddit-connexion-obligatoire-scraping/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "Internet"
-      ],
-      "published_at": "2026-11-02T05:49:21+00:00",
-      "published_ts": 1793598561
-    },
-    {
-      "id": "art-9815306",
-      "title": "Discord : les messages des serveurs publics vont apparaître dans les moteurs de recherche",
-      "description": "Dès la mi-décembre 2026, Discord publiera sur le Web, notamment sur Google, des messages de ses serveurs publics. En France, l'option est désactivée par défaut.",
-      "link": "https://www.it-connect.fr/discord-messages-serveurs-publics-moteurs-recherche/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "Discord"
-      ],
-      "published_at": "2026-10-28T16:40:54+00:00",
-      "published_ts": 1793205654
-    },
-    {
-      "id": "art-6490749",
-      "title": "Google : vos e-mails Gmail et vos photos peuvent désormais influencer les publicités, à une condition",
-      "description": "Google a modifié sa politique de confidentialité : si vous connectez Gmail ou Google Photos à la recherche, ces données peuvent influencer vos publicités.",
-      "link": "https://www.it-connect.fr/google-gmail-photos-publicites-personnalisees-politique-confidentialite/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "Google",
-        "Privacy"
-      ],
-      "published_at": "2026-10-27T06:40:22+00:00",
-      "published_ts": 1793083222
-    },
-    {
-      "id": "art-3780239",
-      "title": "Quad9 quitte la France : le DNS 9.9.9.9 sera coupé le 24 novembre 2026",
-      "description": "Vous utilisez le DNS 9.9.9.9 ? Le 24 novembre 2026, Quad9 cessera de servir la France plutôt que d'appliquer un blocage judiciaire. Voici ce que l'on sait.",
-      "link": "https://www.it-connect.fr/quad9-quitte-la-france-blocage-dns/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "DNS"
-      ],
-      "published_at": "2026-10-26T07:35:50+00:00",
-      "published_ts": 1793000150
-    },
-    {
-      "id": "art-4284",
-      "title": "SynthID Detector : Google ouvre à tous son outil pour repérer les contenus générés par IA",
-      "description": "Google ouvre SynthID Detector à tous : l'outil vérifie si une image, une vidéo ou un audio vient de l'IA de Google, OpenAI, NVIDIA ou Kakao. Pas des autres.",
-      "link": "https://www.it-connect.fr/google-synthid-detector-grand-public/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "Google",
-        "IA"
-      ],
-      "published_at": "2026-10-07T16:13:51+00:00",
-      "published_ts": 1791389631
-    },
-    {
-      "id": "art-2015092",
-      "title": "DNSSEC : la clé principale du DNS change le 11 octobre, qui doit vérifier son résolveur ?",
-      "description": "Le 11 octobre 2026, la clé KSK-2024 signera la zone racine du DNS. Les résolveurs où la validation DNSSEC est activée sont concernés : voici comment vérifier.",
-      "link": "https://www.it-connect.fr/dnssec-roulement-ksk-racine-dns-verifier-resolveur/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "Cybersécurité",
-        "DNS"
-      ],
-      "published_at": "2026-10-07T15:29:41+00:00",
-      "published_ts": 1791386981
     }
   ]
 }
