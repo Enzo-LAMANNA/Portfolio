@@ -40,12 +40,12 @@ TIMEOUT = 15
 MAX_ARTICLES = 120
 ALLOWED_BADGES = ("Alerte / Faille", "Mise à jour", "Actu / Tendance")
 DEFAULT_GEMINI_MODELS = (
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
+    "gemini-3.5-flash-lite",
+    "gemini-3.1-flash-lite",
+    "gemini-3.5-flash",
+    "gemini-3.6-flash",
     "gemini-3.7-flash",
     "gemini-3.8-flash",
-    "gemini-flash-lite-latest",
-    "gemini-flash-latest",
 )
 
 # Flux RSS fiables (sources + rubriques associées)
@@ -322,13 +322,13 @@ def collect_rss_articles(existing_by_link: dict[str, dict[str, Any]]) -> tuple[d
 
 
 def create_gemini_client(api_key: str):
-    """Initialise le client google-genai avec timeout court et sans retries bloquants."""
+    """Initialise le client google-genai avec timeout confortable (60s) et sans retries bloquants."""
     from google import genai
     from google.genai import types
 
     try:
         http_opts = types.HttpOptions(
-            timeout=25_000,
+            timeout=60_000,
             retry_options=types.HttpRetryOptions(attempts=1),
         )
         return genai.Client(api_key=api_key, http_options=http_opts)
@@ -451,15 +451,21 @@ def summarize_with_gemini(client: Any, article: dict[str, Any], model_name: str)
     )
 
     is_gemma = "gemma" in model_name.lower()
-    config = (
-        types.GenerateContentConfig(temperature=0.2)
-        if is_gemma
-        else types.GenerateContentConfig(
-            response_mime_type="application/json",
-            response_schema=schema,
-            temperature=0.2,
-        )
-    )
+    if is_gemma:
+        config = types.GenerateContentConfig(temperature=0.2)
+    else:
+        cfg_kwargs: dict[str, Any] = {
+            "response_mime_type": "application/json",
+            "response_schema": schema,
+            "temperature": 0.2,
+        }
+        # Désactive le thinking lent si le modèle le supporte (réponse en ~2s au lieu de 25s)
+        if "lite" not in model_name.lower():
+            try:
+                cfg_kwargs["thinking_config"] = types.ThinkingConfig(thinking_budget=0)
+            except Exception:
+                pass
+        config = types.GenerateContentConfig(**cfg_kwargs)
 
     try:
         response = client.models.generate_content(
@@ -470,7 +476,6 @@ def summarize_with_gemini(client: Any, article: dict[str, Any], model_name: str)
         raw_text = (response.text or "").strip()
         if raw_text.startswith("```"):
             raw_text = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw_text, flags=re.IGNORECASE).strip()
-        # Si le modèle a ajouté du texte avant/après l'accolade JSON, on isole l'objet JSON
         start_brace = raw_text.find("{")
         end_brace = raw_text.rfind("}")
         if start_brace != -1 and end_brace > start_brace:
@@ -487,8 +492,34 @@ def summarize_with_gemini(client: Any, article: dict[str, Any], model_name: str)
             }
     except Exception as exc:
         err_msg = str(exc)
-        if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg:
-            raise RuntimeError(f"QUOTA_EXCEEDED: {exc}") from exc
+        if any(code in err_msg for code in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE")):
+            raise RuntimeError(f"MODEL_UNAVAILABLE: {exc}") from exc
+        # Si thinking_budget=0 n'est pas supporté par ce modèle, on réessaie sans
+        if "thinking" in err_msg.lower() and not is_gemma:
+            try:
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                        response_schema=schema,
+                        temperature=0.2,
+                    ),
+                )
+                raw_text = (response.text or "").strip()
+                parsed = json.loads(raw_text)
+                if is_valid_ai_summary(parsed):
+                    return {
+                        "badge": parsed["badge"],
+                        "contexte": parsed["contexte"].strip(),
+                        "quoi": parsed["quoi"].strip(),
+                        "pourquoi": parsed["pourquoi"].strip(),
+                        "consequence": parsed["consequence"].strip(),
+                        "generated_by": "gemini",
+                    }
+            except Exception as exc2:
+                print(f"[WARN] Échec retry ({model_name}) : {str(exc2)[:180]}", file=sys.stderr, flush=True)
+                return None
         print(f"[WARN] Échec analyse ({model_name}) pour '{article['title'][:50]}' : {err_msg[:220]}", file=sys.stderr, flush=True)
 
     return None
@@ -499,14 +530,14 @@ def main() -> int:
     parser.add_argument(
         "--max-ai",
         type=int,
-        default=40,
-        help="Nombre maximum d'articles à analyser par exécution (défaut : 40 ; tout l'historique est complété progressivement).",
+        default=60,
+        help="Nombre maximum d'articles à analyser par exécution (défaut : 60 ; tout l'historique est complété automatiquement).",
     )
     parser.add_argument(
         "--delay",
         type=float,
-        default=3.0,
-        help="Pause en secondes entre deux appels API Gemini (défaut : 3.0s pour respecter le Free Tier).",
+        default=2.0,
+        help="Pause en secondes entre deux appels API Gemini (défaut : 2.0s pour respecter le Free Tier).",
     )
     args = parser.parse_args()
 
