@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T23:27:42.785944+00:00",
+  "updated_at": "2026-11-24T09:16:57.110152+00:00",
   "total": 120,
   "sources": [
     "IT-Connect",
@@ -13,6 +13,172 @@
     "Web"
   ],
   "articles": [
+    {
+      "id": "art-9198283",
+      "title": "ZDNET Morning 24/11/2026 : Influence politique derrière la réintégration de Jensen Huang, Rétention cognitive et usage des IA, Google Chrome : six réglages clés pour la sécurité,...",
+      "description": "Le ZDNET Morning le brief de l'actu tech pour les pros tous les matins à 9h00. Transformation numérique, IA, matériel, logiciels,... ne passez pas à côté de ce qui fait la Une du secteur.",
+      "link": "https://www.zdnet.fr/actualites/zdnet-morning-24-11-2026-influence-politique-derriere-la-reintegration-de-jensen-huang-retention-cognitive-et-usage-des-ia-google-chrome-six-reglages-cles-pour-la-securite-508481.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T10:11:27+00:00",
+      "published_ts": 1795515087
+    },
+    {
+      "id": "art-8460555",
+      "title": "Nvidia : Donald Trump a pesé en coulisses sur le retour de Jensen Huang",
+      "description": "Quelques jours après avoir exclu tout retour de Jensen Huang à la tête de Nvidia, le conseil d’administration du géant américain des semi-conducteurs a fait volte-face sous la pression de Donald Trump.",
+      "link": "https://www.zdnet.fr/actualites/nvidia-donald-trump-a-pese-en-coulisses-sur-le-retour-de-jensen-huang-508468.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T10:11:22+00:00",
+      "published_ts": 1795515082
+    },
+    {
+      "id": "art-9628744",
+      "title": "Arm prolonge son PDG Rene Haas jusqu’en 2033",
+      "description": "Arm a annoncé que son directeur général, Rene Haas, prolonge son contrat jusqu’en 2033. Cité parmi les successeurs possibles de Jensen Huang chez Nvidia, il devient aussi vice-président de SoftBank Group, actionnaire majoritaire d’Arm.",
+      "link": "https://www.zdnet.fr/actualites/arm-prolonge-son-pdg-rene-haas-jusquen-2033-508474.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T09:11:15+00:00",
+      "published_ts": 1795511475
+    },
+    {
+      "id": "art-7940210",
+      "title": "Black Friday 2026 chez UGREEN : notre sélection de chargeurs, batteries et NAS en promotion",
+      "description": "Black Friday UGREEN : chargeurs Nexode, batterie externe, traceurs, webcam et NAS en promotion. Notre sélection des meilleures offres jusqu'au 30 novembre.",
+      "link": "https://www.it-connect.fr/black-friday-2026-chez-ugreen-notre-selection-de-chargeurs-batteries-et-nas-en-promotion/",
+      "source": "IT-Connect",
+      "category": "Matériel",
+      "tags": [
+        "Bons Plans",
+        "Black Friday",
+        "Bon plan",
+        "Hardware"
+      ],
+      "published_at": "2026-11-24T08:55:00+00:00",
+      "published_ts": 1795510500
+    },
+    {
+      "id": "art-593402",
+      "title": "privacyIDEA : un serveur MFA open source pour sécuriser Windows et l’Active Directory",
+      "description": "Tuto privacyIDEA : installez un serveur MFA open source, connectez-le à l’Active Directory et ajoutez le MFA à l’ouverture de session Windows.",
+      "link": "https://www.it-connect.fr/tuto-privacyidea-serveur-mfa-open-source/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Sécurité & Durcissement AD",
+        "Self-Hosting & Open Source",
+        "Active Directory",
+        "Cybersécurité"
+      ],
+      "published_at": "2026-11-24T08:45:00+00:00",
+      "published_ts": 1795509900
+    },
+    {
+      "id": "art-4094218",
+      "title": "RDMA over USB4 : Windows va permettre de relier plusieurs PC pour faire tourner de gros modèles d’IA",
+      "description": "Microsoft prépare RDMA over USB4, une nouveauté Windows permettant de relier plusieurs PC en USB4 pour y répartir un gros modèle d'IA.",
+      "link": "https://www.it-connect.fr/rdma-over-usb4-windows-cluster-ia-locale/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "AMD",
+        "IA",
+        "Microsoft"
+      ],
+      "published_at": "2026-11-24T08:20:00+00:00",
+      "published_ts": 1795508400
+    },
+    {
+      "id": "art-8995701",
+      "title": "ZD Tech : L'intelligence artificielle rend-elle vos équipes amnésiques ? L'étude du MIT alerte",
+      "description": "Déléguer vos synthèses à une intelligence artificielle générative fait gagner du temps, mais dégrade vos capacités cérébrales. 80 % des professionnels oublient leur travail assisté par IA, contre 10 % sans aide.",
+      "link": "https://www.zdnet.fr/actualites/zd-tech-lintelligence-artificielle-rend-elle-vos-equipes-amnesiques-letude-du-mit-alerte-508457.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T08:11:36+00:00",
+      "published_ts": 1795507896
+    },
+    {
+      "id": "art-4915956",
+      "title": "Neutralisé en 2019 par la gendarmerie, le ver USB Retadup revient pour distribuer CoffeeLoader",
+      "description": "Démantelé en 2019 par la gendarmerie, le botnet du ver USB Retadup a été réactivé via ses anciens domaines. Il distribue désormais le loader CoffeeLoader.",
+      "link": "https://www.it-connect.fr/retadup-ver-usb-coffeeloader/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Botnet",
+        "Cybersécurité",
+        "Malware"
+      ],
+      "published_at": "2026-11-24T08:00:00+00:00",
+      "published_ts": 1795507200
+    },
+    {
+      "id": "art-9069471",
+      "title": "Jensen Huang témoignera devant le Sénat américain le 3 décembre, après son retour surprise chez Nvidia",
+      "description": "Tim Scott, président de la commission bancaire du Sénat américain, a fixé au 3 décembre l’audition publique de Jensen Huang sur le contrôle des exportations de puces, quelques heures après son retour à la tête de Nvidia.",
+      "link": "https://www.zdnet.fr/actualites/jensen-huang-temoignera-devant-le-senat-americain-le-3-decembre-apres-son-retour-surprise-chez-nvidia-508465.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-24T07:11:54+00:00",
+      "published_ts": 1795504314
+    },
+    {
+      "id": "art-5844384",
+      "title": "rust-anything : cet outil open source aide les agents IA à réécrire vos applications en Rust",
+      "description": "Grâce à rust-anything, vous pouvez piloter un agent IA pour réécrire en Rust une application, tout en vérifiant chaque étape pour vous assurer du résultat.",
+      "link": "https://www.it-connect.fr/rust-anything-reecrire-application-rust-agents-ia/",
+      "source": "IT-Connect",
+      "category": "Logiciel & OS",
+      "tags": [
+        "Logiciel - OS",
+        "Développeur",
+        "IA",
+        "Open Source"
+      ],
+      "published_at": "2026-11-24T03:00:00+00:00",
+      "published_ts": 1795489200
+    },
+    {
+      "id": "art-2402808",
+      "title": "Entra Connect Health : une faille exploitée a exposé les e-mails des admins de tenants Microsoft",
+      "description": "Une faille dans l'API d'Entra Connect Health a été exploitée pour lire les métadonnées de tenants, dont les e-mails des admins. Voici ce qu'il faut savoir.",
+      "link": "https://www.it-connect.fr/entra-connect-health-faille-exploitee-metadonnees-tenants/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Azure AD Connect",
+        "Cybersécurité",
+        "Fuite de données"
+      ],
+      "published_at": "2026-11-24T02:00:00+00:00",
+      "published_ts": 1795485600
+    },
     {
       "id": "art-6529053",
       "title": "Kudu, FluentCleaner, BleachBit, etc… Lequel choisir pour remplacer CCleaner ?",
@@ -1684,170 +1850,6 @@
       ],
       "published_at": "2026-10-07T15:29:41+00:00",
       "published_ts": 1791386981
-    },
-    {
-      "id": "art-1785659",
-      "title": "MalExt : une liste open source avec près de 7 000 extensions Chrome malveillantes",
-      "description": "MalExt Sentry recense près de 7 000 extensions Chrome et Edge malveillantes ou retirées des stores, avec des outils pour vérifier vos propres navigateurs.",
-      "link": "https://www.it-connect.fr/malext-sentry-base-extensions-chrome-edge-malveillantes/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "Chrome",
-        "Cybersécurité"
-      ],
-      "published_at": "2026-10-06T13:11:38+00:00",
-      "published_ts": 1791292298
-    },
-    {
-      "id": "art-6206730",
-      "title": "OpenAI va ajouter un filigrane invisible aux textes de ChatGPT et Codex dans l’UE",
-      "description": "AI Act oblige, OpenAI va glisser un filigrane invisible dans les textes de ChatGPT et Codex en Europe. Une méthode qui a ses limites, selon OpenAI.",
-      "link": "https://www.it-connect.fr/openai-filigrane-invisible-textes-chatgpt-codex-ue/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "IA",
-        "OpenAI"
-      ],
-      "published_at": "2026-10-06T05:15:53+00:00",
-      "published_ts": 1791263753
-    },
-    {
-      "id": "art-6375550",
-      "title": "Avec les mods, Claude Code devient personnalisable : interface, commandes, etc.",
-      "description": "Anthropic lance les mods dans Claude Code : des plugins qui modifient l'interface et le comportement de l'outil, et qui tournent avec vos droits, sans sandbox.",
-      "link": "https://www.it-connect.fr/claude-code-mods-plugins/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "Claude",
-        "IA"
-      ],
-      "published_at": "2026-10-05T16:56:39+00:00",
-      "published_ts": 1791219399
-    },
-    {
-      "id": "art-7225178",
-      "title": "OpenAI lance dots, l’agent IA qui travaille même quand vous dormez",
-      "description": "OpenAI lance dots, des agents IA toujours actifs dotés de leur propre ordinateur dans le cloud. Disponibilité, garde-fous, Agent 365 : voici l'essentiel.",
-      "link": "https://www.it-connect.fr/openai-dots-agents-ia-toujours-actifs/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "IA",
-        "OpenAI"
-      ],
-      "published_at": "2026-09-30T15:24:46+00:00",
-      "published_ts": 1790781886
-    },
-    {
-      "id": "art-4374450",
-      "title": "Claude Code : Anthropic offre jusqu’à 250 dollars de crédit, mais seulement pour les sessions cloud",
-      "description": "Abonné à Claude Pro ou Max ? Anthropic vous offre jusqu'à 250 dollars de crédit pour tester les sessions cloud de Claude Code. Voici comment en profiter.",
-      "link": "https://www.it-connect.fr/claude-code-sessions-cloud-credit-offert/",
-      "source": "IT-Connect",
-      "category": "Web",
-      "tags": [
-        "Web",
-        "IA"
-      ],
-      "published_at": "2026-09-29T12:06:13+00:00",
-      "published_ts": 1790683573
-    },
-    {
-      "id": "art-2485704",
-      "title": "Synology : APM 2.0 s’ouvre à de nouvelles plateformes dont Proxmox et Nutanix",
-      "description": "Synology dévoile ActiveProtect Manager 2.0 : sauvegarde d'Amazon EC2, Azure VM, Proxmox VE, Nutanix AHV et Google Workspace, et restauration cloud à cloud.",
-      "link": "https://www.it-connect.fr/synology-activeprotect-manager-2-0-multicloud-proxmox-nutanix/",
-      "source": "IT-Connect",
-      "category": "Matériel",
-      "tags": [
-        "Matériel",
-        "Proxmox",
-        "Synology"
-      ],
-      "published_at": "2026-09-04T13:22:38+00:00",
-      "published_ts": 1788528158
-    },
-    {
-      "id": "art-9786039",
-      "title": "UGREEN HomeAgent : quand le NAS devient un hub avec de l’IA locale pour la domotique",
-      "description": "UGREEN a dévoilé HomeAgent à l'IFA 2026 : trois hubs d'IA locale sous UGOS Pro, dont un modèle NVIDIA Jetson Thor, pour la domotique. Précommandes ouvertes.",
-      "link": "https://www.it-connect.fr/ugreen-homeagent-hub-ia-locale-domotique/",
-      "source": "IT-Connect",
-      "category": "Matériel",
-      "tags": [
-        "Matériel",
-        "IA",
-        "Smart Home",
-        "Ugreen"
-      ],
-      "published_at": "2026-09-04T12:21:46+00:00",
-      "published_ts": 1788524506
-    },
-    {
-      "id": "art-3416426",
-      "title": "Le Thunderbolt arrive sur les Mac sous Linux, mais pas pour tous les modèles",
-      "description": "Une série de 19 patchs apporte l'USB4 et le Thunderbolt aux Mac M1, M2 et M3 sous Linux. Mais les écrans externes et les boîtiers PCIe devront encore patienter.",
-      "link": "https://www.it-connect.fr/linux-mac-usb4-thunderbolt-puces-apple-m1-m2-m3/",
-      "source": "IT-Connect",
-      "category": "Matériel",
-      "tags": [
-        "Matériel",
-        "Apple",
-        "Linux"
-      ],
-      "published_at": "2026-09-01T10:11:17+00:00",
-      "published_ts": 1788257477
-    },
-    {
-      "id": "art-7201936",
-      "title": "Synology dévoile la gamme neo+ : quatre NAS moins chers, mais sans mémoire ECC",
-      "description": "Synology dévoile les DS1825neo+, DS1525neo+, DS925neo+ et DS725neo+ : même plateforme que les DS Plus, mais 4 Go de DDR4 non-ECC. Disponibilité en octobre.",
-      "link": "https://www.it-connect.fr/synology-diskstation-neo-plus-nas-memoire-non-ecc/",
-      "source": "IT-Connect",
-      "category": "Matériel",
-      "tags": [
-        "Matériel",
-        "Hardware",
-        "NAS",
-        "Synology"
-      ],
-      "published_at": "2026-08-17T12:28:38+00:00",
-      "published_ts": 1786969718
-    },
-    {
-      "id": "art-3455923",
-      "title": "ConfigoMatic : le configurateur de PC sur mesure 100% compatible",
-      "description": "Découvrez le ConfigoMatic, le configurateur PC de TopAchat pour concevoir un PC gamer sur mesure 100% compatible, à monter soi-même ou pas : à vous de choisir.",
-      "link": "https://www.it-connect.fr/configomatic-configurateur-pc-sur-mesure/",
-      "source": "IT-Connect",
-      "category": "Matériel",
-      "tags": [
-        "Matériel",
-        "Gaming",
-        "Hardware"
-      ],
-      "published_at": "2026-07-25T11:00:00+00:00",
-      "published_ts": 1784977200
-    },
-    {
-      "id": "art-3422731",
-      "title": "Monter son PC soi-même, bonne ou mauvaise idée ?",
-      "description": "Gamer et budget: faut-il assembler soi-même ou opter pour un PC prêt-à-lancer? Analyse des coûts, concessions et fiabilité.",
-      "link": "https://www.it-connect.fr/monter-son-pc-soi-meme-bonne-ou-mauvaise-idee/",
-      "source": "IT-Connect",
-      "category": "Matériel",
-      "tags": [
-        "Matériel"
-      ],
-      "published_at": "2026-07-13T22:30:00+00:00",
-      "published_ts": 1783981800
     }
   ]
 }
