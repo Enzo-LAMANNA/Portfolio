@@ -702,6 +702,66 @@ section {
     text-align: left;
 }
 
+/* Encart dédié à l'onglet Actu (ActuZip) dans le guide de bienvenue */
+.guide-actu-callout {
+    margin-bottom: 24px;
+    padding: 20px 24px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(184, 51, 87, 0.2), rgba(45, 24, 35, 0.85));
+    border: 1.5px solid rgba(240, 188, 147, 0.45);
+    box-shadow: 0 12px 28px -16px rgba(223, 75, 106, 0.4);
+}
+
+.guide-actu-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.guide-actu-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 13px;
+    border-radius: 999px;
+    background: rgba(240, 188, 147, 0.16);
+    border: 1px solid rgba(240, 188, 147, 0.45);
+    color: var(--copper);
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+.guide-actu-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 15px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, var(--wine-400), var(--wine-500));
+    border: 1px solid var(--wine-200);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 600;
+    transition: transform 0.2s var(--ease-out), box-shadow 0.2s;
+}
+
+.guide-actu-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow);
+}
+
+.guide-actu-text {
+    font-size: 0.93rem;
+    color: var(--color-text-muted);
+    line-height: 1.72;
+    text-align: justify;
+    hyphens: auto;
+}
+
 .guide-legend {
     padding: 18px 22px;
     border-radius: 12px;
@@ -2681,6 +2741,11 @@ article.actu-spotlight-card.is-lead {
     align-items: start;
 }
 
+/* Quand l'analyse n'est pas encore présente, 1 seule colonne pleine largeur (zéro vide à droite) */
+.actu-spotlight-body.is-single-col {
+    grid-template-columns: 1fr;
+}
+
 .actu-spotlight-left {
     display: flex;
     flex-direction: column;
@@ -2782,8 +2847,21 @@ article.actu-spotlight-card.is-lead {
     border-radius: 10px;
     background: rgba(27, 14, 21, 0.66);
     border: 1px solid rgba(139, 72, 101, 0.45);
+    border-left: 3px solid var(--copper);
     text-align: left;
 }
+
+.actu-analysis-item.item-contexte { border-left-color: #7cc4fa; }
+.actu-analysis-item.item-contexte .actu-analysis-label { color: #9ed4fc; }
+
+.actu-analysis-item.item-quoi { border-left-color: var(--copper); }
+.actu-analysis-item.item-quoi .actu-analysis-label { color: var(--copper); }
+
+.actu-analysis-item.item-pourquoi { border-left-color: var(--wine-200); }
+.actu-analysis-item.item-pourquoi .actu-analysis-label { color: var(--wine-100); }
+
+.actu-analysis-item.item-consequence { border-left-color: #5ee9a4; }
+.actu-analysis-item.item-consequence .actu-analysis-label { color: #8af1be; }
 
 .actu-analysis-label {
     display: inline-block;
@@ -3007,6 +3085,34 @@ article.actu-featured-card .actu-card-title {
     transform: translateX(2px);
 }
 
+/* Bouton filtres mobile (masqué sur desktop) */
+.actu-mobile-filter-toggle {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border-strong);
+    background: rgba(54, 30, 43, 0.85);
+    color: #fff;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.actu-mobile-filter-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.actu-mobile-filter-left svg {
+    color: var(--copper);
+}
+
 /* Barre de filtres du tableau de bord */
 .actu-toolbar {
     display: flex;
@@ -3175,19 +3281,151 @@ article.actu-featured-card .actu-card-title {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .actu-stats-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
+    header.actu-hero {
+        padding: 96px 16px 38px;
+    }
+
+    .actu-hero-top {
+        margin-bottom: 14px;
+    }
+
+    .actu-subtitle {
+        font-size: 0.94rem;
+        margin-bottom: 18px;
+        line-height: 1.6;
+    }
+
+    /* Stats condensées sur mobile pour afficher Les 3 actus du moment tout de suite */
+    .actu-stats-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .actu-stat-card {
+        padding: 11px 13px;
+        gap: 10px;
+    }
+
+    .actu-stat-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .actu-stat-card strong {
+        font-size: 0.9rem;
+    }
+
+    .actu-stat-card span {
+        font-size: 0.78rem;
+    }
+
+    .actu-section {
+        padding: 40px 12px;
+    }
+
+    .actu-section-head {
+        margin-bottom: 20px;
+    }
+
+    /* Lecture mobile fluide : alignement à gauche sans rivières d'espaces blancs */
+    .actu-spotlight-desc,
+    .actu-card-desc,
+    .actu-analysis-item p,
+    .guide-actu-text {
+        text-align: left;
+        hyphens: none;
+    }
+
+    article.actu-spotlight-card {
+        padding: 18px 16px;
+        gap: 16px;
+    }
+
+    .actu-spotlight-body {
+        gap: 18px;
+    }
+
+    .actu-spotlight-title {
+        font-size: 1.12rem;
+    }
+
+    .actu-source-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
     .actu-analysis-grid {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
+
+    .actu-analysis-item {
+        padding: 13px 14px;
+    }
+
+    .actu-analysis-item p {
+        font-size: 0.9rem;
+        line-height: 1.62;
+    }
+
+    /* Filtres repliables + défilement horizontal sur mobile */
+    .actu-mobile-filter-toggle {
+        display: flex;
+    }
+
+    .actu-toolbar {
+        display: none;
+        padding: 14px;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .actu-toolbar.is-mobile-open {
+        display: flex;
+    }
+
+    .actu-filter-group {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .actu-pill-group {
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .actu-pill-group::-webkit-scrollbar {
+        display: none;
+    }
+
+    .actu-pill {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .actu-sort-btn,
+    .actu-reset-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
     .actu-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
-    .actu-toolbar {
-        padding: 16px;
+
+    article.actu-card {
+        padding: 18px 16px;
     }
 }
 

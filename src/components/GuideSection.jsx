@@ -8,6 +8,7 @@ import {
   GraduationCap,
   Mail,
   MousePointerClick,
+  Radio,
   Sparkles,
   User,
 } from 'lucide-react';
@@ -104,6 +105,23 @@ export default function GuideSection() {
                 </a>
               );
             })}
+          </div>
+
+          {/* Encart dédié à l'onglet Actu (ActuZip) */}
+          <div className="guide-actu-callout">
+            <div className="guide-actu-head">
+              <span className="guide-actu-badge">
+                <Radio size={15} aria-hidden="true" />
+                Onglet Actu — ActuZip
+              </span>
+              <a href="./ActuZip.html" className="guide-actu-link">
+                <span>Ouvrir la page Actu</span>
+                <ArrowRight size={15} aria-hidden="true" />
+              </a>
+            </div>
+            <p className="guide-actu-text">
+              En complément du portfolio, l&apos;onglet <strong>Actu</strong> donne accès à un espace automatisé que j&apos;ai mis en place avec <strong>Antigravity de Gemini</strong> pour suivre automatiquement les actualités en cybersécurité, réseaux, systèmes et informatique (depuis IT-Connect et ZDNet France). L&apos;objectif n&apos;est en aucun cas de m&apos;approprier l&apos;information, mais simplement de disposer d&apos;un outil pratique pour ma <strong>veille technologique</strong> quotidienne, tout en renvoyant systématiquement vers les articles d&apos;origine.
+            </p>
           </div>
 
           <div className="guide-legend">

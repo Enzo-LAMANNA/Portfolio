@@ -40,9 +40,12 @@ TIMEOUT = 15
 MAX_ARTICLES = 120
 ALLOWED_BADGES = ("Alerte / Faille", "Mise à jour", "Actu / Tendance")
 DEFAULT_GEMINI_MODELS = (
-    "gemini-3.8-flash",
-    "gemini-flash-latest",
     "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "gemini-flash-lite-latest",
+    "gemini-flash-latest",
 )
 
 # Flux RSS fiables (sources + rubriques associées)
@@ -319,9 +322,18 @@ def collect_rss_articles(existing_by_link: dict[str, dict[str, Any]]) -> tuple[d
 
 
 def create_gemini_client(api_key: str):
-    """Initialise le client google-genai."""
+    """Initialise le client google-genai avec timeout court et sans retries bloquants."""
     from google import genai
-    return genai.Client(api_key=api_key)
+    from google.genai import types
+
+    try:
+        http_opts = types.HttpOptions(
+            timeout=25_000,
+            retry_options=types.HttpRetryOptions(attempts=1),
+        )
+        return genai.Client(api_key=api_key, http_options=http_opts)
+    except Exception:
+        return genai.Client(api_key=api_key)
 
 
 def extract_article_excerpt(url: str, fallback_desc: str) -> str:
@@ -358,29 +370,51 @@ def extract_article_excerpt(url: str, fallback_desc: str) -> str:
 
 
 def resolve_gemini_models(client: Any) -> list[str]:
-    """Construit la liste des modèles Flash disponibles (avec découverte auto en secours)."""
+    """Construit la liste des modèles Flash/Gemma candidats (exclut omni/image/audio/tts)."""
     models: list[str] = list(DEFAULT_GEMINI_MODELS)
     try:
         discovered: list[str] = []
         for m in client.models.list():
             name = (getattr(m, "name", "") or "").replace("models/", "")
+            low = name.lower()
             methods = getattr(m, "supported_actions", None) or getattr(m, "supported_generation_methods", None) or []
-            if "flash" in name.lower() and "image" not in name.lower() and "audio" not in name.lower() and "tts" not in name.lower():
+            if any(bad in low for bad in ("image", "audio", "tts", "omni", "embedding", "veo", "imagen", "robotics", "computer-use")):
+                continue
+            if "flash" in low or "gemma-3" in low:
                 if not methods or any("generateContent" in str(act) for act in methods):
                     discovered.append(name)
-        # Trie pour essayer les versions Flash les plus récentes en premier
         discovered.sort(reverse=True)
         for name in discovered:
             if name not in models:
                 models.append(name)
-    except Exception:
-        pass
-    print(f"[IA] Modèles candidats : {models[:5]}")
+    except Exception as exc:
+        print(f"[WARN] list() modèles impossible : {exc}", flush=True)
+    print(f"[IA] Modèles candidats ({len(models)}) : {models[:12]}", flush=True)
     return models
 
 
-def summarize_with_gemini(client: Any, article: dict[str, Any], models: list[str]) -> dict[str, str] | None:
-    """Appelle Google Gemini Flash une seule fois pour produire une analyse pédagogique détaillée en JSON."""
+def pick_working_model(client: Any, models: list[str], skip: set[str] | None = None) -> str | None:
+    """Teste rapidement chaque candidat pour trouver le premier modèle autorisé sur le Free Tier."""
+    skip = skip or set()
+    for name in models:
+        if name in skip:
+            continue
+        try:
+            resp = client.models.generate_content(
+                model=name,
+                contents="Réponds simplement OK.",
+            )
+            if (resp.text or "").strip():
+                print(f"[IA] Modèle actif sélectionné : {name}", flush=True)
+                return name
+        except Exception as exc:
+            short = str(exc).replace("\n", " ")[:160]
+            print(f"[IA] Candidat ignoré ({name}) : {short}", flush=True)
+    return None
+
+
+def summarize_with_gemini(client: Any, article: dict[str, Any], model_name: str) -> dict[str, str] | None:
+    """Appelle Google Gemini/Gemma une seule fois pour produire une analyse pédagogique détaillée en JSON."""
     from google.genai import types
 
     article_excerpt = extract_article_excerpt(article["link"], article["description"])
@@ -395,7 +429,8 @@ def summarize_with_gemini(client: Any, article: dict[str, Any], models: list[str
         f"Titre : {article['title']}\n"
         f"Chapô : {article['description']}\n"
         f"Extrait de l'article :\n{article_excerpt}\n\n"
-        "Retourne un objet JSON strict avec exactement ces 5 clés (vise 2 à 4 phrases riches et bien expliquées par champ) :\n"
+        "Retourne UNIQUEMENT un objet JSON valide (sans texte autour ni balises markdown) avec exactement ces 5 clés "
+        "(vise 2 à 4 phrases riches et bien expliquées par champ) :\n"
         '- "badge" : UNIQUEMENT l\'une de ces 3 valeurs exactes : "Alerte / Faille", "Mise à jour" ou "Actu / Tendance".\n'
         '- "contexte" : pose clairement le décor de l\'actualité ET vulgarise simplement les termes techniques, protocoles, outils ou sigles mentionnés pour que n\'importe quel lecteur comprenne de quoi on parle.\n'
         '- "quoi" : détaille précisément ce qui s\'est passé, ce qui a été annoncé, corrigé, comparé ou découvert (fonctionnalités, mécanisme ou faits clés).\n'
@@ -415,38 +450,47 @@ def summarize_with_gemini(client: Any, article: dict[str, Any], models: list[str
         },
     )
 
-    last_err: Exception | None = None
-    for model_name in models:
-        try:
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    response_schema=schema,
-                    temperature=0.2,
-                ),
-            )
-            raw_text = (response.text or "").strip()
-            parsed = json.loads(raw_text)
-            if is_valid_ai_summary(parsed):
-                return {
-                    "badge": parsed["badge"],
-                    "contexte": parsed["contexte"].strip(),
-                    "quoi": parsed["quoi"].strip(),
-                    "pourquoi": parsed["pourquoi"].strip(),
-                    "consequence": parsed["consequence"].strip(),
-                    "generated_by": "gemini",
-                }
-        except Exception as exc:
-            last_err = exc
-            err_msg = str(exc)
-            # En cas de quota dépassé (429), on ne spamme pas
-            if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg:
-                raise RuntimeError(f"QUOTA_EXCEEDED: {exc}") from exc
-            continue
+    is_gemma = "gemma" in model_name.lower()
+    config = (
+        types.GenerateContentConfig(temperature=0.2)
+        if is_gemma
+        else types.GenerateContentConfig(
+            response_mime_type="application/json",
+            response_schema=schema,
+            temperature=0.2,
+        )
+    )
 
-    print(f"[WARN] Échec analyse Gemini pour '{article['title'][:50]}' : {last_err}", file=sys.stderr)
+    try:
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt,
+            config=config,
+        )
+        raw_text = (response.text or "").strip()
+        if raw_text.startswith("```"):
+            raw_text = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw_text, flags=re.IGNORECASE).strip()
+        # Si le modèle a ajouté du texte avant/après l'accolade JSON, on isole l'objet JSON
+        start_brace = raw_text.find("{")
+        end_brace = raw_text.rfind("}")
+        if start_brace != -1 and end_brace > start_brace:
+            raw_text = raw_text[start_brace : end_brace + 1]
+        parsed = json.loads(raw_text)
+        if is_valid_ai_summary(parsed):
+            return {
+                "badge": parsed["badge"],
+                "contexte": parsed["contexte"].strip(),
+                "quoi": parsed["quoi"].strip(),
+                "pourquoi": parsed["pourquoi"].strip(),
+                "consequence": parsed["consequence"].strip(),
+                "generated_by": "gemini",
+            }
+    except Exception as exc:
+        err_msg = str(exc)
+        if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg:
+            raise RuntimeError(f"QUOTA_EXCEEDED: {exc}") from exc
+        print(f"[WARN] Échec analyse ({model_name}) pour '{article['title'][:50]}' : {err_msg[:220]}", file=sys.stderr, flush=True)
+
     return None
 
 
@@ -455,14 +499,14 @@ def main() -> int:
     parser.add_argument(
         "--max-ai",
         type=int,
-        default=30,
-        help="Nombre maximum d'articles à analyser par exécution (défaut : 30 pour respecter le quota gratuit).",
+        default=40,
+        help="Nombre maximum d'articles à analyser par exécution (défaut : 40 ; tout l'historique est complété progressivement).",
     )
     parser.add_argument(
         "--delay",
         type=float,
-        default=1.2,
-        help="Pause en secondes entre deux appels API Gemini (défaut : 1.2s).",
+        default=3.0,
+        help="Pause en secondes entre deux appels API Gemini (défaut : 3.0s pour respecter le Free Tier).",
     )
     args = parser.parse_args()
 
@@ -514,15 +558,29 @@ def main() -> int:
         return 1
 
     models = resolve_gemini_models(client)
+    exhausted_models: set[str] = set()
+    active_model = pick_working_model(client, models, exhausted_models)
+    if not active_model:
+        print("[STOP] Aucun modèle Gemini Free Tier disponible actuellement. Les articles RSS sont sauvegardés.", file=sys.stderr, flush=True)
+        return 0
+
     analyzed_count = 0
     batch = to_analyze[: args.max_ai]
     for idx, key in enumerate(batch, start=1):
         art = merged[key]
-        print(f"[IA {idx}/{len(batch)}] Analyse de : {art['title'][:75]}…")
-        try:
-            summary = summarize_with_gemini(client, art, models)
-        except RuntimeError as quota_err:
-            print(f"[STOP] Limite de quota API atteinte ({quota_err}). Les analyses déjà faites sont sauvegardées.", file=sys.stderr)
+        print(f"[IA {idx}/{len(batch)}] Analyse ({active_model}) : {art['title'][:75]}…", flush=True)
+        summary = None
+        while active_model:
+            try:
+                summary = summarize_with_gemini(client, art, active_model)
+                break
+            except RuntimeError as quota_err:
+                print(f"[WARN] Quota atteint sur {active_model} ({str(quota_err)[:140]}), bascule vers un autre modèle…", file=sys.stderr, flush=True)
+                exhausted_models.add(active_model)
+                active_model = pick_working_model(client, models, exhausted_models)
+
+        if not active_model:
+            print("[STOP] Quota Free Tier atteint sur tous les modèles candidats. Les analyses déjà faites sont sauvegardées.", file=sys.stderr, flush=True)
             break
 
         if summary:

@@ -117,19 +117,19 @@ function AnalysisGrid({ summary, compact = false }) {
   if (!summary) return null;
   return (
     <div className={`actu-analysis-grid${compact ? ' is-compact' : ''}`}>
-      <div className="actu-analysis-item">
+      <div className="actu-analysis-item item-contexte">
         <span className="actu-analysis-label">Contexte</span>
         <p>{summary.contexte}</p>
       </div>
-      <div className="actu-analysis-item">
+      <div className="actu-analysis-item item-quoi">
         <span className="actu-analysis-label">Quoi</span>
         <p>{summary.quoi}</p>
       </div>
-      <div className="actu-analysis-item">
+      <div className="actu-analysis-item item-pourquoi">
         <span className="actu-analysis-label">Pourquoi</span>
         <p>{summary.pourquoi}</p>
       </div>
-      <div className="actu-analysis-item">
+      <div className="actu-analysis-item item-consequence">
         <span className="actu-analysis-label">Conséquence</span>
         <p>{summary.consequence}</p>
       </div>
@@ -238,6 +238,7 @@ export default function ActuPage() {
   const [sortOrder, setSortOrder] = useState('desc');
   const [query, setQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(18);
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   useEffect(() => {
     fetch('./ActuZip.json', { cache: 'no-cache' })
@@ -429,7 +430,7 @@ export default function ActuPage() {
                         </span>
                       </div>
 
-                      <div className="actu-spotlight-body">
+                      <div className={`actu-spotlight-body${art.ai_summary ? '' : ' is-single-col'}`}>
                         <div className="actu-spotlight-left">
                           <h3 className="actu-spotlight-title">
                             <a href={art.link} target="_blank" rel="noopener noreferrer">
@@ -474,8 +475,26 @@ export default function ActuPage() {
                   </p>
                 </div>
 
+                {/* Bouton filtres compact sur mobile */}
+                <button
+                  type="button"
+                  className="actu-mobile-filter-toggle"
+                  aria-expanded={mobileFiltersOpen}
+                  onClick={() => setMobileFiltersOpen((v) => !v)}
+                >
+                  <span className="actu-mobile-filter-left">
+                    <Filter size={16} aria-hidden="true" />
+                    <span>Filtres &amp; recherche{hasActiveFilter ? ' (actifs)' : ''}</span>
+                  </span>
+                  <ChevronDown
+                    size={17}
+                    className={`actu-toggle-chevron${mobileFiltersOpen ? ' is-rotated' : ''}`}
+                    aria-hidden="true"
+                  />
+                </button>
+
                 {/* Panneau de filtres */}
-                <div className="actu-toolbar">
+                <div className={`actu-toolbar${mobileFiltersOpen ? ' is-mobile-open' : ''}`}>
                   <div className="actu-toolbar-row">
                     <div className="actu-filter-group">
                       <span className="actu-filter-label">
