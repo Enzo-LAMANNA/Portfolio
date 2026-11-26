@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T21:29:53.266982+00:00",
+  "updated_at": "2026-11-26T07:42:53.884559+00:00",
   "total": 120,
   "sources": [
     "IT-Connect",
@@ -13,6 +13,76 @@
     "Web"
   ],
   "articles": [
+    {
+      "id": "art-9738070",
+      "title": "ZD Tech : Anthropic bat le record de Space X en Bourse avec 1 500 milliards de valorisation",
+      "description": "Le créateur de l'IA Claude a levé 81 milliards de dollars et pulvérisé le record de Space X avec une valorisation de 1 500 milliards. Mais l'action a chuté de 8,5 % sur le Nasdaq dès le deuxième jour, révélant un modèle économique fragile soutenu à bout de bras par Microsoft, Google et Nvidia.",
+      "link": "https://www.zdnet.fr/actualites/zd-tech-anthropic-bat-le-record-de-space-x-en-bourse-avec-1-500-milliards-de-valorisation-508537.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-26T08:11:25+00:00",
+      "published_ts": 1795680685,
+      "ai_summary": {
+        "badge": "Actu / Tendance",
+        "contexte": "Le marché financier de la tech connaît des mouvements historiques avec des valorisations vertigineuses dans le domaine de l'intelligence artificielle. Pour le lecteur, il faut comprendre qu'une introduction en Bourse sur le Nasdaq (la célèbre bourse américaine des valeurs technologiques) permet à une entreprise de lever des fonds auprès d'investisseurs, mais expose immédiatement sa santé financière et son modèle économique au jugement impitoyable du marché.",
+        "quoi": "Anthropic, l'entreprise créatrice de l'intelligence artificielle Claude, a réalisé une levée de fonds massive de 81 milliards de dollars. Cette opération lui a permis d'atteindre une valorisation boursière de 1 500 milliards, battant ainsi le record historique précédemment détenu par SpaceX. Cependant, cet enthousiasme initial a été tempéré dès le deuxième jour de cotation par une chute de l'action de 8,5 % sur le Nasdaq.",
+        "pourquoi": "Cette situation met en lumière le rôle central des géants de la tech que sont Microsoft, Google et Nvidia, qui soutiennent activement et financièrement ces structures à bout de bras. Derrière des chiffres de valorisation spectaculaires se cache une stratégie économique agressive mais fragile, où les investisseurs réalisent soudainement que le modèle économique de ces IA génératives repose sur des investissements colossaux et incertains à court terme.",
+        "consequence": "Pour les entreprises et les éditeurs, cette volatilité boursière et ce modèle fragile rappellent que l'écosystème de l'intelligence artificielle reste hautement spéculatif. Pour les administrateurs systèmes et les utilisateurs finaux, cela pourrait se traduire à terme par des ajustements tarifaires, des changements dans la disponibilité des services de l'IA Claude, ou une pression accrue sur la rentabilité des outils déployés.",
+        "generated_by": "gemini"
+      }
+    },
+    {
+      "id": "art-3581774",
+      "title": "Cyberattaque 1Password : devez-vous vous inquiéter pour vos mots de passe ?",
+      "description": "1Password confirme une cyberattaque : des données clients volées sur des serveurs suite à la compromission du compte GitHub d'un salarié.",
+      "link": "https://www.it-connect.fr/cyberattaque-1password-novembre-2026/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Cyberattaque",
+        "Fuite de données",
+        "GitHub"
+      ],
+      "published_at": "2026-11-26T05:51:00+00:00",
+      "published_ts": 1795672260,
+      "ai_summary": {
+        "badge": "Alerte / Faille",
+        "contexte": "L'éditeur du gestionnaire de mots de passe 1Password a révélé un incident de sécurité touchant ses serveurs backend et faisant suite à une enquête ouverte le 19 novembre 2026. Pour bien comprendre, un coffre-fort de mots de passe est un espace chiffré de bout en bout, tandis que le système CI/CD (Intégration Continue et Déploiement Continu) regroupe des outils automatisés permettant aux développeurs de tester et de publier leur code informatique.",
+        "quoi": "Un pirate a réussi à compromettre le compte GitHub d'un salarié de 1Password, ce qui lui a permis de pousser du code malveillant vers des services backend afin d'aspirer des données clients sur les serveurs de production. L'attaquant a également dérobé le code de dépôts privés, accédé au système CI/CD contenant des secrets d'infrastructure et téléchargé des fiches d'une partie des clients incluant des paramètres SRP. Cependant, 1Password a confirmé que les coffres-forts des utilisateurs et le contenu chiffré n'ont jamais été consultés ni accessibles.",
+        "pourquoi": "Cet incident trouve son origine dans la compromission initiale du compte GitHub d'un employé, un vecteur d'attaque classique de type phishing ou vol d'identifiants ciblant les collaborateurs. Les attaquants visent souvent ce type de comptes pour s'immiscer dans la chaîne de production logicielle (CI/CD) d'entreprises éditrices de solutions de sécurité hautement sensibles, cherchant à contourner les protections en exploitant le maillon humain et les accès aux serveurs backend.",
+        "consequence": "Pour les utilisateurs finaux, les mots de passe et les coffres-forts restent sécurisés grâce au chiffrement de bout en bout, mais le risque de phishing est bien réel en raison du vol de fiches clients. Pour les administrateurs et l'éditeur 1Password, cet incident a nécessité des actions correctives d'urgence, notamment la rotation de tous les identifiants et secrets d'infrastructure exposés dans le système CI/CD, rappelant la nécessité de renforcer la sécurité des accès collaborateurs.",
+        "generated_by": "gemini"
+      }
+    },
+    {
+      "id": "art-4118137",
+      "title": "Signature NTLM : les mises à jour de novembre 2026 perturbent l’authentification sur Windows",
+      "description": "Depuis les mises à jour Windows de novembre 2026, l'authentification NTLM peut échouer dans certains cas, notamment avec les proxys et certains SSO.",
+      "link": "https://www.it-connect.fr/windows-novembre-2026-echec-authentification-ntlm-proxy-sso/",
+      "source": "IT-Connect",
+      "category": "Cybersécurité",
+      "tags": [
+        "Actu Cybersécurité",
+        "Microsoft",
+        "Mise à jour",
+        "NTLM"
+      ],
+      "published_at": "2026-11-26T05:17:49+00:00",
+      "published_ts": 1795670269,
+      "ai_summary": {
+        "badge": "Mise à jour",
+        "contexte": "Cette actualité concerne les systèmes d'exploitation Windows et met en lumière des difficultés d'authentification survenues suite à des correctifs récents. Pour bien comprendre, l'authentification NTLM est un protocole de sécurité ancien utilisé par Windows pour identifier les utilisateurs sur un réseau, tandis que les proxys et les SSO (Single Sign-On ou authentification unique) sont des outils qui facilitent respectivement la navigation sécurisée sur Internet et l'accès à plusieurs applications avec un seul identifiant.",
+        "quoi": "L'information principale réside dans le fait que les mises à jour Windows déployées en novembre 2026 provoquent des échecs d'authentification NTLM dans des scénarios précis. Ce dysmfonctionnement perturbe spécifiquement l'utilisation combinée de ce protocole avec certains proxys et solutions de SSO, altérant ainsi le fonctionnement habituel des sessions utilisateurs.",
+        "pourquoi": "Microsoft est l'éditeur directement impliqué dans la diffusion de ces mises à jour de novembre 2026, conçues à l'origine pour faire évoluer la sécurité des systèmes d'exploitation. Les raisons techniques de ces perturbations proviennent probablement d'un renforcement des règles de validation ou de modifications internes apportées au protocole NTLM, impactant sa compatibilité avec des intermédiaires comme les proxys et les SSO.",
+        "consequence": "Les conséquences directes touchent les utilisateurs finaux qui peuvent se voir bloqués lors de leurs connexions, ainsi que les administrateurs systèmes et réseaux qui doivent gérer ces incidents inattendus. Pour les entreprises, cela se traduit par une perte de productivité temporaire et une charge de travail supplémentaire pour trouver des contournements en attendant un correctif officiel de l'éditeur.",
+        "generated_by": "gemini"
+      }
+    },
     {
       "id": "art-2431570",
       "title": "Proxmox VE 9.3 est disponible : le SAN se gère désormais depuis l’interface web",
@@ -2672,78 +2742,6 @@
         "quoi": "Google DeepMind a annoncé son intention de rendre le code source d'AlphaProof accessible à la communauté en open source. Cette décision fait suite à une démonstration où l'IA a été utilisée pour analyser et confirmer l'efficacité du chiffrement de bout en bout de Signal, prouvant ainsi que le protocole résiste aux tentatives de compromission logique.",
         "pourquoi": "Cette initiative est portée par la volonté de Google de renforcer la sécurité des systèmes numériques critiques à l'échelle mondiale. En ouvrant l'accès à AlphaProof, Google cherche à permettre aux chercheurs en cybersécurité et aux développeurs de tester et de sécuriser leurs propres infrastructures, favorisant ainsi une approche collaborative pour élever le niveau de protection des données privées.",
         "consequence": "Pour les utilisateurs finaux, cette avancée confirme la fiabilité des outils de communication sécurisés qu'ils utilisent au quotidien. Pour les administrateurs et les éditeurs de logiciels, la mise à disposition d'AlphaProof offre un nouvel outil puissant pour auditer le code et détecter des vulnérabilités complexes, ce qui pourrait mener à une standardisation accrue des pratiques de sécurité dans le développement logiciel.",
-        "generated_by": "gemini"
-      }
-    },
-    {
-      "id": "art-4644659",
-      "title": "Windows : les mises à jour de novembre 2026 provoquent des échecs d’activation, Microsoft confirme",
-      "description": "Les mises à jour Windows de novembre 2026 font échouer l'activation via slmgr avec l'erreur 0x80041008. Microsoft confirme le bug et prépare un correctif.",
-      "link": "https://www.it-connect.fr/windows-activation-slmgr-erreur-080041008/",
-      "source": "IT-Connect",
-      "category": "Logiciel & OS",
-      "tags": [
-        "Logiciel - OS",
-        "Microsoft",
-        "Mise à jour",
-        "Windows 10"
-      ],
-      "published_at": "2026-11-13T12:41:58+00:00",
-      "published_ts": 1794573718,
-      "ai_summary": {
-        "badge": "Mise à jour",
-        "contexte": "Le système d'activation de Windows permet de vérifier que la copie du système d'exploitation est authentique et légalement acquise. L'outil 'slmgr' (Software Licensing Management Tool) est un utilitaire en ligne de commande utilisé par les administrateurs système pour gérer les licences et les clés de produit au sein d'un parc informatique.",
-        "quoi": "Les mises à jour cumulatives déployées par Microsoft en novembre 2026 ont introduit un dysfonctionnement technique majeur affectant le processus d'activation. Les utilisateurs et administrateurs rencontrent systématiquement l'erreur 0x80041008 lorsqu'ils tentent d'activer Windows via l'outil slmgr, rendant la gestion des licences inopérante.",
-        "pourquoi": "Microsoft a officiellement reconnu l'existence de ce bug suite aux remontées de la communauté technique. Ce problème découle d'une anomalie logicielle introduite lors de la phase de déploiement des correctifs mensuels, poussant l'éditeur à travailler activement sur une solution corrective pour rétablir le fonctionnement normal du service.",
-        "consequence": "Pour les administrateurs système, cet incident entraîne une perte de contrôle sur la gestion des licences de leur parc informatique, pouvant bloquer le déploiement ou la conformité des postes de travail. Les utilisateurs finaux peuvent se retrouver face à des messages d'erreur persistants concernant l'activation de leur système, nécessitant une intervention ultérieure de Microsoft pour corriger la situation via une mise à jour corrective.",
-        "generated_by": "gemini"
-      }
-    },
-    {
-      "id": "art-4709351",
-      "title": "Votre SQL Server est lent ? Les mises à jour Windows récentes sont peut-être en cause",
-      "description": "Depuis les mises à jour Windows d'octobre 2026, les serveurs liés SQL Server peuvent laisser des connexions ouvertes. Microsoft a confirmé et prépare un patch.",
-      "link": "https://www.it-connect.fr/sql-server-serveurs-lies-connexions-ouvertes-mises-a-jour-windows/",
-      "source": "IT-Connect",
-      "category": "Logiciel & OS",
-      "tags": [
-        "Logiciel - OS",
-        "Microsoft",
-        "Mise à jour",
-        "SQL Server"
-      ],
-      "published_at": "2026-11-12T16:25:06+00:00",
-      "published_ts": 1794500706,
-      "ai_summary": {
-        "badge": "Alerte / Faille",
-        "contexte": "Les serveurs liés (Linked Servers) dans SQL Server permettent à une base de données de communiquer avec une autre source de données externe, agissant comme un pont entre différents systèmes. Les mises à jour Windows sont des correctifs diffusés régulièrement par Microsoft pour améliorer la sécurité et la stabilité du système d'exploitation, mais elles peuvent parfois introduire des régressions logicielles imprévues.",
-        "quoi": "Depuis le déploiement des mises à jour Windows d'octobre 2026, un dysfonctionnement affecte la gestion des connexions au sein des serveurs liés SQL Server. Ce bug technique empêche la fermeture correcte des sessions, provoquant une accumulation de connexions ouvertes qui ne sont plus utilisées par le système.",
-        "pourquoi": "Microsoft a officiellement reconnu ce problème technique suite aux retours d'utilisateurs confrontés à des baisses de performance. L'éditeur est actuellement en phase de développement d'un correctif spécifique pour résoudre cette anomalie introduite par ses propres mises à jour, afin de restaurer le comportement nominal du moteur de base de données.",
-        "consequence": "Pour les administrateurs systèmes et bases de données, ce problème se traduit par une dégradation notable des performances du serveur SQL, pouvant aller jusqu'à une saturation des ressources. Les entreprises utilisant ces interconnexions doivent surveiller leurs serveurs en attendant la publication du patch correctif par Microsoft pour éviter toute interruption de service ou instabilité applicative.",
-        "generated_by": "gemini"
-      }
-    },
-    {
-      "id": "art-2527478",
-      "title": "Windows 11 : la mise à jour KB5132061 refuse de s’installer sur certains PC, Microsoft promet un correctif",
-      "description": "L'installation de la KB5132061 échoue sur certains PC Windows 11 ayant reçu la préversion d'octobre. Microsoft promet une réparation automatique sous 48h.",
-      "link": "https://www.it-connect.fr/windows-11-kb5132061-echec-installation-0800f0989/",
-      "source": "IT-Connect",
-      "category": "Logiciel & OS",
-      "tags": [
-        "Logiciel - OS",
-        "Microsoft",
-        "Mise à jour",
-        "Windows 11"
-      ],
-      "published_at": "2026-11-12T16:10:10+00:00",
-      "published_ts": 1794499810,
-      "ai_summary": {
-        "badge": "Mise à jour",
-        "contexte": "Le Patch Tuesday est le rendez-vous mensuel incontournable où Microsoft publie des correctifs de sécurité et des améliorations pour ses systèmes d'exploitation Windows. Dans ce cadre, une mise à jour cumulative, qui regroupe plusieurs correctifs en un seul paquet, a été déployée pour les versions 26H2, 25H2 et 24H2 de Windows 11.",
-        "quoi": "La mise à jour KB5132061 rencontre des échecs d'installation récurrents sur certains PC, se manifestant par des boucles de tentatives infructueuses ou l'apparition des codes d'erreur 0x80070306, 0x800f0989 et 0x800f0993. Microsoft a officiellement reconnu ce problème, identifié sous la référence WI1549693, et a confirmé qu'il touche spécifiquement les machines ayant préalablement installé la mise à jour optionnelle KB5127936 d'octobre.",
-        "pourquoi": "Le problème découle d'une incompatibilité logicielle entre la préversion d'octobre, qui offrait un aperçu des changements futurs, et la mise à jour cumulative officielle de novembre. Microsoft, en tant qu'éditeur, a pris en charge l'incident après les signalements de la communauté et a promis une réparation automatique sous 48 heures pour les utilisateurs impactés.",
-        "consequence": "Pour les utilisateurs finaux, cela se traduit par une perte de temps et une frustration liée aux tentatives répétées d'installation et aux messages d'erreur système. Les administrateurs systèmes doivent surveiller l'historique des mises à jour pour identifier les postes concernés, tout en attendant le correctif automatique promis par Microsoft pour rétablir la stabilité du parc informatique sans intervention manuelle complexe.",
         "generated_by": "gemini"
       }
     }
