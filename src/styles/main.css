@@ -2086,6 +2086,34 @@ article:hover { border-color: var(--color-border-strong); }
     box-shadow: 0 16px 36px -14px rgba(0, 0, 0, 0.65);
 }
 
+/* Images des certifications (bien détourées, cadrées et centrées) */
+.cert-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 26px auto;
+    width: 100%;
+}
+
+.cert-image {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    border-radius: 14px;
+    border: 1.5px solid var(--color-border-strong);
+    box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.72), 0 0 0 4px rgba(244, 124, 147, 0.08);
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.cert-image-card {
+    width: min(320px, 100%);
+}
+
+.cert-image-result {
+    width: min(560px, 100%);
+}
+
 .sport-img {
     border: 1px solid var(--color-border-strong);
     box-shadow: 0 16px 36px -14px rgba(0, 0, 0, 0.65) !important;
