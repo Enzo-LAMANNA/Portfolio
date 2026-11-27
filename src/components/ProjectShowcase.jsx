@@ -22,6 +22,7 @@ function getSnippet(html) {
   )
     .replace(/\s+/g, ' ')
     .trim();
+  if (/^(?:[àa]\s+venir\.?\s*)+$/i.test(plain)) return 'À venir';
   return plain.length > 165 ? plain.slice(0, 162).trim() + '…' : plain;
 }
 
