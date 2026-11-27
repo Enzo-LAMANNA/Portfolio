@@ -335,7 +335,7 @@ export const portfolioData = {
             "id": "comp-cyber-0",
             "title": "Pentest",
             "badge": null,
-            "contentHtml": "<p class=\"formation-objective-text\">Explication à venir dans cette catégorie.</p>"
+            "contentHtml": "<p class=\"formation-objective-text\">Lors de mes cours de <strong>Pentest</strong>, j'ai été amené à réaliser des tests d'intrusion sur des <strong>machines virtuelles (VM) de différents niveaux</strong> en déployant l'ensemble des tests et logiciels utiles pour s'y introduire. Grâce à cette pratique, je sais structurer un <strong>plan d'attaque</strong> en passant par une étape de réflexion et d'analyse, puis en mobilisant des outils spécialisés tels que <strong>Metasploit</strong>, <strong>Burp Suite</strong> et d'autres utilitaires dédiés sous le système d'exploitation <strong>Kali Linux</strong>.</p>"
           }
         ]
       },
