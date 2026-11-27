@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T21:14:32.602859+00:00",
+  "updated_at": "2026-11-27T07:41:17.230333+00:00",
   "total": 120,
   "sources": [
     "IT-Connect",
@@ -13,6 +13,28 @@
     "Web"
   ],
   "articles": [
+    {
+      "id": "art-2217063",
+      "title": "ZD Tech : Comment la Nasa sauve Perseverance sur Mars, une leçon pour votre réseau",
+      "description": "Depuis le 30 octobre, les deux antennes UHF du rover Perseverance sont défaillantes. Privée de débit, la Nasa a suspendu la science pour sauver le robot, alors que la sonde relais Mars Odyssey menace aussi de tomber en panne.",
+      "link": "https://www.zdnet.fr/actualites/zd-tech-comment-la-nasa-sauve-perseverance-sur-mars-une-lecon-pour-votre-reseau-508540.htm#xtor=RSS-1",
+      "source": "ZDNet France",
+      "category": "Informatique",
+      "tags": [
+        "Actualités",
+        "Informatique"
+      ],
+      "published_at": "2026-11-27T08:11:12+00:00",
+      "published_ts": 1795767072,
+      "ai_summary": {
+        "badge": "Alerte / Faille",
+        "contexte": "Sur la planète Mars, le rover Perseverance utilise des antennes UHF pour communiquer à distance et transmettre ses données vers la Terre via des orbiteurs relais. Le sigle UHF désigne les hautes fréquences radio, un type de signal hertzien indispensable pour assurer le transport des informations sur de grandes distances dans l'espace.",
+        "quoi": "Depuis le 30 octobre, les deux antennes UHF du rover Perseverance ont subi une défaillance critique qui prive l'appareil de tout débit de communication suffisant. Face à cette panne majeure, la Nasa a pris la décision radicale de suspendre toutes les opérations scientifiques pour concentrer ses efforts sur la sauvegarde du robot.",
+        "pourquoi": "L'agence spatiale américaine Nasa doit faire face à une situation particulièrement critique, d'autant plus que la sonde relais Mars Odyssey, qui sert d'intermédiaire pour les transmissions, menace elle aussi de tomber en panne. Cette double défaillance met en péril la liaison indispensable entre les équipes terrestres et le rover, menaçant la survie même de la mission sur place.",
+        "consequence": "Pour les administrateurs systèmes et les gestionnaires de réseaux, cette situation illustre la vulnérabilité critique des infrastructures distantes face à des pannes matérielles en cascade. La perte des relais de communication prive les scientifiques de toute donnée, rappelant l'importance vitale de concevoir des architectures résilientes et de prévoir des solutions de secours redondantes, que ce soit pour un rover sur Mars ou pour des réseaux informatiques terrestres.",
+        "generated_by": "gemini"
+      }
+    },
     {
       "id": "art-9156467",
       "title": "Black Friday TerraMaster : jusqu’à 30 % de remise sur les NAS et boîtiers de stockage sur Amazon",
@@ -2724,28 +2746,6 @@
         "quoi": "L'armée française a décidé d'accélérer significativement ses cycles de préparation et de développement cyber avec un horizon fixé à 2030. Cette accélération vise à raccourcir les délais de conception et de déploiement des outils de défense pour mieux s'adapter à la vitesse fulgurante des menaces modernes assistées par l'IA.",
         "pourquoi": "Cette initiative est motivée par la nécessité de contrer des menaces étatiques, notamment russes, qui utilisent des technologies avancées pour déstabiliser les infrastructures critiques. Les décideurs militaires cherchent ainsi à réduire leur vulnérabilité face à des adversaires capables d'exploiter des failles de sécurité avec une rapidité inédite, imposant une refonte des méthodes de planification traditionnelles.",
         "consequence": "Pour les acteurs de la défense et les partenaires technologiques, cela implique une transformation profonde des processus de recherche et développement vers des cycles plus agiles et réactifs. À terme, cette stratégie renforce la posture de résilience de la France, obligeant les administrateurs et ingénieurs systèmes à intégrer des outils d'IA plus performants pour maintenir une supériorité opérationnelle face à des cyberattaques de plus en plus sophistiquées.",
-        "generated_by": "gemini"
-      }
-    },
-    {
-      "id": "art-3919460",
-      "title": "L'accès à l'IA de votre entreprise peut être vendu pour quelques centimes, méfiez-vous des « LLM Mixers »",
-      "description": "Selon Google, des revendeurs clandestins vendent l'accès à des comptes d'IA d'entreprise piratés, dont les frais d'utilisation sont pris en charge par les victimes.",
-      "link": "https://www.zdnet.fr/actualites/lacces-a-lia-de-votre-entreprise-peut-etre-vendu-pour-quelques-centimes-mefiez-vous-des-llm-mixers-508025.htm#xtor=RSS-1",
-      "source": "ZDNet France",
-      "category": "Cybersécurité",
-      "tags": [
-        "Actualités",
-        "Cybersécurité"
-      ],
-      "published_at": "2026-11-17T02:11:10+00:00",
-      "published_ts": 1794881470,
-      "ai_summary": {
-        "badge": "Alerte / Faille",
-        "contexte": "Le paysage de la cybersécurité évolue avec l'adoption massive des outils d'intelligence artificielle générative, comme les LLM (Large Language Models). Ces systèmes, capables de générer du texte ou du code, sont désormais intégrés dans les environnements professionnels, créant de nouvelles surfaces d'attaque pour les cybercriminels qui cherchent à exploiter les accès aux comptes d'entreprise.",
-        "quoi": "Google a identifié l'émergence de « LLM Mixers », des plateformes clandestines où des accès à des comptes d'IA d'entreprise piratés sont mis en vente pour des sommes dérisoires. Ces accès permettent aux acheteurs d'utiliser les ressources de calcul et les fonctionnalités avancées de ces outils aux frais des victimes, sans que ces dernières ne s'en aperçoivent immédiatement.",
-        "pourquoi": "Des attaquants exploitent des identifiants compromis pour détourner des abonnements professionnels à l'IA, transformant ces outils en marchandises monétisables sur le marché noir. Cette stratégie est motivée par la rentabilité immédiate, car les coûts d'utilisation des modèles d'IA, souvent élevés, sont directement imputés aux budgets des entreprises ciblées, rendant le vol invisible pour les services comptables classiques.",
-        "consequence": "Pour les entreprises, cela se traduit par une augmentation imprévue des coûts opérationnels et un risque majeur de fuite de données confidentielles traitées par les IA détournées. Les administrateurs systèmes doivent renforcer les mesures d'authentification et surveiller étroitement les logs d'utilisation des services d'IA, tandis que les utilisateurs finaux doivent être sensibilisés à la protection de leurs accès professionnels pour éviter que leurs comptes ne deviennent des vecteurs d'abus.",
         "generated_by": "gemini"
       }
     }
